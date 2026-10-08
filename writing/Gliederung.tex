@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{accent}{HTML}{28485E}
+\definecolor{muted}{HTML}{59636B}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={TabPFN: Vorläufiger Titel und Gliederung},
+  pdfsubject={Planungsdokument zur Bachelorarbeit}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlist[enumerate]{leftmargin=2.5em,itemsep=0.15em,topsep=0.3em,parsep=0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.2em,topsep=0.3em,parsep=0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{muted}TabPFN \enspace / \enspace Bachelorarbeit}
+\fancyhead[R]{\small\sffamily\color{muted}Planungsstand}
+\fancyfoot[L]{\small\sffamily\color{muted}Vorläufiger Vorschlag zur Besprechung}
+\fancyfoot[R]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\pageheading}[2]{%
+  {\small\sffamily\color{accent}\MakeUppercase{#1}\par}
+  \vspace{0.4em}
+  {\LARGE\sffamily\bfseries #2\par}
+  \vspace{0.6em}
+}
+\newcommand{\blockheading}[1]{%
+  \par\vspace{0.7em}
+  {\large\sffamily\bfseries\color{accent}#1\par}
+  \nopagebreak
+}
+\newenvironment{chapterblock}[2]{%
+  \par\addvspace{1.5em}\begin{minipage}{\linewidth}
+  {\large\sffamily\bfseries\color{accent}#1\enspace #2\par}
+  \begin{enumerate}[label=#1.\arabic*,itemsep=0.4em,topsep=0.5em]
+}{%
+  \end{enumerate}\end{minipage}\par
+}
+
+\begin{document}
+\pageheading{Bachelorarbeit · Konzept}{Thema und Forschungsfrage}
+
+{\small\sffamily\color{muted}VORLÄUFIGER ARBEITSTITEL\par}
+\vspace{0.4em}
+{\fontsize{21}{26}\selectfont\sffamily\bfseries
+TabPFN for Tabular Data:\\
+Development and Empirical\\
+Comparison with Tree-Based Models\par}
+
+{\color{muted}\emph{TabPFN für tabellarische Daten: Entwicklung und empirischer Vergleich mit baumbasierten Modellen}\par}
+
+Die Arbeit verbindet eine Literaturübersicht zur Entwicklung von TabPFN mit einem eigenen empirischen Vergleich. Der Titel wird angepasst, falls sich Umfang oder Vergleichsmodelle im Gespräch mit dem Betreuer ändern.
+
+\blockheading{Forschungsfrage}
+Wie wurde TabPFN weiterentwickelt, um Herausforderungen tabellarischer Daten zu adressieren, und wie schneidet eine ausgewählte TabPFN-Version im Vergleich zu baumbasierten Verfahren bei einer konkreten tabellarischen Vorhersageaufgabe ab?
+
+\blockheading{Unterfragen}
+\begin{enumerate}
+  \item Welche Eigenschaften tabellarischer Daten erschweren den Einsatz von Deep Learning, und warum sind baumbasierte Verfahren auf solchen Daten starke Vergleichsmodelle?
+  \item Welche methodischen Änderungen zeigen sich zwischen dem ursprünglichen TabPFN-Paper, TabPFN-2.5 und TabPFN-3.5, insbesondere bei Architektur, Eingaberepräsentation und synthetischem Vortraining?
+  \item Wie unterscheiden sich TabPFN und ausgewählte baumbasierte Modelle auf einem festgelegten Datensatz hinsichtlich Vorhersageleistung und Rechenaufwand?
+  \item Welche Einschränkungen folgen aus Datensatzwahl, Evaluation, Modellversion, Hardware und Lizenzierung?
+\end{enumerate}
+
+\blockheading{Roter Faden}
+\begin{description}[leftmargin=1em,labelindent=0pt,labelwidth=0.5em,font=\sffamily\bfseries,style=nextline,itemsep=0.2em]
+  \item[Herausforderung] Schwierigkeiten tabellarischer Daten und Stärke baumbasierter Baselines.
+  \item[Ansatz und Entwicklung] PFN-Grundidee, In-Context Learning und ausgewählte TabPFN-Meilensteine.
+  \item[Überprüfung und Einordnung] Eigener Modellvergleich; Aussagekraft, Einsatzgrenzen und offene Fragen.
+\end{description}
+
+\clearpage
+\pageheading{Gliederung · Teil I}{Grundlagen und Modellentwicklung}
+
+\begin{chapterblock}{1}{Einleitung}
+  \item Motivation: Bedeutung tabellarischer Daten in praktischen Anwendungen
+  \item Problemstellung: Herausforderungen für Deep Learning auf Tabellendaten
+  \item Ziel und Abgrenzung der Arbeit
+  \item Forschungsfrage und Unterfragen
+  \item Aufbau der Arbeit
+\end{chapterblock}
+
+\begin{chapterblock}{2}{Hintergrund}
+  \item Tabellarische Daten: Struktur, Merkmale und typische Herausforderungen
+  \item Deep Learning auf Tabellendaten und Unterschiede zu Bild- und Sprachdaten
+  \item Baumbasierte Verfahren als wichtige Baselines
+  \item Tabular Foundation Models und In-Context Learning
+  \item Prior-Data Fitted Networks und bayessche Interpretation
+\end{chapterblock}
+
+\begin{chapterblock}{3}{Vorgehen der Literaturübersicht}
+  \item Ziel und Umfang der Literaturauswahl
+  \item Verwendete Suchquellen und Suchbegriffe
+  \item Kriterien für Ein- und Ausschluss von Arbeiten
+  \item Vorgehen beim strukturierten Vergleich der ausgewählten Arbeiten
+\end{chapterblock}
+
+\begin{chapterblock}{4}{Entwicklung von TabPFN}
+  \item Ursprüngliches TabPFN: Grundidee und erste Umsetzung
+  \item TabPFN-2.5: Erweiterungen und adressierte Grenzen
+  \item TabPFN-3.5: weitere Änderungen und neue Fähigkeiten
+  \item Vergleich über gemeinsame Aspekte
+  \item Zwischenfazit: Welche Probleme wurden adressiert, welche bleiben offen?
+\end{chapterblock}
+
+\clearpage
+\pageheading{Gliederung · Teil II}{Experiment und Einordnung}
+
+\begin{chapterblock}{5}{Experimenteller Vergleich}
+  \item Ziel des Experiments und Bezug zur Forschungsfrage
+  \item Datensatz und Vorhersageaufgabe
+  \item Datenbereinigung und Vorverarbeitung
+  \item Verglichene Modelle: ausgewählte TabPFN-Version und baumbasierte Baselines
+  \item Versuchsaufbau: Splits, Validierung und Umgang mit Zufälligkeit
+  \item Metriken für Vorhersageleistung
+  \item Messung von Laufzeit und gegebenenfalls Ressourcenverbrauch
+  \item Implementierung und Reproduzierbarkeit
+\end{chapterblock}
+
+\begin{chapterblock}{6}{Ergebnisse}
+  \item Ergebnisse zur Vorhersageleistung
+  \item Ergebnisse zu Laufzeit und Ressourcen
+  \item Vergleich der Modelle und Beobachtungen
+\end{chapterblock}
+
+\begin{chapterblock}{7}{Diskussion}
+  \item Beantwortung der Forschungsfrage anhand von Literatur und Experiment
+  \item Einordnung der eigenen Ergebnisse im Vergleich zur Literatur
+  \item Einfluss von Datensatz, Metrik, Split und Modellkonfiguration
+  \item Grenzen der Untersuchung und mögliche Verzerrungen
+  \item Praktische Aspekte: Skalierung, Verfügbarkeit und Lizenzierung
+\end{chapterblock}
+
+\begin{chapterblock}{8}{Fazit und Ausblick}
+  \item Zusammenfassung der wichtigsten Erkenntnisse
+  \item Abschließende Beantwortung der Forschungsfrage
+  \item Ausblick auf weiterführende Untersuchungen
+\end{chapterblock}
+
+\clearpage
+\pageheading{Besprechung}{Planungshinweise und offene Entscheidungen}
+
+\blockheading{Literaturbasis und Abgrenzung}
+Die bisherigen TabPFN-Arbeiten behandeln das ursprüngliche TabPFN, TabPFN-2.5 und TabPFN-3.5. Sie sind ausgewählte Meilensteine, \emph{keine lückenlose Versionsgeschichte} und nicht schlicht „Version 1, 2 und 3“. Ob weitere Berichte zu TabPFN-v2 oder TabPFN-3 aufgenommen werden, ist noch abzuklären.
+
+\emph{Transformers Can Do Bayesian Inference} liefert den PFN-Hintergrund. Die Arbeit \emph{Why do tree-based models still outperform deep learning on typical tabular data?} motiviert die Herausforderungen und die Rolle baumbasierter Verfahren. Beide gehören vor allem in das Grundlagenkapitel.
+
+\blockheading{Vergleichsrahmen für den Literaturteil}
+Die Modellversionen werden anhand derselben Aspekte verglichen: Aufgaben und Datensatzgrößen; Architektur und Eingabekodierung; synthetischer Prior und Trainingsaufgaben; Vorverarbeitung und Inferenz; Benchmarks und Vergleichsmodelle; Einschränkungen und Verfügbarkeit. Herstellerberichte und von den Autoren berichtete Resultate sind als solche zu kennzeichnen.
+
+\blockheading{Noch nicht festgelegter Praxisteil}
+Offen sind Datensatz, Klassifikation oder Regression, TabPFN-Version, Baselines, Metriken und Hardware. XGBoost und Random Forest sind mögliche Vergleichsmodelle. Die Auswahl erfolgt nach Rücksprache mit dem Betreuer und abhängig von Daten, Umfang und verfügbarer Implementierung.
+
+\blockheading{Fragen für das Betreuungsgespräch}
+\begin{enumerate}
+  \item Ist die geplante Kombination aus Literaturübersicht und eigenem empirischem Vergleich für die Bachelorarbeit passend?
+  \item Gibt es einen vom Betreuer empfohlenen Datensatz oder eine konkrete Anwendungsaufgabe? Falls nicht: Welche Anforderungen soll ein selbst ausgewählter öffentlicher Datensatz erfüllen?
+  \item Soll die experimentelle Aufgabe Klassifikation oder Regression sein?
+  \item Welche TabPFN-Version ist für die Implementierung und den vorgesehenen Einsatzzweck verfügbar und lizenzrechtlich geeignet?
+  \item Sind XGBoost und Random Forest als Vergleich ausreichend, oder wird eine weitere Baseline erwartet?
+  \item Soll die Versionsgeschichte über die drei ausgewählten Meilensteine hinaus erweitert werden, insbesondere um TabPFN-v2 und TabPFN-3?
+  \item Welche Anforderungen gelten an Suchstrategie, Umfang und Formalisierung der Literaturübersicht?
+  \item Welche Metriken, Hardware- und Laufzeitanalysen werden für den Praxisteil erwartet?
+\end{enumerate}
+
+\blockheading{Arbeitsstand}
+Dies ist ein Planungsvorschlag, kein endgültiges Studiendesign. Der Fokus liegt auf TabPFN; andere Tabular Foundation Models dienen nur als Kontext oder Vergleich. Umfang und Formalisierung der Literaturrecherche werden abgestimmt; die Quellenauswahl ist in jedem Fall transparent zu beschreiben.
+
+\end{document}
