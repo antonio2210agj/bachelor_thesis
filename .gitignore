@@ -29,9 +29,6 @@ __pycache__/
 *.lof
 *.lot
 
-# Downloaded papers: obtain separately from the original sources
-/literature/*.pdf
-
 # Operating system files
 Thumbs.db
 Desktop.ini

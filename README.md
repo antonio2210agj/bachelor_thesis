@@ -5,13 +5,15 @@ zur Bachelorarbeit ueber die Entwicklung und Evaluation von TabPFN.
 
 ## Struktur
 
-- `literature/notes/`: Literaturnotizen mit Quellenstellen.
+- `literature/`: Literatur-PDFs und Literaturnotizen mit Quellenstellen in `notes/`.
 - `writing/`: Gliederung, LaTeX-Quellen, Bibliografie und kompilierte PDF.
 - `experiments/`: Python-Experimente und der aktuell verwendete Datensatz.
 
-Heruntergeladene Literatur-PDFs werden nicht in Git aufgenommen. Sie koennen
-auf jedem Rechner separat von den Originalquellen bezogen werden.
-Die virtuelle Python-Umgebung und temporaere LaTeX-Dateien bleiben ebenfalls lokal.
+Literatur-PDFs koennen zusammen mit den Notizen im privaten Repository versioniert
+werden und stehen nach Commit, Push und Pull auch auf dem anderen Rechner bereit.
+Vor dem Hinzufuegen neuer Papers die Lizenz und Weitergaberechte pruefen;
+ein privates Repository ersetzt diese Pruefung nicht.
+Die virtuelle Python-Umgebung und temporaere LaTeX-Dateien bleiben lokal.
 
 ## Auf einem zweiten Windows-Rechner einrichten
 
