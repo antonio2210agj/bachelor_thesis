@@ -6,8 +6,6 @@
 
 - **PDF:** `literature/1_Benchmark.pdf`
 - **Thema:** Systematischer Vergleich von baumbasierten Verfahren und Deep-Learning-Architekturen auf mittelgroßen Tabellendatensätzen sowie empirische Untersuchung, welche Eigenschaften der Daten den Leistungsunterschied erklären.
-- **Hinweis zur Fundstellengenauigkeit:** Das Paper druckt keine Zeilennummern. Die Zeilenangaben in dieser Notiz zählen deshalb die aus der jeweiligen PDF-Seite extrahierten Textzeilen (in Leserichtung). Abbildungen, Bildunterschriften und mehrspaltige Elemente können die Extraktion unterbrechen. Für die Gegenprüfung zuerst die angegebene PDF-Seite und den Abschnitt aufsuchen und dann die Zeilenangabe als Orientierung verwenden.
-- **Seitenzählung:** Gemeint sind die Seiten des PDFs; die Seitenzahlen im Paper stimmen ab Seite 2 mit den PDF-Seiten überein.
 
 ## 1. Kernproblem
 
