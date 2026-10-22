@@ -1,0 +1,249 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\definecolor{linienfarbe}{HTML}{D5DCE1}
+\hypersetup{
+  hidelinks,
+  pdftitle={TabPFN für tabellarische Daten: Grundlagen, Entwicklung und empirischer Vergleich mit baumbasierten Modellen}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.25em,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=0.15em,topsep=0.25em,parsep=0pt}
+\renewcommand{\arraystretch}{1.15}
+\pagestyle{plain}
+
+\begin{document}
+
+{\Large\bfseries Exposé: Zwischenstand\par}
+{\color{linienfarbe}\hrule height 0.4pt}
+\vspace{0.5em}
+
+{\large\bfseries TabPFN für tabellarische Daten: Grundlagen, Entwicklung
+und empirischer Vergleich mit baumbasierten Modellen\par}
+
+
+\section{Problemstellung und Motivation}
+
+Deep Learning hat große Fortschritte bei Bild-, Sprach- und Audiodaten
+ermöglicht; bei tabellarischen Daten ist die Leistungsfähigkeit weniger
+eindeutig. Die Einleitung der Benchmark-Studie beschreibt Tabellendaten
+als heterogen und verweist auf kleine Stichproben und extreme Werte.
+Dadurch ist es schwieriger zu bestimmen, welche Veränderungen der
+Eingaben die Vorhersage unberührt lassen sollten. In den Experimenten
+untersucht die Studie außerdem
+unregelmäßige Zielzusammenhänge und unwichtige Merkmale als mögliche
+Erklärungen für Leistungsunterschiede zwischen neuronalen Netzen und
+Baumverfahren \cite[S.~1, 6--9]{grinsztajn_why_2022}.
+
+Der Benchmark umfasst 45  Datensätze. Unter den dort getesteten
+Modellen schneiden die baumbasierten Verfahren besser ab als die
+verglichenen neuronalen Netze \cite[S.~1, 3, 6]{grinsztajn_why_2022}.
+Dieser Befund bezieht sich auf die ausgewählten Datensätze, Modelle und
+Versuchsbedingungen und belegt keine allgemeine Überlegenheit von
+Baumverfahren. Er begründet jedoch, warum neue Deep-Learning-Ansätze für
+Tabellendaten anhand transparenter Versuchsbedingungen und geeigneter
+Baselines eingeordnet werden sollten.
+
+Die TabPFN-Originalarbeit untersucht einen anderen Modellansatz und
+Versuchsbereich: Ihr zentraler Vergleich umfasst 18 rein numerische
+OpenML-CC18-Datensätze ohne fehlende Werte und mit höchstens 1.000
+Trainingsbeispielen \cite[S.~1, 8]{hollmann_tabpfn_2023}. Die Ergebnisse
+dieser Arbeit und des 45-Datensatz-Benchmarks lassen sich wegen der
+unterschiedlichen Modelle, Datensätze und Versuchsbedingungen nicht
+unmittelbar zu einer gemeinsamen Rangfolge zusammenfassen. Die Arbeit
+ordnet daher ausgewählte Entwicklungsschritte von TabPFN anhand
+gemeinsamer Merkmale ein und ergänzt dies um einen transparent
+abgegrenzten Vergleich mit Baumverfahren auf einer konkreten Aufgabe.
+Damit wird keine allgemeine Forschungslücke für sämtliche Tabellendaten
+oder Modellversionen beansprucht.
+
+Das PFN-Grundprinzip besteht darin, ein Modell anhand von Lernaufgaben aus
+einem vorgegebenen Prior darauf zu trainieren, bayessche Vorhersagen zu
+approximieren \cite[S.~1--4]{muller_transformers_2024}. TabPFN verwendet
+dieses Prinzip für Tabellendaten: Bei einer neuen Aufgabe verarbeitet es
+gelabelte Beispiele gemeinsam mit den Fällen, für die Vorhersagen benötigt
+werden, ohne die Modellparameter für diese Aufgabe erneut anzupassen
+\cite[S.~1--3]{hollmann_tabpfn_2023}. Spätere ausgewählte
+Modellgenerationen erweitern laut den jeweiligen technischen Berichten
+den vorgesehenen Anwendungsumfang
+\cite[S.~1--5]{grinsztajn_tabpfn-25_2026}\cite[S.~3--5]{jager_tabpfn-35_2026}.
+Da diese Berichte von den Entwicklerteams stammen, werden ihre
+Leistungsangaben als berichtete Ergebnisse und nicht als unabhängige
+Bestätigung eingeordnet. Die Literaturanalyse vergleicht daher nicht nur
+Architektur und Anwendungsbereich, sondern auch Evaluationsdesign und
+Quellenstatus. Das eigene Experiment ergänzt diese Einordnung um einen
+dokumentierten Vergleich auf einer konkreten Aufgabe; es soll keine
+allgemeine Rangfolge der Modellfamilien begründen, sondern einen
+nachvollziehbaren, begrenzten Befund liefern.
+
+\section{Zielsetzung und Forschungsfragen}
+
+Ziel ist, ausgewählte Entwicklungsschritte von TabPFN vor dem Hintergrund
+der Herausforderungen tabellarischer Daten einzuordnen und eine
+TabPFN-Version empirisch mit baumbasierten Verfahren zu vergleichen.
+Die Literaturanalyse ordnet Architektur, Eingaberepräsentation, synthetisches
+Vortraining, Inferenz und Evaluationsbefunde nach gemeinsamen Konzepten.
+Das Experiment dokumentiert Vorhersageleistung und Laufzeit unter
+festgelegten Bedingungen. Aussagekraft und Grenzen beider Teile werden
+gemeinsam diskutiert.
+
+\textbf{Übergeordnete Forschungsfrage}
+
+Wie adressieren ausgewählte Entwicklungsschritte von TabPFN die
+Herausforderungen tabellarischer Vorhersageaufgaben, und wie unterscheidet
+sich eine ausgewählte TabPFN-Version unter festgelegten Versuchsbedingungen
+von baumbasierten Verfahren hinsichtlich Vorhersageleistung und Laufzeit?
+
+\textbf{FF1: Literaturteil}
+
+Welche methodischen Änderungen beschreiben ausgewählte TabPFN-Arbeiten,
+welche Herausforderungen tabellarischer Daten sollen sie adressieren,
+und welche Schlussfolgerungen erlauben die jeweiligen Evaluationen?
+
+\textbf{FF2: Experimenteller Teil}
+
+Wie unterscheiden sich eine ausgewählte TabPFN-Version und ausgewählte
+baumbasierte Baselines auf einem festgelegten tabellarischen Datensatz
+hinsichtlich Vorhersageleistung und Laufzeit?
+
+\section{Inhaltliche Abgrenzung und roter Faden}
+
+Der Literaturteil führt von den Grundlagen des Deep Learning zu den
+Herausforderungen neuronaler Verfahren auf tabellarischen Daten und zur
+Rolle baumbasierter Modelle als Vergleich. Darauf folgen die für das Thema
+notwendigen Grundlagen bayesscher Inferenz, insbesondere Prior und
+posterior-prädiktive Verteilung. Anschließend werden Foundation Models
+allgemein und Tabular Foundation Models als spezielle Anwendung eingeordnet.
+Der Schwerpunkt liegt danach auf Prior-Data Fitted Networks, TabPFN und
+ausgewählten Schritten seiner Entwicklung.
+
+Die Grundlagen werden auf das für die Forschungsfragen nötige Maß
+beschränkt. Eine vollständige Übersicht über alle Tabular Foundation
+Models ist nicht vorgesehen. Ausgangspunkte sind das ursprüngliche
+TabPFN-Paper sowie die Berichte zu TabPFN-2.5 und TabPFN-3.5. Diese
+Auswahl ist keine lückenlose Versionsgeschichte; die Recherche soll
+klären, ob Arbeiten zu TabPFNv2 und TabPFN-3 ergänzt werden müssen.
+
+Der empirische Teil beschränkt sich auf eine ausgewählte TabPFN-Version,
+einen tabellarischen Datensatz und eine begrenzte Zahl baumbasierter
+Baselines. German Credit ist ein möglicher Datensatzkandidat; XGBoost und
+Random Forest sind mögliche Vergleichsverfahren. Datensatz, Aufgabe,
+Modellversion, Baselines, Metriken und technische Machbarkeit sind noch
+abzustimmen. Eigenes Foundation-Model-Vortraining, die Entwicklung einer
+neuen Architektur und kausale Inferenz sind nicht Gegenstand der Arbeit.
+Ergebnisse des Experiments sollen keine allgemeine Rangfolge der
+Modellfamilien begründen.
+
+\section{Geplantes methodisches Vorgehen}
+
+\subsection{Literaturanalyse}
+
+Der Literaturteil ist vorläufig als deskriptiv-konzeptuelle Literaturanalyse
+mit konzeptzentrierter Synthese angelegt. Das Reviewdesign wird anhand von
+Coopers Taxonomie beschrieben, die Reviews unter anderem nach Fokus, Ziel,
+Perspektive, Abdeckung und Organisation unterscheidet
+\cite{cooper_organizing_1988}. Die Darstellung orientiert sich an einer
+konzeptzentrierten statt autorenzentrierten Ordnung, wie sie Webster und
+Watson für Literaturreviews empfehlen \cite[S.~xvi]{webster_analyzing_2002}.
+Verglichen werden gemeinsame Konzepte wie
+Aufgabenbereich, Architektur, Eingaberepräsentation, synthetischer Prior,
+Inferenz und Evaluationsdesign.
+
+Die Suche soll Grundlagen zu Deep Learning auf Tabellendaten, bayesscher
+Inferenz und PFNs sowie Arbeiten zu TabPFN, Tabular Foundation Models,
+Baumverfahren und Benchmarkmethodik abdecken. Vorgesehen sind Google
+Scholar, eine ergänzende Metadaten- oder Zitationssuche, offizielle
+Publikationsseiten und arXiv. Englische Suchbegriffe werden kombiniert,
+auf den jeweiligen Plattformen getestet und angepasst. Rückwärts- und
+Vorwärtssuchen ergänzen die Datenbanksuche.
+
+Ein- und Ausschlusskriterien werden vor dem Screening festgelegt.
+Nach Dublettenbereinigung erfolgen Titel- und Abstractprüfung sowie
+Volltextprüfung. Peer-reviewte Arbeiten, Preprints und technische Berichte
+können einbezogen werden; Publikationsstatus und Unabhängigkeit werden
+getrennt ausgewiesen. Suchdatum, Plattform, vollständige Suchanfragen,
+Einschränkungen, Trefferzahlen und Volltextausschlüsse mit Gründen werden
+dokumentiert. Eine Teilmenge soll nach zeitlichem Abstand erneut anhand
+derselben Kriterien geprüft.
+
+Die ausgewählten Beiträge sollen in einer Konzeptmatrix unter anderem nach
+Aufgabenbereich, Architektur und Eingaberepräsentation, synthetischem Prior,
+Vorverarbeitung und Inferenz, Evaluationsdesign, Baselines und Grenzen
+verglichen werden. Die Synthese soll Übereinstimmungen, Unterschiede und
+Entwicklungslinien herausarbeiten. Nicht vergleichbare Benchmarks werden
+nicht zu einer gemeinsamen Rangfolge zusammengefasst.
+
+Die Recherche ist noch nicht abgeschlossen. Deshalb enthält dieser
+Zwischenstand keine Trefferzahlen oder Auswahlresultate. PRISMA 2020
+formuliert Berichtsleitlinien für systematische Reviews
+\cite{page_prisma_2021}. Die geplante Literaturanalyse wird nicht als
+vollständig PRISMA-konformes systematisches Review ausgewiesen. Ein
+Flussdiagramm wird nur erstellt, wenn der tatsächlich durchgeführte
+Auswahlprozess dafür dokumentiert ist und die entsprechenden Zahlen
+vorliegen.
+
+\subsection{Experimenteller Vergleich}
+
+Geplant ist der Vergleich einer TabPFN-Version mit baumbasierten Verfahren
+auf einem öffentlichen Datensatz. German Credit ist ein noch zu prüfender
+Kandidat; XGBoost und Random Forest sind mögliche Baselines. Aufgabe,
+Modellversion und Metriken hängen von Dateneignung, Verfügbarkeit, Lizenz
+und Hardware ab. Das Protokoll soll gemeinsame Datensplits, begründete
+Vorverarbeitung und festgelegte Metriken vorsehen. Testdaten werden nicht
+zur Modellauswahl verwendet. Vorhersageleistung und Laufzeit werden
+getrennt ausgewertet und zusammen mit Hardware und Konfiguration
+dokumentiert. Die endgültige Festlegung steht aus.
+
+\section{Vorläufige Gliederung}
+
+\begin{enumerate}
+  \item Einleitung: Motivation, Problemstellung, Ziel und Forschungsfragen
+  \item Grundlagen: Deep Learning auf Tabellendaten, baumbasierte Verfahren,
+  bayessche Inferenz und Foundation Models
+  \item Methodik der Literaturanalyse
+  \item Entwicklung von TabPFN: Grundlagen, ausgewählte Versionen und
+  konzeptzentrierter Vergleich
+  \item Experimenteller Vergleich: Datensatz, Modelle und Evaluationsdesign
+  \item Ergebnisse des Experiments
+  \item Diskussion: gemeinsame Einordnung, Aussagekraft und Grenzen
+  \item Fazit und Ausblick
+\end{enumerate}
+
+\section{Punkte für die erste Rückmeldung}
+
+Für die weitere Ausarbeitung wären insbesondere Rückmeldungen zu folgenden
+Punkten hilfreich:
+\begin{itemize}
+  \item Ist der rote Faden vom allgemeinen Hintergrund bis zur Entwicklung
+  von TabPFN sinnvoll abgegrenzt?
+  \item Passt eine deskriptiv-konzeptuelle Literaturanalyse mit transparenter
+  Such- und Auswahl-Dokumentation zum erwarteten Anspruch, oder wird ein
+  formaleres systematisches Review erwartet?
+  \item Ist ein empirischer Vergleich auf einem Datensatz mit einer
+  TabPFN-Version und ausgewählten baumbasierten Baselines ein angemessener
+  Umfang?
+  \item Gibt es Empfehlungen zu Datensatz, Aufgabe, Modellversion oder
+  erwarteten Metriken?
+\end{itemize}
+
+\vspace{0.5em}
+Dieser Text ist ein Zwischenstand zur inhaltlichen Rückmeldung. Die
+Literaturrecherche und die Festlegung des experimentellen Designs sind
+noch nicht abgeschlossen.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
