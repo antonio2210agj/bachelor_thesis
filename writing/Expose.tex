@@ -45,11 +45,11 @@ Eingaben die Vorhersage unberührt lassen sollten. In den Experimenten
 untersucht die Studie außerdem
 unregelmäßige Zielzusammenhänge und unwichtige Merkmale als mögliche
 Erklärungen für Leistungsunterschiede zwischen neuronalen Netzen und
-Baumverfahren \cite[S.~1, 6--9]{grinsztajn_why_2022}.
+Baumverfahren \cite[PDF-S.~1, 6--9]{grinsztajn_why_2022}.
 
 Der Benchmark umfasst 45  Datensätze. Unter den dort getesteten
 Modellen schneiden die baumbasierten Verfahren besser ab als die
-verglichenen neuronalen Netze \cite[S.~1, 3, 6]{grinsztajn_why_2022}.
+verglichenen neuronalen Netze \cite[PDF-S.~1, 3, 6]{grinsztajn_why_2022}.
 Dieser Befund bezieht sich auf die ausgewählten Datensätze, Modelle und
 Versuchsbedingungen und belegt keine allgemeine Überlegenheit von
 Baumverfahren. Er begründet jedoch, warum neue Deep-Learning-Ansätze für
@@ -59,7 +59,7 @@ Baselines eingeordnet werden sollten.
 Die TabPFN-Originalarbeit untersucht einen anderen Modellansatz und
 Versuchsbereich: Ihr zentraler Vergleich umfasst 18 rein numerische
 OpenML-CC18-Datensätze ohne fehlende Werte und mit höchstens 1.000
-Trainingsbeispielen \cite[S.~1, 8]{hollmann_tabpfn_2023}. Die Ergebnisse
+Trainingsbeispielen \cite[PDF-S.~1, 8]{hollmann_tabpfn_2023}. Die Ergebnisse
 dieser Arbeit und des 45-Datensatz-Benchmarks lassen sich wegen der
 unterschiedlichen Modelle, Datensätze und Versuchsbedingungen nicht
 unmittelbar zu einer gemeinsamen Rangfolge zusammenfassen. Die Arbeit
@@ -71,14 +71,14 @@ oder Modellversionen beansprucht.
 
 Das PFN-Grundprinzip besteht darin, ein Modell anhand von Lernaufgaben aus
 einem vorgegebenen Prior darauf zu trainieren, bayessche Vorhersagen zu
-approximieren \cite[S.~1--4]{muller_transformers_2024}. TabPFN verwendet
+approximieren \cite[PDF-S.~1--4]{muller_transformers_2024}. TabPFN verwendet
 dieses Prinzip für Tabellendaten: Bei einer neuen Aufgabe verarbeitet es
 gelabelte Beispiele gemeinsam mit den Fällen, für die Vorhersagen benötigt
 werden, ohne die Modellparameter für diese Aufgabe erneut anzupassen
-\cite[S.~1--3]{hollmann_tabpfn_2023}. Spätere ausgewählte
+\cite[PDF-S.~1--3]{hollmann_tabpfn_2023}. Spätere ausgewählte
 Modellgenerationen erweitern laut den jeweiligen technischen Berichten
 den vorgesehenen Anwendungsumfang
-\cite[S.~1--5]{grinsztajn_tabpfn-25_2026}\cite[S.~3--5]{jager_tabpfn-35_2026}.
+\cite[PDF-S.~1--5]{grinsztajn_tabpfn-25_2026}\cite[PDF-S.~3--5]{jager_tabpfn-35_2026}.
 Da diese Berichte von den Entwicklerteams stammen, werden ihre
 Leistungsangaben als berichtete Ergebnisse und nicht als unabhängige
 Bestätigung eingeordnet. Die Literaturanalyse vergleicht daher nicht nur
@@ -156,7 +156,7 @@ Coopers Taxonomie beschrieben, die Reviews unter anderem nach Fokus, Ziel,
 Perspektive, Abdeckung und Organisation unterscheidet
 \cite{cooper_organizing_1988}. Die Darstellung orientiert sich an einer
 konzeptzentrierten statt autorenzentrierten Ordnung, wie sie Webster und
-Watson für Literaturreviews empfehlen \cite[S.~xvi]{webster_analyzing_2002}.
+Watson für Literaturreviews empfehlen \cite[PDF-S.~4]{webster_analyzing_2002}.
 Verglichen werden gemeinsame Konzepte wie
 Aufgabenbereich, Architektur, Eingaberepräsentation, synthetischer Prior,
 Inferenz und Evaluationsdesign.
@@ -176,7 +176,7 @@ können einbezogen werden; Publikationsstatus und Unabhängigkeit werden
 getrennt ausgewiesen. Suchdatum, Plattform, vollständige Suchanfragen,
 Einschränkungen, Trefferzahlen und Volltextausschlüsse mit Gründen werden
 dokumentiert. Eine Teilmenge soll nach zeitlichem Abstand erneut anhand
-derselben Kriterien geprüft.
+derselben Kriterien geprüft werden.
 
 Die ausgewählten Beiträge sollen in einer Konzeptmatrix unter anderem nach
 Aufgabenbereich, Architektur und Eingaberepräsentation, synthetischem Prior,
@@ -188,7 +188,7 @@ nicht zu einer gemeinsamen Rangfolge zusammengefasst.
 Die Recherche ist noch nicht abgeschlossen. Deshalb enthält dieser
 Zwischenstand keine Trefferzahlen oder Auswahlresultate. PRISMA 2020
 formuliert Berichtsleitlinien für systematische Reviews
-\cite{page_prisma_2021}. Die geplante Literaturanalyse wird nicht als
+\cite[PDF-S.~1]{page_prisma_2021}. Die geplante Literaturanalyse wird nicht als
 vollständig PRISMA-konformes systematisches Review ausgewiesen. Ein
 Flussdiagramm wird nur erstellt, wenn der tatsächlich durchgeführte
 Auswahlprozess dafür dokumentiert ist und die entsprechenden Zahlen
@@ -220,23 +220,6 @@ dokumentiert. Die endgültige Festlegung steht aus.
   \item Diskussion: gemeinsame Einordnung, Aussagekraft und Grenzen
   \item Fazit und Ausblick
 \end{enumerate}
-
-\section{Punkte für die erste Rückmeldung}
-
-Für die weitere Ausarbeitung wären insbesondere Rückmeldungen zu folgenden
-Punkten hilfreich:
-\begin{itemize}
-  \item Ist der rote Faden vom allgemeinen Hintergrund bis zur Entwicklung
-  von TabPFN sinnvoll abgegrenzt?
-  \item Passt eine deskriptiv-konzeptuelle Literaturanalyse mit transparenter
-  Such- und Auswahl-Dokumentation zum erwarteten Anspruch, oder wird ein
-  formaleres systematisches Review erwartet?
-  \item Ist ein empirischer Vergleich auf einem Datensatz mit einer
-  TabPFN-Version und ausgewählten baumbasierten Baselines ein angemessener
-  Umfang?
-  \item Gibt es Empfehlungen zu Datensatz, Aufgabe, Modellversion oder
-  erwarteten Metriken?
-\end{itemize}
 
 \vspace{0.5em}
 Dieser Text ist ein Zwischenstand zur inhaltlichen Rückmeldung. Die
