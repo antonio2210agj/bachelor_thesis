@@ -1,219 +1,287 @@
-\documentclass[11pt,a4paper]{article}
-
-\usepackage[utf8]{inputenc}
+\documentclass[12pt,a4paper]{article}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage[margin=25mm]{geometry}
-\usepackage{xcolor}
+\usepackage{geometry}
 \usepackage{enumitem}
-\usepackage{tabularx}
 \usepackage{hyperref}
+\geometry{margin=2.5cm}
+\setlist{nosep}
+\hypersetup{hidelinks}
+\emergencystretch=3em
 
-\definecolor{linienfarbe}{HTML}{D5DCE1}
-\hypersetup{
-  hidelinks,
-  pdftitle={TabPFN für tabellarische Daten: Grundlagen, Entwicklung und empirischer Vergleich mit baumbasierten Modellen}
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.45em}
-\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.25em,parsep=0pt}
-\setlist[enumerate]{leftmargin=1.8em,itemsep=0.15em,topsep=0.25em,parsep=0pt}
-\renewcommand{\arraystretch}{1.15}
-\pagestyle{plain}
+\title{Exposé zur Bachelorarbeit\\[0.5em]
+\large Robustheit von TabPFN-3.5 gegenüber irrelevanten Merkmalen:
+Eine kontrollierte Untersuchung im Vergleich zu LightGBM}
+\author{}
+\date{Vorläufiger Entwurf}
 
 \begin{document}
-
-{\Large\bfseries Exposé: Zwischenstand\par}
-{\color{linienfarbe}\hrule height 0.4pt}
-\vspace{0.5em}
-
-{\large\bfseries TabPFN für tabellarische Daten: Grundlagen, Entwicklung
-und empirischer Vergleich mit baumbasierten Modellen\par}
-
+\maketitle
 
 \section{Problemstellung und Motivation}
 
-Deep Learning hat große Fortschritte bei Bild-, Sprach- und Audiodaten
-ermöglicht; bei tabellarischen Daten ist die Leistungsfähigkeit weniger
-eindeutig. Die Einleitung der Benchmark-Studie beschreibt Tabellendaten
-als heterogen und verweist auf kleine Stichproben und extreme Werte.
-Dadurch ist es schwieriger zu bestimmen, welche Veränderungen der
-Eingaben die Vorhersage unberührt lassen sollten. In den Experimenten
-untersucht die Studie außerdem
-unregelmäßige Zielzusammenhänge und unwichtige Merkmale als mögliche
-Erklärungen für Leistungsunterschiede zwischen neuronalen Netzen und
-Baumverfahren \cite[PDF-S.~1, 6--9]{grinsztajn_why_2022}.
+Tabellarische Klassifikationsaufgaben unterscheiden sich in Umfang,
+Merkmalstypen, Klassenverteilung und Datenqualität. Für solche Aufgaben
+werden häufig baumbasierte Verfahren eingesetzt. Grinsztajn et al.\
+untersuchen in einem Benchmark mit 45 kuratierten Datensätzen verschiedene
+baumbasierte und neuronale Verfahren. Sie berichten unter anderem, dass das
+Hinzufügen unkorrelierter irrelevanter Merkmale die Leistung der untersuchten
+neuronalen Modelle beeinträchtigen und den Abstand zu den Baumverfahren
+vergrößern kann \cite{grinsztajn_why_2022}. Der Befund gilt für die in dieser
+Studie getesteten Modelle und Versuchsbedingungen, nicht automatisch für
+jede neuronale Architektur oder jede spätere Modellgeneration.
 
-Der Benchmark umfasst 45  Datensätze. Unter den dort getesteten
-Modellen schneiden die baumbasierten Verfahren besser ab als die
-verglichenen neuronalen Netze \cite[PDF-S.~1, 3, 6]{grinsztajn_why_2022}.
-Dieser Befund bezieht sich auf die ausgewählten Datensätze, Modelle und
-Versuchsbedingungen und belegt keine allgemeine Überlegenheit von
-Baumverfahren. Er begründet jedoch, warum neue Deep-Learning-Ansätze für
-Tabellendaten anhand transparenter Versuchsbedingungen und geeigneter
-Baselines eingeordnet werden sollten.
+TabPFN verfolgt einen anderen Ansatz als ein pro Datensatz neu trainiertes
+neuronales Netz: Ein Transformer wird vorab auf synthetisch erzeugten
+Klassifikationsaufgaben trainiert und verarbeitet beim Einsatz die
+beschrifteten Trainingsbeispiele als Kontext. Das ursprüngliche Paper
+evaluiert TabPFN vor allem auf kleinen Klassifikationsdatensätzen und
+untersucht zusätzlich den Einfluss uninformativer Merkmale. Für die damalige
+Modellversion berichten die Autoren eine geringere Robustheit gegenüber
+solchen Merkmalen als bei LightGBM \cite{hollmann_tabpfn_2023}. Dieser
+Befund bietet einen konkreten Ausgangspunkt für die vorliegende Arbeit.
 
-Die TabPFN-Originalarbeit untersucht einen anderen Modellansatz und
-Versuchsbereich: Ihr zentraler Vergleich umfasst 18 rein numerische
-OpenML-CC18-Datensätze ohne fehlende Werte und mit höchstens 1.000
-Trainingsbeispielen \cite[PDF-S.~1, 8]{hollmann_tabpfn_2023}. Die Ergebnisse
-dieser Arbeit und des 45-Datensatz-Benchmarks lassen sich wegen der
-unterschiedlichen Modelle, Datensätze und Versuchsbedingungen nicht
-unmittelbar zu einer gemeinsamen Rangfolge zusammenfassen. Die Arbeit
-ordnet daher ausgewählte Entwicklungsschritte von TabPFN anhand
-gemeinsamer Merkmale ein und ergänzt dies um einen transparent
-abgegrenzten Vergleich mit Baumverfahren auf einer konkreten Aufgabe.
-Damit wird keine allgemeine Forschungslücke für sämtliche Tabellendaten
-oder Modellversionen beansprucht.
+Der technische Bericht zu TabPFN-3.5 beschreibt unter anderem Anpassungen
+des synthetischen Priors für Datensätze mit größeren Merkmalszahlen und
+berichtet Benchmark-Ergebnisse für hochdimensionale Daten
+\cite{jager_tabpfn-35_2026}. Der Bericht ist eine Evaluation des
+Modellentwicklerteams und wird in der Arbeit entsprechend als solcher
+eingeordnet. Eine größere unterstützte Merkmalszahl beantwortet für sich
+genommen nicht, wie empfindlich TabPFN-3.5 reagiert, wenn gezielt zusätzliche
+Merkmale ohne Zusammenhang mit dem Ziel eingeführt werden. Im geprüften
+Bericht wird kein isoliertes Experiment mit kontrolliert hinzugefügten
+unabhängigen Störmerkmalen berichtet. Ob neuere unabhängige oder
+anwendungsbezogene Studien diese konkrete Frage bereits untersuchen, wird
+vor einer abschließenden Behauptung einer Forschungslücke systematisch
+nachgeprüft.
 
-Das PFN-Grundprinzip besteht darin, ein Modell anhand von Lernaufgaben aus
-einem vorgegebenen Prior darauf zu trainieren, bayessche Vorhersagen zu
-approximieren \cite[PDF-S.~1--4]{muller_transformers_2024}. TabPFN verwendet
-dieses Prinzip für Tabellendaten: Bei einer neuen Aufgabe verarbeitet es
-gelabelte Beispiele gemeinsam mit den Fällen, für die Vorhersagen benötigt
-werden, ohne die Modellparameter für diese Aufgabe erneut anzupassen
-\cite[PDF-S.~1--3]{hollmann_tabpfn_2023}. Spätere ausgewählte
-Modellgenerationen erweitern laut den jeweiligen technischen Berichten
-den vorgesehenen Anwendungsumfang
-\cite[PDF-S.~1--5]{grinsztajn_tabpfn-25_2026}\cite[PDF-S.~3--5]{jager_tabpfn-35_2026}.
-Da diese Berichte von den Entwicklerteams stammen, werden ihre
-Leistungsangaben als berichtete Ergebnisse und nicht als unabhängige
-Bestätigung eingeordnet. Die Literaturanalyse vergleicht daher nicht nur
-Architektur und Anwendungsbereich, sondern auch Evaluationsdesign und
-Quellenstatus. Das eigene Experiment ergänzt diese Einordnung um einen
-dokumentierten Vergleich auf einer konkreten Aufgabe; es soll keine
-allgemeine Rangfolge der Modellfamilien begründen, sondern einen
-nachvollziehbaren, begrenzten Befund liefern.
+Damit ergibt sich eine klar begrenzte praktische Frage: Verhält sich
+TabPFN-3.5 bei kontrollierter Zugabe irrelevanter Merkmale anders als
+LightGBM, und verändert sich die Vorhersageleistung der Modelle mit
+zunehmendem Störmerkmal-Anteil? Die Untersuchung soll keinen allgemeinen
+Sieger zwischen Foundation Models und Baumverfahren bestimmen. Sie isoliert
+stattdessen einen Datenfaktor, der in früheren Arbeiten als relevant
+beschrieben wurde.
 
-\section{Zielsetzung und Forschungsfragen}
+\section{Zielsetzung und möglicher Beitrag}
 
-Ziel ist, ausgewählte Entwicklungsschritte von TabPFN vor dem Hintergrund
-der Herausforderungen tabellarischer Daten einzuordnen und eine
-TabPFN-Version empirisch mit baumbasierten Verfahren zu vergleichen.
-Die Literaturanalyse ordnet Architektur, Eingaberepräsentation, synthetisches
-Vortraining, Inferenz und Evaluationsbefunde nach gemeinsamen Konzepten.
-Das Experiment dokumentiert Vorhersageleistung und Laufzeit unter
-festgelegten Bedingungen. Aussagekraft und Grenzen beider Teile werden
-gemeinsam diskutiert.
+Ziel der Arbeit ist es, ausgewählte methodische Änderungen von TabPFN bis
+Version 3.5 und die Aussagekraft relevanter Evaluationen knapp und kritisch
+einzuordnen. Darauf aufbauend wird in einem kontrollierten
+Klassifikationsexperiment untersucht, wie sich die Leistung von TabPFN-3.5
+und LightGBM verändert, wenn unabhängig erzeugte irrelevante Merkmale
+schrittweise zu den Eingabedaten hinzugefügt werden.
 
-\textbf{Übergeordnete Forschungsfrage}
+Der praktische Beitrag besteht in einer reproduzierbaren Untersuchung mit
+mehreren geeigneten Datensätzen, festgelegten Störmerkmal-Stufen,
+wiederholten Datenaufteilungen und einer klar benannten Baum-Baseline.
+Gemessen wird die Veränderung gegenüber der jeweiligen Bedingung ohne
+zusätzliche Störmerkmale. Dadurch steht die Empfindlichkeit gegenüber dem
+kontrollierten Eingriff im Vordergrund und nicht allein ein Rangvergleich
+der Modelle auf unterschiedlichen Datensätzen. Die Arbeit entwickelt keinen
+neuen Algorithmus und beansprucht nicht, Ergebnisse für alle baumbasierten
+Verfahren zu liefern. Ob die Untersuchung eine Forschungslücke schließt,
+hängt vom noch ausstehenden Abgleich mit der neueren Literatur ab; bis dahin
+wird sie als empirische Prüfung und mögliche Erweiterung früherer Befunde
+bezeichnet.
 
-Wie adressieren ausgewählte Entwicklungsschritte von TabPFN die
-Herausforderungen tabellarischer Vorhersageaufgaben, und wie unterscheidet
-sich eine ausgewählte TabPFN-Version unter festgelegten Versuchsbedingungen
-von baumbasierten Verfahren hinsichtlich Vorhersageleistung und Laufzeit?
+\section{Forschungsfragen}
 
-\textbf{FF1: Literaturteil}
+\subsection*{Übergeordnete Forschungsfrage}
 
-Welche methodischen Änderungen beschreiben ausgewählte TabPFN-Arbeiten,
-welche Herausforderungen tabellarischer Daten sollen sie adressieren,
-und welche Schlussfolgerungen erlauben die jeweiligen Evaluationen?
+\textbf{Wie robust ist TabPFN-3.5 gegenüber schrittweise hinzugefügten
+unabhängigen, irrelevanten Merkmalen im Vergleich zu LightGBM, und wie ist
+dieses Ergebnis anhand der methodischen Entwicklung und bisherigen
+Evaluationen von TabPFN einzuordnen?}
 
-\textbf{FF2: Experimenteller Teil}
+Die übergeordnete Frage verbindet Literatur- und Experimentteil. Die
+Literaturanalyse klärt, wie das Modell und die Fragestellung einzuordnen
+sind; der experimentelle Teil beantwortet den konkreten Leistungsvergleich.
+Die übergeordnete Frage verspricht keine experimentelle Prüfung sämtlicher
+TabPFN-Entwicklungsschritte.
 
-Wie unterscheiden sich eine ausgewählte TabPFN-Version und ausgewählte
-baumbasierte Baselines auf einem festgelegten tabellarischen Datensatz
-hinsichtlich Vorhersageleistung und Laufzeit?
+\subsection*{FF1: Literaturanalyse}
 
-\section{Inhaltliche Abgrenzung und roter Faden}
+\textbf{Welche relevanten methodischen Änderungen und adressierten
+Herausforderungen tabellarischer Daten beschreiben ausgewählte
+TabPFN-Arbeiten, und welche Schlussfolgerungen erlauben ihre Evaluationen?}
 
-Der Literaturteil führt von den Grundlagen des Deep Learning zu den
-Herausforderungen neuronaler Verfahren auf tabellarischen Daten und zur
-Rolle baumbasierter Modelle als Vergleich. Darauf folgen die für das Thema
-notwendigen Grundlagen bayesscher Inferenz, insbesondere Prior und
-posterior-prädiktive Verteilung. Anschließend werden Foundation Models
-allgemein und Tabular Foundation Models als spezielle Anwendung eingeordnet.
-Der Schwerpunkt liegt danach auf Prior-Data Fitted Networks, TabPFN und
-ausgewählten Schritten seiner Entwicklung.
+\subsection*{FF2: Experimenteller Vergleich}
 
-Die Grundlagen werden auf das für die Forschungsfragen nötige Maß
-beschränkt. Eine vollständige Übersicht über alle Tabular Foundation
-Models ist nicht vorgesehen. Ausgangspunkte sind das ursprüngliche
-TabPFN-Paper sowie die Berichte zu TabPFN-2.5 und TabPFN-3.5. Diese
-Auswahl ist keine lückenlose Versionsgeschichte; die Recherche soll
-klären, ob Arbeiten zu TabPFNv2 und TabPFN-3 ergänzt werden müssen.
+\textbf{Wie verändert sich die Klassifikationsleistung von TabPFN-3.5 und
+LightGBM bei schrittweiser Zugabe unabhängiger, irrelevanter Merkmale?}
 
-Der empirische Teil beschränkt sich auf eine ausgewählte TabPFN-Version,
-einen tabellarischen Datensatz und eine begrenzte Zahl baumbasierter
-Baselines. German Credit ist ein möglicher Datensatzkandidat; XGBoost und
-Random Forest sind mögliche Vergleichsverfahren. Datensatz, Aufgabe,
-Modellversion, Baselines, Metriken und technische Machbarkeit sind noch
-abzustimmen. Eigenes Foundation-Model-Vortraining, die Entwicklung einer
-neuen Architektur und kausale Inferenz sind nicht Gegenstand der Arbeit.
-Ergebnisse des Experiments sollen keine allgemeine Rangfolge der
-Modellfamilien begründen.
+FF2 wird anhand der Veränderung der vorab festgelegten Leistungsmetriken
+über Störmerkmal-Stufen, Datensätze und Wiederholungen beantwortet. Aus dem
+Vergleich mit LightGBM werden keine Aussagen über andere Baumverfahren
+abgeleitet.
 
-\section{Geplantes methodisches Vorgehen}
+\section{Inhaltliche Abgrenzung}
 
-\subsection{Literaturanalyse}
+Die Untersuchung konzentriert sich auf überwachte tabellarische
+Klassifikation und auf den Einfluss künstlich hinzugefügter Merkmale, die
+unabhängig von den ursprünglichen Eingaben und der Zielvariable erzeugt
+werden. Der Modellvergleich umfasst TabPFN-3.5 und LightGBM. Die genaue
+Version, Paketkonfiguration und Verfügbarkeit von TabPFN-3.5 werden vor
+Beginn des Hauptversuchs technisch und lizenzrechtlich geprüft.
 
-Der Literaturteil ist vorläufig als deskriptiv-konzeptuelle Literaturanalyse
-mit konzeptzentrierter Synthese angelegt. Das Reviewdesign wird anhand von
-Coopers Taxonomie beschrieben, die Reviews unter anderem nach Fokus, Ziel,
-Perspektive, Abdeckung und Organisation unterscheidet
-\cite{cooper_organizing_1988}. Die Darstellung orientiert sich an einer
-konzeptzentrierten statt autorenzentrierten Ordnung, wie sie Webster und
-Watson für Literaturreviews empfehlen \cite[PDF-S.~4]{webster_analyzing_2002}.
-Verglichen werden gemeinsame Konzepte wie
-Aufgabenbereich, Architektur, Eingaberepräsentation, synthetischer Prior,
-Inferenz und Evaluationsdesign.
+Nicht Gegenstand der Arbeit sind Explainable AI, SHAP oder LIME,
+Kausalaussagen, Regression, ein umfassender Benchmark vieler Modellfamilien
+oder eine vollständige Versionsgeschichte von TabPFN. Laufzeit wird nicht
+als zentrale Forschungsfrage behandelt; eine ergänzende Laufzeitmessung
+kann nur aufgenommen werden, wenn sie unter dokumentierten und fairen
+Bedingungen realisierbar ist. Vorgängermodelle werden ausschließlich dort
+herangezogen, wo sie für die Einordnung der aktuellen Version und früherer
+Robustheitsbefunde nötig sind.
 
-Die Suche soll Grundlagen zu Deep Learning auf Tabellendaten, bayesscher
-Inferenz und PFNs sowie Arbeiten zu TabPFN, Tabular Foundation Models,
-Baumverfahren und Benchmarkmethodik abdecken. Vorgesehen sind Google
-Scholar, eine ergänzende Metadaten- oder Zitationssuche, offizielle
-Publikationsseiten und arXiv. Englische Suchbegriffe werden kombiniert,
-auf den jeweiligen Plattformen getestet und angepasst. Rückwärts- und
-Vorwärtssuchen ergänzen die Datenbanksuche.
+\section{Roter Faden und inhaltlicher Aufbau}
 
-Ein- und Ausschlusskriterien werden vor dem Screening festgelegt.
-Nach Dublettenbereinigung erfolgen Titel- und Abstractprüfung sowie
-Volltextprüfung. Peer-reviewte Arbeiten, Preprints und technische Berichte
-können einbezogen werden; Publikationsstatus und Unabhängigkeit werden
-getrennt ausgewiesen. Suchdatum, Plattform, vollständige Suchanfragen,
-Einschränkungen, Trefferzahlen und Volltextausschlüsse mit Gründen werden
-dokumentiert. Eine Teilmenge soll nach zeitlichem Abstand erneut anhand
-derselben Kriterien geprüft werden.
+Der rote Faden führt vom Problem zu einer gezielten empirischen Prüfung:
 
-Die ausgewählten Beiträge sollen in einer Konzeptmatrix unter anderem nach
-Aufgabenbereich, Architektur und Eingaberepräsentation, synthetischem Prior,
-Vorverarbeitung und Inferenz, Evaluationsdesign, Baselines und Grenzen
-verglichen werden. Die Synthese soll Übereinstimmungen, Unterschiede und
-Entwicklungslinien herausarbeiten. Nicht vergleichbare Benchmarks werden
-nicht zu einer gemeinsamen Rangfolge zusammengefasst.
+\begin{quote}
+Tabellarische Daten enthalten Merkmale mit unterschiedlichem Informationswert
+$\longrightarrow$ frühere Benchmarks und TabPFN-Arbeiten berichten einen
+Einfluss irrelevanter Merkmale auf die Leistung bestimmter Modelle
+$\longrightarrow$ TabPFN-3.5 erweitert laut technischem Bericht den Umgang
+mit größeren Merkmalszahlen, doch daraus folgt nicht automatisch Robustheit
+gegenüber gezielt hinzugefügten Störmerkmalen
+$\longrightarrow$ die Arbeit variiert diese Merkmale kontrolliert und
+vergleicht die Veränderung der Klassifikationsleistung von TabPFN-3.5 und
+LightGBM.
+\end{quote}
 
-Die Recherche ist noch nicht abgeschlossen. Deshalb enthält dieser
-Zwischenstand keine Trefferzahlen oder Auswahlresultate. PRISMA 2020
-formuliert Berichtsleitlinien für systematische Reviews
-\cite[PDF-S.~1]{page_prisma_2021}. Die geplante Literaturanalyse wird nicht als
-vollständig PRISMA-konformes systematisches Review ausgewiesen. Ein
-Flussdiagramm wird nur erstellt, wenn der tatsächlich durchgeführte
-Auswahlprozess dafür dokumentiert ist und die entsprechenden Zahlen
-vorliegen.
+Grundlagen zu tabellarischem Deep Learning, Prior-Data Fitted Networks und
+dem synthetischen Prior von TabPFN dienen dazu, die Modellidee und den
+Bezug der Forschungsfrage zu erklären. Sie werden nicht zu einem breiten
+allgemeinen Abriss über KI oder LLMs ausgebaut. Die Entwicklung früherer
+Versionen ist selektiver Kontext statt eines eigenen Kapitels zur
+Versionsgeschichte. Der Schwerpunkt und die Eigenleistung liegen im
+kontrollierten Experiment und dessen kritischer Auswertung.
 
-\subsection{Experimenteller Vergleich}
+\section{Vorgehen der Literaturanalyse}
 
-Geplant ist der Vergleich einer TabPFN-Version mit baumbasierten Verfahren
-auf einem öffentlichen Datensatz. German Credit ist ein noch zu prüfender
-Kandidat; XGBoost und Random Forest sind mögliche Baselines. Vorhersageleistung und Laufzeit werden
-getrennt ausgewertet und dokumentiert. Die endgültige Festlegung steht aus.
+Die Literaturanalyse wird als fokussierte, nachvollziehbare Recherche
+angelegt, nicht als Anspruch auf ein vollständiges systematisches Review
+aller Tabular Foundation Models. Im Zentrum stehen:
+\begin{itemize}
+  \item das ursprüngliche TabPFN-Paper und die darin berichteten
+        Evaluationen, insbesondere der Befund zu uninformativen Merkmalen;
+  \item der Benchmark von Grinsztajn et al.\ als Kontext für den Vergleich
+        neuronaler Modelle und Baumverfahren;
+  \item der TabPFN-3.5-Bericht mit Fokus auf die für Feature-Zahl,
+        synthetischen Prior und Evaluation relevanten Aussagen;
+  \item neuere Arbeiten, die gezielt TabPFN-3/3.5, irrelevante Merkmale,
+        Feature-Robustheit oder kontrollierte Feature-Interventionen
+        untersuchen.
+\end{itemize}
+
+Gesucht wird unter anderem in Google Scholar, arXiv und den
+Literaturverzeichnissen einschlägiger Konferenzbeiträge. Vorläufige
+Suchkombinationen kombinieren \texttt{TabPFN} mit \texttt{irrelevant
+features}, \texttt{robustness}, \texttt{noise features} oder
+\texttt{feature selection}; zusätzlich wird nach \texttt{tabular foundation
+model} zusammen mit \texttt{robustness} und \texttt{irrelevant features}
+gesucht. Suchdatum, Suchanfragen, relevante Treffer und Ausschlüsse
+werden festgehalten. Bei der Synthese werden Modellversion, Datensatz,
+Versuchsaufbau, Metriken und Grenzen der jeweiligen Quelle gegenübergestellt.
+Entwicklerberichte werden als solche kenntlich gemacht; berichtete
+Benchmarkresultate werden nicht ungeprüft als unabhängige Evidenz
+interpretiert.
+
+\section{Vorläufiger experimenteller Vergleich}
+
+\subsection*{Datensätze und Versuchsbedingungen}
+
+Vorgesehen sind zunächst etwa vier öffentlich verfügbare
+numerische Klassifikationsdatensätze. Die Beschränkung auf numerische
+Eingaben soll zusätzliche Effekte aus unterschiedlichen Verfahren zur
+Kodierung kategorialer Merkmale vermeiden. Die Datensätze werden anhand
+vorab festgelegter Kriterien
+ausgewählt: Eignung für TabPFN-3.5, Anzahl der Beobachtungen und Merkmale,
+Klassenverteilung, Datenqualität und verfügbare Nutzungsrechte. Die
+Datensatzauswahl und Ausschlüsse werden dokumentiert. Das genaue Set wird
+erst nach technischer Prüfung festgeschrieben.
+
+Für jeden Datensatz werden identische, stratifizierte Datenaufteilungen für
+beide Modelle verwendet. Auf die Eingabemerkmale werden in kontrollierten
+Stufen zusätzliche numerische Störmerkmale gelegt, die unabhängig von den
+ursprünglichen Merkmalen, voneinander und der Zielvariable erzeugt werden.
+Als erste Versuchsplanung sind unabhängige standardnormalverteilte
+Störmerkmale und Stufen von 0, 0{,}5, 1 und 2 zusätzlichen Merkmalen pro
+ursprünglicher Eingabespalte vorgesehen; nicht-ganzzahlige Stufenzahlen
+werden auf ganze Spalten gerundet. Die genaue Definition der ursprünglichen
+Eingabespalten und die Machbarkeit der höchsten Stufe werden im Pilotlauf
+geprüft. Dieselben erzeugten Merkmale, Seeds und Splits werden für beide
+Modelle verwendet.
+
+Die Auswertung wird über mehrere wiederholte Seeds durchgeführt. Eine
+unveränderte Bedingung ohne zusätzliche Merkmale dient pro Datensatz und
+Modell als Referenz. Die experimentellen Bedingungen unterscheiden sich
+innerhalb eines Vergleichs nur durch die Zahl der Störmerkmale.
+
+\subsection*{Modelle, Metriken und Auswertung}
+
+TabPFN-3.5 wird mit dokumentierter Paket- und Modellversion sowie
+festgehaltenen Inferenzoptionen ausgewertet. LightGBM wird als einzelnes
+baumbasiertes Gradient-Boosting-Modell eingesetzt \cite{ke2017lightgbm}.
+Um Robustheit statt zusätzlicher Tuningeffekte zu vergleichen, werden
+Modellkonfigurationen vor der Auswertung der Störmerkmal-Stufen festgelegt.
+Für LightGBM kann die Konfiguration auf einer Validierung der unveränderten
+Trainingsdaten bestimmt und anschließend über alle Stufen eingefroren
+werden; TabPFN wird mit seiner dokumentierten Standardkonfiguration
+verwendet. Diese asymmetrische Trainingsweise wird als Teil des Designs
+offengelegt: Verglichen wird die Veränderung unter demselben Eingriff, nicht
+der Aufwand einer gleich großen Hyperparametersuche.
+
+Als primäre Kennzahl ist zunächst Balanced Accuracy vorgesehen, um
+Klassifikationsleistung über Datensätze mit unterschiedlichen
+Klassenverteilungen vergleichbar auszuwerten. Log-Loss kann ergänzend
+berichtet werden, sofern die Wahrscheinlichkeitsausgaben technisch
+vergleichbar und ohne zusätzliche, unterschiedlich abgestimmte Kalibrierung
+auswertbar sind. Für jedes Modell und jeden Datensatz wird insbesondere die
+Änderung gegenüber der Bedingung ohne Störmerkmale dargestellt. Ergebnisse
+pro Datensatz, Streuung über Wiederholungen und aggregierte Ergebnisse
+werden getrennt ausgewiesen. Unsicherheit wird angemessen berichtet; eine
+aggregierte Rangliste allein ist nicht ausreichend.
+
+\subsection*{Machbarkeit und Grenzen}
+
+Vor dem Hauptversuch wird ein Pilot mit mindestens einem Datensatz
+durchgeführt. Er prüft Installation und Lizenzbedingungen von TabPFN-3.5,
+Laufzeit, Speicherbedarf, Datenformat und die geplante Vorverarbeitung.
+Datensätze, Störmerkmal-Stufen und Wiederholungszahlen werden nur dann
+festgelegt, wenn sie mit der verfügbaren Hardware realisierbar sind.
+
+Unabhängig generierte Merkmale sind in endlichen Stichproben nicht zwingend
+empirisch unkorreliert. Wiederholte Seeds und die kontrollierte
+Erzeugungsprozedur helfen, zufällige Stichprobeneffekte sichtbar zu machen,
+beseitigen sie aber nicht vollständig. Die Resultate gelten außerdem für
+die ausgewählten Datensätze, die festgelegte Datenpipeline und genau die
+beiden untersuchten Modelle. Sie erlauben keine direkte Verallgemeinerung
+auf alle Datendomänen oder alle baumbasierten Verfahren.
 
 \section{Vorläufige Gliederung}
 
 \begin{enumerate}
-  \item Einleitung: Motivation, Problemstellung, Ziel und Forschungsfragen
-  \item Grundlagen: Deep Learning auf Tabellendaten, baumbasierte Verfahren,
-  bayessche Inferenz und Foundation Models
-  \item Methodik der Literaturanalyse
-  \item Entwicklung von TabPFN: Grundlagen, ausgewählte Versionen und
-  konzeptzentrierter Vergleich
-  \item Experimenteller Vergleich: Datensatz, Modelle und Evaluationsdesign
-  \item Ergebnisse des Experiments
-  \item Diskussion: gemeinsame Einordnung, Aussagekraft und Grenzen
-  \item Fazit und Ausblick
+  \item \textbf{Einleitung:} Problemstellung, Motivation, Zielsetzung,
+        Forschungsfragen, Abgrenzung und Aufbau.
+  \item \textbf{Grundlagen:} Tabellarische Klassifikation; TabPFN und
+        Prior-Data Fitted Networks; synthetische Priors; Gradient Boosting
+        und LightGBM; irrelevante Merkmale und Robustheitsbegriffe.
+  \item \textbf{Stand der Forschung und Literaturanalyse:} Ausgewählte
+        methodische Änderungen bis TabPFN-3.5; Benchmarkbefunde und deren
+        Grenzen; frühere Experimente mit irrelevanten Merkmalen;
+        Herleitung des Untersuchungsbedarfs.
+  \item \textbf{Methodik:} Forschungsdesign; Datensatzauswahl;
+        Störmerkmal-Erzeugung; Modelle und Konfigurationen; Splits,
+        Wiederholungen, Metriken und Auswertung.
+  \item \textbf{Ergebnisse:} Ergebnisse ohne Störmerkmale;
+        Leistungsänderung mit zunehmender Störmerkmal-Zahl; Vergleich
+        zwischen Modellen und Datensätzen.
+  \item \textbf{Diskussion:} Beantwortung der Forschungsfragen;
+        Einordnung in die Literatur; Bedeutung und Limitationen.
+  \item \textbf{Fazit und Ausblick.}
 \end{enumerate}
 
 \bibliographystyle{plain}

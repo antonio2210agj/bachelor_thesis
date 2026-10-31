@@ -8,16 +8,16 @@ transparent zu machen. Die Dimensionen sind **keine sechs Schritte, die
 nacheinander abgearbeitet werden müssen**, und ersetzen weder die
 Suchstrategie noch das Screening der Literatur.
 
-Für das geplante Review zur Entwicklung von TabPFN ergibt sich vorläufig
-folgende Einordnung:
+Für die fokussierte Literaturanalyse zu TabPFN und der empirischen
+Robustheitsfrage ergibt sich vorläufig folgende Einordnung:
 
 | Dimension | Leitfrage | Vorläufige Einordnung für diese Arbeit |
 |---|---|---|
-| **Fokus** | Welche Aspekte der Literatur werden untersucht? | Im Mittelpunkt stehen methodische Ansätze und Evaluationen ausgewählter PFN- und TabPFN-Arbeiten: Architektur, Eingaberepräsentation, synthetischer Prior, Inferenz, Benchmarks und Grenzen. |
-| **Ziel** | Was soll das Review leisten? | Die ausgewählten Entwicklungsschritte beschreiben und vergleichen; herausarbeiten, welche Herausforderungen sie adressieren und welche Schlussfolgerungen die jeweiligen Evaluationen zulassen. |
+| **Fokus** | Welche Aspekte der Literatur werden untersucht? | Für die Forschungsfragen relevante methodische Änderungen und Evaluationen von TabPFN bis Version 3.5; frühere Befunde zu irrelevanten Merkmalen und Vergleiche mit Baumverfahren. Explainable AI ist nicht Teil der Arbeit. |
+| **Ziel** | Was soll das Review leisten? | Die Modellentwicklung und den Forschungsstand zur Robustheit knapp synthetisieren, berichtete Evaluationen kritisch einordnen und daraus das kontrollierte Experiment mit TabPFN-3.5 und LightGBM herleiten. |
 | **Perspektive** | Aus welcher Haltung werden die Quellen eingeordnet? | Kritisch und ausgewogen. Publikationsstatus, Unabhängigkeit und Evaluationsdesign werden berücksichtigt. Ergebnisse aus Entwicklerberichten werden als berichtete Ergebnisse gekennzeichnet. |
-| **Abdeckung** | Wie vollständig soll die Literatur erfasst werden? | Gezielte Abdeckung der für die Forschungsfragen relevanten Grundlagen und ausgewählten TabPFN-Meilensteine. Keine vollständige Übersicht aller Tabular Foundation Models und keine lückenlose Versionsgeschichte. Die endgültige Auswahl steht noch aus. |
-| **Organisation** | Wie wird die Literatur geordnet? | Konzeptzentriert: Arbeiten werden nach gemeinsamen Themen wie Architektur, Prior, Inferenz und Evaluation verglichen, statt ausschließlich Paper für Paper zusammengefasst zu werden. |
+| **Abdeckung** | Wie vollständig soll die Literatur erfasst werden? | Fokussiert und selektiv: zentrale TabPFN-Arbeiten, der TabPFN-3.5-Bericht sowie Forschung zu irrelevanten Merkmalen und passenden Baum-Baselines. Keine vollständige Übersicht aller Tabular Foundation Models und keine lückenlose Versionsgeschichte. Die Forschungslücke wird erst nach gezielter Suche beurteilt. |
+| **Organisation** | Wie wird die Literatur geordnet? | Konzeptzentriert: PFN-/Prior-Ansatz, methodische Änderungen, Evaluationsdesign und Robustheit gegenüber irrelevanten Merkmalen werden thematisch gegenübergestellt. |
 | **Zielgruppe** | Für wen wird das Review geschrieben? | Fachlich interessierte Leserinnen und Leser der Bachelorarbeit, insbesondere die Betreuungsperson. |
 
 ## Ist das einer der ersten Schritte einer Bachelorarbeit?
@@ -45,8 +45,10 @@ Ein sinnvoller Ablauf für das Vorhaben ist:
 
 Diese Reihenfolge ist ein praktikabler Arbeitsablauf für das konkrete
 Projekt, nicht eine Reihenfolge, die Cooper als sechs Reviewdimensionen
-vorgibt. Das Review bleibt vorläufig, bis Suche und Auswahl tatsächlich
-durchgeführt und die Entscheidungen gegebenenfalls angepasst wurden.
+vorgibt. Die Literaturanalyse ist der begründende Teil einer empirischen
+Bachelorarbeit und beansprucht nicht, ein vollständiges systematisches
+Review zu sein. Ihr Umfang und ihre Aussagen zur Forschungslücke bleiben
+vorläufig, bis Suche und Auswahl tatsächlich durchgeführt wurden.
 
 ## Literaturhinweise
 
@@ -56,4 +58,3 @@ durchgeführt und die Entscheidungen gegebenenfalls angepasst wurden.
 - Webster, Jane und Richard T. Watson (2002). *Analyzing the past to
   prepare for the future: Writing a literature review*. Empfehlen eine
   konzeptzentrierte Organisation von Literaturreviews.
-
