@@ -1,14 +1,19 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{geometry}
 \usepackage{enumitem}
 \geometry{margin=2.5cm}
-\setlist{nosep}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25\baselineskip}
+\setlist{topsep=0.25em,itemsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate,2]{topsep=0.15em,itemsep=0pt}
+\raggedbottom
+\emergencystretch=3em
 
 \title{Vorläufige Gliederung der Bachelorarbeit}
-\author{}
+\author{Marco Garcia Jung}
 \date{}
 
 \begin{document}
@@ -16,98 +21,116 @@
 
 \section*{Arbeitstitel}
 
-\textbf{Robustheit von TabPFN-3.5 gegenüber irrelevanten Merkmalen:
-Eine kontrollierte Untersuchung im Vergleich zu LightGBM}
+\textbf{TabPFN für tabellarische Klassifikation:
+Kritische Literaturanalyse und experimentelle Untersuchung
+der Robustheit gegenüber irrelevanten Merkmalen}
 
 \section*{Forschungsfragen}
 
 \textbf{Übergeordnete Forschungsfrage:}
-Wie robust ist TabPFN-3.5 gegenüber schrittweise hinzugefügten unabhängigen,
-irrelevanten Merkmalen im Vergleich zu LightGBM, und wie ist dieses Ergebnis
-anhand der methodischen Entwicklung und bisherigen Evaluationen von TabPFN
-einzuordnen?
+Welche Möglichkeiten und Grenzen von TabPFN für tabellarische
+Klassifikation ergeben sich aus ausgewählten aktuellen Arbeiten und aus
+einer eigenen Robustheitsuntersuchung von TabPFN-3.5 im Vergleich zu
+LightGBM?
 
 \medskip
-\noindent\textbf{FF1 -- Literaturteil:}
-Welche relevanten methodischen Änderungen und adressierten Herausforderungen
-tabellarischer Daten beschreiben ausgewählte TabPFN-Arbeiten, und welche
-Schlussfolgerungen erlauben ihre Evaluationen?
+\noindent\textbf{FF1 -- Literaturanalyse:}
+Welche methodischen Ansätze und Einsatzmöglichkeiten von TabPFN
+beschreiben ausgewählte aktuelle Arbeiten, und welche Aussagen über
+Leistungsfähigkeit und Grenzen bei tabellarischer Klassifikation lassen
+ihre Evaluationen zu?
 
 \medskip
-\noindent\textbf{FF2 -- empirischer Teil:}
-Wie verändert sich die Klassifikationsleistung von TabPFN-3.5 und LightGBM
-bei schrittweiser Zugabe unabhängiger, irrelevanter Merkmale?
+\noindent\textbf{FF2 -- empirische Untersuchung:}
+Wie verändert sich die Klassifikationsleistung von TabPFN-3.5
+und LightGBM bei schrittweiser Zugabe zufällig permutierter Kopien
+vorhandener Merkmale, und wie konsistent sind die Veränderungen über
+mehrere Datensätze?
 
-Die Versionsentwicklung dient nur der Einordnung von TabPFN-3.5. FF2 bildet
-den empirischen Schwerpunkt. Aussagen aus dem Vergleich mit LightGBM werden
-nicht auf alle baumbasierten Verfahren übertragen.
+\medskip
+Literaturanalyse und Experiment bilden zwei verbundene Leistungen.
+Der Literaturteil ist nicht auf Robustheit beschränkt; diese bildet
+die Brücke zum praktischen Schwerpunkt. Die Arbeit beansprucht keine
+neue Methode oder erstmalige Untersuchung irrelevanter Merkmale.
+Frühere Modellversionen dienen dem konzeptbezogenen Vergleich,
+nicht einer eigenen Versionsgeschichte.
+Robustheit bezeichnet die Leistungsänderung unter dem definierten
+Eingriff, keine allgemeine Sicherheitsgarantie. FF2 wird deskriptiv
+anhand gepaarter Änderungen beantwortet; ein Gleichwertigkeitsnachweis
+oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
 
 \section*{Vorläufige Gliederung}
 
 \begin{enumerate}
   \item \textbf{Einleitung}
     \begin{enumerate}
+      \item KI, LLMs und der Übergang zu tabellarischen Foundation Models
       \item Problemstellung und Motivation
-      \item Zielsetzung und Forschungsfragen
-      \item Abgrenzung und Aufbau der Arbeit
+      \item Zielsetzung, Beitrag und Forschungsfragen
+      \item Abgrenzung und Aufbau
     \end{enumerate}
   \item \textbf{Grundlagen}
     \begin{enumerate}
-      \item Tabellarische Klassifikationsaufgaben und ihre Besonderheiten
-      \item TabPFN als Tabular Foundation Model
-      \item Bayesianische Priors und Prior-Data Fitted Networks
-      \item Baumbasiertes Gradient Boosting und LightGBM
-      \item Irrelevante Merkmale und Robustheit von Klassifikationsmodellen
+      \item Tabellarische Klassifikation und Datenbesonderheiten
+      \item Foundation Models und In-Context Learning
+      \item Bayesianische Vorhersage und Prior-Data Fitted Networks
+      \item TabPFN: Modellprinzip und aktueller Bezugspunkt TabPFN-3.5
+      \item Gradient Boosting und LightGBM
+      \item Irrelevante Merkmale, Robustheit und Evaluationsmetriken
     \end{enumerate}
-  \item \textbf{Stand der Forschung und Literaturanalyse}
+  \item \textbf{Kritische Literaturanalyse zu TabPFN}
     \begin{enumerate}
-      \item TabPFN: methodische Entwicklung bis Version 3.5
-      \item Auswahl und Einordnung relevanter TabPFN-Evaluationen
-      \item Vergleichende Forschung zu Deep Learning und Baumverfahren auf
-            Tabellendaten
-      \item Bisherige Befunde zu irrelevanten Merkmalen
-      \item Forschungsbedarf und Herleitung des Experiments
+      \item Recherche, Auswahl und Konzeptmatrix
+      \item Architektur und Eingaberepräsentation
+      \item Synthetisches Vortraining und Inferenz
+      \item Berichtete Einsatzmöglichkeiten und ergänzende Fähigkeiten
+      \item Evaluationsdesigns, Leistungsbefunde und ihre Grenzen
+      \item Evidenz zu irrelevanten Merkmalen und Einordnung des
+            eigenen Experiments
     \end{enumerate}
-  \item \textbf{Methodik}
+  \item \textbf{Methodik der empirischen Untersuchung}
     \begin{enumerate}
-      \item Forschungsdesign und Versuchsbedingungen
-      \item Datensätze und Auswahlkriterien
-      \item Erzeugung und stufenweise Zugabe irrelevanter Merkmale
-      \item Modelle, Konfigurationen und Vorverarbeitung
-      \item Datenaufteilungen und Wiederholungen
-      \item Metriken und Auswertungsverfahren
+      \item Forschungsdesign und Bezug zu Vorarbeiten
+      \item Datensatzauswahl, Splits und Vorverarbeitung
+      \item Konstruktion und Stufen permutierter Zusatzmerkmale
+      \item Modelle, Konfigurationen und Trainingsprotokoll
+      \item Wiederholungen, Metriken und gepaarte Auswertung
+      \item Pilotlauf und Reproduzierbarkeit
     \end{enumerate}
   \item \textbf{Ergebnisse}
     \begin{enumerate}
-      \item Datensätze und technische Umsetzung
-      \item Ergebnisse ohne zusätzliche irrelevante Merkmale
-      \item Veränderung der Leistung bei zunehmender Zahl irrelevanter
-            Merkmale
-      \item Vergleich der Ergebnisse zwischen Modellen und Datensätzen
+      \item Datensatzübersicht und Ausgangsleistung
+      \item Veränderungskurven bei zusätzlichen Merkmalen
+      \item Gepaarter Vergleich der Modellreaktionen
+      \item Streuung und Konsistenz über Datensätze
     \end{enumerate}
   \item \textbf{Diskussion}
     \begin{enumerate}
-      \item Beantwortung der Forschungsfragen
-      \item Einordnung in die Literatur
-      \item Aussagekraft, Grenzen und Übertragbarkeit
-      \item Praktische Bedeutung und weiterer Forschungsbedarf
+      \item Beantwortung der Literaturfrage
+      \item Beantwortung der empirischen Frage
+      \item Gemeinsame Einordnung in die vorhandene Evidenz
+      \item Praktische Bedeutung, Limitationen und Übertragbarkeit
     \end{enumerate}
-  \item \textbf{Fazit}
+  \item \textbf{Fazit und Ausblick}
 \end{enumerate}
 
-\section*{Roter Faden}
+\section*{Roter Faden und Gewichtung}
 
 \begin{quote}
-Tabellarische Daten stellen besondere Anforderungen an Lernverfahren
-$\longrightarrow$ TabPFN adressiert diese Aufgaben durch einen auf
-synthetischen Datensätzen trainierten Prior-Data-Fitted-Ansatz
-$\longrightarrow$ bestehende Arbeiten untersuchen die Leistungsfähigkeit
-und teilweise die Empfindlichkeit gegenüber irrelevanten Merkmalen
-$\longrightarrow$ TabPFN-3.5 erweitert laut technischem Bericht den Umgang
-mit größeren Feature-Zahlen, was jedoch nicht automatisch Robustheit
-gegenüber gezielt hinzugefügten Störmerkmalen belegt
-$\longrightarrow$ die Arbeit untersucht diesen Effekt kontrolliert für
-TabPFN-3.5 und LightGBM.
+KI und In-Context Learning bei LLMs
+$\longrightarrow$ Foundation-Model-Ansatz für Tabellen
+$\longrightarrow$ Methoden, Einsatzmöglichkeiten und Evidenz zu TabPFN
+$\longrightarrow$ Robustheit als konkreter Prüfgegenstand
+$\longrightarrow$ kontrollierter Vergleich von TabPFN-3.5 und LightGBM
+$\longrightarrow$ gemeinsame Einordnung von Literatur und Experiment.
 \end{quote}
+
+Der Einstieg über KI und LLMs führt zum Thema, ohne einen allgemeinen
+KI-Geschichtsabriss zu bilden. Grundlagen werden auf die Forschungsfragen
+beschränkt. Kapitel 3 liefert die kritische Synthese für FF1;
+Kapitel 4 und 5 bilden den größeren praktischen Arbeitsblock für FF2.
+Kapitel 6 verbindet beide Teile. Die Gliederung enthält weder ein
+eigenständiges Kapitel zur Versionshistorie noch einen zusätzlichen
+XAI- oder Laufzeitbenchmark.
 
 \end{document}

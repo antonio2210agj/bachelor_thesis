@@ -1,8 +1,9 @@
 # Bachelorarbeit: TabPFN
 
-Arbeitsrepository für die Literaturrecherche, Schreibdateien und Experimente
-zur kontrollierten Untersuchung der Robustheit von TabPFN-3.5 gegenüber
-irrelevanten Merkmalen im Vergleich zu LightGBM.
+Arbeitsrepository für eine kritische Literaturanalyse zu Methoden,
+Einsatzmöglichkeiten und Grenzen von TabPFN sowie eine empirische
+Anschlussuntersuchung zur Robustheit von TabPFN-3.5 gegenüber irrelevanten
+Merkmalen im Vergleich zu LightGBM.
 
 ## Struktur
 
