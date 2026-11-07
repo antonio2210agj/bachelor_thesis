@@ -4,7 +4,7 @@
 
 **Prior Labs Team.** *TabPFN-3.5: Technical Report.* Technischer Bericht, datiert auf den 14. September 2026; die PDF-Kopfzeile nennt arXiv:2609.17895v2 vom 22. September 2026. Die Autorzeile verweist für die namentliche Liste der Beitragenden auf Appendix A.
 
-- **PDF:** `literature/5_TabPFN_3.5.pdf`
+- **PDF:** `literature/02_TabPFN_Kernmodelle/5_TabPFN_3.5.pdf`
 - **Gegenstand:** TabPFN-3.5, ein Tabular Foundation Model (TFM) für Klassifikation und Regression, plus die Varianten Fast, Plus und Thinking. Der Bericht behandelt Benchmarkresultate, Architektur und Vorverarbeitung, Inferenz, synthetischen Prior und Lizenzierung.
 - **Fundstellenformat:** Das Paper enthält keine gedruckten Zeilennummern. „Z.“ bezeichnet deshalb die Zeile des mit `pypdf` extrahierten Texts und dient nur als Suchhilfe. Bei Tabellen, Abbildungen und zweispaltigem Layout kann die Extraktionsreihenfolge von der visuellen Anordnung abweichen; bitte zusätzlich Seite, Abschnitt und ggf. Abbildungs-/Tabellentitel prüfen.
 - **Seitenzählung:** „PDF S.“ meint die physische Seite der 33-seitigen PDF. Der Haupttext steht auf PDF S. 1–12; der Anhang beginnt auf S. 13.

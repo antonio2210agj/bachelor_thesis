@@ -21,40 +21,42 @@
 
 \section*{Arbeitstitel}
 
-\textbf{TabPFN für tabellarische Klassifikation:
-Kritische Literaturanalyse und experimentelle Untersuchung
-der Robustheit gegenüber irrelevanten Merkmalen}
+\textbf{TabPFN bei unvollständigen tabellarischen Daten:
+Kritische Literaturanalyse und experimenteller Vergleich
+von Missing-Data-Behandlungen mit LightGBM}
 
 \section*{Forschungsfragen}
 
 \textbf{Übergeordnete Forschungsfrage:}
 Welche Möglichkeiten und Grenzen von TabPFN für tabellarische
-Klassifikation ergeben sich aus ausgewählten aktuellen Arbeiten und aus
-einer eigenen Robustheitsuntersuchung von TabPFN-3.5 im Vergleich zu
-LightGBM?
+Vorhersageaufgaben lassen sich aus der aktuellen Forschung und einer
+eigenen Untersuchung bei unvollständigen Eingaben ableiten?
 
 \medskip
 \noindent\textbf{FF1 -- Literaturanalyse:}
 Welche methodischen Ansätze und Einsatzmöglichkeiten von TabPFN
-beschreiben ausgewählte aktuelle Arbeiten, und welche Aussagen über
-Leistungsfähigkeit und Grenzen bei tabellarischer Klassifikation lassen
-ihre Evaluationen zu?
+beschreiben ausgewählte aktuelle Arbeiten, und wie belastbar sind ihre
+Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?
 
 \medskip
 \noindent\textbf{FF2 -- empirische Untersuchung:}
-Wie verändert sich die Klassifikationsleistung von TabPFN-3.5
-und LightGBM bei schrittweiser Zugabe zufällig permutierter Kopien
-vorhandener Merkmale, und wie konsistent sind die Veränderungen über
-mehrere Datensätze?
+Wie verändert die Behandlung fehlender Merkmalswerte den
+Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei steigenden
+Fehlraten über mehrere Datensätze?
 
 \medskip
 Literaturanalyse und Experiment bilden zwei verbundene Leistungen.
-Der Literaturteil ist nicht auf Robustheit beschränkt; diese bildet
-die Brücke zum praktischen Schwerpunkt. Die Arbeit beansprucht keine
-neue Methode oder erstmalige Untersuchung irrelevanter Merkmale.
+Der Literaturteil ist nicht auf fehlende Werte beschränkt; die Synthese
+zu ihrer Behandlung bildet die Brücke zum praktischen Schwerpunkt.
+Der LightGBM-Vergleich beschränkt sich auf diesen Schwerpunkt.
+Die Arbeit beansprucht keine
+neue Methode oder erstmalige Untersuchung fehlender Werte.
 Frühere Modellversionen dienen dem konzeptbezogenen Vergleich,
 nicht einer eigenen Versionsgeschichte.
-Robustheit bezeichnet die Leistungsänderung unter dem definierten
+Der Versuch verwendet MCAR-Fehlraten von 0, 10, 30 und 50 Prozent
+in Training, Validierung und Test. Der Hauptvergleich umfasst interne
+Verarbeitung und Median-Imputation; Missing-Indikatoren ergänzen die Analyse.
+Robustheit bezeichnet die Leistungsänderung unter diesem
 Eingriff, keine allgemeine Sicherheitsgarantie. FF2 wird deskriptiv
 anhand gepaarter Änderungen beantwortet; ein Gleichwertigkeitsnachweis
 oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
@@ -72,11 +74,12 @@ oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
   \item \textbf{Grundlagen}
     \begin{enumerate}
       \item Tabellarische Klassifikation und Datenbesonderheiten
-      \item Foundation Models und In-Context Learning
+      \item Neuronale Netze, Transformer und Foundation Models:
+            In-Context Learning, Open Weights und Open Source
       \item Bayesianische Vorhersage und Prior-Data Fitted Networks
       \item TabPFN: Modellprinzip und aktueller Bezugspunkt TabPFN-3.5
       \item Gradient Boosting und LightGBM
-      \item Irrelevante Merkmale, Robustheit und Evaluationsmetriken
+      \item Fehlende Werte, MCAR/MAR/MNAR, Imputation und Evaluationsmetriken
     \end{enumerate}
   \item \textbf{Kritische Literaturanalyse zu TabPFN}
     \begin{enumerate}
@@ -85,23 +88,26 @@ oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
       \item Synthetisches Vortraining und Inferenz
       \item Berichtete Einsatzmöglichkeiten und ergänzende Fähigkeiten
       \item Evaluationsdesigns, Leistungsbefunde und ihre Grenzen
-      \item Evidenz zu irrelevanten Merkmalen und Einordnung des
+      \item Evidenz zu fehlenden Werten und deren Behandlung; Einordnung des
             eigenen Experiments
     \end{enumerate}
   \item \textbf{Methodik der empirischen Untersuchung}
     \begin{enumerate}
       \item Forschungsdesign und Bezug zu Vorarbeiten
-      \item Datensatzauswahl, Splits und Vorverarbeitung
-      \item Konstruktion und Stufen permutierter Zusatzmerkmale
-      \item Modelle, Konfigurationen und Trainingsprotokoll
+      \item Datensatzauswahl, gruppengetrennte Splits identischer Eingaben
+            und Vorverarbeitung
+      \item MCAR-Maskierung: 0, 10, 30 und 50 Prozent in allen Partitionen
+      \item Interne Verarbeitung, Median-Imputation und Indikator-Zusatzanalyse
+      \item Modelle, feste Konfigurationen und Tuning-Sensitivität bei 50 Prozent
       \item Wiederholungen, Metriken und gepaarte Auswertung
-      \item Pilotlauf und Reproduzierbarkeit
+      \item Pilotlauf, fixierte Software-/Checkpointversionen und Reproduzierbarkeit
     \end{enumerate}
   \item \textbf{Ergebnisse}
     \begin{enumerate}
       \item Datensatzübersicht und Ausgangsleistung
-      \item Veränderungskurven bei zusätzlichen Merkmalen
-      \item Gepaarter Vergleich der Modellreaktionen
+      \item Leistungskurven nach Fehlrate und Behandlung
+      \item Gepaarter Modellvergleich und Indikator-Zusatzanalyse
+      \item Sensitivität gegenüber erneuter LightGBM-Abstimmung
       \item Streuung und Konsistenz über Datensätze
     \end{enumerate}
   \item \textbf{Diskussion}
@@ -120,7 +126,7 @@ oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
 KI und In-Context Learning bei LLMs
 $\longrightarrow$ Foundation-Model-Ansatz für Tabellen
 $\longrightarrow$ Methoden, Einsatzmöglichkeiten und Evidenz zu TabPFN
-$\longrightarrow$ Robustheit als konkreter Prüfgegenstand
+$\longrightarrow$ fehlende Eingaben und ihre Behandlung als Prüfgegenstand
 $\longrightarrow$ kontrollierter Vergleich von TabPFN-3.5 und LightGBM
 $\longrightarrow$ gemeinsame Einordnung von Literatur und Experiment.
 \end{quote}

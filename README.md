@@ -2,14 +2,29 @@
 
 Arbeitsrepository für eine kritische Literaturanalyse zu Methoden,
 Einsatzmöglichkeiten und Grenzen von TabPFN sowie eine empirische
-Anschlussuntersuchung zur Robustheit von TabPFN-3.5 gegenüber irrelevanten
-Merkmalen im Vergleich zu LightGBM.
+Anschlussuntersuchung zum Einfluss der Behandlung fehlender Merkmalswerte
+auf den Leistungsvergleich zwischen TabPFN-3.5 und LightGBM.
 
 ## Struktur
 
 - `literature/`: Literatur-PDFs und Literaturnotizen mit Quellenstellen in `notes/`.
 - `writing/`: Gliederung, LaTeX-Quellen, Bibliografie und kompilierte PDFs.
 - `experiments/`: Python-Experimente und der aktuell verwendete Datensatz.
+
+Die PDFs in `literature/` sind thematisch abgelegt:
+
+- `01_Grundlagen_KI_PFN/`: LLM-/In-Context-Learning- und PFN-Grundlagen.
+- `02_TabPFN_Kernmodelle/`: TabPFN-Originalarbeit, Nature/TabPFNv2 und Modellberichte.
+- `03_Benchmarks_Baumverfahren/`: vergleichende Benchmarks und Baumverfahren.
+- `04_Merkmalszahl_und_Selektion/`: Zusatzmerkmale, Merkmalsauswahl und breite Tabellen.
+- `07_Missing_Data_und_Imputation/`: Missing-Data- und Imputationsliteratur;
+  ergänzende Quellen und Lizenzhinweise stehen im Abschlussabgleich.
+  Bestehende Modellberichte mit Missing-Data-Bezug bleiben bei den Kernmodellen,
+  statt doppelt abgelegt zu werden. Die Nummerierung bleibt trotz nicht mehr
+  vorhandener Themenordner 05 und 06 erhalten, um bestehende Links zu bewahren.
+- `notes/`: Literaturnotizen und der
+  [abschliessende Missing-Data-Literaturabgleich](literature/notes/Missing_Data_Abschlussabgleich.md)
+  mit Quellenstellen, Abgrenzung und Empfehlungen zur Frageformulierung.
 
 Literatur-PDFs dürfen nur dann ins Repository aufgenommen werden, wenn die
 Lizenz und die Weitergaberechte dies erlauben. Ein privates Repository ersetzt

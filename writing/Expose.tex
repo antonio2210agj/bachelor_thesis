@@ -15,9 +15,9 @@
 \emergencystretch=3em
 
 \title{Exposé zur Bachelorarbeit\\[0.5em]
-\large TabPFN für tabellarische Klassifikation:\\
-Kritische Literaturanalyse und experimentelle Untersuchung\\
-der Robustheit gegenüber irrelevanten Merkmalen}
+\large TabPFN bei unvollständigen tabellarischen Daten:\\
+Kritische Literaturanalyse und experimenteller Vergleich\\
+von Missing-Data-Behandlungen mit LightGBM}
 \author{Marco Garcia Jung}
 \date{}
 \begin{document}
@@ -57,60 +57,67 @@ Datengenerierung und wiederverwendbare Repräsentationen
 Für die Einordnung ihrer Leistungsfähigkeit sind neben den methodischen
 Änderungen auch die jeweiligen Evaluationsbedingungen zu berücksichtigen.
 
-Ein Schwerpunkt der Untersuchung ist der Umgang mit irrelevanten
-Merkmalen. Im ursprünglichen TabPFN-Paper sinkt die
-ROC-AUC der damaligen Version bei zusätzlich eingefügten, zufällig
-permutierten Spaltenkopien, während LightGBM vergleichsweise stabil bleibt
-\cite[Anhang B.3.2, Abb.~9]{hollmann_tabpfn_2023}.
-Neuere Arbeiten berichten unter anderen Versuchsbedingungen dagegen
-eine vergleichsweise stabile Leistung bei zusätzlichen irrelevanten
-Merkmalen \cite{hollmann_accurate_2025,hu_noise_2026,zhao_alignment_2026}.
-Die Befunde unterscheiden sich jedoch hinsichtlich Modellversion,
-Konfiguration und Aufgabenstellung; auch vorhandene Ergebnisse zu
-TabPFN-3.5 betreffen ein anderes Untersuchungsdesign mit wiederholten
-Messungen bei Regression
-\cite[Abschnitt 3.2, Tabelle 16]{liu_repeated_2026}.
-Daran knüpft die geplante Arbeit als empirische Anschlussuntersuchung an:
-Sie untersucht die Leistungsänderung von TabPFN-3.5 und LightGBM bei
-schrittweiser Zugabe permutierter Merkmalskopien auf ausgewählten
-Klassifikationsdatensätzen.
+Der empirische Schwerpunkt liegt auf fehlenden Merkmalswerten.
+Unvollständige Eingaben können entweder durch die jeweilige
+Modellpipeline oder durch vorgeschaltete Imputation verarbeitet werden.
+Perez-Lebel et al.\ vergleichen diese Ansätze für Baumverfahren auf
+Gesundheitsdaten und zeigen, dass auch die Information darüber, welche
+Werte fehlen, für die Vorhersage relevant sein kann
+\cite{perez_benchmarking_2022}. TIME untersucht bereits TabPFNv2 als
+Encoder eines Bild-Tabellen-Modells bei fehlenden Eingaben und
+Median-Imputation \cite[Abschnitte 4.3--4.4]{luo_time_2025}.
+TabImpute bewertet dagegen primär die Rekonstruktion fehlender Werte,
+nicht die anschließende Klassifikationsleistung
+\cite[Abschnitt 4]{feitelberg_pipeline_2026}.
+Diese Zielgrößen sind zu unterscheiden. Die geplante Arbeit knüpft an
+etablierte Behandlungsvergleiche an und untersucht, wie sie den
+Leistungsvergleich von TabPFN-3.5 und LightGBM auf rein numerischen
+Klassifikationsdatensätzen beeinflussen. Sie beansprucht keine neue
+Imputationsmethode oder erstmalige Untersuchung fehlender Werte.
 
 \section{Zielsetzung und Forschungsfragen}
 
 Die Arbeit verbindet eine kritische Literatursynthese zu Methoden,
 Einsatzmöglichkeiten und Grenzen von TabPFN mit einem experimentellen
-Vergleich. Untersucht wird die Leistungsänderung von TabPFN-3.5 und LightGBM bei
-kontrollierter Zugabe permutierter Merkmalskopien untersucht.
+Vergleich bei kontrolliert erzeugten fehlenden Eingabewerten.
 Der Beitrag besteht in der kritischen Zusammenführung der Literaturbefunde
-und der Quantifizierung der Leistungsänderungen im eigenen Experiment.
-Dabei wird untersucht, ob und wie stark sich die beiden Modelle in
-ihrer Reaktion auf zusätzliche Merkmale unterscheiden.
+und einer reproduzierbaren empirischen Anschlussuntersuchung.
+Identische Datenaufteilungen und Missingness-Masken ermöglichen einen
+gepaarten Vergleich von Modell, Behandlung und Fehlrate. Im Mittelpunkt
+steht nicht nur der Leistungsverlust, sondern die Frage, ob die
+Datenbehandlung den Leistungsabstand oder die Rangfolge der Modelle
+verändert.
 
 \subsection*{Übergeordnete Forschungsfrage}
 
 \textbf{Welche Möglichkeiten und Grenzen von TabPFN für tabellarische
-Klassifikation ergeben sich aus ausgewählten aktuellen Arbeiten und aus
-einer eigenen Robustheitsuntersuchung von TabPFN-3.5 im Vergleich zu
-LightGBM?}
+Vorhersageaufgaben lassen sich aus der aktuellen Forschung und einer
+eigenen Untersuchung bei unvollständigen Eingaben ableiten?}
 
 \subsection*{FF1: Literaturanalyse}
 
 \textbf{Welche methodischen Ansätze und Einsatzmöglichkeiten von TabPFN
-beschreiben ausgewählte aktuelle Arbeiten, und welche Aussagen über
-Leistungsfähigkeit und Grenzen bei tabellarischer Klassifikation lassen
-ihre Evaluationen zu?}
+beschreiben ausgewählte aktuelle Arbeiten, und wie belastbar sind ihre
+Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?}
 
 \subsection*{FF2: Empirische Untersuchung}
 
-\textbf{Wie verändert sich die Klassifikationsleistung von TabPFN-3.5
-und LightGBM bei schrittweiser Zugabe zufällig permutierter Kopien
-vorhandener Merkmale, und wie konsistent sind die Veränderungen über
-mehrere Datensätze?}
+\textbf{Wie verändert die Behandlung fehlender Merkmalswerte den
+Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei steigenden
+Fehlraten über mehrere Datensätze?}
 
 Robustheit bezeichnet hier die Leistungsänderung unter dem definierten
 Eingriff, nicht Widerstandsfähigkeit gegen beliebige Datenfehler.
-Der Literaturteil ist breiter als diese Einzeluntersuchung; die
-Diskussion führt beide Teile zusammen. Frühere Modellversionen dienen
+Eine ergänzende Analyse untersucht Median-Imputation mit
+Missing-Indikatoren. Die Klassenlabels bleiben vollständig.
+Die Literaturanalyse ordnet die Möglichkeiten und Grenzen von TabPFN ein.
+Der Umgang mit fehlenden Merkmalswerten bildet den Übergang zur eigenen
+empirischen Untersuchung. Diese prüft, wie unterschiedliche Behandlungen
+den Vergleich mit LightGBM beeinflussen. Der Vergleich mit LightGBM
+beschränkt sich auf diesen empirischen Schwerpunkt; er umfasst nicht
+sämtliche Einsatzmöglichkeiten beider Modelle.
+Die Diskussion führt Literaturbefunde und eigene Ergebnisse zusammen.
+Frühere Modellversionen dienen
 der konzeptbezogenen Einordnung, nicht einer vollständigen Versionschronik.
 
 \section{Geplantes Vorgehen}
@@ -126,7 +133,8 @@ TabPFN-Originalarbeit, Nature-Arbeit und aktuelle Modellberichte
 \cite{muller_transformers_2024,hollmann_tabpfn_2023,
 hollmann_accurate_2025,grinsztajn_tabpfn-25_2026,jager_tabpfn-35_2026}.
 Suchbegriffe verbinden TabPFN mit Architektur, synthetischen Priors,
-In-Context Learning, Evaluation, Anwendungen und Robustheit.
+In-Context Learning, Evaluation und Anwendungen sowie mit
+Missing Values, Imputation, MCAR und nachgelagerter Vorhersage.
 
 Nach Titel- und Abstractscreening werden relevante Volltextpassagen
 einschließlich Methoden und Anhängen geprüft. Suchanfragen, Auswahl und
@@ -134,6 +142,14 @@ Ausschlüsse werden dokumentiert. Eine Konzeptmatrix vergleicht
 Architektur und Eingaberepräsentation, Vortraining und Inferenz,
 Einsatzmöglichkeiten sowie Daten, Baselines, Metriken und Grenzen der
 Evaluationen.
+Für fehlende Werte werden zusätzlich Mechanismus, Fehlrate,
+betroffene Datenpartitionen und Behandlung erfasst. Rekonstruktionsgüte
+und Vorhersageleistung sowie Entwicklerberichte und unabhängige
+Untersuchungen werden getrennt eingeordnet.
+Die berichteten Befunde werden hinsichtlich Modellversion, Daten,
+Vergleichsverfahren und Evaluationsdesign bewertet. Dabei wird zwischen
+nachgewiesenen Fähigkeiten und weitergehenden Schlussfolgerungen
+unterschieden.
 
 \subsection*{Datensatzkandidaten}
 
@@ -174,9 +190,14 @@ Beobachtungsstruktur und Machbarkeit.
 Bekannte zeitliche oder gruppierte Abhängigkeiten passen nicht zum
 geplanten zufälligen Splitversuch. Die lokale Prüfung zeigt identische
 Merkmalsvektoren insbesondere in Spambase, vereinzelt auch in Ionosphere
-und QSAR. Vor der endgültigen Auswahl wird ein dokumentierter Umgang
-mit diesen Wiederholungen festgelegt, damit identische Eingaben nicht
-ungeprüft auf Training und Test verteilt werden.
+und QSAR. Identische ursprüngliche Merkmalsvektoren werden ohne ID
+und Zielvariable vor Maskierung und datenabhängiger Vorverarbeitung
+zu Gruppen zusammengefasst. Jede Gruppe verbleibt vollständig in
+Training, Validierung oder Test; unterschiedliche Labels innerhalb
+einer Gruppe bleiben erhalten. Klassenanteile werden soweit möglich
+berücksichtigt und die erreichten Splitgrößen und Klassenverteilungen
+dokumentiert. Identisches X belegt dabei nicht zwingend dieselbe
+ursprüngliche Beobachtung.
 Weitergehende Beobachtungsabhängigkeiten sind noch nicht abschließend
 geklärt.
 
@@ -184,32 +205,61 @@ geklärt.
 
 Beide Modelle erhalten identische Trainings-,
 Validierungs- und Testaufteilungen. Datenabhängige Vorverarbeitung
-wird ausschließlich auf Trainingsdaten angepasst; leere und konstante
-Spalten werden entfernt, verbleibende fehlende Werte mit
-Trainingsmedianen ersetzt.
+wird ausschließlich auf Trainingsdaten angepasst. Leere und konstante
+Eingabespalten werden anhand des unmaskierten Trainingsanteils vor
+der Intervention entfernt.
 
-Die ursprünglichen Merkmale werden um permutierte Spaltenkopien im
-Umfang von 0\,\%, 50\,\%, 100\,\% und 200\,\% der ursprünglichen
-Merkmalszahl ergänzt; nicht-ganzzahlige Spalte5nzahlen werden aufgerundet.
-Zusatzmerkmale entstehen durch einzeln permutierte
-Spaltenkopien, getrennt innerhalb von Training, Validierung und Test.
-Das erhält ihre empirischen Randverteilungen, garantiert aber keine
-vollständige statistische Unabhängigkeit. Höhere Stufen enthalten die
-Zusatzmerkmale niedrigerer Stufen. Beide Modelle erhalten dieselben
-Konstruktionen und reproduzierbar gemischten Spaltenreihenfolgen.
-Das Design knüpft an Vorarbeiten an
-\cite{hollmann_tabpfn_2023,zhao_alignment_2026}, ist aber keine exakte
-Replikation: Zhao et al.\ permutieren ganze Spaltenblöcke gemeinsam,
-während hier jede Kopie separat permutiert wird.
+Ausgehend von vollständigen numerischen Eingaben werden Zellen mit
+Wahrscheinlichkeiten von 0\,\%, 10\,\%, 30\,\% und 50\,\% als fehlend
+maskiert. Missing Completely At Random (MCAR) bedeutet hier, dass
+die Maskierung unabhängig von Merkmalswerten und Ziel erfolgt.
+Training, Validierung und Test werden separat und unabhängig
+maskiert, jeweils mit derselben Wahrscheinlichkeit. Die realisierten
+Fehlanteile werden dokumentiert. Beide Modelle und alle Behandlungen
+verwenden innerhalb eines Durchlaufs dieselben Masken; die
+0\,\%-Bedingung bildet die vollständige Referenz.
+
+Verglichen werden drei Pipelines:
+\begin{enumerate}
+  \item Modellinterne Verarbeitung der NaN-Eingaben.
+  \item Median-Imputation aus beobachteten Trainingswerten,
+        angewandt auf alle drei Partitionen.
+  \item Ergänzend dieselbe Median-Imputation mit binären
+        Missing-Indikatoren für die ursprünglichen Eingabespalten.
+\end{enumerate}
+TabPFN-3.5 bewahrt intern einen Missing-Indikator und ersetzt Werte
+durch den Trainingsspaltenmittelwert
+\cite[Abschnitt 3.1, Abb.~8]{jager_tabpfn-35_2026}.
+LightGBM unterstützt NaN-Eingaben standardmäßig
+\cite{lightgbm_missing_docs_2026}.
+Externe Imputation verändert daher Ersatzwerte und verfügbare
+Missingness-Information. Der Versuch vergleicht vollständige
+Pipelines, nicht isoliert Mittelwert und Median; zusätzliche
+Indikatorspalten sind keine identische Nachbildung der internen
+Zellkodierung von TabPFN.
 
 TabPFN-3.5 wird mit dokumentierter Standardkonfiguration eingesetzt;
 LightGBM dient als konkrete Baum-Baseline \cite{ke2017lightgbm}.
 Eine begrenzte LightGBM-Abstimmung erfolgt nur auf Training und
-Validierung der unveränderten Bedingung. Die Konfiguration bleibt
-anschließend über die Stufen konstant, LightGBM wird jedoch je Stufe
-neu trainiert. TabPFN erhält jeweils den erweiterten Trainingskontext.
+Validierung der vollständigen Referenz. Die Konfiguration bleibt
+anschließend über Fehlraten und Behandlungen konstant; LightGBM wird
+für jede Bedingung neu trainiert. TabPFN erhält jeweils den entsprechend
+aufbereiteten Trainingskontext. Damit wird die Wirkung der
+Datenbehandlung bei festen Modellkonfigurationen untersucht,
+nicht die bestmögliche Leistung nach bedingungsspezifischem Tuning.
 
-Über mehrere Datenaufteilungen und Merkmalskonstruktionen werden
+Eine vorab festgelegte Sensitivitätsanalyse ergänzt den Hauptversuch:
+Bei 50\,\% Fehlrate wird LightGBM für interne Verarbeitung und
+Median-Imputation jeweils erneut auf Training und Validierung
+abgestimmt. Suchraum, Optimierungsmetrik und Versuchszahlbudget
+entsprechen der Abstimmung der vollständigen Referenz; Splits und
+Masken bleiben für den Vergleich mit der festen Konfiguration gleich.
+Testdaten werden weder zur Abstimmung noch zur Auswahl von
+Konfigurationen verwendet. Die Analyse prüft, ob erneutes Tuning die
+Schlussfolgerungen bei der höchsten untersuchten Fehlrate verändert;
+sie ersetzt kein bedingungsspezifisches Tuning aller Pipelines.
+
+Über mehrere Datenaufteilungen und Maskierungsdurchläufe werden
 Balanced Accuracy als primäre Metrik und ergänzend Log-Loss ausgewertet.
 Im Mittelpunkt stehen gepaarte Änderungen gegenüber der jeweiligen
 Ausgangsbedingung, Modellunterschiede sowie deren Richtung und Größe
@@ -220,7 +270,9 @@ Log-Loss wird nicht als isolierter Kalibrierungsnachweis interpretiert.
 \section{Umfang und weitere Planung}
 
 Der eigene Versuch konzentriert sich auf binäre Klassifikation und
-den beschriebenen Merkmalseingriff. Nicht vorgesehen sind eigenes
+den beschriebenen MCAR-Eingriff. Aussagen über MAR, MNAR oder einen
+Wechsel des Fehlmechanismus zwischen Training und Einsatz sind damit
+nicht abgesichert. Nicht vorgesehen sind eigenes
 Vortraining, XAI, ein umfassender Modellbenchmark oder ein zusätzlicher
 Laufzeitvergleich. Die Ergebnisse erlauben keine allgemeinen Aussagen
 über alle Baumverfahren, keine kausale Erklärung interner Mechanismen
@@ -229,7 +281,14 @@ Fortschritts gegenüber früherem TabPFN.
 
 Die endgültige Datensatzauswahl, Splitanteile, Wiederholungszahlen und
 das Tuningbudget werden vor dem Hauptversuch festgelegt. Die
-experimentellen Ergebnisse werden anschließend ausgewertet und im
+Nutzungsbedingungen, der Modellzugang und die Ausführbarkeit werden
+in einem technischen Pilot geprüft. Für vollständig maskierte
+Trainingsspalten wird vorab eine explizite Regel definiert.
+Vor dem Hauptversuch werden Paketversionen, der konkrete
+TabPFN-3.5-Checkpoint einschließlich Prüfsumme, Modellkonfigurationen
+und Seeds dokumentiert und fixiert. Während des Hauptversuchs
+erfolgen keine unkontrollierten Software- oder Checkpointupdates.
+Die experimentellen Ergebnisse werden anschließend ausgewertet und im
 Zusammenhang mit den Literaturbefunden diskutiert.
 
 \section{Vorläufige Gliederung}
@@ -238,14 +297,18 @@ Zusammenhang mit den Literaturbefunden diskutiert.
   \item \textbf{Einleitung:} KI/LLMs als Kontext, Motivation,
         Zielsetzung, Forschungsfragen und Abgrenzung.
   \item \textbf{Grundlagen:} Tabellarische Klassifikation,
-        Foundation Models, In-Context Learning, PFNs, TabPFN und LightGBM.
+        neuronale Netze und Transformer, Foundation Models und
+        Nutzungsbegriffe, In-Context Learning, PFNs, TabPFN,
+        LightGBM und fehlende Werte.
   \item \textbf{Kritische Literaturanalyse zu TabPFN:} Recherche,
         methodische Ansätze, Einsatzmöglichkeiten, Evaluationsbefunde
         und Einordnung des eigenen Experiments.
   \item \textbf{Methodik der empirischen Untersuchung:} Datensätze,
-        Vorverarbeitung, Merkmalsintervention, Modelle und Auswertung.
+        MCAR-Maskierung, Behandlungspipelines, Modelle und Auswertung.
   \item \textbf{Ergebnisse:} Ausgangsleistung, Veränderungskurven
-        und Konsistenz der Modellunterschiede über Datensätze.
+        je Behandlung, Indikator-Zusatzanalyse und
+        Tuning-Sensitivität sowie Konsistenz der Modellunterschiede
+        über Datensätze.
   \item \textbf{Diskussion:} Beantwortung der Forschungsfragen,
         gemeinsame Einordnung, praktische Bedeutung und Grenzen.
   \item \textbf{Fazit und Ausblick.}

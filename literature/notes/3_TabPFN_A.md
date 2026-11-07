@@ -4,7 +4,7 @@
 
 **Noah Hollmann, Samuel Müller, Katharina Eggensperger und Frank Hutter (2023).** *TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second.* ICLR 2023. Noah Hollmann und Samuel Müller sind als gleich beitragende Autoren gekennzeichnet. Die PDF enthält die Konferenzfassung sowie Anhang; die erste Seite zeigt zusätzlich arXiv:2207.01848v6 (16. September 2023).
 
-- **PDF:** `literature/3_TabPFN_A.pdf`
+- **PDF:** `literature/02_TabPFN_Kernmodelle/3_TabPFN_A.pdf`
 - **Kernaussage:** Ein vortrainierter Transformer approximiert Bayes’sche Vorhersagen unter einem synthetischen Prior für Tabellendaten. Statt pro neuem Datensatz ein Modell zu trainieren und hyperzuoptimieren, verarbeitet TabPFN Trainingsbeispiele und Testpunkte gemeinsam in einem Forward-Pass.
 - **Fundstellenformat:** Das Paper druckt keine Zeilennummern. Die Zeilenangaben hier zählen daher die aus der jeweiligen PDF-Seite extrahierten Textzeilen und sind Suchhilfen. Tabellen- und Abbildungszeilen können vom visuellen Layout abweichen; zur Kontrolle zuerst die angegebene PDF-Seite und den genannten Abschnitt aufsuchen.
 - **Seitenangabe:** „PDF S.“ meint die physische PDF-Seite, insgesamt 37 Seiten. Haupttext: PDF S. 1–10; Anhang beginnt auf PDF S. 16.

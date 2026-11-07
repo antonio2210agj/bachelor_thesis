@@ -4,7 +4,7 @@
 
 **Samuel Müller, Noah Hollmann, Sebastian Pineda, Josif Grabocka und Frank Hutter (2022).** *Transformers Can Do Bayesian Inference.* International Conference on Learning Representations (ICLR 2022). Die PDF-Datei enthält die Konferenzfassung sowie Anhänge; auf der ersten PDF-Seite steht zusätzlich die arXiv-Kennung arXiv:2112.10510v7 (13. Aug. 2024).
 
-- **PDF:** `literature/2_Bayesian_Inference.pdf`
+- **PDF:** `literature/01_Grundlagen_KI_PFN/2_Bayesian_Inference.pdf`
 - **Hauptbeitrag:** Prior-Fitted Networks (PFNs), eine Methode, die mit künstlich erzeugten Aufgaben aus einem spezifizierten Prior trainiert wird und anschließend die posterior-prädiktive Verteilung (PPD) mit einem einzigen Transformer-Forward-Pass approximiert.
 - **Fundstellenformat:** Das Paper druckt keine Zeilennummern. Die Zeilenangaben dieser Notiz zählen den extrahierten PDF-Text der jeweiligen PDF-Seite und dienen als Suchhilfe; Abbildungen und Tabellen können die Extraktion unterbrechen. Zur Kontrolle zuerst die Seite und den Abschnitt aufrufen.
 - **Seitenangabe:** „PDF S.“ bezeichnet die PDF-Seite (insgesamt 24 Seiten). Die ersten zehn Seiten sind der Haupttext; ab PDF S. 15 folgen Anhänge.

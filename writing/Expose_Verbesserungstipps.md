@@ -1,4 +1,76 @@
-## Aktueller Bearbeitungsstand: 2. November 2026
+## Aktueller Bearbeitungsstand: 6. November 2026
+
+### Beschlossener Missing-Data-Schwerpunkt
+
+Nach dem [Literaturabschlussabgleich](../literature/notes/Missing_Data_Abschlussabgleich.md)
+wurde der Zusatzmerkmalversuch durch einen Missing-Data-Pipelinevergleich
+ersetzt. [Exposé](./Expose.tex) und [Gliederung](./Gliederung.tex) wurden
+mit identischem Titel und identischen Forschungsfragen darauf ausgerichtet.
+Die bisherigen Zusatzmerkmal-Planungsnotizen weiter unten sind historisch.
+
+**Vom Nutzer festgelegt:**
+
+Nach Abgleich mit den ursprünglichen Fragen wurde die breite Klammer
+wiederhergestellt:
+
+- **Übergeordnet:** „Welche Möglichkeiten und Grenzen von TabPFN für
+  tabellarische Vorhersageaufgaben lassen sich aus der aktuellen Forschung
+  und einer eigenen Untersuchung bei unvollständigen Eingaben ableiten?“
+- **FF1:** „Welche methodischen Ansätze und Einsatzmöglichkeiten von
+  TabPFN beschreiben ausgewählte aktuelle Arbeiten, und wie belastbar
+  sind ihre Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?“
+- **FF2:** „Wie verändert die Behandlung fehlender Merkmalswerte den
+  Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei steigenden
+  Fehlraten über mehrere Datensätze?“
+
+Die Versuchsdetails bleiben in der Methodik. Der breitere Literaturfokus
+bleibt erhalten; die Synthese zur Behandlung fehlender Werte bildet die
+Brücke zu FF2. Der LightGBM-Vergleich betrifft nur den empirischen
+Schwerpunkt, nicht alle Einsatzmöglichkeiten beider Modelle. Die Bewertung von
+Modellversionen, Daten, Vergleichsverfahren und Evaluationsdesigns
+ist im Literaturvorgehen explizit beschrieben.
+
+- MCAR-Maskierung in Training, Validierung und Test, separat und unabhängig,
+  jeweils mit derselben Wahrscheinlichkeit;
+- 0 %, 10 %, 30 % und 50 %; tatsächliche Fehlanteile dokumentieren;
+- interne Verarbeitung versus Trainingsmedian-Imputation als Hauptvergleich;
+- Median plus Missing-Indikatoren als kleine ergänzende Analyse;
+- Klassenlabels bleiben vollständig; gleiche Splits und Masken für alle Pipelines.
+
+Der Beitrag liegt in der kritischen Synthese und im kontrollierten Vergleich
+von Modell, Behandlung und Fehlrate, nicht in einer neuen Imputationsmethode.
+Interne TabPFN-Verarbeitung ist nicht „ohne Imputation“: Sie bewahrt
+Missing-Indikatoren und ersetzt Werte durch Trainingsmittelwerte.
+Der Versuch ist ein Pipelinevergleich, keine isolierte Median-Ablation.
+Die LightGBM-Konfiguration wird auf der vollständigen Referenz abgestimmt
+und für die folgenden Bedingungen eingefroren.
+
+**Zusätzlich vom Nutzer beschlossen:** Identische ursprüngliche Eingaben
+ohne ID/Ziel werden vor Maskierung und datenabhängiger Vorverarbeitung
+als Gruppen gebildet und nicht über Training, Validierung und Test
+verteilt. Widersprüchliche Labels bleiben erhalten; Klassenanteile und
+erreichte Splitgrößen werden dokumentiert.
+
+Der feste Hauptversuch wird um eine vorab definierte Tuning-Sensitivität
+bei 50 % Fehlrate ergänzt: LightGBM für interne Verarbeitung und Median
+separat neu abstimmen, mit gleichem Suchraum, gleicher Optimierungsmetrik
+und gleichem Versuchszahlbudget wie auf der vollständigen Referenz.
+Gleiche Splits und Masken für feste und neu abgestimmte Konfiguration;
+keine Auswahl anhand der Testergebnisse. Kein Nachweis optimaler
+Konfigurationen für alle Bedingungen.
+
+Paketversionen, konkreten Checkpoint samt Prüfsumme, Konfigurationen und
+Seeds vor dem Hauptversuch fixieren; keine unkontrollierten Updates.
+Dies ist eine beschlossene Absicherung, noch keine ausgeführte
+technische Prüfung.
+
+**Weiterhin offen vor dem Hauptversuch:** endgültige Datenwahl,
+Splitanteile, Wiederholungen, Tuningbudget,
+Regel für vollständig maskierte Trainingsspalten sowie Modellzugang,
+Nutzungsbedingungen und technischer Pilot. Keine Modelle ausgeführt.
+
+Die nachfolgenden Datenaudits bleiben gültig; ältere Statustabellen
+beziehen sich teilweise auf die frühere Zusatzmerkmalfassung.
 
 ### Vertiefte Dateneignungsprüfung
 
@@ -134,11 +206,11 @@ Literaturabdeckung.
 
 | Primärquelle / Fundstelle | Modell und Aufgabe | Eingriff und berichteter Befund | Abgrenzung zur BA |
 |---|---|---|---|
-| [Ursprüngliches TabPFN](../literature/3_TabPFN_A.pdf), Anhang B.3.2, Abb. 9 | Damaliges TabPFN und u. a. LightGBM; eingeschränkte Auswahl binärer Klassifikationsaufgaben | Permutierte Spaltenkopien; ROC-AUC sinkt bei TabPFN, LightGBM bleibt relativ stabil | Historischer Anschluss, kein identischer Versionsvergleich im geplanten BA-Experiment |
-| [Nature / TabPFNv2](../literature/13_Accurate%20predictions%20on%20small%20data%20with%20a%20tabular%20foundation%20model.pdf), Abb. 5a und zugehöriger Text | TabPFNv2 und Baselines; Klassifikation/Regression | Durchmischte Zusatzmerkmale; aggregierte normalisierte ROC-AUC/negative RMSE; berichtet vergleichsweise robuste Leistung | Reale Daten und Zusatzmerkmale bereits untersucht; kein Erstmaligkeitsanspruch |
-| [Hu und Ghelichi](../literature/8_Noise%20Immunity.pdf), Abschnitt 3.2.1, Anhang A | Spezieller TabPFNv2-Checkpoint; synthetische binäre Klassifikation | 2 informative Merkmale, insgesamt 4 bis 512 Spalten durch Zufallsmerkmale; stabile ROC-AUC; 1 Merkmal pro Gruppe, 1 Schätzer, kein Feature-Shuffling | Synthetische Daten und spezielle Konfiguration, nicht ungeprüft auf Standardensemble oder v3.5 übertragen |
-| [Zhao et al.](../literature/.pdf), Abschnitt 2, Anhang C.1 | Unter anderem TabPFNv2/v3; 42 reale OpenML-Regressionsdatensätze | Verhältnis 0 bis 7; ganze Kopien gemeinsam nach Zeilen permutiert, getrennt für Kontext/Query; 5 Konstruktionen bei festem Split; u. a. geringe R²-Verluste für TabPFN | Engste methodische Referenz; BA mit Klassifikation/v3.5/LightGBM und einzeln permutierten Kopien. Das lokal namenlose PDF wurde über Titel und Autoren identifiziert. |
-| [Liu et al.](../literature/10_Repeated%20Measurement.pdf), Abschnitt 3.2, Tabelle 16 | Unter anderem TabPFN-v3.5; Regression mit wiederholten Messungen | Zusätzliche unabhängige Koordinaten verstärken bei v3.5 den Wiederholungsmessungs-Nachteil in diesem Setup nicht entsprechend | Verhältnis Expanded/Single, kein direkter Nachweis allgemeiner Robustheit gegenüber Zusatzmerkmalen |
+| [Ursprüngliches TabPFN](../literature/02_TabPFN_Kernmodelle/3_TabPFN_A.pdf), Anhang B.3.2, Abb. 9 | Damaliges TabPFN und u. a. LightGBM; eingeschränkte Auswahl binärer Klassifikationsaufgaben | Permutierte Spaltenkopien; ROC-AUC sinkt bei TabPFN, LightGBM bleibt relativ stabil | Historischer Anschluss, kein identischer Versionsvergleich im geplanten BA-Experiment |
+| [Nature / TabPFNv2](../literature/02_TabPFN_Kernmodelle/13_Accurate%20predictions%20on%20small%20data%20with%20a%20tabular%20foundation%20model.pdf), Abb. 5a und zugehöriger Text | TabPFNv2 und Baselines; Klassifikation/Regression | Durchmischte Zusatzmerkmale; aggregierte normalisierte ROC-AUC/negative RMSE; berichtet vergleichsweise robuste Leistung | Reale Daten und Zusatzmerkmale bereits untersucht; kein Erstmaligkeitsanspruch |
+| [Hu und Ghelichi](../literature/04_Merkmalszahl_und_Selektion/8_Noise%20Immunity.pdf), Abschnitt 3.2.1, Anhang A | Spezieller TabPFNv2-Checkpoint; synthetische binäre Klassifikation | 2 informative Merkmale, insgesamt 4 bis 512 Spalten durch Zufallsmerkmale; stabile ROC-AUC; 1 Merkmal pro Gruppe, 1 Schätzer, kein Feature-Shuffling | Synthetische Daten und spezielle Konfiguration, nicht ungeprüft auf Standardensemble oder v3.5 übertragen |
+| [Zhao et al.](../literature/04_Merkmalszahl_und_Selektion/Architecture_Alignment_with_Sparse_Priors_2609.36883v1.pdf), Abschnitt 2, Anhang C.1 | Unter anderem TabPFNv2/v3; 42 reale OpenML-Regressionsdatensätze | Verhältnis 0 bis 7; ganze Kopien gemeinsam nach Zeilen permutiert, getrennt für Kontext/Query; 5 Konstruktionen bei festem Split; u. a. geringe R²-Verluste für TabPFN | Engste methodische Referenz; BA mit Klassifikation/v3.5/LightGBM und einzeln permutierten Kopien. Das lokal namenlose PDF wurde über Titel und Autoren identifiziert. |
+| [Liu et al.](../literature/05_Weitere_Robustheit/10_Repeated%20Measurement.pdf), Abschnitt 3.2, Tabelle 16 | Unter anderem TabPFN-v3.5; Regression mit wiederholten Messungen | Zusätzliche unabhängige Koordinaten verstärken bei v3.5 den Wiederholungsmessungs-Nachteil in diesem Setup nicht entsprechend | Verhältnis Expanded/Single, kein direkter Nachweis allgemeiner Robustheit gegenüber Zusatzmerkmalen |
 
 ### Priorität bis zum Betreuergespräch
 
@@ -272,7 +344,7 @@ Neue Formulierung:
 
 **Was wurde geändert und warum?** Der Satz ordnet den zuvor genannten Robustheitsbefund in die Studie ein, ohne den ersten Satz erneut mit „Grinsztajn et al.“ zu beginnen. Die Zahl 45 bezeichnet den Benchmarkumfang; die Formulierung behauptet nicht, dass das Robustheitsexperiment auf sämtlichen 45 Datensätzen durchgeführt wurde. Der anschließende Satz über das Hinzufügen irrelevanter Merkmale wurde entfernt, weil der neue Einstieg diesen Befund bereits präziser beschreibt.
 
-**Welches Problem ist damit gelöst?** Der Absatz wiederholt den Robustheitsbefund nicht mehr und enthält nicht mehr die zu breite Formulierung „die untersuchten neuronalen Modelle“. Abschnitt 5.3 des [Benchmark-Papers](../literature/1_Benchmark.pdf) unterscheidet insbesondere MLP-nahe Modelle von FT-Transformern und Baumverfahren; diese Reichweite bleibt im ersten Satz erhalten. Der nächste Satz begrenzt weiterhin die Übertragbarkeit des Befunds.
+**Welches Problem ist damit gelöst?** Der Absatz wiederholt den Robustheitsbefund nicht mehr und enthält nicht mehr die zu breite Formulierung „die untersuchten neuronalen Modelle“. Abschnitt 5.3 des [Benchmark-Papers](../literature/03_Benchmarks_Baumverfahren/1_Benchmark.pdf) unterscheidet insbesondere MLP-nahe Modelle von FT-Transformern und Baumverfahren; diese Reichweite bleibt im ersten Satz erhalten. Der nächste Satz begrenzt weiterhin die Übertragbarkeit des Befunds.
 
 **„Der Befund gilt für die getesteten Modelle und Versuchsbedingungen …“**
 
@@ -342,7 +414,7 @@ Neue Formulierung:
 >
 > Aus diesem Benchmarkvergleich allein lässt sich jedoch nicht ableiten, welchen Anteil die Prioränderung an der berichteten Verbesserung hat.
 
-**Belege:** Abschnitt 3.3 des [TabPFN-3.5-Berichts](../literature/5_TabPFN_3.5.pdf) für die Prioränderung; Abschnitt 2.2 für den Vergleich in der hochdimensionalen Teilgruppe von BeyondArena. Beide Stellen wurden im Original-PDF geprüft.
+**Belege:** Abschnitt 3.3 des [TabPFN-3.5-Berichts](../literature/02_TabPFN_Kernmodelle/5_TabPFN_3.5.pdf) für die Prioränderung; Abschnitt 2.2 für den Vergleich in der hochdimensionalen Teilgruppe von BeyondArena. Beide Stellen wurden im Original-PDF geprüft.
 
 **Was wurde geändert und warum?** Die zuvor zusammengefassten Aussagen wurden in eine beschriebene methodische Änderung und ein berichtetes Evaluationsergebnis aufgeteilt. Die Zielsetzung „realistischere Trainingsaufgaben“ ist als Absicht der Entwickler formuliert, nicht als unabhängig nachgewiesene Eigenschaft. Das Evaluationsergebnis benennt Benchmark, Teilgruppe und Vergleichsmodell.
 
@@ -431,7 +503,7 @@ Die genannten Suchbegriffe sind brauchbar. Es fehlen noch:
 - eine dokumentierte Unterscheidung zwischen **hinzugefügtem Feature-Rauschen**, Messrauschen und Label-Rauschen;
 - PFN-Grundlagenliteratur für den theoretischen Teil.
 
-Du hast das [PFN-Grundlagenpaper](../literature/2_Bayesian_Inference.pdf) bereits. Es sollte im Literaturvorgehen berücksichtigt werden, wenn Bayesianische Priors und PFNs in der Gliederung stehen.
+Du hast das [PFN-Grundlagenpaper](../literature/01_Grundlagen_KI_PFN/2_Bayesian_Inference.pdf) bereits. Es sollte im Literaturvorgehen berücksichtigt werden, wenn Bayesianische Priors und PFNs in der Gliederung stehen.
 
 ### F. Experimenteller Vergleich
 

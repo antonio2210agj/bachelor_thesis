@@ -4,7 +4,7 @@
 
 **Prior Labs Team.** *TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models.* Technischer Report. Das Deckblatt datiert den Report auf **6. November 2025**; in der PDF-Kopfzeile steht **arXiv:2511.08667v2 vom 5. Februar 2026**. Die Quelle nennt „Prior Labs Team“ als Autor und verweist für die vollständige Beitragsliste auf den Anhang.
 
-- **PDF:** `literature/4_TabPFN_2.5.pdf`
+- **PDF:** `literature/02_TabPFN_Kernmodelle/4_TabPFN_2.5.pdf`
 - **Thema:** nächste TabPFN-Generation für größere tabellarische Aufgaben; Ausbau der Modellarchitektur, neue bzw. breitere synthetische Priors, Skalierung, Distillation zu MLP-/Baum-Ensembles und Evaluation auf öffentlichen sowie internen Benchmarks.
 - **Fundstellenformat:** Das Dokument druckt keine Zeilennummern. Die Zeilenangaben in dieser Notiz zählen den extrahierten PDF-Text und sind Suchhilfen. Für Tabellen und Abbildungen zusätzlich Titel und Seite beachten, weil Extraktion und visuelle Anordnung auseinanderfallen können.
 - **Seitenzählung:** „PDF S.“ bezeichnet die physische PDF-Seite (35 Seiten). Der Haupttext liegt auf S. 1–11; der Anhang beginnt danach.
