@@ -20,4 +20,4 @@ y = df[target_col]
 print(f"Datensatz erfolgreich geladen!")
 print(f"Instanzen (Zeilen): {X.shape[0]}")
 print(f"Features (Spalten): {X.shape[1]}")
-print(f"Klassenverteilung:\n{y.value_counts()}")
+print(f"Klassenverteilung:\n{y.value_counts()}") #ethsiche fragen

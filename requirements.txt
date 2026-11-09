@@ -2,3 +2,5 @@ numpy>=2.5,<3
 pandas>=3.0,<4
 scipy>=1.18,<2
 scikit-learn>=1.9,<2
+tabpfn>=9.2,<10
+lightgbm>=4.7,<5

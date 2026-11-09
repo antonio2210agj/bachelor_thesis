@@ -17,7 +17,7 @@
 \title{Exposé zur Bachelorarbeit\\[0.5em]
 \large TabPFN bei unvollständigen tabellarischen Daten:\\
 Kritische Literaturanalyse und experimenteller Vergleich\\
-von Missing-Data-Behandlungen mit LightGBM}
+mit LightGBM unter verschiedenen Missing-Data-Behandlungen}
 \author{Marco Garcia Jung}
 \date{}
 \begin{document}
@@ -69,8 +69,19 @@ Median-Imputation \cite[Abschnitte 4.3--4.4]{luo_time_2025}.
 TabImpute bewertet dagegen primär die Rekonstruktion fehlender Werte,
 nicht die anschließende Klassifikationsleistung
 \cite[Abschnitt 4]{feitelberg_pipeline_2026}.
-Diese Zielgrößen sind zu unterscheiden. Die geplante Arbeit knüpft an
-etablierte Behandlungsvergleiche an und untersucht, wie sie den
+Diese Zielgrößen sind zu unterscheiden.
+Die nächstliegende Vorarbeit untersucht TabPFNv2 unter kontrolliertem
+MCAR mit interner Verarbeitung, Median-Imputation und
+Missing-Indikatoren; die dortigen Baselines erhalten jedoch je genau
+eine Behandlung ohne Hyperparameterabstimmung, LightGBM fehlt, und der
+Abstand zwischen TabPFN und der Baum-Baseline verändert sich sichtbar
+mit der Behandlung \cite[Tabelle II]{zaimoglu_tabpfn_2026}.
+Tran und Byeon kombinieren LightGBM als Imputer mit TabPFN als
+Klassifikator auf einem medizinischen Datensatz, vergleichen aber keine
+Behandlungen über Modelle hinweg \cite{tran_predicting_2024}.
+Die geplante Arbeit knüpft an
+etablierte Behandlungsvergleiche an und untersucht in einem vollständig
+gekreuzten, gepaarten Design, wie die Behandlungen den
 Leistungsvergleich von TabPFN-3.5 und LightGBM auf rein numerischen
 Klassifikationsdatensätzen beeinflussen. Sie beansprucht keine neue
 Imputationsmethode oder erstmalige Untersuchung fehlender Werte.
@@ -82,6 +93,10 @@ Einsatzmöglichkeiten und Grenzen von TabPFN mit einem experimentellen
 Vergleich bei kontrolliert erzeugten fehlenden Eingabewerten.
 Der Beitrag besteht in der kritischen Zusammenführung der Literaturbefunde
 und einer reproduzierbaren empirischen Anschlussuntersuchung.
+Anders als in der nächstliegenden Vorarbeit
+\cite{zaimoglu_tabpfn_2026} erhalten beide Modelle sämtliche
+Behandlungen, die LightGBM-Baseline wird auf der vollständigen Referenz
+abgestimmt, und alle drei Datenpartitionen werden maskiert.
 Identische Datenaufteilungen und Missingness-Masken ermöglichen einen
 gepaarten Vergleich von Modell, Behandlung und Fehlrate. Im Mittelpunkt
 steht nicht nur der Leistungsverlust, sondern die Frage, ob die
@@ -103,8 +118,8 @@ Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?}
 \subsection*{FF2: Empirische Untersuchung}
 
 \textbf{Wie verändert die Behandlung fehlender Merkmalswerte den
-Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei steigenden
-Fehlraten über mehrere Datensätze?}
+gepaarten Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei
+steigenden Fehlraten über mehrere Datensätze?}
 
 Robustheit bezeichnet hier die Leistungsänderung unter dem definierten
 Eingriff, nicht Widerstandsfähigkeit gegen beliebige Datenfehler.
@@ -280,13 +295,13 @@ und ohne identischen Versionsvergleich keinen Nachweis eines
 Fortschritts gegenüber früherem TabPFN.
 
 Die endgültige Datensatzauswahl, Splitanteile, Wiederholungszahlen und
-das Tuningbudget werden vor dem Hauptversuch festgelegt. Die
-Nutzungsbedingungen, der Modellzugang und die Ausführbarkeit werden
-in einem technischen Pilot geprüft. Für vollständig maskierte
+das Tuningbudget werden vor dem Hauptversuch festgelegt. Die Nutzungsbedingungen, der Modellzugang und die Ausführbarkeit
+wurden in einem technischen Pilot auf einem Datensatz erfolgreich
+geprüft; der TabPFN-3.5-Checkpoint liegt lokal vor und ist mit
+Prüfsumme dokumentiert. Für vollständig maskierte
 Trainingsspalten wird vorab eine explizite Regel definiert.
-Vor dem Hauptversuch werden Paketversionen, der konkrete
-TabPFN-3.5-Checkpoint einschließlich Prüfsumme, Modellkonfigurationen
-und Seeds dokumentiert und fixiert. Während des Hauptversuchs
+Vor dem Hauptversuch werden Paketversionen,
+Modellkonfigurationen und Seeds dokumentiert und fixiert. Während des Hauptversuchs
 erfolgen keine unkontrollierten Software- oder Checkpointupdates.
 Die experimentellen Ergebnisse werden anschließend ausgewertet und im
 Zusammenhang mit den Literaturbefunden diskutiert.

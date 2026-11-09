@@ -23,7 +23,7 @@
 
 \textbf{TabPFN bei unvollständigen tabellarischen Daten:
 Kritische Literaturanalyse und experimenteller Vergleich
-von Missing-Data-Behandlungen mit LightGBM}
+mit LightGBM unter verschiedenen Missing-Data-Behandlungen}
 
 \section*{Forschungsfragen}
 
@@ -41,8 +41,8 @@ Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?
 \medskip
 \noindent\textbf{FF2 -- empirische Untersuchung:}
 Wie verändert die Behandlung fehlender Merkmalswerte den
-Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei steigenden
-Fehlraten über mehrere Datensätze?
+gepaarten Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei
+steigenden Fehlraten über mehrere Datensätze?
 
 \medskip
 Literaturanalyse und Experiment bilden zwei verbundene Leistungen.
@@ -51,6 +51,10 @@ zu ihrer Behandlung bildet die Brücke zum praktischen Schwerpunkt.
 Der LightGBM-Vergleich beschränkt sich auf diesen Schwerpunkt.
 Die Arbeit beansprucht keine
 neue Methode oder erstmalige Untersuchung fehlender Werte.
+Die nächstliegende Vorarbeit (Zaimoğlu 2026, TabPFNv2 unter MCAR)
+kreuzt die Behandlungen nicht über die ungetunten Baselines und
+enthält kein LightGBM; die Arbeit schließt diese Lücke durch ein
+vollständig gekreuztes, gepaartes Design mit abgestimmter Baseline.
 Frühere Modellversionen dienen dem konzeptbezogenen Vergleich,
 nicht einer eigenen Versionsgeschichte.
 Der Versuch verwendet MCAR-Fehlraten von 0, 10, 30 und 50 Prozent
