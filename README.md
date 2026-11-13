@@ -10,6 +10,8 @@ auf den Leistungsvergleich zwischen TabPFN-3.5 und LightGBM.
 - `literature/`: Literatur-PDFs und Literaturnotizen mit Quellenstellen in `notes/`.
 - `writing/`: Gliederung, LaTeX-Quellen, Bibliografie und kompilierte PDFs.
 - `experiments/`: Python-Experimente und der aktuell verwendete Datensatz.
+- `experiments/Pilotprotokoll.md`: Protokoll des technischen
+  TabPFN-3.5-/LightGBM-Piloten; kein Ergebnis des Hauptversuchs.
 
 Die PDFs in `literature/` sind thematisch abgelegt:
 
@@ -48,8 +50,21 @@ py -3.12 -m venv .venv
 
 Die Befehle für Experimente werden aus dem Projekt-Hauptordner ausgeführt.
 In VS Code `.venv\Scripts\python.exe` als Python-Interpreter auswählen.
-Die Python-Abhängigkeiten decken den aktuellen Datenlader ab; TabPFN ist noch
-nicht Teil der Implementierung.
+Die Abhängigkeiten umfassen den Datenlader sowie TabPFN und LightGBM für den
+technischen Pilot. Vor dem ersten TabPFN-Lauf müssen die geltenden
+Nutzungsbedingungen akzeptiert und der erforderliche Modellzugang eingerichtet
+sein. Der Pilot kann aus dem Projekt-Hauptordner mit folgendem Befehl gestartet
+werden:
+
+```powershell
+.\.venv\Scripts\python.exe experiments\pilot_tabpfn_wdbc.py
+```
+
+Das Pilotprotokoll dokumentiert die getestete lokale Umgebung und den
+Checkpoint. `requirements.txt` enthält derzeit Versionsbereiche, keine
+vollständige Umgebungs- oder Checkpoint-Sperre; für den Hauptversuch müssen
+die tatsächlich verwendeten Paketversionen und die geladene Checkpointdatei
+zusätzlich festgehalten werden.
 
 ## Zwischen Desktop und Laptop wechseln
 

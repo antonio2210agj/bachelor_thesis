@@ -1,5 +1,11 @@
 # Evaluation: Exposé, Titel & Forschungsfragen
 
+> **Aktueller Stand:** Die Bewertung unten dokumentiert die erste Einschätzung
+> vom 8. November und wurde durch die kritische Neubewertung vom 9. November
+> ersetzt. Insbesondere die damalige Notenprognose und die Beschreibung des
+> Beitrags als „exzellent“ gelten nicht als aktuelle Schlussfolgerungen.
+> Siehe [Expose_Evaluation_2026-11-09_Neubewertung.md](./Expose_Evaluation_2026-11-09_Neubewertung.md).
+
 Stand: 8. November 2026. **Aktualisiert am 9. November 2026** nach
 Volltextprüfung der beiden neuen Quellen — Details im Folgedokument
 [Expose_Evaluation_2026-11-09_Volltextabgleich.md](./Expose_Evaluation_2026-11-09_Volltextabgleich.md).

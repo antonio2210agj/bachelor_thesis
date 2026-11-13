@@ -21,88 +21,106 @@
 
 \section*{Arbeitstitel}
 
-\textbf{TabPFN bei unvollständigen tabellarischen Daten:
-Kritische Literaturanalyse und experimenteller Vergleich
-mit LightGBM unter verschiedenen Missing-Data-Behandlungen}
+\textbf{Tabular Foundation Models bei fehlenden Merkmalswerten:
+Ein literaturgestützter empirischer Vergleich
+mit Gradient Boosting unter MCAR-Bedingungen}
 
 \section*{Forschungsfragen}
 
 \textbf{Übergeordnete Forschungsfrage:}
-Welche Möglichkeiten und Grenzen von TabPFN für tabellarische
-Vorhersageaufgaben lassen sich aus der aktuellen Forschung und einer
-eigenen Untersuchung bei unvollständigen Eingaben ableiten?
+Wie beeinflussen fehlende Merkmalswerte den Leistungsvergleich
+zwischen Tabular Foundation Models und Gradient Boosting in der
+tabellarischen Klassifikation?
+
+Leistungsvergleich bezeichnet hier den Unterschied der
+Klassifikationsleistung beider Modellansätze und dessen Veränderung
+durch fehlende Merkmalswerte und ihre Behandlung. Kosten, Laufzeit und
+eine allgemeine Praxistauglichkeit werden nicht bewertet.
 
 \medskip
-\noindent\textbf{FF1 -- Literaturanalyse:}
-Welche methodischen Ansätze und Einsatzmöglichkeiten von TabPFN
-beschreiben ausgewählte aktuelle Arbeiten, und wie belastbar sind ihre
-Aussagen zur Leistungsfähigkeit und zu den Grenzen des Modells?
+\noindent\textbf{FF1 -- literaturgestützte Herleitung:}
+Welche Befunde liefert die aktuelle Literatur zur Klassifikation mit
+fehlenden Merkmalswerten bei Tabular Foundation Models und Gradient
+Boosting, und welcher Untersuchungsbedarf ergibt sich daraus für den
+Vergleich beider Ansätze?
 
 \medskip
 \noindent\textbf{FF2 -- empirische Untersuchung:}
-Wie verändert die Behandlung fehlender Merkmalswerte den
-gepaarten Leistungsvergleich zwischen TabPFN-3.5 und LightGBM bei
-steigenden Fehlraten über mehrere Datensätze?
+Wie verändert sich der Leistungsunterschied zwischen einem Tabular
+Foundation Model und einem Gradient-Boosting-Verfahren bei steigenden
+Anteilen MCAR-fehlender Merkmalswerte und unterschiedlichen
+Behandlungen dieser Werte?
 
 \medskip
-Literaturanalyse und Experiment bilden zwei verbundene Leistungen.
-Der Literaturteil ist nicht auf fehlende Werte beschränkt; die Synthese
-zu ihrer Behandlung bildet die Brücke zum praktischen Schwerpunkt.
-Der LightGBM-Vergleich beschränkt sich auf diesen Schwerpunkt.
-Die Arbeit beansprucht keine
-neue Methode oder erstmalige Untersuchung fehlender Werte.
-Die nächstliegende Vorarbeit (Zaimoğlu 2026, TabPFNv2 unter MCAR)
-kreuzt die Behandlungen nicht über die ungetunten Baselines und
-enthält kein LightGBM; die Arbeit schließt diese Lücke durch ein
-vollständig gekreuztes, gepaartes Design mit abgestimmter Baseline.
-Frühere Modellversionen dienen dem konzeptbezogenen Vergleich,
-nicht einer eigenen Versionsgeschichte.
-Der Versuch verwendet MCAR-Fehlraten von 0, 10, 30 und 50 Prozent
-in Training, Validierung und Test. Der Hauptvergleich umfasst interne
-Verarbeitung und Median-Imputation; Missing-Indikatoren ergänzen die Analyse.
-Robustheit bezeichnet die Leistungsänderung unter diesem
-Eingriff, keine allgemeine Sicherheitsgarantie. FF2 wird deskriptiv
-anhand gepaarter Änderungen beantwortet; ein Gleichwertigkeitsnachweis
-oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
+FF1 begründet FF2: Die Literaturanalyse ordnet die vorhandenen Befunde
+zu fehlenden Werten und leitet daraus die offene Vergleichsfrage sowie
+das Versuchsdesign ab. FF2 prüft diese Frage empirisch; die Diskussion
+führt Literaturbefunde und eigene Ergebnisse zu einer begrenzten
+Einschätzung zusammen, wie fehlende Merkmalswerte den Leistungsvergleich
+beeinflussen, und beantwortet damit die übergeordnete Frage. Dabei
+werden die Grenzen der vorhandenen
+Evidenz und die Reichweite des eigenen Experiments ausdrücklich
+berücksichtigt. Allgemeine Leistungsvergleiche
+zwischen TabPFN und Gradient Boosting liegen bereits vor; der Fokus
+auf fehlende Merkmalswerte grenzt die Arbeit davon ab. Die Arbeit
+beansprucht keine neue Methode, keine erstmalige Untersuchung fehlender
+Werte und kein allgemeines Ranking der Modellfamilien.
+
+Als Vertreter dienen TabPFN-3.5 und LightGBM. Sie werden in der
+Methodik festgelegt und sind bei neuen Versionen austauschbar.
+MCAR dient als kontrollierter Referenzfall: Die Fehlrate ist genau
+steuerbar, eine vollständige Referenz liegt vor, und das Fehlen trägt
+keine Information über das Klassenlabel. MAR und MNAR werden nicht
+untersucht. Verwendet werden MCAR-Fehlraten von 0, 10, 30 und
+50 Prozent in Training, Validierung und Test sowie interne Verarbeitung,
+Median-Imputation und Median-Imputation mit Missing-Indikatoren.
+Primärer Endpunkt ist die Veränderung der gepaarten
+Balanced-Accuracy-Differenz gegenüber der vollständigen Referenz;
+Log-Loss wird ergänzend ausgewertet. Wiederholungen werden nicht als
+unabhängige Datensätze behandelt.
 
 \section*{Vorläufige Gliederung}
 
 \begin{enumerate}
   \item \textbf{Einleitung}
     \begin{enumerate}
-      \item KI, LLMs und der Übergang zu tabellarischen Foundation Models
-      \item Problemstellung und Motivation
+      \item KI, LLMs und der Übergang zu Tabular Foundation Models
+      \item Problemstellung: bestehende Modellvergleiche und der Fokus
+            auf fehlende Merkmalswerte
       \item Zielsetzung, Beitrag und Forschungsfragen
       \item Abgrenzung und Aufbau
     \end{enumerate}
   \item \textbf{Grundlagen}
     \begin{enumerate}
       \item Tabellarische Klassifikation und Datenbesonderheiten
-      \item Neuronale Netze, Transformer und Foundation Models:
-            In-Context Learning, Open Weights und Open Source
+      \item Transformer, Foundation Models und In-Context Learning
       \item Bayesianische Vorhersage und Prior-Data Fitted Networks
-      \item TabPFN: Modellprinzip und aktueller Bezugspunkt TabPFN-3.5
-      \item Gradient Boosting und LightGBM
-      \item Fehlende Werte, MCAR/MAR/MNAR, Imputation und Evaluationsmetriken
+      \item Tabular Foundation Models am Beispiel TabPFN
+      \item Gradient Boosting am Beispiel LightGBM
+      \item Fehlende Werte: MCAR, MAR, MNAR, Imputation und
+            Missing-Indikatoren
+      \item Evaluationsmetriken
     \end{enumerate}
-  \item \textbf{Kritische Literaturanalyse zu TabPFN}
+  \item \textbf{Literaturanalyse zu fehlenden Merkmalswerten (FF1)}
     \begin{enumerate}
       \item Recherche, Auswahl und Konzeptmatrix
-      \item Architektur und Eingaberepräsentation
-      \item Synthetisches Vortraining und Inferenz
-      \item Berichtete Einsatzmöglichkeiten und ergänzende Fähigkeiten
-      \item Evaluationsdesigns, Leistungsbefunde und ihre Grenzen
-      \item Evidenz zu fehlenden Werten und deren Behandlung; Einordnung des
-            eigenen Experiments
+      \item Bestehende Leistungsvergleiche zwischen Tabular Foundation
+            Models und Gradient Boosting
+      \item Verarbeitung fehlender Werte in beiden Modellansätzen
+      \item Empirische Befunde zu Fehlraten und Behandlungen
+      \item Bewertung der Evaluationsdesigns und ihrer Aussagekraft
+      \item Abgeleiteter Untersuchungsbedarf und Anforderungen an das
+            Experiment
     \end{enumerate}
-  \item \textbf{Methodik der empirischen Untersuchung}
+  \item \textbf{Methodik der empirischen Untersuchung (FF2)}
     \begin{enumerate}
-      \item Forschungsdesign und Bezug zu Vorarbeiten
+      \item Forschungsdesign und Ableitung aus der Literaturanalyse
+      \item Auswahl der Vertreter: TabPFN-3.5 und LightGBM
       \item Datensatzauswahl, gruppengetrennte Splits identischer Eingaben
             und Vorverarbeitung
       \item MCAR-Maskierung: 0, 10, 30 und 50 Prozent in allen Partitionen
       \item Interne Verarbeitung, Median-Imputation und Indikator-Zusatzanalyse
-      \item Modelle, feste Konfigurationen und Tuning-Sensitivität bei 50 Prozent
+      \item Konfigurationen und Tuning-Sensitivität bei 50 Prozent
       \item Wiederholungen, Metriken und gepaarte Auswertung
       \item Pilotlauf, fixierte Software-/Checkpointversionen und Reproduzierbarkeit
     \end{enumerate}
@@ -110,16 +128,19 @@ oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
     \begin{enumerate}
       \item Datensatzübersicht und Ausgangsleistung
       \item Leistungskurven nach Fehlrate und Behandlung
-      \item Gepaarter Modellvergleich und Indikator-Zusatzanalyse
-      \item Sensitivität gegenüber erneuter LightGBM-Abstimmung
+      \item Veränderung des gepaarten Leistungsunterschieds und Indikator-Pipeline
+      \item Sensitivität gegenüber erneuter Abstimmung des Gradient Boosting
       \item Streuung und Konsistenz über Datensätze
     \end{enumerate}
   \item \textbf{Diskussion}
     \begin{enumerate}
-      \item Beantwortung der Literaturfrage
-      \item Beantwortung der empirischen Frage
-      \item Gemeinsame Einordnung in die vorhandene Evidenz
-      \item Praktische Bedeutung, Limitationen und Übertragbarkeit
+      \item Beantwortung von FF1
+      \item Beantwortung von FF2
+      \item Synthese von Literaturbefunden und eigenen Ergebnissen:
+            Einfluss fehlender Merkmalswerte auf den Leistungsvergleich
+            und Beantwortung der übergeordneten Forschungsfrage
+      \item Praktische Bedeutung, Limitationen und Übertragbarkeit auf
+            andere Vertreter und Fehlmechanismen
     \end{enumerate}
   \item \textbf{Fazit und Ausblick}
 \end{enumerate}
@@ -128,19 +149,20 @@ oder eine kausale Mechanismenanalyse ist nicht vorgesehen.
 
 \begin{quote}
 KI und In-Context Learning bei LLMs
-$\longrightarrow$ Foundation-Model-Ansatz für Tabellen
-$\longrightarrow$ Methoden, Einsatzmöglichkeiten und Evidenz zu TabPFN
-$\longrightarrow$ fehlende Eingaben und ihre Behandlung als Prüfgegenstand
-$\longrightarrow$ kontrollierter Vergleich von TabPFN-3.5 und LightGBM
-$\longrightarrow$ gemeinsame Einordnung von Literatur und Experiment.
+$\longrightarrow$ Tabular Foundation Models
+$\longrightarrow$ allgemeine Vergleiche mit Gradient Boosting liegen vor
+$\longrightarrow$ Literaturanalyse: Was ist über fehlende Werte bekannt,
+und was bleibt offen?
+$\longrightarrow$ kontrolliertes MCAR-Experiment zur offenen Frage
+$\longrightarrow$ Einordnung und Beantwortung der übergeordneten Frage.
 \end{quote}
 
 Der Einstieg über KI und LLMs führt zum Thema, ohne einen allgemeinen
 KI-Geschichtsabriss zu bilden. Grundlagen werden auf die Forschungsfragen
-beschränkt. Kapitel 3 liefert die kritische Synthese für FF1;
+beschränkt. Kapitel 3 beantwortet FF1 und leitet das Experiment ab;
 Kapitel 4 und 5 bilden den größeren praktischen Arbeitsblock für FF2.
-Kapitel 6 verbindet beide Teile. Die Gliederung enthält weder ein
-eigenständiges Kapitel zur Versionshistorie noch einen zusätzlichen
-XAI- oder Laufzeitbenchmark.
+Kapitel 6 führt beide Teile zur übergeordneten Frage zusammen. Die
+Gliederung enthält weder ein eigenständiges Kapitel zur
+Versionshistorie noch einen zusätzlichen XAI- oder Laufzeitbenchmark.
 
 \end{document}

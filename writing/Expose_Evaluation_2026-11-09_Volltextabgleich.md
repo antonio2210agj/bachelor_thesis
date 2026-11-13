@@ -14,12 +14,12 @@ Stand: 9. November 2026. Geprüfte Volltexte (beide jetzt lokal in
 
 ## Kurzantwort
 
-**Nein, FF2 ist nicht beantwortet — aber Zaimoğlu ist die mit Abstand engste
-Vorarbeit und muss im Exposé explizit abgegrenzt werden.** Die Formulierung
-von FF2 hält, weil Zaimoğlu genau die zwei Dinge *nicht* tut, die den Kern
-deiner Frage ausmachen: (a) die Behandlungen über **beide** Modelle kreuzen
-und (b) eine **abgestimmte** GBDT-Baseline (LightGBM) gepaart vergleichen.
-Tran & Byeon beantwortet eine ganz andere Frage und ist nur Konzeptmatrix-Kontext.
+**Zaimoğlu ist die engste Vorarbeit, beantwortet aber nicht dieselbe
+Vergleichsfrage.** Die Arbeit untersucht TabPFN v2 unter MCAR mit mehreren
+Behandlungen, kreuzt diese jedoch nicht vollständig über alle Modelle und
+enthält kein LightGBM. Das begründet eine begrenzte Anschlussuntersuchung,
+keinen Nachweis einer umfassenden Forschungslücke. Tran & Byeon adressieren
+eine andere Frage und dienen vor allem als Anwendungskontext.
 
 ---
 
@@ -61,17 +61,21 @@ Tran & Byeon beantwortet eine ganz andere Frage und ist nur Konzeptmatrix-Kontex
 am besten? (raw) — und: Ist TabPFN_raw robuster als *ungetunte*
 sklearn-Baselines? (ja).
 
-**Was offen bleibt (= deine FF2):** Verändert die Behandlung den **gepaarten
-Leistungsvergleich** zwischen TabPFN-3.5 und einem **abgestimmten LightGBM**,
-wenn beide Modelle dieselben Behandlungen und Masken erhalten? Da die
-Baselines bei Zaimoğlu nicht gekreuzt und nicht getunt sind, sind Modell- und
-Behandlungseffekt dort konfundiert. Die Moderatorfrage ist nicht beantwortet.
+**Was offen bleibt (= der engere Anschluss deiner FF2):** Verändert sich der
+gepaarte Leistungsabstand zwischen TabPFN-3.5 und LightGBM, wenn beide
+Modelle dieselben Behandlungen und Masken erhalten? Zaimoğlus
+Vergleichsdesign beantwortet diese Differenzfrage nicht, weil die
+Behandlungen nicht vollständig über die Baselines gekreuzt werden. Die
+geplante Abstimmung von LightGBM auf vollständigen Daten verbessert die
+Vergleichbarkeit, belegt aber keine optimale Konfiguration unter jeder
+Fehlrate oder Pipeline.
 
-**Bonus-Motivation aus Zaimoğlus eigenen Zahlen:** Der Abstand
-TabPFN↔HistGB schrumpft von 0,051 (0 %: 0,965 vs. 0,914) auf 0,035
-(40 %: TabPFN_median 0,827 vs. HistGB_raw 0,792, Tabelle II). Die Behandlung
-moduliert den Abstand also sichtbar — genau das, was FF2 sauber untersuchen
-will. Diese Beobachtung kannst du als Motivationsbeleg zitieren.
+**Vorsicht bei Zahlenvergleichen:** Tabelle II berichtet aggregierte
+Ergebnisse unterschiedlicher Modell-Behandlungs-Kombinationen. Der Abstand
+von 0,035 bei 40 % vergleicht TabPFN_median mit HistGB_raw und ist kein
+gepaarter Behandlungseffekt. Er kann höchstens illustrieren, warum ein
+gekreuzter Vergleich interessant ist; nicht als Beleg für die Größe oder
+Richtung einer Moderation verwenden.
 
 ## 3. Kritikpunkte an Zaimoğlu (Material für FF1!)
 
@@ -113,35 +117,25 @@ ein hervorragender Diskussionsaufhänger.
 
 ## 5. Konsequenzen für Exposé und Anmeldung
 
-**FF2 geht weiterhin durch.** Erforderliche Anpassungen:
+**Die empirische Anschlussfrage ist weiterhin vertretbar, aber enger und
+bescheidener zu formulieren.** Erforderliche Konsequenzen:
 
-1. **Abgrenzungssatz ins Exposé** (Problemstellung und/oder Kap.-3.6-Bezug):
-   Zaimoğlu zeigt für TabPFN v2 unter MCAR die Überlegenheit der internen
-   Verarbeitung gegenüber Median/Indikator, kreuzt die Behandlungen aber
-   nicht über die (ungetunten) Baselines und enthält kein LightGBM; die
-   geplante Arbeit prüft die Moderatorfrage im vollständig gekreuzten,
-   gepaarten Design mit TabPFN-3.5 und abgestimmtem LightGBM.
-2. **Beitragsformulierung schärfen:** Das Alleinstellungsmerkmal ist jetzt
-   nicht mehr „TabPFN + MCAR + Median/Indikator" (das existiert), sondern
-   das **gekreuzte gepaarte Design mit getunter LightGBM-Baseline und
-   Maskierung aller drei Partitionen**. Diese Wörter sollten in Beitrag
-   und ggf. FF2-Erläuterung auftauchen.
-3. **Erwartungsmanagement:** Die Richtung (intern > Median für TabPFN) ist
-   nun teilweise vorhersagbar — deine Arbeit wird dadurch teilkonfirmatorisch.
-   Das ist für eine BA völlig in Ordnung und sogar gut verteidigbar
-   (unabhängige Prüfung unter faireren Bedingungen). Spannend bleibt offen:
-   Hält TabPFNs Vorteil gegen ein *getuntes* LightGBM? Kippt die Rangfolge
-   unter irgendeiner Behandlung?
-4. **FF1 gewinnt:** Zaimoğlu ist jetzt Pflichtbestandteil der Konzeptmatrix
-   und das beste Anschauungsobjekt für die Belastbarkeitsbewertung
-   (Punkte in Abschnitt 3 oben).
+1. **Zielgröße explizit festlegen:** Der zentrale Endpunkt ist die
+   Veränderung der gepaarten Balanced-Accuracy-Differenz gegenüber der
+   vollständigen Referenz, nicht ein allgemeines Modellranking.
+2. **Beitragsformulierung begrenzen:** Das gekreuzte Design ist eine
+   kontrolliertere Anschlussuntersuchung; es beweist weder generelle
+   Überlegenheit noch eine weltweit erstmalige Lücke.
+3. **Erwartungen offen halten:** Die Vorarbeit liefert Befunde, aber keine
+   belastbare Vorhersage für TabPFN-3.5 gegen abgestimmtes LightGBM unter
+   denselben Pipelines.
+4. **FF1 nutzen:** Zaimoğlu ist ein zentraler Fall für die kritische
+   Bewertung von Design, Baselines, Maskierung und statistischer Einheit.
 5. **Neue Screening-Kandidaten aus Zaimoğlus Literaturverzeichnis:**
    Samad et al. 2026 (Imputation-free Learning of Tabular Data with Missing
    Values, Applied Soft Computing) und TabArena (arXiv 2506.16791) — kurz
    auf FF2-Relevanz prüfen, vermutlich nur Kontext.
 
-**Notenprognose unverändert: 1,0–1,3 bei sauberer Ausführung.** Die Vorarbeit
-nimmt deiner Frage nichts Wesentliches, sie gibt dir im Gegenteil einen
-zitierfähigen Motivationsbeleg und ein perfektes FF1-Fallbeispiel. Die
-verbleibenden Pflichtpunkte vor Anmeldung: Abgrenzungssatz einarbeiten
-(Punkt 1–2) und der noch offene technische Pilot für TabPFN-3.5.
+Eine belastbare Notenprognose lässt sich aus dieser Literaturabgrenzung nicht
+ableiten. Die Vorarbeit stärkt die Motivation, setzt aber zugleich enge
+Grenzen für Neuheits- und Generalisierungsbehauptungen.
