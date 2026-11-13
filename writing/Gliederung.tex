@@ -21,44 +21,42 @@
 
 \section*{Arbeitstitel}
 
-\textbf{Tabular Foundation Models bei fehlenden Merkmalswerten:
-Ein literaturgestützter empirischer Vergleich
-mit Gradient Boosting unter MCAR-Bedingungen}
+\textbf{Fehlende Merkmalswerte bei der Klassifikation auf tabellarischen
+Daten: Tabular Foundation Models im Vergleich zu Gradient Boosting}
 
 \section*{Forschungsfragen}
 
 \textbf{Übergeordnete Forschungsfrage:}
-Wie beeinflussen fehlende Merkmalswerte den Leistungsvergleich
-zwischen Tabular Foundation Models und Gradient Boosting in der
-tabellarischen Klassifikation?
+Inwieweit eignen sich Tabular Foundation Models im Vergleich zu
+Gradient Boosting für Klassifikationsaufgaben auf tabellarischen Daten
+mit fehlenden Merkmalswerten?
 
-Leistungsvergleich bezeichnet hier den Unterschied der
-Klassifikationsleistung beider Modellansätze und dessen Veränderung
-durch fehlende Merkmalswerte und ihre Behandlung. Kosten, Laufzeit und
-eine allgemeine Praxistauglichkeit werden nicht bewertet.
+Eignung wird hier anhand der Klassifikationsleistung und ihrer
+Robustheit gegenüber fehlenden Merkmalswerten unter den untersuchten
+Behandlungen beurteilt. Kosten, Laufzeit und eine allgemeine
+Praxistauglichkeit werden nicht bewertet.
 
 \medskip
 \noindent\textbf{FF1 -- literaturgestützte Herleitung:}
-Welche Befunde liefert die aktuelle Literatur zur Klassifikation mit
-fehlenden Merkmalswerten bei Tabular Foundation Models und Gradient
-Boosting, und welcher Untersuchungsbedarf ergibt sich daraus für den
-Vergleich beider Ansätze?
+Welche Befunde und Grenzen berichtet die aktuelle Literatur zur
+Klassifikation auf tabellarischen Daten mit fehlenden Merkmalswerten
+bei Tabular Foundation Models und Gradient Boosting, und welcher
+empirische Untersuchungsbedarf ergibt sich daraus?
 
 \medskip
 \noindent\textbf{FF2 -- empirische Untersuchung:}
 Wie verändert sich der Leistungsunterschied zwischen einem Tabular
-Foundation Model und einem Gradient-Boosting-Verfahren bei steigenden
-Anteilen MCAR-fehlender Merkmalswerte und unterschiedlichen
-Behandlungen dieser Werte?
+Foundation Model und einem Gradient-Boosting-Verfahren bei zunehmenden
+Anteilen fehlender Merkmalswerte und unterschiedlichen Behandlungen
+dieser Werte?
 
 \medskip
 FF1 begründet FF2: Die Literaturanalyse ordnet die vorhandenen Befunde
 zu fehlenden Werten und leitet daraus die offene Vergleichsfrage sowie
 das Versuchsdesign ab. FF2 prüft diese Frage empirisch; die Diskussion
 führt Literaturbefunde und eigene Ergebnisse zu einer begrenzten
-Einschätzung zusammen, wie fehlende Merkmalswerte den Leistungsvergleich
-beeinflussen, und beantwortet damit die übergeordnete Frage. Dabei
-werden die Grenzen der vorhandenen
+Einschätzung der leistungsbezogenen Eignung zusammen und beantwortet
+damit die übergeordnete Frage. Dabei werden die Grenzen der vorhandenen
 Evidenz und die Reichweite des eigenen Experiments ausdrücklich
 berücksichtigt. Allgemeine Leistungsvergleiche
 zwischen TabPFN und Gradient Boosting liegen bereits vor; der Fokus
@@ -68,10 +66,12 @@ Werte und kein allgemeines Ranking der Modellfamilien.
 
 Als Vertreter dienen TabPFN-3.5 und LightGBM. Sie werden in der
 Methodik festgelegt und sind bei neuen Versionen austauschbar.
-MCAR dient als kontrollierter Referenzfall: Die Fehlrate ist genau
-steuerbar, eine vollständige Referenz liegt vor, und das Fehlen trägt
-keine Information über das Klassenlabel. MAR und MNAR werden nicht
-untersucht. Verwendet werden MCAR-Fehlraten von 0, 10, 30 und
+Die Forschungsfragen legen den Fehlmechanismus nicht fest. Für das
+Experiment ist MCAR als Ausgangspunkt vorgesehen: Die Fehlrate ist
+genau steuerbar, eine vollständige Referenz liegt vor, und das Fehlen
+trägt keine Information über das Klassenlabel. Ob MAR- oder
+MNAR-Bedingungen hinzukommen, wird nach der Literaturanalyse
+entschieden. Vorgesehen sind Fehlraten von 0, 10, 30 und
 50 Prozent in Training, Validierung und Test sowie interne Verarbeitung,
 Median-Imputation und Median-Imputation mit Missing-Indikatoren.
 Primärer Endpunkt ist die Veränderung der gepaarten
@@ -92,7 +92,7 @@ unabhängige Datensätze behandelt.
     \end{enumerate}
   \item \textbf{Grundlagen}
     \begin{enumerate}
-      \item Tabellarische Klassifikation und Datenbesonderheiten
+      \item Klassifikation auf tabellarischen Daten und Datenbesonderheiten
       \item Transformer, Foundation Models und In-Context Learning
       \item Bayesianische Vorhersage und Prior-Data Fitted Networks
       \item Tabular Foundation Models am Beispiel TabPFN
@@ -107,7 +107,8 @@ unabhängige Datensätze behandelt.
       \item Bestehende Leistungsvergleiche zwischen Tabular Foundation
             Models und Gradient Boosting
       \item Verarbeitung fehlender Werte in beiden Modellansätzen
-      \item Empirische Befunde zu Fehlraten und Behandlungen
+      \item Empirische Befunde zu Fehlmechanismen, Fehlraten und
+            Behandlungen
       \item Bewertung der Evaluationsdesigns und ihrer Aussagekraft
       \item Abgeleiteter Untersuchungsbedarf und Anforderungen an das
             Experiment
@@ -118,7 +119,8 @@ unabhängige Datensätze behandelt.
       \item Auswahl der Vertreter: TabPFN-3.5 und LightGBM
       \item Datensatzauswahl, gruppengetrennte Splits identischer Eingaben
             und Vorverarbeitung
-      \item MCAR-Maskierung: 0, 10, 30 und 50 Prozent in allen Partitionen
+      \item Erzeugung fehlender Werte: Fehlmechanismus und Fehlraten
+            von 0, 10, 30 und 50 Prozent in allen Partitionen
       \item Interne Verarbeitung, Median-Imputation und Indikator-Zusatzanalyse
       \item Konfigurationen und Tuning-Sensitivität bei 50 Prozent
       \item Wiederholungen, Metriken und gepaarte Auswertung
@@ -137,8 +139,8 @@ unabhängige Datensätze behandelt.
       \item Beantwortung von FF1
       \item Beantwortung von FF2
       \item Synthese von Literaturbefunden und eigenen Ergebnissen:
-            Einfluss fehlender Merkmalswerte auf den Leistungsvergleich
-            und Beantwortung der übergeordneten Forschungsfrage
+            leistungsbezogene Eignung und Beantwortung der
+            übergeordneten Forschungsfrage
       \item Praktische Bedeutung, Limitationen und Übertragbarkeit auf
             andere Vertreter und Fehlmechanismen
     \end{enumerate}
@@ -153,7 +155,7 @@ $\longrightarrow$ Tabular Foundation Models
 $\longrightarrow$ allgemeine Vergleiche mit Gradient Boosting liegen vor
 $\longrightarrow$ Literaturanalyse: Was ist über fehlende Werte bekannt,
 und was bleibt offen?
-$\longrightarrow$ kontrolliertes MCAR-Experiment zur offenen Frage
+$\longrightarrow$ kontrolliertes Experiment zur offenen Frage
 $\longrightarrow$ Einordnung und Beantwortung der übergeordneten Frage.
 \end{quote}
 

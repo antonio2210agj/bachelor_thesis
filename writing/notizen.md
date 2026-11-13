@@ -1,10 +1,5 @@
 # Vorbereitung Zoom-Call mit Maximilian
 
-Freitag, 13. November 2026, 13 Uhr. Grundlage: [Expose.tex](./Expose.tex),
-[Missing_Data_Abschlussabgleich.md](../literature/notes/Missing_Data_Abschlussabgleich.md)
-und [Pilotprotokoll.md](../experiments/Pilotprotokoll.md).
-
-Die Antworten sind so formuliert, dass du sie frei sprechen kannst.
 
 ## Aktueller Stand
 
@@ -34,7 +29,7 @@ fehlen und unterschiedlich behandelt werden. Die Literaturanalyse zeigt,
 was dazu bekannt ist und was offen bleibt; das Experiment prüft die
 offene Frage unter kontrollierten Bedingungen.
 
-## Teil 1: Die fünf Punkte aus seiner Mail
+## Teil 1: Anmerkungen
 
 ### 1. Warum stehen keine Modellversionen mehr im Titel?
 
