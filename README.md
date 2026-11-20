@@ -11,6 +11,10 @@ und LightGBM.
 
 ## Struktur
 
+- `PROJEKTSTAND.md`: fortlaufender Stand mit Entscheidungen, offenen Punkten,
+  nächsten Schritten und KI-Nutzungsprotokoll; am Ende jeder Sitzung aktualisieren.
+- `.github/copilot-instructions.md`: dauerhafte Arbeitsregeln, die GitHub
+  Copilot in jedem Chat automatisch lädt.
 - `literature/`: Literatur-PDFs und Literaturnotizen mit Quellenstellen in `notes/`.
 - `literature/notes/Suchprotokoll.md` und `literature/notes/Konzeptmatrix.csv`:
   Dokumentation der Recherche und Auswertung der Arbeiten für FF1.
