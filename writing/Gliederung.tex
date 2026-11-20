@@ -21,8 +21,8 @@
 
 \section*{Arbeitstitel}
 
-\textbf{Fehlende Merkmalswerte bei der Klassifikation auf tabellarischen
-Daten: Tabular Foundation Models im Vergleich zu Gradient Boosting}
+\textbf{Tabular Foundation Models bei fehlenden Merkmalswerten: Ein
+Vergleich mit Gradient Boosting bei Klassifikationsaufgaben}
 
 \section*{Forschungsfragen}
 
@@ -64,14 +64,20 @@ auf fehlende Merkmalswerte grenzt die Arbeit davon ab. Die Arbeit
 beansprucht keine neue Methode, keine erstmalige Untersuchung fehlender
 Werte und kein allgemeines Ranking der Modellfamilien.
 
-Als Vertreter dienen TabPFN-3.5 und LightGBM. Sie werden in der
-Methodik festgelegt und sind bei neuen Versionen austauschbar.
-Die Forschungsfragen legen den Fehlmechanismus nicht fest. Für das
-Experiment ist MCAR als Ausgangspunkt vorgesehen: Die Fehlrate ist
-genau steuerbar, eine vollständige Referenz liegt vor, und das Fehlen
-trägt keine Information über das Klassenlabel. Ob MAR- oder
-MNAR-Bedingungen hinzukommen, wird nach der Literaturanalyse
-entschieden. Vorgesehen sind Fehlraten von 0, 10, 30 und
+Beide Modellansätze werden anhand ihres Verarbeitungsprinzips für
+fehlende Werte betrachtet. Als
+Vertreter dienen TabPFN-3.5 und LightGBM; sie werden in der Methodik
+festgelegt und sind bei neuen Versionen austauschbar. Gemessen wird an
+diesen Vertretern, die Schlussfolgerungen werden auf die
+Verarbeitungsprinzipien bezogen.
+Die Forschungsfragen legen den Fehlmechanismus nicht fest. Im
+Experiment ist er ein eigener Versuchsfaktor: Fehlende Werte werden
+kontrolliert in vollständigen Datensätzen erzeugt, sodass die Fehlrate
+steuerbar ist und eine vollständige Referenz vorliegt. MCAR dient als
+Referenzbedingung, weil das Fehlen dort keine Information über das
+Klassenlabel trägt. MAR und MNAR sind vorgesehen; welche Bedingungen
+in welchem Umfang in den Hauptversuch eingehen, wird nach der
+Literaturanalyse festgelegt. Vorgesehen sind Fehlraten von 0, 10, 30 und
 50 Prozent in Training, Validierung und Test sowie interne Verarbeitung,
 Median-Imputation und Median-Imputation mit Missing-Indikatoren.
 Primärer Endpunkt ist die Veränderung der gepaarten
@@ -116,10 +122,11 @@ unabhängige Datensätze behandelt.
   \item \textbf{Methodik der empirischen Untersuchung (FF2)}
     \begin{enumerate}
       \item Forschungsdesign und Ableitung aus der Literaturanalyse
-      \item Auswahl der Vertreter: TabPFN-3.5 und LightGBM
+      \item Verarbeitungsprinzipien und Auswahl der Vertreter:
+            TabPFN-3.5 und LightGBM
       \item Datensatzauswahl, gruppengetrennte Splits identischer Eingaben
             und Vorverarbeitung
-      \item Erzeugung fehlender Werte: Fehlmechanismus und Fehlraten
+      \item Erzeugung fehlender Werte: Fehlmechanismen und Fehlraten
             von 0, 10, 30 und 50 Prozent in allen Partitionen
       \item Interne Verarbeitung, Median-Imputation und Indikator-Zusatzanalyse
       \item Konfigurationen und Tuning-Sensitivität bei 50 Prozent
@@ -129,7 +136,8 @@ unabhängige Datensätze behandelt.
   \item \textbf{Ergebnisse}
     \begin{enumerate}
       \item Datensatzübersicht und Ausgangsleistung
-      \item Leistungskurven nach Fehlrate und Behandlung
+      \item Leistungskurven nach Fehlrate, Behandlung und
+            Fehlmechanismus
       \item Veränderung des gepaarten Leistungsunterschieds und Indikator-Pipeline
       \item Sensitivität gegenüber erneuter Abstimmung des Gradient Boosting
       \item Streuung und Konsistenz über Datensätze

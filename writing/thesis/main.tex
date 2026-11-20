@@ -1,0 +1,251 @@
+\documentclass[numbers=noenddot,bibliography=totoc,12pt,sfdefaults=false]{scrartcl}
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{twoside=false, vmargin=1cm, hmargin=1in, centering, columnsep=2pc, heightrounded, includeheadfoot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\lang}{ngerman} % english or ngerman
+\newcommand{\lang}{ngerman} % english or ngerman
+\newcommand{\name}{Marco Garcia Jung}
+\newcommand{\street}{Klenzestraße 25}
+\newcommand{\plzCity}{TODO PLZ und Ort}
+\newcommand{\matnr}{2437251}
+
+\newcommand{\submittedDate}{16. Februar 2027}
+
+\newcommand{\examiner}{Prof. Dr. Stefan Schönig}
+\newcommand{\supervisor}{Maximilian Metzner} % TODO prüfen
+
+\newcommand{\thesistypeDe}{Bachelorarbeit}
+\newcommand{\thesistypeEn}{Bachelor's Thesis}
+
+\newcommand{\thesisTitle}{Tabular Foundation Models bei fehlenden Merkmalswerten: Ein Vergleich mit Gradient Boosting bei Klassifikationsaufgaben}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesistype}{not set}
+\newcommand{\abbreviationname}{not set}
+\usepackage[\lang]{babel}
+
+\addto\captionsenglish{
+    \renewcommand{\listfigurename}{List of Figures}
+    \renewcommand{\listtablename}{List of Tables}
+    \renewcommand{\listoflistingscaption}{List of Code Examples}
+    \renewcommand{\abbreviationname}{Abbreviations and Acronyms}
+    \crefname{listing}{code example}{code examples}
+    \Crefname{listing}{Code Example}{Code Examples}
+    \captionsetup[listing]{name=Code}
+    \sisetup{locale=US}
+    \renewcommand{\thesistype}{\thesistypeEn}
+}
+
+\addto\captionsngerman{
+    \renewcommand{\listfigurename}{Abbildungsverzeichnis}
+    \renewcommand{\listtablename}{Tabellenverzeichnis}
+    \renewcommand{\listoflistingscaption}{Codebeispiele}
+    \renewcommand{\abbreviationname}{Abkürzungen}
+    \crefname{listing}{Codebeispiel}{Codebeispiele}
+    \Crefname{listing}{Codebeispiel}{Codebeispiele}
+    \captionsetup[listing]{name=Codebeispiel}
+    \sisetup{locale=DE}
+    \renewcommand{\thesistype}{\thesistypeDe}
+}
+
+\sloppy
+
+\usepackage{minted}
+\setminted{frame=lines, framesep=2mm, linenos, breaklines=true, fontsize=\footnotesize,style=manni,autogobble}
+
+\usepackage{amsmath}
+
+\usepackage[T1]{fontenc}
+\usepackage[p,osf,cochineal,swashQ,vvarbb]{newtx}
+\usepackage[book,scale=0.82]{FiraSans}
+\usepackage[cal=boondoxo]{mathalfa}
+\usepackage[scale=0.82]{FiraMono}
+
+\usepackage{setspace}
+\setstretch{1}
+
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage[svgnames,dvipsnames]{xcolor}
+\usepackage{iftex}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks,
+  bookmarksnumbered,
+  pdfencoding=unicode,
+  allcolors=DarkSlateGrey
+}
+
+\setkomafont{section}{\rmfamily\fontsize{13pt}{15pt}\bfseries}
+\setkomafont{subsection}{\rmfamily\fontsize{11pt}{13pt}\bfseries\selectfont}
+\setkomafont{subsubsection}{\rmfamily\fontsize{10.5pt}{12pt}\fontseries{b}\fontshape{it}\selectfont}
+\setkomafont{paragraph}{\rmfamily\fontsize{11pt}{10pt}\itshape\selectfont}
+\setkomafont{subparagraph}{\rmfamily\fontsize{11pt}{10pt}\selectfont}
+
+\colorlet{scolor}{black}
+\colorlet{hscolor}{DarkSlateGrey}
+\usepackage{booktabs}
+\usepackage[backend=biber, style=lncs, giveninits,sorting=nyt]{biblatex}
+\addbibresource{../references.bib}
+
+\usepackage{siunitx}
+\sisetup{per-mode = fraction, prefixes-as-symbols = false, list-units = brackets, range-units = brackets, multi-part-units = brackets }
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{enumitem}
+\usepackage{cleveref}
+\usepackage{tabularx}
+\usepackage[printonlyused]{acronym}
+
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{}
+
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{tikz}
+\usetikzlibrary{3d,mindmap}
+
+\usepackage{caption}
+\captionsetup{font={small}, labelfont={bf,small}, singlelinecheck=false, labelsep=newline, format=plain}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\usepackage[defaultlines=3,all]{nowidow}
+
+% Misc
+\usepackage{ifthen}
+\usepackage{iflang}
+
+\usepackage{scrlayer-scrpage}
+\automark*[section]{}
+\renewcommand*{\partmark}[1]{}
+\setkomafont{pageheadfoot}{\normalcolor\footnotesize\scshape}
+\setkomafont{pagenumber}{\normalfont\normalsize}
+\clearpairofpagestyles
+%\ihead{\headmark}
+\ohead*{\normalcolor\footnotesize\pagemark}
+\ifoot*{\normalfont \thesistype}
+\ofoot*{\normalfont \name, \the\year{}}
+\KOMAoptions{headsepline=.25pt}
+\pagestyle{headings}
+\usepackage{scrhack}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+    \include{Deckblatt}
+
+% Abstract wird zuletzt geschrieben
+    {\thispagestyle{empty}
+    \subsection*{\abstractname}
+    }
+
+    \newpage
+
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    \tableofcontents
+    \newpage
+
+    \addcontentsline{toc}{section}{\listfigurename}
+    \listoffigures
+    \newpage
+
+    \addcontentsline{toc}{section}{\listtablename}
+    \listoftables
+    \newpage
+
+% Nur einkommentieren, falls Codebeispiele in der Arbeit stehen
+%    \addcontentsline{toc}{section}{\listoflistingscaption}
+%    \listoflistings
+%    \newpage
+
+% Es erscheinen nur Abkürzungen, die im Text mit \ac{...} verwendet werden
+    \section*{\abbreviationname}
+    \addcontentsline{toc}{section}{\abbreviationname}
+    \begin{acronym}[MMMMM]
+        \acro{BA}{Balanced Accuracy}
+        \acro{ICL}{In-Context Learning}
+        \acro{LLM}{Large Language Model}
+        \acro{MAR}{Missing At Random}
+        \acro{MCAR}{Missing Completely At Random}
+        \acro{MNAR}{Missing Not At Random}
+        \acro{PFN}{Prior-Data Fitted Network}
+        \acro{TFM}{Tabular Foundation Model}
+    \end{acronym}
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \input{chapters/01_einleitung}
+    \input{chapters/02_grundlagen}
+    \input{chapters/03_literaturanalyse}
+    \input{chapters/04_methodik}
+    \input{chapters/05_ergebnisse}
+    \input{chapters/06_diskussion}
+    \input{chapters/07_fazit}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \clearpage
+
+    \printbibliography
+
+    \clearpage
+    \appendix
+
+    \input{chapters/A_anhang}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\subsection*{Angaben zur Verwendung KI-basierter Hilfsmittel}
+
+Ich versichere, dass ich keine KI-basierten Tools verwendet habe, deren Nutzung der Prüfer / die Prüferin explizit schriftlich ausgeschlossen hat. Sämtliche KI-basierte Hilfsmittel sind mit Produktnamen und Erläuterung der Verwendung in folgender Tabelle angegeben. Ich bin mir bewusst, dass die Verwendung von Texten oder anderen Inhalten und Produkten, die durch KI-basierte Tools generiert wurden, keine Garantie für deren Qualität darstellt. Ich verantworte die Übernahme jeglicher von mir verwendeter maschinell generierter Passagen vollumfänglich selbst und trage die Verantwortung für eventuell durch die KI generierte fehlerhafte oder verzerrte Inhalte, fehlerhafte Referenzen, Verstöße gegen das Datenschutz- und Urheberrecht oder Plagiate. Ich versichere zudem, dass in der vorliegenden Arbeit mein gestalterischer Einfluss überwiegt.
+
+\vspace{2cm}
+\begin{flushright}
+    Regensburg, den \submittedDate
+\end{flushright}
+
+% Laufend pflegen: jedes Tool mit Einsatzform, Grund und betroffenen Teilen
+{
+\scriptsize
+\begin{longtblr}[entry=none]{
+  width = \linewidth,
+  colspec = {Q[l,-1]X[l]X[l]Q[l]X[l]},
+  rowhead =
+}
+\toprule
+\SetCell{font=\bfseries} KI-Tool & \SetCell{font=\bfseries} Einsatzform & \SetCell{font=\bfseries} Grund & \SetCell{font=\bfseries} Betroffene Teile & \SetCell{font=\bfseries} Anmerkungen \\
+\midrule
+
+GitHub Copilot & Einrichtung von Projektstruktur und LaTeX-Gerüst, Arbeitsplanung & Organisation des Arbeitsprozesses & Gesamte Arbeit (Struktur) & Kein Fließtext übernommen \\
+
+\bottomrule
+\end{longtblr}
+}
+
+
+\newpage
+\pagestyle{empty}
+
+\subsection*{Erklärung an Eides statt}
+\todo[inline]{Geltende Prüfungsordnung prüfen: unten steht die Fassung BPO 2021; für PO 2015 lautet der Verweis §13 Abs. 3 PO 2015.}
+Ich habe die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt. Die Arbeit wurde bisher an keiner anderen Hochschule zur Erlangung eines akademischen Grades eingereicht. Die vorgelegten Druckexemplare und die dem Prüfer / der Prüferin zur Verfügung gestellte elektronische Version (PDF-Datei) der Arbeit sind identisch. Von den in §27 Abs. 6 BPO 2021 vorgesehenen Rechtsfolgen habe ich Kenntnis.
+
+\vspace{4cm}
+\begin{flushright}
+    Regensburg, den \submittedDate
+\end{flushright}
+
+\end{document}

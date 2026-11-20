@@ -28,6 +28,12 @@ __pycache__/
 *.toc
 *.lof
 *.lot
+*.tdo
+*.lol
+_minted*/
+
+# Literatur-PDFs ohne Weitergabelizenz (nur lokal)
+literature/07_Missing_Data_und_Imputation/Perez-Lebel_2022_*.pdf
 
 # Operating system files
 Thumbs.db

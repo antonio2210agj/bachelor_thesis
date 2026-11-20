@@ -1,14 +1,24 @@
 # Bachelorarbeit: TabPFN
 
-Arbeitsrepository für eine kritische Literaturanalyse zu Methoden,
-Einsatzmöglichkeiten und Grenzen von TabPFN sowie eine empirische
-Anschlussuntersuchung zum Einfluss der Behandlung fehlender Merkmalswerte
-auf den Leistungsvergleich zwischen TabPFN-3.5 und LightGBM.
+Arbeitsrepository für die Bachelorarbeit „Tabular Foundation Models bei
+fehlenden Merkmalswerten: Ein Vergleich mit Gradient Boosting bei
+Klassifikationsaufgaben“. Die Arbeit verbindet eine
+Literaturanalyse zu fehlenden Merkmalswerten bei Tabular Foundation Models
+und Gradient Boosting mit einer empirischen Untersuchung, wie sich der
+Leistungsunterschied beider Ansätze bei fehlenden Werten und
+unterschiedlichen Behandlungen verändert. Als Vertreter dienen TabPFN-3.5
+und LightGBM.
 
 ## Struktur
 
 - `literature/`: Literatur-PDFs und Literaturnotizen mit Quellenstellen in `notes/`.
-- `writing/`: Gliederung, LaTeX-Quellen, Bibliografie und kompilierte PDFs.
+- `literature/notes/Suchprotokoll.md` und `literature/notes/Konzeptmatrix.csv`:
+  Dokumentation der Recherche und Auswertung der Arbeiten für FF1.
+- `writing/`: Exposé, Gliederung und die gemeinsame Bibliografie
+  `references.bib`.
+- `writing/thesis/`: die Bachelorarbeit auf Basis der Lehrstuhlvorlage;
+  `main.tex` bindet die Kapitel aus `chapters/` ein.
+- `Methodik/`: Methodenunterlagen und die unveränderte Lehrstuhlvorlage.
 - `experiments/`: Python-Experimente und der aktuell verwendete Datensatz.
 - `experiments/Pilotprotokoll.md`: Protokoll des technischen
   TabPFN-3.5-/LightGBM-Piloten; kein Ergebnis des Hauptversuchs.
@@ -19,11 +29,12 @@ Die PDFs in `literature/` sind thematisch abgelegt:
 - `02_TabPFN_Kernmodelle/`: TabPFN-Originalarbeit, Nature/TabPFNv2 und Modellberichte.
 - `03_Benchmarks_Baumverfahren/`: vergleichende Benchmarks und Baumverfahren.
 - `04_Merkmalszahl_und_Selektion/`: Zusatzmerkmale, Merkmalsauswahl und breite Tabellen.
+- `05_Weitere_Robustheit/` und `06_Weitere_Anwendungen/`: Hintergrund aus dem
+  früheren Zuschnitt, nicht Teil der Literaturanalyse.
 - `07_Missing_Data_und_Imputation/`: Missing-Data- und Imputationsliteratur;
   ergänzende Quellen und Lizenzhinweise stehen im Abschlussabgleich.
   Bestehende Modellberichte mit Missing-Data-Bezug bleiben bei den Kernmodellen,
-  statt doppelt abgelegt zu werden. Die Nummerierung bleibt trotz nicht mehr
-  vorhandener Themenordner 05 und 06 erhalten, um bestehende Links zu bewahren.
+  statt doppelt abgelegt zu werden.
 - `notes/`: Literaturnotizen und der
   [abschliessende Missing-Data-Literaturabgleich](literature/notes/Missing_Data_Abschlussabgleich.md)
   mit Quellenstellen, Abgrenzung und Empfehlungen zur Frageformulierung.
@@ -65,6 +76,23 @@ Checkpoint. `requirements.txt` enthält derzeit Versionsbereiche, keine
 vollständige Umgebungs- oder Checkpoint-Sperre; für den Hauptversuch müssen
 die tatsächlich verwendeten Paketversionen und die geladene Checkpointdatei
 zusätzlich festgehalten werden.
+
+Für GPU-Läufe wird PyTorch vor den übrigen Abhängigkeiten mit CUDA
+installiert:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cu128
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+## Arbeit kompilieren
+
+```powershell
+.\writing\thesis\build.ps1
+```
+
+Das Skript ruft `pdflatex`, `biber` und zweimal `pdflatex` auf und erzeugt
+`writing/thesis/main.pdf`. Die Vorlage benötigt `-shell-escape` für `minted`.
 
 ## Zwischen Desktop und Laptop wechseln
 

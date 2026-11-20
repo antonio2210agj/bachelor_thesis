@@ -1,0 +1,487 @@
+\documentclass[numbers=noenddot,bibliography=totoc,12pt,sfdefaults=false]{scrartcl}
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{twoside=false, vmargin=1cm, hmargin=1in, centering, columnsep=2pc, heightrounded, includeheadfoot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\lang}{ngerman} % english or ngerman
+\newcommand{\lang}{ngerman} % english or ngerman
+\newcommand{\name}{Max Mustermann}
+\newcommand{\street}{Bismarckplatz 1}
+\newcommand{\plzCity}{93047 Regensburg}
+\newcommand{\matnr}{12345678}
+
+\newcommand{\submittedDate}{1. Januar 2024}
+
+\newcommand{\thesistypeDe}{Theoretisches Seminar}
+\newcommand{\thesistypeEn}{Theoretical Seminar}
+
+\newcommand{\thesisTitle}{Eine sehr wichtige Auseinandersetzung über die Zusammenhänge zwischen BPM und IoT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesistype}{not set}
+\newcommand{\abbreviationname}{not set}
+\usepackage[\lang]{babel}
+
+\addto\captionsenglish{
+    \renewcommand{\listfigurename}{List of Figures}
+    \renewcommand{\listtablename}{List of Tables}
+    \renewcommand{\listoflistingscaption}{List of Code Examples}
+    \renewcommand{\abbreviationname}{Abbreviations and Acronyms}
+    \crefname{listing}{code example}{code examples}
+    \Crefname{listing}{Code Example}{Code Examples}
+    \captionsetup[listing]{name=Code}
+    \sisetup{locale=US}
+    \renewcommand{\thesistype}{\thesistypeEn}
+}
+
+\addto\captionsngerman{
+    \renewcommand{\listfigurename}{Abbildungsverzeichnis}
+    \renewcommand{\listtablename}{Tabellenverzeichnis}
+    \renewcommand{\listoflistingscaption}{Codebeispiele}
+    \renewcommand{\abbreviationname}{Abkürzungen}
+    \crefname{listing}{Codebeispiel}{Codebeispiele}
+    \Crefname{listing}{Codebeispiel}{Codebeispiele}
+    \captionsetup[listing]{name=Codebeispiel}
+    \sisetup{locale=DE}
+    \renewcommand{\thesistype}{\thesistypeDe}
+}
+
+\sloppy
+
+\usepackage{minted}
+\setminted{frame=lines, framesep=2mm, linenos, breaklines=true, fontsize=\footnotesize,style=manni,autogobble}
+
+\usepackage{amsmath}
+
+\usepackage[T1]{fontenc}
+\usepackage[p,osf,cochineal,swashQ,vvarbb]{newtx}
+\usepackage[book,scale=0.82]{FiraSans}
+\usepackage[cal=boondoxo]{mathalfa}
+\usepackage[scale=0.82]{FiraMono}
+
+\usepackage{setspace}
+\setstretch{1}
+
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage[svgnames,dvipsnames]{xcolor}
+\usepackage{iftex}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks,
+  bookmarksnumbered,
+  pdfencoding=unicode,
+  allcolors=DarkSlateGrey
+}
+
+\setkomafont{section}{\rmfamily\fontsize{13pt}{15pt}\bfseries}
+\setkomafont{subsection}{\rmfamily\fontsize{11pt}{13pt}\bfseries\selectfont}
+\setkomafont{subsubsection}{\rmfamily\fontsize{10.5pt}{12pt}\fontseries{b}\fontshape{it}\selectfont}
+\setkomafont{paragraph}{\rmfamily\fontsize{11pt}{10pt}\itshape\selectfont}
+\setkomafont{subparagraph}{\rmfamily\fontsize{11pt}{10pt}\selectfont}
+
+\colorlet{scolor}{black}
+\colorlet{hscolor}{DarkSlateGrey}
+\usepackage{booktabs}
+\usepackage[backend=biber, style=lncs, giveninits,sorting=nyt]{biblatex}
+\addbibresource{literature.bib}
+
+\usepackage{siunitx}
+\sisetup{per-mode = fraction, prefixes-as-symbols = false, list-units = brackets, range-units = brackets, multi-part-units = brackets }
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{enumitem}
+\usepackage{cleveref}
+\usepackage{tabularx}
+\usepackage[printonlyused]{acronym}
+
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{}
+
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{tikz}
+\usetikzlibrary{3d,mindmap}
+
+\usepackage{caption}
+\captionsetup{font={small}, labelfont={bf,small}, singlelinecheck=false, labelsep=newline, format=plain}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\usepackage[defaultlines=3,all]{nowidow}
+
+% Misc
+\usepackage{ifthen}
+\usepackage{iflang}
+
+\usepackage{scrlayer-scrpage}
+\automark*[section]{}
+\renewcommand*{\partmark}[1]{}
+\setkomafont{pageheadfoot}{\normalcolor\footnotesize\scshape}
+\setkomafont{pagenumber}{\normalfont\normalsize}
+\clearpairofpagestyles
+%\ihead{\headmark}
+\ohead*{\normalcolor\footnotesize\pagemark}
+\ifoot*{\normalfont \thesistype}
+\ofoot*{\normalfont \name, \the\year{}}
+\KOMAoptions{headsepline=.25pt}
+\pagestyle{headings}
+\usepackage{scrhack}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+    \include{Deckblatt}
+
+% Fill out abstract
+    {\thispagestyle{empty}
+    \subsection*{\abstractname}
+    \textit{Abstract text}
+    }
+
+    \newpage
+
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    \tableofcontents
+    \newpage
+
+    \addcontentsline{toc}{section}{\listfigurename}
+    \listoffigures
+    \newpage
+
+    \addcontentsline{toc}{section}{\listtablename}
+    \listoftables
+    \newpage
+
+% Comment out if not applicable
+    \addcontentsline{toc}{section}{\listoflistingscaption}
+    \listoflistings
+    \newpage
+
+    \section*{\abbreviationname}
+    \addcontentsline{toc}{section}{\abbreviationname}
+    \begin{acronym}[MMMMMMMMM]
+        \acro{USA}{United States of America}
+        \acro{a}{a}
+        \acro{AvgBacklog}{Average process instance backlog length}
+        \acro{AvgDef}{Average duration of process definitions}
+        \acro{AvgTask}{Average duration of process tasks per process definition}
+        \acro{Bsp.}{Beispiel}
+        \acro{BAM}{Business Activity Monitoring}
+        \acro{BP}{Business Process}
+        \acro{BPL}{Business Process Lifecycle}
+        \acro{BPM}{Business Process Management}
+        \acro{BPMN}{Business Process Management Notation}
+        \acro{BPMS}{Business Process Management System}
+        \acro{cBPs}{Collaborative Business Processes}
+        \acro{CEP}{Complex Event Processing}
+        \acro{CP}{Complex Event}
+        \acro{DB}{Data base}
+    \end{acronym}
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\subsection{Background and Motivation}
+\mintinline{latex}{\textcite{Webster2002_Analyzing}} = \textcite{Webster2002_Analyzing}
+
+\mintinline{latex}{\parencite{Webster2002_Analyzing}} = \parencite{Webster2002_Analyzing}
+
+
+\subsection{Background}
+    \parencite{Webster2002_Analyzing} und \textcite{Webster2002_Analyzing} "test" äüöß \& \textit{\&} \ac{USA} und dann nochmal was über die \ac{USA} in \nameref{lst:fib_rust} (\cref{lst:fib_rust}, \pageref{lst:fib_rust}), \nameref{sec:2}
+    
+    \mintinline{latex}{\mintinline{latex}{your $code$ goes here}} \todo{Schreiben}
+\subsubsection{Motivation}
+
+    $$\mathbb{R}^+ \mathbb{N Z} \mathfrak{R}$$
+
+    \begin{gather}
+        f(x) = \begin{cases}
+                   \frac{1}{\mathcal{B}(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1} & \text{if } 0<x<1 \\
+                   0, & \text{otherwise}
+        \end{cases} \label{eq:betapdf} \\
+        \mathcal{B}(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}=\int_{0}^{1}x^{\alpha-1}(1-x)^{\beta-1}\text{d}\alpha \label{eq:beta} \\
+        \Gamma(n)=(n-1)! \label{eq:gamma}
+    \end{gather}
+
+\paragraph{Paragraph 123} Test
+
+
+    \section[A2]{Assignment 2}\label{sec:2}
+
+    \begin{enumerate}
+        \item Determine whether the vector $\begin{bmatrix}
+                                                8 \\ 0\\ 5
+        \end{bmatrix}$ is a linear combination of the vectors $\begin{bmatrix}
+                                                                   1 \\ 2 \\ 3
+        \end{bmatrix}$, $\begin{bmatrix}
+                             0 \\ 1 \\ 4
+        \end{bmatrix}$ and $\begin{bmatrix}
+                                2 \\ -1 \\ 1
+        \end{bmatrix}$.
+        \item Is the vector $\begin{bmatrix}
+                                 2 \\ -1 \\ 1 \\ -3
+        \end{bmatrix}$ in the span $\begin{Bmatrix}
+                                        \begin{bmatrix}
+                                            1 \\ 0 \\ 1 \\ -1
+                                        \end{bmatrix}\cdot\begin{bmatrix}
+                                                              0 \\ 1 \\ 1 \\ 1
+                                        \end{bmatrix}
+        \end{Bmatrix}$
+        \item Consider the following matrix
+        $$A=\begin{bmatrix}
+                2  & -4 & 0  & -2 \\
+                -3 & 4  & 1  & 2  \\
+                0  & -1 & 2  & 1  \\
+                4  & -2 & -3 & -1 \\
+        \end{bmatrix}$$
+        \begin{enumerate}
+            \item How many rows of this matrix contain a pivot position? Does the equation $A\textbf{x}=\textbf{b}$ have a solution for each $\textbf{b}$ in $\mathbb{R}^4$?
+        \end{enumerate}
+    \end{enumerate}
+
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}
+            [z={(10:10mm)},x={(-45:5mm)}]
+            \def\wave{
+                \draw[fill,thick,fill opacity=.2]
+                (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+                sin (5,1) cos (6,0) sin (7,-1) cos (8,0)
+                sin (9,1) cos (10,0)sin (11,-1)cos (12,0);
+                \foreach \shift in {0,4,8}
+                    {
+                    \begin{scope}[xshift=\shift cm,thin]
+                        \draw (.5,0)  -- (0.5,0 |- 45:1cm);
+                        \draw (1,0)   -- (1,1);
+                        \draw (1.5,0) -- (1.5,0 |- 45:1cm);
+                        \draw (2.5,0) -- (2.5,0 |- -45:1cm);
+                        \draw (3,0)   -- (3,-1);
+                        \draw (3.5,0) -- (3.5,0 |- -45:1cm);
+                    \end{scope}
+                }
+            }
+            \begin{scope}[canvas is zy plane at x=0,fill=blue]
+                \wave
+                \node at (6,-1.5) [transform shape] {magnetic field};
+            \end{scope}
+            \begin{scope}[canvas is zx plane at y=0,fill=red]
+                \draw[help lines] (0,-2) grid (12,2);
+                \wave
+                \node at (6,1.5) [rotate=180,xscale=-1,transform shape] {electric field};
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Oscillating electric field vectors}
+        \label{fig:enter-label}
+    \end{figure}
+
+
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=.5\textwidth]{ur-logo-bildmarke-grau}
+        \caption{Logo der Universität Regensburg}
+        \label{fig:my_label}
+    \end{figure}
+
+
+    Siehe \cref{fig:my_label} (S. \pageref{fig:my_label}). \Cref{fig:my_label} zeigt\footnote{Sonst steht hier nichts!~\parencite{Bensky2019_Technologies}} in \cref{sec:2}
+
+    \newpage
+
+    \mintinline{java}{ToolSupport1(String s1, String s2)}
+
+    \texttt{ToolSupport2(String s1, String s2)}
+
+
+    $a$ ist \num{1,2} oder $a = \num{1,2}$
+
+    \numrange{1,234}{5,678} sowie \numlist{1,2;3,45;6,7}
+
+    \num{-1,23e45} und \num{+1,23e45}
+
+    \num{+-1,2e-3} oder \num{-+1,2e-3}
+
+    \num{1,23(4)} oder \num{1,23+-0,04}
+
+    \ang{12} genauer \ang{12;3;} noch genauer \ang{12;3;4}
+    oder \ang{12,05}
+
+    \si{\kg\m\squared\per\milli\A\s\cubed} ungleich
+    \si[sticky-per]{\kg\m\squared\per\milli\A\s\cubed}
+
+    \SI{1,234(5)}{\celsius}
+
+    \SI{1,23e6}{\mega\watt}
+
+    \SI[round-mode = places]{12,34567}{\kJ}
+
+    \SIrange{1,234}{2,456}{\mega\volt}
+
+    \begin{table}[t]
+        \centering
+        \caption{Studium mit Beispielhafter Tabelle}
+        \label{tab:my_label}
+        \begin{tabularx}{.7\columnwidth}{XXX}
+            \toprule
+            \multicolumn{2}{c}{Studium} \\ \cmidrule{1-2}
+            Fach & Dauer & Einkommen (€) \\
+            \midrule
+            Info & 2     & 12,75         \\
+            MST  & 6     & 8,20          \\
+            VWL  & 14    & 10,00         \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+    \begin{listing}[t]
+        \begin{minted}{rust}
+pub fn fibonacci_reccursive(n: i32) -> u64 {
+    if n < 0 {
+        panic!("{} is negative!", n);
+    }
+    match n {
+        0 => panic!("zero is not a right argument to fibonacci_reccursive()!"),
+        1 | 2 => 1,
+        3 => 2,
+        _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),
+    }
+}
+        \end{minted}
+        \caption{Fibonnaci Sequence Rust (nicht nach \textcite{Schilit1994_Disseminating})}
+        \label{lst:fib_rust}
+    \end{listing}
+
+    \[
+        \begin{pmatrix}
+            F_{k+2} \\
+            F_{k+1}
+        \end{pmatrix} = \begin{pmatrix}
+                            1 & 1 \\
+                            1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            F_{k+1} \\
+            F_k
+        \end{pmatrix}
+    \]
+
+    und auch inline gilt $F_n=F_{n-1}+F_{n-2}$~\parencite{Webster2002_Analyzing}
+
+    \parencite{EuropeanCommission2020_Smartphone}
+
+    \textcite{PeralRosado2018_Survey}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \clearpage
+
+    \printbibliography
+
+    \clearpage
+%%
+%% If your work has an appendix, this is the place to put it.
+    \appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Anhang wenn benötigt}
+
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \path[mindmap,concept color=black,text=white]
+            node[concept] {Computer Science}
+            [clockwise from=0]
+            % note that `sibling angle' can only be defined in
+            % `level 1 concept/.append style={}'
+            child[concept color=green!50!black] {
+                node[concept] {practical}
+                [clockwise from=90]
+                child { node[concept] {algorithms} }
+                child { node[concept] {data structures} }
+                child { node[concept] {pro\-gramming languages} }
+                child { node[concept] {software engineer\-ing} }
+            }
+            % note that the `concept color' is passed to the `child'(!)
+            child[concept color=blue] {
+                node[concept] {applied}
+                [clockwise from=-30]
+                child { node[concept] {databases} }
+                child { node[concept] {WWW} }
+            }
+            child[concept color=red] { node[concept] {technical} }
+            child[concept color=orange] { node[concept] {theoretical} };
+        \end{tikzpicture}
+        \caption{Mindmap built from a tree}
+        \label{fig:enter-label2}
+    \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\subsection*{Angaben zur Verwendung KI-basierter Hilfsmittel}
+
+Ich versichere, dass ich keine KI-basierten Tools verwendet habe, deren Nutzung der Prüfer / die Prüferin explizit schriftlich ausgeschlossen hat. Sämtliche KI-basierte Hilfsmittel sind mit Produktnamen und Erläuterung der Verwendung in folgender Tabelle angegeben. Ich bin mir bewusst, dass die Verwendung von Texten oder anderen Inhalten und Produkten, die durch KI-basierte Tools generiert wurden, keine Garantie für deren Qualität darstellt. Ich verantworte die Übernahme jeglicher von mir verwendeter maschinell generierter Passagen vollumfänglich selbst und trage die Verantwortung für eventuell durch die KI generierte fehlerhafte oder verzerrte Inhalte, fehlerhafte Referenzen, Verstöße gegen das Datenschutz- und Urheberrecht oder Plagiate. Ich versichere zudem, dass in der vorliegenden Arbeit mein gestalterischer Einfluss überwiegt.
+
+\vspace{2cm}
+\begin{flushright}
+    Regensburg, den \submittedDate
+\end{flushright}
+
+{
+\scriptsize
+\begin{longtblr}[entry=none]{
+  width = \linewidth,
+  colspec = {Q[l,-1]X[l]X[l]Q[l]X[l]},
+  rowhead =
+}
+\toprule
+\SetCell{font=\bfseries} KI-Tool & \SetCell{font=\bfseries} Einsatzform & \SetCell{font=\bfseries} Grund & \SetCell{font=\bfseries} Betroffene Teile & \SetCell{font=\bfseries} Anmerkungen \\
+\midrule
+
+DeepL   & Übersetzung von Zeitungsartikeln & Entscheidung welche Artikel relevant sind & Literaturrecherche vorab & \\ 
+
+ChatGPT & Begriffsklärung xy & Verständnisklärung als Grundlage zur einheitlichen Begriffsnutzung & Kapitel 1, S. 3-6 & \\
+
+DALL-E  & Visualisierung & Veranschaulichung des Sachverhalts zum besseren Verständnis & Kapitel 3, S. 8 Abschnitt 2 & Nur die Grundidee wurde genutzt, Grafik wurde stark bearbeitet \\
+
+...     & ...            & ...                 & ...          & ... \\
+
+\bottomrule
+\end{longtblr}
+}
+
+
+\newpage
+\pagestyle{empty}
+
+\subsection*{Erklärung an Eides statt}
+\todo{nur bei Bachelor- und Masterarbeiten, bei Seminaren nicht benötigt}
+%% Bachelor und Master nach Prüfungsordnung 2015
+Ich habe die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt. Die Arbeit wurde bisher an keiner anderen Hochschule zur Erlangung eines akademischen Grades eingereicht. Die vorgelegten Druckexemplare und die dem Prüfer / der Prüferin zur Verfügung gestellte elektronische Version (PDF-Datei) der Arbeit sind identisch. Von den in §13 Abs. 3 PO 2015 vorgesehenen Rechtsfolgen habe ich Kenntnis.
+
+%% Bachelor nach Prüfungsordnung 2021
+Ich habe die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt. Die Arbeit wurde bisher an keiner anderen Hochschule zur Erlangung eines akademischen Grades eingereicht. Die vorgelegten Druckexemplare und die dem Prüfer / der Prüferin zur Verfügung gestellte elektronische Version (PDF-Datei) der Arbeit sind identisch. Von den in §27 Abs. 6 BPO 2021 vorgesehenen Rechtsfolgen habe ich Kenntnis.
+
+%% Master nach Prüfungsordnung 2021
+Ich habe die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt. Die Arbeit wurde bisher an keiner anderen Hochschule zur Erlangung eines akademischen Grades eingereicht. Die vorgelegten Druckexemplare und die dem Prüfer / der Prüferin zur Verfügung gestellte elektronische Version (PDF-Datei) der Arbeit sind identisch. Von den in §26 Abs. 6 MPO 2021 vorgesehenen Rechtsfolgen habe ich Kenntnis.
+
+
+\vspace{4cm}
+\begin{flushright}
+    Regensburg, den \submittedDate
+\end{flushright}
+
+\end{document}
+
+%%
+%% End of file
