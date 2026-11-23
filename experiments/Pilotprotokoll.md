@@ -61,6 +61,67 @@ scikit-learn 1.9.1. TabPFN wählt das Gerät automatisch (`device='auto'`).
 Das ist eine einzelne Messung auf WDBC, kein Laufzeitvergleich. Spambase ist
 noch nicht gemessen.
 
+## Laufzeittest auf Spambase am PC (23. November 2026)
+
+Skript [laufzeit_spambase.py](./laufzeit_spambase.py), gespeicherte Messung
+[results/laufzeit_spambase_20261123_131211.json](./results/laufzeit_spambase_20261123_131211.json)
+mit Konfiguration, Seed, Paketversionen und realisierten Fehlanteilen. Kein
+Hauptversuch: ein Split, eine Maske je Fehlrate, nur MCAR, keine Abstimmung. Die
+Metriken in der Datei dienen nur der Plausibilität.
+
+Aufbau: Gruppensplit identischer Merkmalsvektoren (`StratifiedGroupKFold`, drei
+Folds, einer als Test), 3 067 Trainings- und 1 534 Testfälle, 57 Merkmale;
+Fehlraten 0, 10, 30, 50 %; interne Verarbeitung, Median, Median mit Indikatoren
+(114 Merkmale).
+
+| Modell | Bedingungen | Zeit je Bedingung | Summe |
+|---|---|---|---|
+| TabPFN-3.5 (GPU) | 10 | 15,4 bis 46,5 s | 267,7 s |
+| LightGBM | 10 | 0,07 bis 0,12 s | 1,0 s |
+
+Bei TabPFN brauchen interne Verarbeitung und Median 15 bis 22 s, die
+Indikator-Pipeline mit doppelter Merkmalszahl 44 bis 46 s. Der belegte
+GPU-Speicher lag bei etwa 7,6 GB.
+
+**Wichtig für den Hauptversuch: `memory_saving_mode=True` setzen.** Mit der
+Standardeinstellung `"auto"` lief der Grafikspeicher (16 GB) ab etwa 2 000
+Trainingsfällen voll, und ein einzelner Lauf war nach über fünf Minuten nicht
+fertig; zwei Versuche wurden abgebrochen. Einzelmessungen dazu mit
+[laufzeit_diagnose.py](./laufzeit_diagnose.py), jeweils eigener Prozess,
+vollständige Daten, alle 1 534 Testfälle (Konsolenausgabe, hier festgehalten):
+
+| Trainingsfälle | `memory_saving_mode` | Testfälle je Aufruf | Zeit | Balanced Accuracy |
+|---|---|---|---|---|
+| 1 500 | auto | alle | 2,0 s | 0,9048 |
+| 2 000 | auto | alle | abgebrochen (> 5 min) | – |
+| 2 000 | True | alle | 2,5 s | 0,9380 |
+| 2 000 | auto | 256 | 5,9 s | 0,9380 |
+| 3 067 | True | alle | 3,2 s | 0,9670 |
+| 3 067 | True | 512 | 5,9 s | 0,9662 |
+| 3 067 | auto | 512 | 5,8 s | 0,9662 |
+
+Zwei Beobachtungen, beide nicht weiter untersucht:
+
+- Dieselbe Bedingung (3 067 Fälle, 0 %) braucht im frischen Prozess 3,2 s, im
+  langen Lauf nach mehreren Modellen 13,6 bis 15,4 s. Die Zeiten der Tabelle
+  oben sind deshalb eher eine Obergrenze; Speicherfreigabe zwischen den Läufen
+  könnte sie senken.
+- Die Vorhersage in Teilmengen der Testfälle ändert die Balanced Accuracy
+  leicht (0,9662 statt 0,9670). Im Hauptversuch die Testfälle deshalb für alle
+  Bedingungen auf dieselbe Weise übergeben.
+
+Hochrechnung für Spambase aus der gespeicherten Messung, unter der Annahme,
+dass MAR und MNAR so lange rechnen wie MCAR:
+
+| Umfang | TabPFN-Läufe je Wiederholung | Zeit je Wiederholung | 20 Wiederholungen |
+|---|---|---|---|
+| nur MCAR | 10 | 4,5 min | 1,5 h |
+| drei Mechanismen | 28 | 12,9 min | 4,3 h |
+
+Die drei kleineren Datensätze sind nicht gemessen; WDBC brauchte 0,3 s je
+Bedingung. Nicht enthalten sind die LightGBM-Abstimmung und die
+Sensitivitätsanalyse bei 50 %.
+
 ## Befunde für die Hauptplanung
 
 1. **Machbarkeit nachgewiesen:** Zugang, Lizenz, Download, NaN-Eingaben,

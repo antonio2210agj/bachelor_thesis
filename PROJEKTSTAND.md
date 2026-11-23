@@ -95,16 +95,24 @@ Mit dem Betreuer zu klären:
 
 ### Experiment (FF2)
 
-- Vorhanden sind nur der Pilot `experiments/pilot_tabpfn_wdbc.py` und der
-  Ladetest. Code für den Hauptversuch (Splits mit Gruppen, Maskierung je
+- Vorhanden sind der Pilot `experiments/pilot_tabpfn_wdbc.py`, der Ladetest
+  und die Laufzeitskripte `laufzeit_spambase.py` und `laufzeit_diagnose.py`
+  (mit Gruppensplit und allen drei Behandlungen, aber nur MCAR und ein Split).
+  Code für den Hauptversuch (Splits mit Gruppen, Maskierung je
   Fehlmechanismus, Pipelines, Abstimmung, Ergebnisablage) existiert noch nicht.
 - Rechenzeit: Im Pilot brauchte TabPFN-3.5 auf der CPU 68 bis 114 Sekunden je
   Bedingung bei 569 Fällen. Der PC hat eine GPU (RTX 5070 Ti, 16 GB); dort
   braucht derselbe Pilot etwa 0,3 Sekunden je Bedingung nach dem Laden des
   Modells, bei identischen Metriken und identischem Checkpoint (Pilotprotokoll,
   Abschnitt „Wiederholung am PC mit GPU“). Auf WDBC ist Rechenzeit damit kein
-  Engpass. Spambase (4 601 Fälle) ist noch nicht gemessen; der Laufzeittest
-  dort bleibt vor der Festlegung der Wiederholungszahl nötig.
+  Engpass. Spambase (4 601 Fälle) am 23.11.2026 gemessen (Pilotprotokoll,
+  Abschnitt „Laufzeittest auf Spambase“): 15 bis 46 Sekunden je
+  TabPFN-Bedingung, hochgerechnet etwa 13 Minuten je Wiederholung mit drei
+  Fehlmechanismen, also rund 4,3 Stunden für 20 Wiederholungen. Der
+  Hauptversuch ist damit auch mit MCAR, MAR und MNAR in vollem Umfang
+  rechenbar. Voraussetzung ist `memory_saving_mode=True`; mit der
+  Standardeinstellung läuft der Grafikspeicher ab etwa 2 000 Trainingsfällen
+  voll und der Lauf hängt.
 - `requirements.txt` enthält Versionsbereiche und kein `torch`; eine exakte
   Sperre fehlt noch. PC und Laptop haben verschiedene torch-Versionen (siehe
   Umgebung). Für den Hauptversuch zählt die PC-Umgebung.
@@ -153,7 +161,8 @@ Pflicht:
 
 Wenn Zeit bleibt:
 
-4. Laufzeittest auf Spambase am PC als Grundlage für Punkt 3.
+4. Laufzeittest auf Spambase am PC als Grundlage für Punkt 3 (erledigt am
+   23.11.2026, siehe Pilotprotokoll).
 5. Zeitplan rückwärts vom 16. Februar 2027 mit zwei Wochen Überarbeitung.
 
 Bis dahin kein Kapiteltext.
@@ -211,7 +220,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 20.11.2026 | GitHub Copilot in VS Code | Durchsicht des Repositorys, Einrichtung von Arbeitsanweisungen und Projektstand, Reparatur der LaTeX-Umgebung am Laptop, Umstellung des Zitierstils auf IEEE; kein Text der Arbeit erzeugt |
 | 21.11.2026 | GitHub Copilot in VS Code | Vorschlag für die Vorbereitung des Betreuertermins am 25.11.2026 (Prioritäten, Fragenliste) |
 
-| 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU |
+| 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU, Laufzeittest auf Spambase mit Skripten und Diagnose des Speicherproblems |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
