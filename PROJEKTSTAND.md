@@ -88,7 +88,10 @@ Mit dem Betreuer zu klären:
   am PC unter `literature/07_Missing_Data_und_Imputation/` und ist in
   `.gitignore` ausgenommen, weil arXiv dafür keine Weitergabelizenz ausweist.
   Am Laptop bei Bedarf selbst herunterladen.
-- Acht ungeprüfte Kandidaten stehen im Suchprotokoll, Abschnitt 6.
+- Die frühere Kandidatenliste wurde am 23.11.2026 (PC) aus dem Suchprotokoll
+  entfernt: Die dort genannten eigenständigen Arbeiten waren weder lokal
+  vorhanden noch im Exposé oder auf dem sichtbaren Zotero-Screenshot enthalten.
+  Neue Kandidaten werden bei der Recherche dokumentiert.
 - In `references.bib` vorhanden, aber nirgends zitiert:
   `cooper_organizing_1988`, `page_prisma_2021` (vermutlich für Kapitel 3.1),
   `hu_noise_2026`, `liu_repeated_2026`, `zhao_alignment_2026` (früherer Zuschnitt).

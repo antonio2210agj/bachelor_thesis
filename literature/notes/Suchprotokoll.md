@@ -95,11 +95,6 @@ Ausschluss:
 | Ke et al. (2017), LightGBM | ke2017lightgbm | nein | offen |
 | Rubin (1976) | rubin_inference_1976 | nein | Grundlage, nicht in Matrix |
 
-Noch nicht geprüfte Kandidaten aus früheren Abgleichen: Ye et al. (TabPFN v2,
-arXiv 2502.17361), Samad et al. (2026), TabArena, Josse et al., Le Morvan
-et al. (2021), Twala et al. (2008), Muzellec et al. (2020), Jarrett et al.
-(2022). Erst am Original prüfen, dann aufnehmen oder mit Grund ausschließen.
-
 ## 7. Such-Log
 
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Filter | Treffer | Nach Titel/Abstract behalten | Neu gegenüber Startmenge |
