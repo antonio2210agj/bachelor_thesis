@@ -3,7 +3,7 @@
 Fortlaufend gepflegter Stand der Bachelorarbeit. Dauerhafte Arbeitsregeln stehen
 in [.github/copilot-instructions.md](.github/copilot-instructions.md).
 
-Zuletzt aktualisiert: 20. November 2026 (Laptop). Erstfassung aus dem Inhalt des
+Zuletzt aktualisiert: 23. November 2026 (Laptop). Erstfassung aus dem Inhalt des
 Repositorys erstellt. Was nur im Chat am PC besprochen wurde und nicht im
 Repository steht, fehlt hier und ist unter „Vom PC-Chat zu ergänzen“ nachzutragen.
 
@@ -14,6 +14,8 @@ Repository steht, fehlt hier und ist unter „Vom PC-Chat zu ergänzen“ nachzu
 | Abgabedatum laut `writing/thesis/main.tex` | 16. Februar 2027 |
 | Erstgutachter | Prof. Dr. Stefan Schönig |
 | Betreuer | Maximilian Metzner |
+| Letzter Stand beim Betreuer | Exposé abgegeben, Bachelorarbeit angemeldet (Angabe des Nutzers vom 21.11.2026) |
+| Nächster Betreuertermin | Mittwoch, 25. November 2026 |
 | Seitenbudget laut Kapitelgerüst | ca. 40 Seiten ohne Anhang (4, 7, 6, 6, 9, 6, 2) |
 | Phase | Literaturanalyse (FF1) beginnt; Kapitel sind Gerüste ohne Text |
 
@@ -89,6 +91,37 @@ Mit dem Betreuer zu klären:
 - Mit dem Schreiben wurde noch nicht begonnen; das ist so geplant.
 - Deckblattangaben in `main.tex` sind vollständig (PLZ, Ort, Betreuer).
 
+## Bis zum Betreuertermin am 25. November 2026
+
+Vorschlag vom 21.11.2026 (Laptop); am 23.11.2026 war davon laut Repository noch
+nichts begonnen.
+
+Pflicht:
+
+1. Erste Suchrunde mit S1 und S2 in Google Scholar, arXiv und Scopus, jede
+   Suche sofort im Such-Log eintragen (macht der Nutzer selbst, Uni-Zugang).
+2. Konzeptmatrix am Volltext prüfen, zuerst Zaimoğlu (trägt die Abgrenzung im
+   Exposé); TabPFN-2.5-Bericht, Ke et al. und neue Treffer ergänzen.
+3. Ein bis zwei Varianten für den Umfang von MAR und MNAR mit Zahl der
+   Rechenläufe (z. B. alle Mechanismen voll oder MCAR voll und MAR/MNAR nur bei
+   einer Fehlrate).
+
+Wenn Zeit bleibt:
+
+4. Laufzeittest auf Spambase am PC als Grundlage für Punkt 3.
+5. Zeitplan rückwärts vom 16. Februar 2027 mit zwei Wochen Überarbeitung.
+
+Bis dahin kein Kapiteltext.
+
+Fragen an den Betreuer:
+
+- Datenbanken: nur Google Scholar und arXiv wie im Exposé oder auch Scopus,
+  IEEE Xplore, ACM Digital Library (und AISeL)?
+- Zitierstil IEEE laut Folien, obwohl die Vorlage auf LNCS steht?
+- Umfang von MAR und MNAR (Varianten aus Punkt 3)?
+- Reichen vier Datensätze, wie viele Wiederholungen sind angemessen?
+- Form der Angabe der KI-Nutzung im Anhang?
+
 ## Nächste Schritte
 
 1. Datenbanken festlegen und Exposé und Suchprotokoll angleichen.
@@ -115,6 +148,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | Datum | Werkzeug | Wofür |
 |---|---|---|
 | 20.11.2026 | GitHub Copilot in VS Code | Durchsicht des Repositorys, Einrichtung von Arbeitsanweisungen und Projektstand, Reparatur der LaTeX-Umgebung am Laptop, Umstellung des Zitierstils auf IEEE; kein Text der Arbeit erzeugt |
+| 21.11.2026 | GitHub Copilot in VS Code | Vorschlag für die Vorbereitung des Betreuertermins am 25.11.2026 (Prioritäten, Fragenliste) |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
