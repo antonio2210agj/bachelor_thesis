@@ -3,9 +3,9 @@
 Fortlaufend gepflegter Stand der Bachelorarbeit. Dauerhafte Arbeitsregeln stehen
 in [.github/copilot-instructions.md](.github/copilot-instructions.md).
 
-Zuletzt aktualisiert: 23. November 2026 (Laptop). Erstfassung aus dem Inhalt des
-Repositorys erstellt. Was nur im Chat am PC besprochen wurde und nicht im
-Repository steht, fehlt hier und ist unter „Vom PC-Chat zu ergänzen“ nachzutragen.
+Zuletzt aktualisiert: 23. November 2026 (PC). Erstfassung am Laptop aus dem
+Inhalt des Repositorys erstellt; am 23.11.2026 am PC um den Stand aus dem
+dortigen Chat (19. und 20.11.2026) ergänzt.
 
 ## Eckdaten
 
@@ -16,7 +16,7 @@ Repository steht, fehlt hier und ist unter „Vom PC-Chat zu ergänzen“ nachzu
 | Betreuer | Maximilian Metzner |
 | Letzter Stand beim Betreuer | Exposé abgegeben, Bachelorarbeit angemeldet (Angabe des Nutzers vom 21.11.2026) |
 | Nächster Betreuertermin | Mittwoch, 25. November 2026 |
-| Seitenbudget laut Kapitelgerüst | ca. 40 Seiten ohne Anhang (4, 7, 6, 6, 9, 6, 2) |
+| Seitenbudget laut Kapitelgerüst | ca. 40 Seiten ohne Anhang (4, 7, 6, 6, 9, 6, 2); „40 oder so“ ist eine Angabe des Nutzers vom 19.11.2026, keine belegte Lehrstuhlvorgabe |
 | Phase | Literaturanalyse (FF1) beginnt; Kapitel sind Gerüste ohne Text |
 
 ## Entscheidungen
@@ -28,6 +28,11 @@ Repository steht, fehlt hier und ist unter „Vom PC-Chat zu ergänzen“ nachzu
 | 09.11.2026 | Technischer Pilot auf WDBC abgeschlossen; Checkpoint `tabpfn-v3.5-20260909.safetensors` mit SHA256 dokumentiert | Pilotprotokoll |
 | 13.11.2026 | Nach Betreuergespräch: Titel und Forschungsfragen auf Ebene der Modellansätze formuliert; TabPFN-3.5 und LightGBM sind austauschbare Vertreter | Commits `be17761`, `24e045e` |
 | 13.11.2026 | Fehlmechanismus ist Versuchsfaktor; MCAR als Referenz, MAR und MNAR vorgesehen, Umfang wird nach der Literaturanalyse festgelegt | Exposé |
+| 19.11.2026 | MCAR, MAR und MNAR gehen alle in den Hauptversuch ein („auf jeden Fall“); offen ist nur noch der Umfang je Mechanismus, der sich nach dem Arbeitsaufwand richtet. Die Variante „nur MCAR“ ist damit verworfen | Nutzer, PC |
+| 19.11.2026 | FF1 und FF2 bleiben im Wortlaut unverändert. Dass FF2 den Fehlmechanismus nicht nennt, ist gewollt (Spielraum); auch der Titel nennt keinen Mechanismus | Nutzer, PC |
+| 19.11.2026 | Statistische Tests nur, wenn der Betreuer sie verlangt; sonst deskriptive Auswertung | Nutzer, PC |
+| 19.11.2026 | Ältere Begleitdokumente (`notizen.md`, Exposé-Evaluationen, Verbesserungstipps, Cooper-Notiz, Gesprächscheckliste) bewusst gelöscht; sie gelten nicht mehr | Nutzer, PC |
+| 19.11.2026 | Recherche beginnt nicht bei null: Startmenge aus dem Exposé, Datenbanksuche prüft, ob daneben etwas fehlt (im Suchprotokoll, Abschnitt 2, umgesetzt) | PC |
 | 20.11.2026 | Zitierstil IEEE nach den Lehrstuhlfolien; `main.tex` von `style=lncs` auf `style=ieee` umgestellt (Abweichung von der Lehrstuhlvorlage, vom Nutzer entschieden) | Nutzer, Laptop |
 | 20.11.2026 | Rechenläufe des Hauptversuchs nur am PC; Laptop für Recherche, Schreiben und kurze Tests | Nutzer, Laptop |
 | 20.11.2026 | Literaturanalyse: zuerst alle relevanten Arbeiten breit sammeln und jede Suche protokollieren, dann anhand der Ein- und Ausschlusskriterien reduzieren; die Konzeptmatrix bleibt, weil das Exposé sie zusagt | Nutzer, Laptop |
@@ -46,6 +51,18 @@ Laut Exposé vor dem Hauptversuch festzulegen:
 - Aggregation der gepaarten Differenzen
 - Regel für vollständig maskierte Trainingsspalten
 - Fixierung von Paketversionen, Modellkonfiguration, Checkpoint und Seeds
+
+Vom Nutzer zu entscheiden (Vorschläge vom 19.11.2026, PC, noch unbeantwortet):
+
+- Kapitel 2 straffen: 2.2 und 2.3 zusammenlegen, 2.7 (Metriken) nach 4.7
+  verschieben; sieben Unterkapitel auf rund sieben Seiten sind kleinteilig.
+- Indikator-Behandlung einheitlich als Zusatzanalyse führen. Die Gliederung
+  nennt sie so, die Abgrenzungstabelle im Exposé zählt sie als dritte volle
+  Behandlung.
+- Der Absatz zur Bedeutung von „Eignung“ (Leistung und Robustheit, nicht Kosten
+  oder Laufzeit) steht nur noch in `Gliederung.tex`, nicht mehr im Exposé; für
+  Kapitel 1.3 vormerken.
+- Exposé als abgeschlossen behandeln und nur noch Gliederung und Kapitel pflegen.
 
 Mit dem Betreuer zu klären:
 
@@ -67,6 +84,10 @@ Mit dem Betreuer zu klären:
   TabPFN-2.5-Bericht und Ke et al. (2017).
 - Lokal fehlt TabImpute in der Fassung arXiv v6; für Ke et al. (2017) und Rubin
   (1976) liegt kein PDF vor.
+- Perez-Lebel et al. (arXiv 2202.10580v1, Author Accepted Manuscript) liegt nur
+  am PC unter `literature/07_Missing_Data_und_Imputation/` und ist in
+  `.gitignore` ausgenommen, weil arXiv dafür keine Weitergabelizenz ausweist.
+  Am Laptop bei Bedarf selbst herunterladen.
 - Acht ungeprüfte Kandidaten stehen im Suchprotokoll, Abschnitt 6.
 - In `references.bib` vorhanden, aber nirgends zitiert:
   `cooper_organizing_1988`, `page_prisma_2021` (vermutlich für Kapitel 3.1),
@@ -78,11 +99,35 @@ Mit dem Betreuer zu klären:
   Ladetest. Code für den Hauptversuch (Splits mit Gruppen, Maskierung je
   Fehlmechanismus, Pipelines, Abstimmung, Ergebnisablage) existiert noch nicht.
 - Rechenzeit: Im Pilot brauchte TabPFN-3.5 auf der CPU 68 bis 114 Sekunden je
-  Bedingung bei 569 Fällen. Mit drei Fehlmechanismen wächst die Zahl der
-  Bedingungen gegenüber der Schätzung im Pilotprotokoll deutlich. Gerechnet wird
-  nur am PC. Vor der Festlegung der Wiederholungszahl ist dort ein Laufzeittest
-  auf Spambase nötig; ob der PC eine GPU hat, ist hier nicht bekannt.
-- `requirements.txt` enthält Versionsbereiche; eine exakte Sperre fehlt noch.
+  Bedingung bei 569 Fällen. Der PC hat eine GPU (RTX 5070 Ti, 16 GB); dort
+  braucht derselbe Pilot etwa 0,3 Sekunden je Bedingung nach dem Laden des
+  Modells, bei identischen Metriken und identischem Checkpoint (Pilotprotokoll,
+  Abschnitt „Wiederholung am PC mit GPU“). Auf WDBC ist Rechenzeit damit kein
+  Engpass. Spambase (4 601 Fälle) ist noch nicht gemessen; der Laufzeittest
+  dort bleibt vor der Festlegung der Wiederholungszahl nötig.
+- `requirements.txt` enthält Versionsbereiche und kein `torch`; eine exakte
+  Sperre fehlt noch. PC und Laptop haben verschiedene torch-Versionen (siehe
+  Umgebung). Für den Hauptversuch zählt die PC-Umgebung.
+- Hinweise aus der Exposé-Evaluation vom 15.11.2026 für das Design. Die Datei
+  ist gelöscht; die Punkte wurden am PC aus ihr gelesen und sind nicht erneut
+  nachgeprüft. Die Zahlen stammen aus einem Kurzcheck nur mit LightGBM und sind
+  keine Ergebnisse:
+  - Kein Kriterium, ab wann eine Veränderung des Abstands zählt. Die Streuung
+    zwischen Splits wurde auf 0,01 bis 0,03 Balanced Accuracy geschätzt;
+    vorgeschlagen war eine vorab festgelegte kleinste relevante Veränderung
+    (z. B. 0,01) mit Intervallen über die Wiederholungen.
+  - Unter MCAR unterschieden sich interne Verarbeitung und Median bei LightGBM
+    kaum; unter einer informativen Maskenregel entstand ein Effekt, je
+    Datensatz sehr unterschiedlich.
+  - Auf Spambase und QSAR ist ein großer Teil der Zellen gleich dem
+    Spaltenmedian; nominell gleiche Fehlraten bedeuten dann je Datensatz
+    unterschiedlich viel Informationsverlust unter Median-Imputation.
+  - Ionosphere, WDBC und QSAR kommen laut der Evaluation in der
+    TabPFN-Originalarbeit vor (Tabellen 7 und 8); vor Verwendung am Volltext
+    prüfen, gehört in die Limitationen.
+  - Offen: Rolle der Validierungsdaten für TabPFN, verschachtelte statt
+    unabhängiger Masken je Fehlrate, zweites Gradient-Boosting-Verfahren, bei
+    MAR und MNAR keine direkte Abhängigkeit der Maske vom Klassenlabel.
 
 ### Schreiben
 
@@ -120,6 +165,9 @@ Fragen an den Betreuer:
 - Zitierstil IEEE laut Folien, obwohl die Vorlage auf LNCS steht?
 - Umfang von MAR und MNAR (Varianten aus Punkt 3)?
 - Reichen vier Datensätze, wie viele Wiederholungen sind angemessen?
+- Sind statistische Tests verlangt, oder reicht eine deskriptive Auswertung mit
+  vorab festgelegter Schwelle?
+- Erwartetes Verhältnis von Literatur- zu Praxisteil und verbindlicher Umfang?
 - Form der Angabe der KI-Nutzung im Anhang?
 
 ## Nächste Schritte
@@ -139,7 +187,18 @@ Fragen an den Betreuer:
 | Rechner | Stand |
 |---|---|
 | Laptop | Python 3.12 mit `.venv` wie im Pilot (tabpfn 9.2.0, lightgbm 4.7.0, torch 2.15.0 nur CPU); Checkpoint und Zugang vorhanden; MiKTeX 25.12, Pakete der Lehrstuhlvorlage am 20.11.2026 nachinstalliert, `build.ps1` läuft durch (12 Seiten) |
-| PC | hier nicht bekannt, bitte ergänzen (GPU, Paketversionen) |
+| PC | GPU: NVIDIA GeForce RTX 5070 Ti, 16 GB, Treiber 610.88. Python 3.12.10 mit `.venv`: torch 2.11.0+cu128 (CUDA 12.8, GPU wird erkannt), tabpfn 9.2.0, lightgbm 4.7.0, numpy 2.5.3, pandas 3.0.6, scikit-learn 1.9.1, scipy 1.18.1. TabPFN wählt das Gerät automatisch (`device='auto'`). Checkpoint `tabpfn-v3.5-20260909.safetensors` unter `%APPDATA%\tabpfn\` mit derselben SHA256 wie im Pilotprotokoll; Zugang eingerichtet. MiKTeX 25.12, `biblatex-ieee` vorhanden, `build.ps1` läuft durch (12 Seiten, geprüft am 23.11.2026). `latexmk` funktioniert nicht (kein Perl), deshalb `build.ps1`. Repository liegt in einem OneDrive-Ordner |
+
+Hinweise zur Umgebung:
+
+- Der Browser-Login von `tabpfn` bricht unter Windows ab (`WinError 10038`).
+  Der Token wurde am 19.11.2026 von Hand in `~/.cache/tabpfn/auth_token`
+  abgelegt. Er stand dabei im Klartext im Chat; im Prior-Labs-Konto erneuern,
+  falls noch nicht geschehen.
+- Am PC wurde torch über den CUDA-Index installiert (siehe README), am Laptop
+  von PyPI. Die Versionen unterscheiden sich deshalb (2.11.0+cu128 gegenüber
+  2.15.0). Solange nur am PC gerechnet wird, ist das unkritisch; für den
+  Hauptversuch die PC-Versionen exakt festhalten.
 
 ## KI-Nutzung (für den Anhang)
 
@@ -147,14 +206,21 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 
 | Datum | Werkzeug | Wofür |
 |---|---|---|
+| 19.11.2026 | GitHub Copilot in VS Code (PC) | Bestandsaufnahme des Repositorys und Startplan; Thesis-Gerüst aus der Lehrstuhlvorlage mit Kapiteldateien und `build.ps1`; Vorlagen für Suchprotokoll und Konzeptmatrix (Matrixzeilen aus Exposé und Abschlussabgleich vorbefüllt, nicht am Volltext geprüft); Einrichtung der GPU-Umgebung und des TabPFN-Zugangs; Download der arXiv-Fassung von Perez-Lebel et al.; kein Text der Arbeit erzeugt |
+| 20.11.2026 | GitHub Copilot in VS Code (PC) | Commit und Push des Stands |
 | 20.11.2026 | GitHub Copilot in VS Code | Durchsicht des Repositorys, Einrichtung von Arbeitsanweisungen und Projektstand, Reparatur der LaTeX-Umgebung am Laptop, Umstellung des Zitierstils auf IEEE; kein Text der Arbeit erzeugt |
 | 21.11.2026 | GitHub Copilot in VS Code | Vorschlag für die Vorbereitung des Betreuertermins am 25.11.2026 (Prioritäten, Fragenliste) |
 
+| 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU |
+
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
-## Vom PC-Chat zu ergänzen
+## Weiterhin offen aus der Übergabe
+
+Der PC-Chat vom 19. und 20.11.2026 ist oben eingearbeitet. Nicht darin
+enthalten und nur vom Nutzer zu ergänzen:
 
 - Entscheidungen und Begründungen aus dem Betreuergespräch (eingearbeitet mit
-  den Commits vom 13.11.2026), die nicht im Exposé stehen
-- Anmeldestatus und verbindliche Termine
-- geplante, aber noch nicht umgesetzte Schritte und verworfene Alternativen
+  den Commits vom 13.11.2026), die nicht im Exposé stehen. Die Ergebnisnotiz in
+  `notizen.md` war leer, die Datei ist gelöscht.
+- verbindliche Vorgaben zu Umfang und Abgabeform

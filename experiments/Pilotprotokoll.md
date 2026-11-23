@@ -45,6 +45,22 @@ Trainingswerten. Beide Modelle mit Standardkonfiguration.
 
 Laufzeiten: TabPFN ~68–114 s pro Bedingung (CPU), LightGBM ~1–2 s.
 
+## Wiederholung am PC mit GPU (23. November 2026)
+
+Dasselbe Skript unverändert am PC: NVIDIA GeForce RTX 5070 Ti (16 GB),
+torch 2.11.0+cu128, tabpfn 9.2.0, lightgbm 4.7.0, numpy 2.5.3, pandas 3.0.6,
+scikit-learn 1.9.1. TabPFN wählt das Gerät automatisch (`device='auto'`).
+
+- Balanced Accuracy und Log-Loss stimmen in allen sechs Zeilen auf vier
+  Nachkommastellen mit der Tabelle oben überein; realisierte Fehlanteile
+  ebenfalls (0,303 / 0,299).
+- Checkpoint mit derselben SHA256 (geprüft am 19. November 2026).
+- Laufzeit TabPFN: 2,0 s für den ersten Lauf einschließlich Laden des Modells,
+  danach 0,3 s je Bedingung; LightGBM unter 0,1 s.
+
+Das ist eine einzelne Messung auf WDBC, kein Laufzeitvergleich. Spambase ist
+noch nicht gemessen.
+
 ## Befunde für die Hauptplanung
 
 1. **Machbarkeit nachgewiesen:** Zugang, Lizenz, Download, NaN-Eingaben,
@@ -55,7 +71,8 @@ Laufzeiten: TabPFN ~68–114 s pro Bedingung (CPU), LightGBM ~1–2 s.
    Abstand gegenläufig; konsistent mit der Motivation von FF2.
    Dass TabPFN bei 30 % intern nominell über der Referenz liegt, ist
    Einzelsplit-Rauschen.
-3. **Budgetplanung:** ~1–2 min pro TabPFN-Bedingung auf CPU bei n≈570.
+3. **Budgetplanung (CPU-Stand vom 9. November; am PC mit GPU deutlich
+   schneller, siehe oben):** ~1–2 min pro TabPFN-Bedingung auf CPU bei n≈570.
    Hochgerechnet auf 4 Datensätze × 4 Fehlraten × 3 Behandlungen ×
    Wiederholungen ist der Hauptversuch auf CPU machbar, aber mehrstündig;
    Spambase (n=4601) wird deutlich langsamer sein — im Pilotumfang vor dem
