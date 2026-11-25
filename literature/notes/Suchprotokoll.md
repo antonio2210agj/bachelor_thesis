@@ -74,16 +74,18 @@ Jede Zeile ist eine **eigene Suchanfrage**, kein einzelner Begriff und keine
 Anweisung, alle Anfragen auf einmal einzugeben. Die Liste ist ein Arbeitsplan,
 kein Nachweis bereits durchgeführter Suchen. Je nach Treffern später weitere
 Varianten ergänzen und genau so protokollieren, wie sie tatsächlich eingegeben
-wurden.
+wurden. Die Beispiele unten setzen jeden Begriff in Anführungszeichen; sie
+sind nicht zwingend identisch mit bereits durchgeführten Anfragen. Maßgeblich
+für die tatsächlichen Eingaben ist das Such-Log in Abschnitt 7.
 
-| ID | Eingabe in Google Scholar | Zweck |
+| ID | Beispiel für Google Scholar | Zweck |
 |---|---|---|
 | S1a | `"TabPFN" "missing values"` | Einstieg: TabPFN und fehlende Werte |
 | S1b | `"tabular foundation models" "missing data"` | Breiterer Ansatz über TabPFN hinaus |
-| S1c | `"TabPFN" imputation` | Weitere Arbeiten zur Behandlung fehlender Werte |
+| S1c | `"TabPFN" "imputation"` | Weitere Arbeiten zur Behandlung fehlender Werte |
 | S2a | `"TabPFN" "gradient boosting" "missing values"` | Mögliche direkte Vergleiche |
 | S3a | `"gradient boosting" "missing values"` | Fehlende Werte bei Gradient Boosting |
-| S4a | `"missing data" imputation classification benchmark` | Vergleichsstudien zu Behandlungen; am 25.11.2026 mit genau dieser Eingabe durchgeführt |
+| S4a | `"missing data" "imputation" "classification" "benchmark"` | Vergleichsstudien zu Behandlungen |
 
 Die explorative Anfrage S3b (`"LightGBM" "missing values"`) wurde einmal
 ausprobiert, aber wegen geringer thematischer Ausbeute aus dem weiteren
