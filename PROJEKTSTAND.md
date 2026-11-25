@@ -74,8 +74,9 @@ Mit dem Betreuer zu klären:
 
 ### Literaturanalyse (FF1)
 
-- Stand 25.11.2026 (PC): Google-Scholar-Suchläufe durchgeführt, arXiv
-  vorläufig abgeschlossen und IEEE Xplore begonnen. Alle Einzelangaben,
+- Stand 25.11.2026 (PC): Google-Scholar-Suchläufe durchgeführt, erste arXiv-
+  und IEEE-Xplore-Suchen durchgeführt; gezielte Ergänzungssuchen sind geplant.
+  Alle Einzelangaben,
   Trefferlisten, Überschneidungen und ungeklärten Angaben stehen im
   [Suchprotokoll](literature/notes/Suchprotokoll.md), Abschnitt 7.
   Insbesondere sind bei arXiv S1a der Sichtungsbereich und bei IEEE S1a

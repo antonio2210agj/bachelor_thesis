@@ -124,6 +124,46 @@ passende Treffer ausschließen.
 "missing data" AND "imputation" AND "classification" AND "benchmark"
 ```
 
+### 3.1b Geplante Ergänzungssuchen
+
+Stand 25.11.2026 (PC): Die bisherigen Anfragen bleiben unverändert
+dokumentiert. Die folgenden Vorschläge erweitern Alternativbegriffe innerhalb
+eines Themenblocks mit OR und verbinden Modellansatz und fehlende Werte mit
+AND. Sie sind noch keine durchgeführten Suchläufe. Ziel ist eine ergänzende
+Suche, kein Nachweis vollständiger Abdeckung.
+
+**IEEE E1: Tabular Foundation Models**
+
+```text
+("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")
+```
+
+Diese Anfrage ergänzt S1b-erweitert um `missingness` und `imputation`.
+
+**IEEE E2: Gradient Boosting**
+
+```text
+("gradient boosting" OR "LightGBM" OR "XGBoost") AND ("missing values" OR "missing data" OR "missingness")
+```
+
+**arXiv:** Dieselben Themen zusätzlich mit getrennten, einfacheren Anfragen
+über die erweiterte Suche abdecken. Je zwei Suchfelder auf „All fields“
+setzen und mit AND verbinden:
+
+| ID | Erstes Feld | Zweites Feld | Ergänzung zu |
+|---|---|---|---|
+| E1 | `TabPFN` | `missingness` | S1a und S1c |
+| E2 | `LightGBM` | `"missing values"` | S3a |
+| E3 | `XGBoost` | `"missing data"` | S3a |
+
+Die arXiv-Einzelanfragen decken nicht exakt dieselben Begriffe wie die
+IEEE-Anfragen ab. Bei vielen Treffern Sortierung und tatsächlich gesichteten
+Bereich dokumentieren; eine Begrenzung auf die ersten 50 ist eine pragmatische
+Vorauswahl, kein Vollständigkeitsnachweis. Ein- und Ausschlussentscheidungen
+an Abschnitt 5 orientieren und Unklares für die Volltextprüfung offenhalten.
+Die Suche nach direkten Vergleichen bleibt ergänzend; Arbeiten über einen
+einzelnen Modellansatz werden dadurch nicht ausgeschlossen.
+
 ### 3.2 Suchbausteine für weitere Datenbanken
 
 Die folgenden Bausteine helfen beim Erweitern der Suche. Sie sind keine
