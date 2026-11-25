@@ -83,7 +83,7 @@ wurden.
 | S1c | `"TabPFN" imputation` | Weitere Arbeiten zur Behandlung fehlender Werte |
 | S2a | `"TabPFN" "gradient boosting" "missing values"` | Mögliche direkte Vergleiche |
 | S3a | `"gradient boosting" "missing values"` | Fehlende Werte bei Gradient Boosting |
-| S3b | `"LightGBM" "missing values"` | Arbeiten zum konkreten Modell |
+| S3b | `"LightGBM" "missing values"` | Explorativ durchgeführt am 25.11.2026; laut Nutzer keine passende Arbeit zur Aufnahme identifiziert, keine weitere Suche vorgesehen (Details in Abschnitt 7) |
 | S4a | `"missing data" imputation classification benchmark` | Vergleichsstudien zu Behandlungen |
 
 **Erster Schritt:** S1a eingeben, angezeigte ungefähre Trefferzahl und
@@ -211,6 +211,7 @@ lassen und nicht aus einem Export erraten.
 | 25.11.2026 | Google Scholar | S1c: `"TabPFN" imputation` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 350 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1c--TabPFN- imputation.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 Titel neu gegenüber S1a/S1b (siehe 7.1); 11 Überschneidungen |
 | 25.11.2026 | Google Scholar | S2a: `"TabPFN" "gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 771 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S2a--TabPFN- -gradient boosting- -missing values-.ris`, 9 Einträge; nur die als passend oder unklar gespeicherten Treffer | 9 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 3 Titel neu gegenüber S1a–S1c (siehe 7.1); 6 Überschneidungen |
 | 25.11.2026 | Google Scholar | S3a: `"gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 62 900 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S3a--gradient boosting- -missing values-.ris`, 18 RIS-Einträge; eine Arbeit doppelt exportiert (17 unterschiedliche Titel) | 18 gespeichert; Titel-/Abstractscreening noch offen | Perez-Lebel et al. ist bereits im Bestand; übrige Treffer mit früheren Exporten abgleichen (siehe 7.1) |
+| 25.11.2026 | Google Scholar | S3b: `"LightGBM" "missing values"` | Sortierung und Filter nicht dokumentiert | nicht dokumentiert | Sichtungsbereich nicht dokumentiert | Kein RIS-Export im Exportordner | Laut Nutzer keine passende Arbeit zur Aufnahme identifiziert; Umfang des Screenings nicht dokumentiert | nicht quantifiziert |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 

@@ -92,7 +92,10 @@ Mit dem Betreuer zu klären:
   durchgeführt: 18 RIS-Einträge aus den ersten 50 von ungefähr 62 900
   Treffern; ein Titel doppelt exportiert. Perez-Lebel et al. (2022) aus dem
   Bestand wurde dabei erneut gefunden. Screening der fünf Suchläufe steht
-  noch aus; S3b und S4a stehen aus.
+  noch aus. S3b (`"LightGBM" "missing values"`) wurde explorativ durchgeführt;
+  laut Nutzer wurde keine passende Arbeit zur Aufnahme gefunden. Sortierung,
+  Trefferzahl und Sichtungsbereich sind nicht dokumentiert, ein RIS-Export liegt
+  nicht vor; die Suche wird nicht fortgesetzt. S4a steht noch aus.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
@@ -270,6 +273,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Exporte der vom Nutzer durchgeführten Google-Scholar-Suchen S1b und S1c ausgewertet, Such-Log und Trefferlisten ergänzt; Suche und Sichtung durch den Nutzer |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S2a ausgewertet, Such-Log und Trefferliste ergänzt; Suche und Sichtung durch den Nutzer |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S3a ausgewertet, Such-Log und Trefferliste ergänzt; Suche und Sichtung durch den Nutzer |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Explorative Google-Scholar-Suche S3b nach Nutzerangabe als durchgeführt, aber ohne passende Auswahl protokolliert; fehlende Suchdetails ausdrücklich offengelassen |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
