@@ -209,6 +209,7 @@ lassen und nicht aus einem Export erraten.
 | 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
 | 25.11.2026 | Google Scholar | S1b: `"tabular foundation models" "missing data"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 236 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1b--tabular foundation models- -missing data-.ris`, 8 Einträge; nur die als passend oder unklar gespeicherten Treffer | 8 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 neu gegenüber Bestand und S1a (siehe 7.1); 2 Überschneidungen mit S1a |
 | 25.11.2026 | Google Scholar | S1c: `"TabPFN" imputation` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 350 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1c--TabPFN- imputation.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 Titel neu gegenüber S1a/S1b (siehe 7.1); 11 Überschneidungen |
+| 25.11.2026 | Google Scholar | S2a: `"TabPFN" "gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 771 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S2a--TabPFN- -gradient boosting- -missing values-.ris`, 9 Einträge; nur die als passend oder unklar gespeicherten Treffer | 9 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 3 Titel neu gegenüber S1a–S1c (siehe 7.1); 6 Überschneidungen |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -285,6 +286,24 @@ Die Markierung „neuer Titel“ bedeutet nur, dass der Eintrag in S1a/S1b nicht
 vorkam; sie ist keine Aussage zur Relevanz oder dazu, ob dieselbe Arbeit schon
 im übrigen Bestand liegt. Offen: Screening der 16 Einträge nach Titel/Abstract,
 Prüfung der möglichen TabImpute-Fassung und tatsächliche Auswahl.
+
+**S2a (25.11.2026)**
+
+| Nr. | Arbeit laut Export | Ort laut Export | Status gegenüber S1a–S1c |
+|---|---|---|---|
+| 1 | Hollmann et al. (2025), Accurate predictions on small data with a tabular foundation model | Nature | Überschneidung |
+| 2 | Zaimoğlu (2026), Evaluation of TabPFN’s Performance Consistency Under Controlled MCAR Conditions … | IDAP 2026 | Überschneidung |
+| 3 | Tran und Byeon (2024), Predicting dementia in Parkinson's disease … hybrid LightGBM–TabPFN and SHAP | im Export ohne Autor-, Jahres- und Ortsfeld | Überschneidung |
+| 4 | Hollmann et al. (2023), TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | arXiv | Überschneidung |
+| 5 | Sepin (2026), Multiple Imputation Using Pretrained Foundation Models: A TabPFN-Based Approach | Preprints | Überschneidung |
+| 6 | Grinsztajn et al. (2026), TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | arXiv | Überschneidung |
+| 7 | Ye et al. (2025), A Closer Look at Deep Learning Methods on Tabular Datasets | arXiv | Neuer Titel |
+| 8 | Milosheski et al. (2026), Comparative Analysis of Neural Network Based Algorithms Against Tree Ensemble Algorithms on Tabular Data | ETAI International Conference | Neuer Titel |
+| 9 | Zabërgja et al. (2025), Tabular Data: Is Deep Learning all you need? | arXiv | Neuer Titel |
+
+Die Markierung „neuer Titel“ bedeutet nur, dass der Eintrag in den früheren
+S1-Exporten nicht vorkam; sie ist keine Aussage zur Relevanz oder zum
+Vorhandensein im übrigen Bestand. Screening nach Titel/Abstract steht aus.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
