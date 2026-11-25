@@ -208,6 +208,7 @@ lassen und nicht aus einem Export erraten.
 |---|---|---|---|---|---|---|---|---|
 | 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
 | 25.11.2026 | Google Scholar | S1b: `"tabular foundation models" "missing data"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 236 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1b--tabular foundation models- -missing data-.ris`, 8 Einträge; nur die als passend oder unklar gespeicherten Treffer | 8 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 neu gegenüber Bestand und S1a (siehe 7.1); 2 Überschneidungen mit S1a |
+| 25.11.2026 | Google Scholar | S1c: `"TabPFN" imputation` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 350 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1c--TabPFN- imputation.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 Titel neu gegenüber S1a/S1b (siehe 7.1); 11 Überschneidungen |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -258,6 +259,32 @@ Anmerkung des Nutzers zu S1b: viele Treffer ohne Bezug zu fehlenden Werten,
 deshalb wenige gespeichert. Offen: Entscheidung je Treffer nach Titel und
 Abstract; Übersichtsarbeiten (Nr. 2, 3, 6) eher Kontext als FF1-Studie, zu
 prüfen.
+
+**S1c (25.11.2026)**
+
+| Nr. | Arbeit laut Export | Ort laut Export | Status gegenüber früheren Exporten/Bestand |
+|---|---|---|---|
+| 1 | Sepin (2026), Multiple Imputation of a Continuous Outcome with Fully Observed Predictors Using TabPFN | Stats | Überschneidung mit S1a |
+| 2 | Feitelberg et al. (2026), One Pipeline, Many Transformers: Pattern-Specific Imputation Specialists for Tabular Missing Data | arXiv | Überschneidung mit S1b; Bestand |
+| 3 | Feitelberg et al. (2025), TabImpute: Accurate and Fast Zero-Shot Missing-Data Imputation with a Pre-Trained Transformer | im Export ohne Erscheinungsort | Neuer Titel im Export; möglicher Zusammenhang mit TabImpute/Einreichung 7944 im Bestand prüfen |
+| 4 | Hollmann et al. (2025), Accurate predictions on small data with a tabular foundation model | Nature | Überschneidung mit S1a und S1b |
+| 5 | Zhang et al. (2026), TabPFN: One Model to Rule Them All? | arXiv | Neuer Titel im Export |
+| 6 | Zaimoğlu (2026), Evaluation of TabPFN’s Performance Consistency Under Controlled MCAR Conditions … | IDAP 2026 | Überschneidung mit S1a |
+| 7 | Luo et al. (2026), TIMF: TabPFN-integrated multimodal framework for robust tabular-image learning | Neurocomputing | Überschneidung mit S1a |
+| 8 | Ye et al. (2026), Evaluating TabPFN for Mild Cognitive Impairment to Alzheimer's Disease Conversion in Data Limited Settings | arXiv | Neuer Titel im Export |
+| 9 | Hollmann et al. (2025), Accurate predictions on small data with a tabular foundation model | Nature | Duplikat von Nr. 4 und Überschneidung mit S1a/S1b |
+| 10 | Liu et al. (2026), Causal Pre-training Under the Fairness Lens: An Empirical Study of TabPFN | ACM | Neuer Titel im Export |
+| 11 | Luo et al. (2025), TIME: TabPFN-Integrated Multimodal Engine … | arXiv | Überschneidung mit S1a |
+| 12 | Hollmann et al. (2023), TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | arXiv | Überschneidung mit S1a |
+| 13 | Tran und Byeon (2024), Predicting dementia in Parkinson's disease … hybrid LightGBM–TabPFN and SHAP | im Export ohne Autor-, Jahres- und Ortsfeld | Überschneidung mit S1a |
+| 14 | Rametta et al. (2026), Are Random Forests Still ‘Good Enough’? Tabular Prior-Data Fitted Networks for Predictive and Causal Tasks | SocArXiv | Neuer Titel im Export |
+| 15 | Grinsztajn et al. (2026), TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | arXiv | Überschneidung mit S1a und S1b |
+| 16 | Grinsztajn et al. (2026), TabPFN-3: Technical Report | arXiv | Überschneidung mit S1a |
+
+Die Markierung „neuer Titel“ bedeutet nur, dass der Eintrag in S1a/S1b nicht
+vorkam; sie ist keine Aussage zur Relevanz oder dazu, ob dieselbe Arbeit schon
+im übrigen Bestand liegt. Offen: Screening der 16 Einträge nach Titel/Abstract,
+Prüfung der möglichen TabImpute-Fassung und tatsächliche Auswahl.
 
 ## 8. Rückwärts- und Vorwärtssuche
 

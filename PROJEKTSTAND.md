@@ -83,7 +83,11 @@ Mit dem Betreuer zu klären:
   (`"TabPFN" "missing values"`) ist durchgeführt und protokolliert: 16
   gespeicherte Treffer, davon 9 neu gegenüber dem Bestand; Screening offen.
   S1b (`"tabular foundation models" "missing data"`) ebenfalls: 8 gespeicherte
-  Treffer, davon 5 neu. S1c bis S4a stehen aus.
+  Treffer, davon 5 neue Titel gegenüber Bestand und S1a. S1c (`"TabPFN"
+  imputation`) ebenfalls durchgeführt: 16 gespeicherte Einträge aus den ersten
+  50 von ungefähr 1 350 Ergebnissen; 5 Titel waren neu gegenüber S1a/S1b, eine
+  mögliche TabImpute-Fassung ist noch abzugleichen. Screening aller drei
+  Suchläufe steht noch aus; S2a bis S4a stehen aus.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
@@ -258,6 +262,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU, Laufzeittest auf Spambase mit Skripten und Diagnose des Speicherproblems |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Entwurf eines detaillierten Zeit- und Arbeitsplans als bearbeitbare LaTeX-Datei und PDF; keine Literaturrecherche durchgeführt |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Suchprotokoll um konkrete Suchanfragen und Grundlagenweg ergänzt; RIS-Export der vom Nutzer durchgeführten Suche S1a ausgelesen und ins Such-Log eingetragen; Suche, Sichtung und Auswahl durch den Nutzer |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Exporte der vom Nutzer durchgeführten Google-Scholar-Suchen S1b und S1c ausgewertet, Such-Log und Trefferlisten ergänzt; Suche und Sichtung durch den Nutzer |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
