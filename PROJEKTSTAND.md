@@ -267,6 +267,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S4a ausgewertet, tatsächliche Suchanfrage und Trefferliste im Suchprotokoll dokumentiert; Screening offen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten arXiv-Suche S1a mit vorhandenen Scholar-Exporten abgeglichen und protokolliert; fehlende Suchdetails offengelassen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Weitere arXiv-Suchläufe und IEEE-S1a anhand von Nutzerangaben und Exporten dokumentiert, Abstracts vorläufig eingeordnet, Zotero-/RIS-Ablage organisiert, Datenbankzugang und Suchoberflächen erläutert; Suchprotokoll und Projektstand gestrafft. Suche und Auswahl durch den Nutzer; Volltextprüfung offen |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Weitere IEEE-Exporte und Sichtungsangaben dokumentiert, Abstracts vorläufig eingeordnet, ergänzende Suchläufe vorgeschlagen und eine bearbeitbare Gesprächsunterlage mit PDF für den Betreuungstermin erstellt |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

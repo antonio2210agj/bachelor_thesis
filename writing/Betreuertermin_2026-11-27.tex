@@ -1,0 +1,178 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\setlist[itemize]{leftmargin=*,itemsep=0.15em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=*,itemsep=0.35em,topsep=0.2em}
+\emergencystretch=3em
+
+\title{Vorbereitung des Betreuungsgesprächs\\
+\large Literaturrecherche und Versuchsplanung}
+\author{Bachelorarbeit: Tabular Foundation Models bei fehlenden Merkmalswerten}
+\date{Termin: 27. November 2026 \quad|\quad Arbeitsstand: 25. November 2026}
+
+\begin{document}
+\maketitle
+
+\textbf{Zweck:} Zwischenstand seit Abgabe des Exposés vorstellen und
+Rückmeldung zum weiteren Vorgehen einholen. Die Recherche und die folgenden
+Planungen sind noch nicht abgeschlossen.
+
+\section*{1. Bisheriger Stand}
+
+\textbf{Literaturrecherche (FF1).}
+\begin{itemize}
+  \item Erste Suchläufe in Google Scholar, arXiv und IEEE Xplore sind
+  durchgeführt und im Suchprotokoll dokumentiert. Scopus war trotz VPN nur
+  als Preview zugänglich; laut DBIS besteht derzeit kein Uni-Zugriff.
+  \item Suchanfragen, Trefferzahlen und -- soweit bekannt -- Sichtungsbereiche
+  werden je Suchlauf festgehalten. Bei Google Scholar wurden in S1a--S1c,
+  S2a, S3a und S4a jeweils die ersten 50 Treffer gesichtet; der Sichtungsbereich
+  der explorativen Suche S3b ist nicht dokumentiert.
+  \item Treffer werden in Zotero gesammelt. Dublettenabgleich, systematische
+  Auswahl und Volltextprüfung stehen noch aus; die Konzeptmatrix ist
+  vorbefüllt, aber noch am Volltext zu prüfen.
+  \item Zaimoğlu, Bi und Jang sind Beispiele für vorläufig interessante
+  Kandidaten. Ihre endgültige Einordnung erfordert Volltextprüfung.
+  Ergänzende Suchläufe und Vorwärts-/Rückwärtssuche sind geplant.
+\end{itemize}
+
+\textbf{Technischer Stand (FF2).}
+\begin{itemize}
+  \item TabPFN-3.5 und LightGBM laufen im technischen Pilot auf WDBC; der
+  Pilot wurde auf der PC-GPU wiederholt. Ein zusätzlicher Laufzeittest auf
+  Spambase liegt vor.
+  \item Beide Tests dienen der Machbarkeit, nicht als Ergebnis des
+  Hauptversuchs. Der Spambase-Test umfasst einen Split und nur MCAR; die
+  vollständige Hauptversuchspipeline sowie MAR und MNAR sind noch nicht
+  implementiert beziehungsweise getestet.
+  \item Vorgesehen sind MCAR, MAR und MNAR; die konkreten Regeln und der
+  Umfang je Mechanismus sind offen. Interne Verarbeitung und Median-Imputation
+  bilden den Kern; Median mit Missing-Indikatoren ist als Zusatzanalyse
+  vorgesehen.
+\end{itemize}
+
+\textbf{Schreiben und Zeit:} Das LaTeX-Kapitelgerüst steht, Kapiteltext ist
+noch nicht geschrieben. Abgabe laut Projektstand: 16. Februar 2027. Das
+Seitenbudget von ungefähr 40 Seiten ist bisher keine bestätigte Vorgabe.
+
+\section*{2. Suchstrategie und Suchbegriffe}
+
+Die Suche verbindet Modellansätze und fehlende Merkmalswerte. Einzelne
+Suchläufe zu nur einem Modellansatz bleiben wichtig; direkte Vergleiche sind
+nicht die einzige Einschlussmöglichkeit. Grundlagen und Methodikquellen
+werden bei Bedarf getrennt ergänzt.
+
+\begin{itemize}
+  \item \textbf{Modelle:} TabPFN, tabular foundation models, gradient boosting,
+  LightGBM und XGBoost.
+  \item \textbf{Fehlende Werte und Behandlung:} missing values, missing data,
+  missingness, imputation; ergänzend MCAR, MAR und MNAR.
+  \item \textbf{Aufgabe und Vergleich:} classification, prediction und
+  benchmark.
+\end{itemize}
+
+Die folgenden Angaben zeigen die bisher verwendeten Suchideen.
+Exakte Eingaben, Felder, Filter und noch ungeklärte Angaben stehen im
+Suchprotokoll; eine Vorlage ist kein Nachweis einer durchgeführten Suche.
+
+\subsection*{Google Scholar: durchgeführte Varianten}
+\begin{itemize}
+  \item S1a: \verb|"TabPFN" "missing values"|
+  \item S1b: \verb|"tabular foundation models" "missing data"|
+  \item S1c: \verb|"TabPFN" imputation|
+  \item S2a: \verb|"TabPFN" "gradient boosting" "missing values"|
+  \item S3a: \verb|"gradient boosting" "missing values"|
+  \item S4a: \verb|"missing data" imputation classification benchmark|
+\end{itemize}
+S3b wurde zusätzlich explorativ versucht; fehlende Suchdetails sind im
+Suchprotokoll ausdrücklich offengelassen.
+
+\subsection*{arXiv: durchgeführte Varianten}
+\begin{itemize}
+  \item S1a: \verb|TabPFN| AND \verb|"missing values"|
+  \item S1b: \verb|"tabular foundation models"| AND \verb|"missing data"|
+  \item S1c: \verb|TabPFN| AND \verb|imputation|
+  \item S2a: \verb|"TabPFN"|, \verb|"gradient boosting"| und
+  \verb|"missing values"|; die zweite Verknüpfung ist nicht dokumentiert.
+  \item S3a: \verb|"gradient boosting"| AND \verb|"missing values"|
+  \item S4a: \verb|"missing data"| AND \verb|imputation| AND
+  \verb|classification| AND \verb|benchmark|
+  \item S5a: \verb|"missing data"| AND \verb|classification| AND
+  \verb|benchmark|
+\end{itemize}
+Die Suchfelder waren laut Nutzer auf „All fields“ eingestellt; gemeinsame
+Einstellungen und Abweichungen sind im Suchprotokoll festgehalten.
+
+\subsection*{IEEE Xplore: durchgeführte und geplante Varianten}
+\begin{itemize}
+  \item S1a: \verb|"TabPFN"| AND \verb|"missing values"|
+  \item S1b: \verb|"tabular foundation models"| AND \verb|"missing data"|
+  (beide Felder „All Metadata“; keine Treffer).
+  \item S1c: \verb|"TabPFN"| AND \verb|"imputation"|
+  \item S3a: \verb|"gradient boosting"| AND \verb|"missing values"|
+  \item Für S2a und S4a liegen Exporte vor; die genauen Eingaben sind noch
+  nicht bestätigt und im Suchprotokoll entsprechend gekennzeichnet.
+  \item S1b wurde zusätzlich mit Alternativen für TabPFN beziehungsweise
+  Tabular Foundation Models und für \verb|"missing data"| beziehungsweise
+  \verb|"missing values"| erweitert.
+\end{itemize}
+
+\textbf{Geplante Ergänzungen:} Bei IEEE sollen weitere Alternativbegriffe
+innerhalb eines Themenblocks mit OR verbunden werden, zum Beispiel
+\verb|"missingness"| oder \verb|"imputation"|. Bei arXiv sind einfachere
+zusätzliche Feldkombinationen vorgesehen. Sie werden bei Durchführung als
+neue Suchläufe dokumentiert, nicht rückwirkend in alte Läufe eingetragen.
+Weder eine Nulltreffersuche noch die Sichtung der ersten 50 Ergebnisse
+beweist Vollständigkeit.
+
+\section*{3. Fragen für das Gespräch}
+
+\textbf{Priorität: Literaturrecherche}
+\begin{enumerate}
+  \item Sind Google Scholar, arXiv und IEEE Xplore als Ausgangspunkt
+  angemessen? Ist eine weitere Datenbank nötig, wenn Scopus nicht zugänglich
+  ist?
+  \item Sind die Suchblöcke und geplanten OR-Ergänzungen ausreichend breit?
+  Wie soll bei vielen Treffern eine Begrenzung auf die ersten 50 begründet
+  werden, und wann ist eine Zitationssuche ausreichend?
+  \item Sind 5--10 Kernpaper insgesamt eine sinnvolle Orientierung? Wie
+  umfangreich soll die Literaturanalyse im Verhältnis zum Experiment sein?
+\end{enumerate}
+
+\textbf{Priorität: Experiment}
+\begin{enumerate}[resume]
+  \item Welcher Umfang und welche Regeln für MAR und MNAR sind neben der
+  MCAR-Referenz für eine Bachelorarbeit angemessen?
+  \item Sind die vier numerischen Datensatzkandidaten als Ausgangspunkt
+  ausreichend? Wie viele Splits und Maskierungswiederholungen sind sinnvoll?
+  \item Reicht die geplante deskriptive Auswertung der gepaarten
+  Leistungsabstände, oder werden statistische Tests erwartet?
+  \item Passt der geplante Vergleich von interner Verarbeitung und
+  Median-Imputation mit Missing-Indikatoren als Zusatzanalyse?
+\end{enumerate}
+
+\textbf{Form und Organisation}
+\begin{enumerate}[resume]
+  \item Welcher Seitenumfang ist verbindlich, und was zählt dazu? Welches
+  Verhältnis von Literatur- und Praxisteil wird erwartet?
+  \item Ist der IEEE-Zitierstil korrekt, obwohl die Vorlage LNCS verwendet?
+  Wie soll die KI-Nutzung im Anhang angegeben werden?
+  \item Ist der vorläufige Zeitplan bis zur Abgabe realistisch?
+\end{enumerate}
+
+\textbf{Arbeitsgrundlagen:} \texttt{literature/notes/Suchprotokoll.md}
+(Suchläufe und Trefferlisten), \texttt{literature/notes/Konzeptmatrix.csv},
+\texttt{experiments/Pilotprotokoll.md}, \texttt{PROJEKTSTAND.md} und Exposé.
+Aktualisierungen nach weiteren Suchläufen hier ergänzen; das Suchprotokoll
+bleibt die detaillierte Dokumentation.
+
+\end{document}
