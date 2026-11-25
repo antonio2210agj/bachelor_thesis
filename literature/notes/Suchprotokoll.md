@@ -100,7 +100,7 @@ passende Treffer ausschließen.
 "tabular foundation models" AND "missing data"
 ```
 
-**S1c**
+**S1c** (RIS-Export vorhanden; Suchangaben noch zu bestätigen)
 
 ```text
 "TabPFN" AND "imputation"
@@ -259,6 +259,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S5a: `"missing data"` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 24 | Alle 24 Treffer laut Nutzer | Kein RIS-Export im Exportordner; Zotero-Auswahl nicht bestätigt | Laut Nutzer keine passenden Treffer gefunden; endgültige Auswahl offen | Nicht quantifiziert |
 | 25.11.2026 | IEEE Xplore | S1a: `"TabPFN"` AND `"missing values"` | Suchfeld nicht angegeben; „All Results“, Sortierung „Relevance“; Jahresanzeige 2026–2026 (aktive Einschränkung nicht geklärt) | 4 | Alle 4 Treffer | `IEEE Xplore/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-S1a; Jang et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
+| 25.11.2026 | IEEE Xplore | S1c: geplante Vorlage `"TabPFN" AND "imputation"`; tatsächliche Eingabe noch nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | Nicht angegeben | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -483,6 +484,15 @@ Jahresbereich 2026–2026. Der Nutzer berichtet, dass der Jahresbereich nach
 einer Änderung automatisch zurückspringt. Ob dies die Jahre der Treffer
 widerspiegelt oder eine aktive Einschränkung darstellt, ist noch ungeklärt;
 aus der Anzeige allein wird keine Jahresfilterung abgeleitet.
+
+**IEEE Xplore S1c (25.11.2026)**
+
+| Arbeit laut RIS-Export | Abgleich mit bisherigen Exporten |
+|---|---|
+| Zaimoğlu (2026), *Evaluation of TabPFN’s Performance Consistency Under Controlled MCAR Conditions* | Bereits in IEEE S1a |
+| Bi et al. (2026), *Missing-Aware Imbalanced Learning Pathways for Manufacturing Process Quality Assessment* | Bereits in IEEE S1a |
+| Jang et al. (2026), *When Does Train-Time Masking Help? A Leakage-Controlled Robustness Audit of Tabular Classifiers Under Feature Missingness* | Bereits in IEEE S1a |
+| Shakir (2024), *Benchmarking TabLM: Evaluating the Performance of Language Models Against Traditional Machine Learning in Structured Data Tasks* | In bisherigen RIS-Exporten nicht nachgewiesen; übrigen Bestand und FF1-Relevanz prüfen |
 
 ## 8. Rückwärts- und Vorwärtssuche
 
