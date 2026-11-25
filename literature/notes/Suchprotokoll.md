@@ -207,6 +207,7 @@ lassen und nicht aus einem Export erraten.
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|---|---|
 | 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
+| 25.11.2026 | Google Scholar | S1b: `"tabular foundation models" "missing data"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 236 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1b--tabular foundation models- -missing data-.ris`, 8 Einträge; nur die als passend oder unklar gespeicherten Treffer | 8 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 neu gegenüber Bestand und S1a (siehe 7.1); 2 Überschneidungen mit S1a |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -239,6 +240,24 @@ dieser Suche.
 Offen zu S1a: unvollständige Metadaten bei
 Nr. 2 und Nr. 12 in Zotero ergänzen; Entscheidung je Treffer nach Titel und
 Abstract.
+
+**S1b (25.11.2026)**
+
+| Nr. | Arbeit laut Export | Ort laut Export | Bestand oder neu |
+|---|---|---|---|
+| 1 | Yang et al. (2024), UniTabE: A Universal Pretraining Protocol for Tabular Foundation Model in Data Science | International Conference on Learning Representations | neu |
+| 2 | Ren et al. (2025), Deep Learning within Tabular Data: Foundations, Challenges, Advances and Future Directions | arXiv | neu |
+| 3 | Jha et al. (2026), A Survey of Large Language Models for Tabular Data Imputation: Tuning Paradigms and Challenges | Springer Nature Switzerland (Konferenzband, Titel fehlt im Export) | neu |
+| 4 | Feitelberg et al. (2026), One Pipeline, Many Transformers: Pattern-Specific Imputation Specialists for Tabular Missing Data | arXiv | Bestand |
+| 5 | Hollmann et al. (2025), Accurate predictions on small data with a tabular foundation model | Nature | Bestand; auch in S1a |
+| 6 | Jiang et al. (2026), Representation Learning for Tabular Data: A Comprehensive Survey | IEEE Transactions on Pattern Analysis and Machine Intelligence | neu |
+| 7 | Delouee et al. (2026), A Comparative Framework for Evaluating Foundation Models on Tabular Data: A Case Study in Healthcare | arXiv | neu |
+| 8 | Grinsztajn et al. (2026), TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | arXiv | Bestand; auch in S1a |
+
+Anmerkung des Nutzers zu S1b: viele Treffer ohne Bezug zu fehlenden Werten,
+deshalb wenige gespeichert. Offen: Entscheidung je Treffer nach Titel und
+Abstract; Übersichtsarbeiten (Nr. 2, 3, 6) eher Kontext als FF1-Studie, zu
+prüfen.
 
 ## 8. Rückwärts- und Vorwärtssuche
 

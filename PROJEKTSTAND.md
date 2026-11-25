@@ -82,7 +82,8 @@ Mit dem Betreuer zu klären:
   S4a, Abschnitt 3.3 und 8a den getrennten Weg für Grundlagen. S1a
   (`"TabPFN" "missing values"`) ist durchgeführt und protokolliert: 16
   gespeicherte Treffer, davon 9 neu gegenüber dem Bestand; Screening offen.
-  S1b bis S4a stehen aus.
+  S1b (`"tabular foundation models" "missing data"`) ebenfalls: 8 gespeicherte
+  Treffer, davon 5 neu. S1c bis S4a stehen aus.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
