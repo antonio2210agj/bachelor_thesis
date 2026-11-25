@@ -206,7 +206,7 @@ lassen und nicht aus einem Export erraten.
 
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|---|---|
-| 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5; Zahl der Treffer je Seite nicht notiert | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
+| 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -236,7 +236,7 @@ dieser Suche.
 | 15 | Grinsztajn et al. (2026), TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | arXiv | Bestand |
 | 16 | Grinsztajn et al. (2026), TabPFN-3: Technical Report | arXiv | neu; nicht identisch mit dem TabPFN-3.5-Bericht im Bestand |
 
-Offen zu S1a: Zahl der Treffer je Ergebnisseite; unvollständige Metadaten bei
+Offen zu S1a: unvollständige Metadaten bei
 Nr. 2 und Nr. 12 in Zotero ergänzen; Entscheidung je Treffer nach Titel und
 Abstract.
 
