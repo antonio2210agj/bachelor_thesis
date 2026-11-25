@@ -169,6 +169,9 @@ Bis dahin kein Kapiteltext.
 
 Planungsvorschlag vom 25.11.2026 (PC), abhängig von verfügbarer Arbeitszeit,
 Feiertagen und Rückmeldung der Betreuung; Fristen sind interne Meilensteine.
+Der detaillierte, noch nicht freigegebene Entwurf steht in
+`writing/Zeitplan.tex` und `writing/Zeitplan.pdf`. Die Recherche beginnt
+erst nach Freigabe durch den Nutzer.
 
 | Zeitraum | Ziel |
 |---|---|
@@ -236,8 +239,8 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 20.11.2026 | GitHub Copilot in VS Code (PC) | Commit und Push des Stands |
 | 20.11.2026 | GitHub Copilot in VS Code | Durchsicht des Repositorys, Einrichtung von Arbeitsanweisungen und Projektstand, Reparatur der LaTeX-Umgebung am Laptop, Umstellung des Zitierstils auf IEEE; kein Text der Arbeit erzeugt |
 | 21.11.2026 | GitHub Copilot in VS Code | Vorschlag für die Vorbereitung des Betreuertermins am 25.11.2026 (Prioritäten, Fragenliste) |
-
 | 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU, Laufzeittest auf Spambase mit Skripten und Diagnose des Speicherproblems |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Entwurf eines detaillierten Zeit- und Arbeitsplans als bearbeitbare LaTeX-Datei und PDF; keine Literaturrecherche durchgeführt |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

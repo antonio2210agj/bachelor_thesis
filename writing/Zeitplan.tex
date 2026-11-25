@@ -1,0 +1,265 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amssymb}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlist[itemize]{leftmargin=*,itemsep=0.15em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=*,itemsep=0.25em,topsep=0.2em}
+\setlength{\emergencystretch}{3em}
+\newcommand{\todoitem}{\(\square\)\enspace}
+\newcommand{\datenstand}{25. November 2026}
+\newcommand{\abgabe}{16. Februar 2027}
+\newcommand{\gespraech}{27. November 2026}
+
+\title{Zeit- und Arbeitsplan zur Bachelorarbeit\\
+\large Literaturrecherche, Experiment und Schreiben}
+\author{Marco Garcia Jung}
+\date{Entwurf vom \datenstand}
+
+\begin{document}
+\maketitle
+
+\textbf{Status: Entwurf zur persönlichen Freigabe und Anpassung.}
+Dieser Plan ist keine Änderung des abgestimmten Exposés. Die Daten sind
+interne Zieltermine, keine zusätzlichen Abgabefristen. Tatsächliche
+Arbeitszeiten, Feiertage und Rückmeldungen der Betreuung können Anpassungen
+erfordern.
+
+\begin{tabular}{@{}p{4.0cm}p{11.3cm}@{}}
+\toprule
+Abgabe & \abgabe{}; ab 25. November noch 83 Kalendertage \\
+Betreuungsgespräch & \gespraech{} \\
+Umfang & ungefähr 40 Seiten als vorläufige Annahme; Vorgabe noch klären \\
+Versuch & TabPFN-3.5 und LightGBM; MCAR, MAR und MNAR vorgesehen \\
+Arbeitsorte & Hauptversuch am PC; Recherche und Schreiben auch am Laptop \\
+\bottomrule
+\end{tabular}
+
+\section{Wo stehe ich?}
+
+\begin{itemize}
+  \item \textbf{Erledigt:} Exposé und Forschungsfragen stehen, die Arbeit ist
+  angemeldet. Literaturbestand, Suchprotokoll, Konzeptmatrix und
+  LaTeX-Kapitelgerüst sind vorhanden.
+  \item \textbf{Literatur:} Eine neue, nachvollziehbar dokumentierte Suche
+  wurde noch nicht begonnen. Die vorbefüllten Matrixzeilen sind am Volltext
+  zu prüfen. Der vorhandene Bestand bleibt erhalten, wird aber nicht
+  nachträglich als Treffer einer nicht durchgeführten Suche ausgegeben.
+  \item \textbf{Technischer Stand:} Ein WDBC-Pilot mit TabPFN-3.5 und
+  LightGBM und ein MCAR-Laufzeittest auf Spambase liegen vor. Der PC besitzt
+  eine NVIDIA RTX 5070 Ti mit 16 GB. Die Tests belegen technische Teilaspekte,
+  nicht die Ergebnisse oder vollständige Machbarkeit des Hauptversuchs.
+  \item \textbf{Noch offen:} Regeln und Umfang von MAR/MNAR, endgültige
+  Datensätze, Splits, Wiederholungen, Tuningbudget, Auswertung und die
+  Implementierung des Hauptversuchs. Der Versuch wird erst nach Festlegung
+  und Prüfung des Designs gestartet.
+\end{itemize}
+
+\textbf{Zusammenhang:} Die Literaturanalyse begründet das Versuchsdesign;
+Implementierung und Tests können beginnen, während relevante Literatur
+weiter geprüft wird. Schreiben läuft parallel, Einleitung und Fazit werden
+am Ende fertiggestellt.
+
+\section{Meilensteine bis zur Abgabe}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{6.5cm}p{6.0cm}@{}}
+\toprule
+\textbf{Zeitraum} & \textbf{Arbeitspaket} & \textbf{Ergebnis am Ende} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Zeitraum} & \textbf{Arbeitspaket} & \textbf{Ergebnis am Ende} \\
+\midrule
+\endhead
+25.--27.11. & Plan freigeben, Suchprotokoll vorbereiten, erste dokumentierte
+Suchläufe und Sichtung; Betreuungsgespräch. & Tatsächlicher Zwischenstand und
+schriftlich festgehaltene Rückmeldungen. \\
+\addlinespace
+28.11.--04.12. & Suchblöcke S1/S2 bearbeiten; Suchläufe protokollieren,
+Treffer in Zotero erfassen, Dubletten und Titel/Abstracts sichten. &
+Dokumentierte Suchläufe und priorisierte Volltextliste. \\
+\addlinespace
+05.--11.12. & S3/S4, Vorwärts- und Rückwärtssuche; Volltexte gezielt prüfen,
+Konzeptmatrix fortschreiben. & Vergleichbare, mit Fundstellen belegte
+Matrixeinträge; offene Fragen sichtbar. \\
+\addlinespace
+12.--18.12. & Literatur konzeptzentriert zusammenführen, Grenzen und
+Untersuchungsbedarf festhalten; Kapitel 3 als Rohfassung. &
+Rohfassung FF1 und begründete Vorschläge für das Experiment. \\
+\addlinespace
+19.--27.12. & Datenlader, Gruppensplits, Maskierung und Behandlungen
+implementieren; erste Tests. Parallel Kapitel 2/4 beginnen. &
+Einzeln testbare Komponenten und dokumentierte offene Designpunkte. \\
+\addlinespace
+28.12.--03.01. & Mit Betreuung offene Designfragen abschließen; Splits,
+Masken, Tuning, Auswertung, Seeds und Umgebung festlegen. Vollständigen
+Probedurchlauf und Fehlerbehandlung testen. &
+Vorab festgelegtes Versuchsprotokoll und geprüfte End-to-End-Pipeline. \\
+\addlinespace
+04.--10.01. & Hauptversuch am PC durchführen; Konfiguration,
+Versionen, Checkpoint, Seeds und Einzelresultate speichern. &
+Gesicherte Ergebnisdateien für die tatsächlich durchgeführten Bedingungen. \\
+\addlinespace
+11.--17.01. & Ergebnisse pro Datensatz auswerten, Abbildungen und Tabellen
+erstellen; Methodik und Ergebniskapitel schreiben. &
+Kapitel 4 und 5 als prüfbare Rohfassung. \\
+\addlinespace
+18.--24.01. & Grundlagen vervollständigen; Ergebnisse, Literatur und
+Limitationen in der Diskussion zusammenführen. &
+Rohfassungen von Kapitel 2 und 6. \\
+\addlinespace
+25.01.--01.02. & Einleitung, Fazit und Abstract schreiben;
+Forschungsfragen und roten Faden über alle Kapitel abgleichen. &
+Vollständige Rohfassung bis spätestens 01.02. \\
+\addlinespace
+02.--08.02. & Inhalt und Argumentation überarbeiten; Quellenstellen,
+Zahlen, Abbildungen und Literaturverzeichnis prüfen. &
+Inhaltlich überprüfte Fassung; offene Punkte dokumentiert. \\
+\addlinespace
+09.--15.02. & Sprache, Format, Anhang und KI-Angaben prüfen; PDF-Build,
+Abgabevorgaben und gegebenenfalls Druck oder Upload vorbereiten. &
+Abgabefertige Fassung und Puffer für technische Probleme. \\
+\addlinespace
+16.02. & Abgabe gemäß den geltenden Vorgaben. & Arbeit eingereicht. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\textbf{Puffer:} Die zwei Wochen ab 2. Februar sind für Überarbeitung und
+Abgabe vorgesehen. Feiertage und persönliche Verpflichtungen insbesondere
+Ende Dezember früh eintragen; freie Tage nicht als sichere Arbeitszeit
+verplanen. Bei Verzögerung zusätzliche Recherche gezielt eingrenzen und die
+Betreuung informieren, statt ungetestete Versuche durchzuführen oder Quellen-
+und Fehlerprüfung zu streichen.
+
+\section{Nach Freigabe: intensiver Start am 25. November}
+
+Die folgenden Blöcke sind ein \textbf{Vorschlag}, keine Annahme über deine
+verfügbare Zeit. Zusammen etwa 4,5--6 Stunden zuzüglich Pausen. Wenn weniger
+Zeit verfügbar ist, Blöcke 1--3 zuerst bearbeiten und den Rest verschieben.
+
+\begin{enumerate}
+  \item \textbf{Vorbereiten, 20--30 Minuten.} In Zotero Sammlungen für
+  vorhandenen Bestand, neue Treffer und zu prüfende Volltexte anlegen.
+  Suchprotokoll öffnen. Vor Beginn Abschnitt 2 an den beschlossenen
+  Neustart anpassen: Fundwege tatsächlich dokumentieren; Bestand nicht
+  rückwirkend als Suchtreffer zählen.
+  \item \textbf{Suchplan prüfen, 30--45 Minuten.} Forschungsfrage und
+  S1--S4 durchgehen. Die bestehenden Ein- und Ausschlusskriterien sind
+  Vorschläge; Grundlagen und reine Rekonstruktionsstudien gesondert als
+  Kontext führen, sofern sie für das Verständnis gebraucht werden. Suchsyntax,
+  Felder, Filter und Sichtungsgrenzen vor jedem Suchlauf festhalten.
+  \item \textbf{Erste Suchläufe, 90--120 Minuten.} In Google Scholar zunächst
+  \texttt{"TabPFN" "missing values"} suchen und als Teil-Suche von S1
+  protokollieren. Anschließend eine weitere passende S1-Variante aus dem
+  Suchprotokoll ausführen. Datum, genaue Eingabe, Sortierung, Filter,
+  geschätzte Trefferzahl und tatsächlich gesichteten Bereich eintragen.
+  Metadaten des festgelegten Sichtungsbereichs soweit möglich sichern.
+  \item \textbf{Sichten, 60--90 Minuten.} Dubletten und unterschiedliche
+  Fassungen prüfen; Titel und Abstracts lesen. Relevante und unklare Treffer
+  zur Volltextprüfung vormerken. Anzahl und Fundwege nachvollziehbar
+  dokumentieren; keine ausführliche Notiz für jeden Treffer.
+  \item \textbf{Erste Volltextprüfung, 45--60 Minuten.} Eine relevante
+  Arbeit auswählen, Methoden und Ergebnisse gezielt lesen und ihre
+  Konzeptmatrixzeile mit Abschnitts- oder Seitenangaben ergänzen.
+  Ungeprüfte Angaben mit \texttt{?} oder entsprechendem Status stehen lassen.
+\end{enumerate}
+
+\textbf{Tagesabschluss:} Such-Log und Zotero-Status prüfen; offene Punkte und
+nächsten Suchlauf notieren. Es gibt keine Zielzahl von 100 Papern und keine
+Pflicht, jede Einleitung zu lesen.
+
+\section{26. und 27. November}
+
+\subsection*{Donnerstag, 26. November}
+\begin{itemize}
+  \item \todoitem S1/S2 fortsetzen; nach Möglichkeit Scopus mit Uni-Zugang
+  nutzen und die exakte datenbankspezifische Eingabe dokumentieren.
+  \item \todoitem Eine Rückwärts- und eine Vorwärtssuche zu einer
+  einschlägigen Arbeit durchführen und im Suchprotokoll festhalten.
+  \item \todoitem Eine weitere relevante Arbeit am Volltext prüfen oder
+  vorhandene Matrixangaben gegen ihre Fundstellen abgleichen.
+  \item \todoitem Zwischenstand und Fragen für den Termin auf einer
+  überschaubaren Liste sammeln.
+\end{itemize}
+
+\subsection*{Freitag, 27. November: Betreuungsgespräch}
+\begin{itemize}
+  \item \todoitem Zeitplan, tatsächliche Suchläufe und eine beispielhaft
+  geprüfte Matrixzeile mitnehmen; unvollständige Schritte offen benennen.
+  \item \todoitem Umfang der drei Fehlmechanismen, konkrete Datenbasis,
+  Wiederholungen und Anforderungen an statistische Auswertung besprechen.
+  \item \todoitem Verbindlichen Seitenumfang, IEEE-Stil trotz LNCS-Vorlage,
+  Form der Suchdokumentation und KI-Angaben klären.
+  \item \todoitem Ergebnisse nach dem Gespräch im Projektstand eintragen und
+  Zeitplan bei Bedarf gemeinsam anpassen.
+\end{itemize}
+
+\section{Recherche: geplanter Datenbankrahmen}
+
+Als Arbeitsgrundlage dienen die bereits im Suchprotokoll genannten
+\textbf{Google Scholar, arXiv, Scopus, IEEE Xplore und ACM Digital Library}
+sowie Vorwärts- und Rückwärtssuche. Zugang und Suchsyntax je Plattform
+prüfen; Suchläufe und tatsächlich gesichtete Bereiche einzeln dokumentieren.
+Das Exposé nennt ausdrücklich Scholar, arXiv und Zitationssuche; die
+weiteren Datenbanken stehen im Suchprotokoll. Die Dokumentation wird nach
+Freigabe und gegebenenfalls Rücksprache inhaltlich konsistent gehalten;
+das Exposé wird nicht ohne Rücksprache geändert.
+
+Der geplante Charakter bleibt eine \textbf{fokussierte dokumentierte
+Literaturanalyse}, kein automatisch vollständiges systematisches Review.
+Auswahlzahlen und Ausschlussgründe nachvollziehbar festhalten; die konkrete
+Darstellung nach PRISMA mit der Betreuung klären. Aus geschätzten Scholar-
+Trefferzahlen und begrenzter Sichtung keine exakten Gesamtzahlen ableiten.
+
+\section{Vor dem Hauptversuch: verbindliche Prüfpunkte}
+
+\begin{itemize}
+  \item \todoitem Auswahl der Datensätze und identische Eingaben als Gruppen
+  vor Maskierung und datenabhängiger Vorverarbeitung prüfen.
+  \item \todoitem MCAR-, MAR- und MNAR-Regeln einschließlich Abhängigkeiten,
+  Ziel- und realisierter Fehlraten, betroffener Partitionen und Seeds
+  festlegen; Labels nicht maskieren.
+  \item \todoitem Splits vor Maskierung; gleiche Splits und Masken für beide
+  Modelle und alle Behandlungen; Median nur aus beobachteten Trainingswerten.
+  \item \todoitem Leere Trainingsspalten, Indikatoren, LightGBM-Tuning,
+  Validierung und Sensitivitätsanalyse vorab regeln.
+  \item \todoitem Balanced Accuracy, Log-Loss und gepaarte Differenz
+  \(\Delta-\Delta_0\) sowie Aggregation festlegen; Wiederholungen nicht als
+  unabhängige Datensätze behandeln.
+  \item \todoitem Paketversionen, Modellkonfiguration, Checkpoint und Seeds
+  festhalten; Einzelergebnisse und realisierte Fehlanteile speichern.
+  \item \todoitem Gesamten Ablauf mit kleinen Daten testen. Der Spambase-Test
+  nutzte den Speichermodus \texttt{memory\_saving\_mode=True}; dies ist für die Hauptpipeline
+  gesondert zu prüfen und zu dokumentieren.
+\end{itemize}
+
+\section{So passe ich den Zeitplan an}
+
+Die bearbeitbare Quelle heißt \texttt{writing/Zeitplan.tex}. Daten und Texte
+können dort direkt verändert werden; für das PDF im Projektverzeichnis:
+
+\begin{verbatim}
+Set-Location writing
+pdflatex -interaction=nonstopmode -halt-on-error Zeitplan.tex
+pdflatex -interaction=nonstopmode -halt-on-error Zeitplan.tex
+\end{verbatim}
+
+Nach Änderungen an tatsächlichen Entscheidungen oder Fristen zusätzlich
+\texttt{PROJEKTSTAND.md} aktualisieren. Ein nicht erreichter interner
+Meilenstein wird neu geplant; vergangene Schritte nicht als erledigt
+kennzeichnen, wenn sie nicht stattgefunden haben.
+
+\end{document}
