@@ -208,7 +208,8 @@ Zotero-RIS-Dateien können unter
 [`literature/recherche/exporte/`](../recherche/exporte/README.md) für den
 Abgleich abgelegt werden. Eine Anleitung liegt dort; die RIS-Dateien bleiben
 lokal und werden nicht mit Git übertragen. Fehlende Angaben im Log offen
-lassen und nicht aus einem Export erraten.
+lassen und nicht aus einem Export erraten. Die unten aufgeführten RIS-Dateien
+der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|---|---|
