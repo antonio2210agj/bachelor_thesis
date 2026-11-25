@@ -109,6 +109,49 @@ und tatsächlichen Sichtungsbereich getrennt festhalten. Bei wenigen Treffern
 die nächste Variante ausprobieren; bei vielen Treffern den tatsächlich
 gesichteten Bereich dokumentieren.
 
+### 3.1a Suchanfragen für IEEE Xplore
+
+Kopiervorlagen für einzelne Suchläufe. Die Suchfelder und Einstellungen sowie
+die tatsächlich eingegebene Anfrage je Lauf in Abschnitt 7 festhalten; die
+Liste allein belegt keine durchgeführte Suche. Viele AND-Bedingungen können
+passende Treffer ausschließen.
+
+**S1a** (bereits durchgeführt)
+
+```text
+"TabPFN" AND "missing values"
+```
+
+**S1b**
+
+```text
+"tabular foundation models" AND "missing data"
+```
+
+**S1c**
+
+```text
+"TabPFN" AND "imputation"
+```
+
+**S2a**
+
+```text
+"TabPFN" AND "gradient boosting" AND "missing values"
+```
+
+**S3a**
+
+```text
+"gradient boosting" AND "missing values"
+```
+
+**S4a**
+
+```text
+"missing data" AND "imputation" AND "classification" AND "benchmark"
+```
+
 ### 3.2 Suchbausteine für weitere Datenbanken
 
 Die folgenden Bausteine helfen beim Erweitern der Suche. Sie sind keine
