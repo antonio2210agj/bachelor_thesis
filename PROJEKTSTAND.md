@@ -3,9 +3,8 @@
 Fortlaufend gepflegter Stand der Bachelorarbeit. Dauerhafte Arbeitsregeln stehen
 in [.github/copilot-instructions.md](.github/copilot-instructions.md).
 
-Zuletzt aktualisiert: 23. November 2026 (PC). Erstfassung am Laptop aus dem
-Inhalt des Repositorys erstellt; am 23.11.2026 am PC um den Stand aus dem
-dortigen Chat (19. und 20.11.2026) ergänzt.
+Zuletzt aktualisiert: 25. November 2026 (PC). Erstfassung am Laptop aus dem
+Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 
 ## Eckdaten
 
@@ -15,7 +14,7 @@ dortigen Chat (19. und 20.11.2026) ergänzt.
 | Erstgutachter | Prof. Dr. Stefan Schönig |
 | Betreuer | Maximilian Metzner |
 | Letzter Stand beim Betreuer | Exposé abgegeben, Bachelorarbeit angemeldet (Angabe des Nutzers vom 21.11.2026) |
-| Nächster Betreuertermin | Mittwoch, 25. November 2026 |
+| Nächster Betreuertermin | Freitag, 27. November 2026 (laut Nutzer vom 25.11.) |
 | Seitenbudget laut Kapitelgerüst | ca. 40 Seiten ohne Anhang (4, 7, 6, 6, 9, 6, 2); „40 oder so“ ist eine Angabe des Nutzers vom 19.11.2026, keine belegte Lehrstuhlvorgabe |
 | Phase | Literaturanalyse (FF1) beginnt; Kapitel sind Gerüste ohne Text |
 
@@ -32,7 +31,7 @@ dortigen Chat (19. und 20.11.2026) ergänzt.
 | 19.11.2026 | FF1 und FF2 bleiben im Wortlaut unverändert. Dass FF2 den Fehlmechanismus nicht nennt, ist gewollt (Spielraum); auch der Titel nennt keinen Mechanismus | Nutzer, PC |
 | 19.11.2026 | Statistische Tests nur, wenn der Betreuer sie verlangt; sonst deskriptive Auswertung | Nutzer, PC |
 | 19.11.2026 | Ältere Begleitdokumente (`notizen.md`, Exposé-Evaluationen, Verbesserungstipps, Cooper-Notiz, Gesprächscheckliste) bewusst gelöscht; sie gelten nicht mehr | Nutzer, PC |
-| 19.11.2026 | Recherche beginnt nicht bei null: Startmenge aus dem Exposé, Datenbanksuche prüft, ob daneben etwas fehlt (im Suchprotokoll, Abschnitt 2, umgesetzt) | PC |
+| 23.11.2026 | Neue Literaturrecherche von Grund auf dokumentieren; vorhandene Literatur bleibt Bestand und wird nach denselben Kriterien geprüft oder mit getrennt dokumentiertem Fundweg ergänzt. Abschnitt 2 des Suchprotokolls beschreibt noch den früheren Plan und ist vor der Recherche anzupassen | Nutzer, PC |
 | 20.11.2026 | Zitierstil IEEE nach den Lehrstuhlfolien; `main.tex` von `style=lncs` auf `style=ieee` umgestellt (Abweichung von der Lehrstuhlvorlage, vom Nutzer entschieden) | Nutzer, Laptop |
 | 20.11.2026 | Rechenläufe des Hauptversuchs nur am PC; Laptop für Recherche, Schreiben und kurze Tests | Nutzer, Laptop |
 | 20.11.2026 | Literaturanalyse: zuerst alle relevanten Arbeiten breit sammeln und jede Suche protokollieren, dann anhand der Ein- und Ausschlusskriterien reduzieren; die Konzeptmatrix bleibt, weil das Exposé sie zusagt | Nutzer, Laptop |
@@ -78,7 +77,8 @@ Mit dem Betreuer zu klären:
 - Suchprotokoll: Vorgehen, Suchstrings S1 bis S4 und Kriterien stehen als
   Vorschlag. Such-Log, Rückwärts- und Vorwärtssuche, Auswahlzahlen und
   Ausschlussliste sind leer; es ist noch keine Datenbanksuche protokolliert.
-  Bisher liegen nur die Grundlagenpaper der Startmenge vor.
+  Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
+  Laut Nutzer wurde bis zum 25.11.2026 nicht weiter recherchiert.
 - Konzeptmatrix: 9 Arbeiten, alle mit Status „vorbefüllt, am Volltext prüfen“,
   21 Zellen mit `?`. In der Matrix fehlen aus der Startmenge der
   TabPFN-2.5-Bericht und Ke et al. (2017).
@@ -111,11 +111,12 @@ Mit dem Betreuer zu klären:
   Engpass. Spambase (4 601 Fälle) am 23.11.2026 gemessen (Pilotprotokoll,
   Abschnitt „Laufzeittest auf Spambase“): 15 bis 46 Sekunden je
   TabPFN-Bedingung, hochgerechnet etwa 13 Minuten je Wiederholung mit drei
-  Fehlmechanismen, also rund 4,3 Stunden für 20 Wiederholungen. Der
-  Hauptversuch ist damit auch mit MCAR, MAR und MNAR in vollem Umfang
-  rechenbar. Voraussetzung ist `memory_saving_mode=True`; mit der
-  Standardeinstellung läuft der Grafikspeicher ab etwa 2 000 Trainingsfällen
-  voll und der Lauf hängt.
+  Fehlmechanismen, also rund 4,3 Stunden für 20 Wiederholungen. Diese grobe
+  Hochrechnung betrifft nur Spambase und setzt voraus, dass MAR und MNAR
+  ähnlich lange wie MCAR dauern; Tuning und andere Datensätze fehlen.
+  Im Test half `memory_saving_mode=True`; bei `auto` waren zwei Läufe mit
+  hoher GPU-Speicherauslastung sehr langsam und wurden abgebrochen. Die
+  vollständige Hauptversuchspipeline und MAR/MNAR sind noch nicht getestet.
 - `requirements.txt` enthält Versionsbereiche und kein `torch`; eine exakte
   Sperre fehlt noch. PC und Laptop haben verschiedene torch-Versionen (siehe
   Umgebung). Für den Hauptversuch zählt die PC-Umgebung.
@@ -147,28 +148,40 @@ Mit dem Betreuer zu klären:
 - Mit dem Schreiben wurde noch nicht begonnen; das ist so geplant.
 - Deckblattangaben in `main.tex` sind vollständig (PLZ, Ort, Betreuer).
 
-## Bis zum Betreuertermin am 25. November 2026
+## Bis zum Betreuertermin am 27. November 2026
 
-Vorschlag vom 21.11.2026 (Laptop); am 23.11.2026 war davon laut Repository noch
-nichts begonnen.
+Der Termin wurde laut Nutzer am 25.11. verschoben. Die Recherche wurde noch
+nicht begonnen. Ziel ist ein nachvollziehbarer erster Zwischenstand, keine
+abgeschlossene Literaturanalyse.
 
-Pflicht:
+Vorbereitung:
 
-1. Erste Suchrunde mit S1 und S2 in Google Scholar, arXiv und Scopus, jede
-   Suche sofort im Such-Log eintragen (macht der Nutzer selbst, Uni-Zugang).
-2. Konzeptmatrix am Volltext prüfen, zuerst Zaimoğlu (trägt die Abgrenzung im
-   Exposé); TabPFN-2.5-Bericht, Ke et al. und neue Treffer ergänzen.
-3. Ein bis zwei Varianten für den Umfang von MAR und MNAR mit Zahl der
-   Rechenläufe (z. B. alle Mechanismen voll oder MCAR voll und MAR/MNAR nur bei
-   einer Fehlrate).
-
-Wenn Zeit bleibt:
-
-4. Laufzeittest auf Spambase am PC als Grundlage für Punkt 3 (erledigt am
-   23.11.2026, siehe Pilotprotokoll).
-5. Zeitplan rückwärts vom 16. Februar 2027 mit zwei Wochen Überarbeitung.
+1. Suchprotokoll an den neuen Suchbeginn anpassen und eine erste Google-Scholar-
+   Suche samt tatsächlichem Sichtungsbereich und Trefferzahlen protokollieren.
+2. Titel und Abstracts sichten und bei einer passenden Arbeit exemplarisch
+   eine Matrixzeile anhand des Volltexts prüfen.
+3. Die Fragen unten und den vorläufigen Zeitplan für das Gespräch vorbereiten;
+   Ergebnisse des Treffens anschließend festhalten.
 
 Bis dahin kein Kapiteltext.
+
+## Vorläufiger Zeitplan bis zur Abgabe
+
+Planungsvorschlag vom 25.11.2026 (PC), abhängig von verfügbarer Arbeitszeit,
+Feiertagen und Rückmeldung der Betreuung; Fristen sind interne Meilensteine.
+
+| Zeitraum | Ziel |
+|---|---|
+| 25.–27.11. | Rechercheablauf und erste Suche vorbereiten; Betreuungsgespräch |
+| 28.11.–11.12. | Suchläufe, Screening, Zitationssuche und Volltextprüfung; Konzeptmatrix aufbauen |
+| 12.–18.12. | Literatursynthese und erste Rohfassung Kapitel 3; Experimentdetails vorläufig ableiten |
+| 19.12.–03.01. | Experimentpipeline und Tests implementieren; Design, Seeds und Umgebung vor Hauptversuch festlegen; Grundlagen/Methodik beginnen |
+| 04.–10.01. | End-to-End-Generalprobe und Hauptversuch am PC; Ergebnisse sichern |
+| 11.–17.01. | Auswertung, Abbildungen, Ergebniskapitel und Methodikrohfassung |
+| 18.–24.01. | Grundlagen und Diskussion; FF1 und FF2 anhand der Befunde bearbeiten |
+| 25.01.–01.02. | Einleitung, Fazit, Abstract; vollständige Rohfassung |
+| 02.–15.02. | Zwei Wochen Überarbeitung, Quellen- und Formprüfung, Abgabevorbereitung und Puffer |
+| 16.02. | Abgabe |
 
 Fragen an den Betreuer:
 
@@ -192,7 +205,8 @@ Fragen an den Betreuer:
 4. Rückwärts- und Vorwärtssuche zu den Kernarbeiten, Kandidaten prüfen.
 5. Aus der Synthese MAR- und MNAR-Regeln ableiten und die offenen
    Designentscheidungen festlegen.
-6. Parallel: Laufzeittest auf Spambase und Gerüst des Hauptversuchs.
+6. Parallel zur Recherche das Gerüst des Hauptversuchs planen; der
+   Spambase-Laufzeittest ist erledigt, der vollständige Versuch bleibt offen.
 
 ## Umgebung
 
