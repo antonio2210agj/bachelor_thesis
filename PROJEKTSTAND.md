@@ -127,6 +127,11 @@ Mit dem Betreuer zu klären:
   umbenannt; FF1-Relevanz der SHAP-Arbeit ist offen.
 - arXiv S4a (`"missing data"` AND `imputation` AND `classification` AND
   `benchmark`): am 25.11. laut Nutzer keine Treffer, kein RIS-Export.
+- arXiv S5a (`"missing data"` AND `classification` AND `benchmark`): am
+  25.11. laut Nutzer alle 24 Treffer gesichtet, keine passenden Arbeiten
+  gefunden; kein RIS-Export im Exportordner, Zotero-Auswahl nicht bestätigt.
+  Der Nutzer möchte arXiv vorläufig abschließen und beim Betreuungsgespräch
+  klären, ob der Suchablauf angepasst werden sollte.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der

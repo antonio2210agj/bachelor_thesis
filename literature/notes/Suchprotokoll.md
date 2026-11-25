@@ -236,6 +236,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S2a: Felder `"TabPFN"`, `"gradient boosting"`, AND `"missing values"`; Verknüpfung des zweiten Feldes auf Screenshot nicht ersichtlich | Drei Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
 | 25.11.2026 | arXiv | S3a: `"gradient boosting"` AND `"missing values"` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 34 | Alle 34 Treffer | `Arxiv/S3a--gradient boosting- -missing values-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Vo et al. im bisherigen Exportabgleich nicht nachgewiesen; übrigen Bestand prüfen |
 | 25.11.2026 | arXiv | S4a: `"missing data"` AND `imputation` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
+| 25.11.2026 | arXiv | S5a: `"missing data"` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 24 | Alle 24 Treffer laut Nutzer | Kein RIS-Export im Exportordner; Zotero-Auswahl nicht bestätigt | Laut Nutzer keine passenden Treffer gefunden; endgültige Auswahl offen | Nicht quantifiziert |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -438,6 +439,14 @@ Models under Missing Data* (arXiv:2407.00411). Der vorgelegte Abstract setzt
 den Schwerpunkt auf SHAP und Erklärbarkeit; ein Bezug zur Klassifikationsleistung
 bei fehlenden Merkmalswerten ist noch am Volltext zu prüfen. Der Export hieß
 anfangs S2a und wurde vom Nutzer auf S3a korrigiert.
+
+**arXiv S5a (25.11.2026)**
+
+Laut Nutzer wurden alle 24 Treffer gesichtet und keine passenden Arbeiten
+gefunden. Der Exportordner enthält keinen RIS-Export für diesen Lauf; ob
+Einträge in Zotero gespeichert wurden, ist nicht bestätigt. Der Nutzer möchte
+die arXiv-Suche vorläufig abschließen und den Ablauf mit dem Betreuer
+besprechen. Das ist kein Nachweis einer vollständigen Abdeckung.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
