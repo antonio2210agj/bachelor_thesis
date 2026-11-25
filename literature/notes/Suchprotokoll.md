@@ -301,7 +301,7 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 | 25.11.2026 | IEEE Xplore | S1b-erweitert: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing data" OR "missing values")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; Screenshot zeigt 6 Treffer | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Vier sichtbare Titel bereits in IEEE S1a oder S1c; zwei weitere nicht in bisherigen RIS-Exporten nachgewiesen |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
-| 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; zwei Screenshots zeigen 10 verschiedene Titel | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; weitere sichtbare Titel auf Relevanz prüfen |
+| 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 10 laut Nutzer | Alle 10 auf Screenshots sichtbar; systematischer Sichtungsumfang nicht angegeben | Nicht angegeben | Offen; Abstracts von Kaysi, Campana et al. und Bellarmino vorgelegt | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; Kaysi und Campana et al. vorläufig prüfen |
 | Nicht bestätigt; Export vom 25.11.2026 | IEEE Xplore | S2a: geplante Vorlage `"TabPFN" AND "gradient boosting" AND "missing values"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S2a--TabPFN- -gradient boosting- -missing values-.ris`, 2 Einträge | Endgültige Auswahl offen | Beide bereits in IEEE S1a (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Erste 50 laut Nutzer | Nicht angegeben | Laut Nutzer keine interessanten Arbeiten gefunden | Nicht quantifiziert |
 | 25.11.2026 | IEEE Xplore | S4a: geplante Vorlage `"missing data" AND "imputation" AND "classification" AND "benchmark"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S4a--missing data- imputation classification benchmark.ris`, 1 Eintrag | Endgültige Auswahl offen | Shakir bereits in IEEE S1c (siehe 7.1) |
@@ -544,6 +544,19 @@ aus der Anzeige allein wird keine Jahresfilterung abgeleitet.
 S2a enthält Zaimoğlu und Jang, beide bereits in IEEE S1a. S4a enthält Shakir,
 bereits in IEEE S1c. Die Angaben beruhen auf RIS-Metadaten; die FF1-Relevanz
 und die tatsächlichen Suchanfragen bleiben zu prüfen.
+
+**IEEE Xplore E1: vorgelegte Abstracts**
+
+Kaysi, *Temporal and Robustness-Aware Evaluation of Tabular Foundation, Deep
+Tabular, and Tree-Based Models for Kidney Dysfunction Screening Using NHANES*,
+ist ein vorläufig interessanter Kandidat: Laut Abstract werden TabPFN und
+baumbasierte Modelle unter anderem bei testseitiger Missingness verglichen.
+Campana et al., *TabHealth: Towards a Self-Supervised Tabular Foundation Model
+for Smart Healthcare*, erwähnen Missingness im Kontext des Vortrainings; ob
+deren Einfluss auf die Vorhersageleistung untersucht wird, ist offen.
+Bellarmino behandelt laut Abstract unter anderem fehlende Labels; fehlende
+Merkmalswerte sind daraus nicht erkennbar. Diese Einschätzungen beruhen
+ausschließlich auf Abstracts; Aufnahme und Volltextprüfung sind offen.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
