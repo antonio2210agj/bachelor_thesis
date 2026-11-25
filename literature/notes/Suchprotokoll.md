@@ -232,6 +232,7 @@ zu dokumentieren.
 | 25.11.2026 | Google Scholar | S4a: `"missing data" imputation classification benchmark` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 45 000 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S4a--missing data- imputation classification benchmark.ris`, 22 Einträge; enthält mögliche Dubletten und Versionsüberschneidungen (siehe 7.1) | 22 als passend oder unklar gespeichert; systematisches Titel-/Abstractscreening noch offen | Perez-Lebel et al. bereits in S3a und im Bestand; weitere Überschneidungen prüfen (siehe 7.1) |
 | 25.11.2026 | arXiv | S1a: `TabPFN` AND `"missing values"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung: Standardeinstellung | 7 | Nicht angegeben | `Arxiv/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-Exporten; Seldon bisher nicht darin (siehe 7.1) |
 | 25.11.2026 | arXiv | S1b: `"tabular foundation models"` AND `"missing data"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung: Standardeinstellung, konkrete Reihenfolge nicht dokumentiert | 3 | Alle 3 Treffer | `Arxiv/S1b--tabular foundation models- -missing data-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Xia et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
+| 25.11.2026 | arXiv | S1c: `TabPFN` AND `imputation` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 10 | Alle 10 Treffer | `Arxiv/S1c--TabPFN- imputation.ris`, 2 RIS-Einträge mit identischem Titel und identischer DOI; eine Arbeit | Endgültige Auswahl offen | TabPFGen in S1a/S1b und bisherigen Scholar-Exporten nicht nachgewiesen; übrigen Bestand prüfen |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -410,6 +411,15 @@ Der Screenshot zeigt 50 Ergebnisse pro Seite und eingeblendete Abstracts. Der
 Nutzer hat die Sortierung nicht verändert; die konkrete Standardsortierung ist
 nicht dokumentiert. „Submission date (most recent)“ bezeichnet die
 Datumsfilterung, nicht nachweislich die Sortierung.
+
+**arXiv S1c (25.11.2026)**
+
+Der RIS-Export enthält zweimal Ma et al. (2024), *TabPFGen — Tabular Data
+Generation with TabPFN* (arXiv:2406.05216). Titel und DOI sind identisch;
+die Zotero-Einträge sind auf eine mögliche Dublette zu prüfen. Nach dem im
+Chat vorgelegten Abstract zunächst eher Kontext zu generativer Imputation;
+eine nachgelagerte Klassifikation und die endgültige FF1-Einordnung sind am
+Volltext zu prüfen.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
