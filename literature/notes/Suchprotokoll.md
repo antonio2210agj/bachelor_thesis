@@ -211,6 +211,16 @@ lokal und werden nicht mit Git übertragen. Fehlende Angaben im Log offen
 lassen und nicht aus einem Export erraten. Die unten aufgeführten RIS-Dateien
 der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 
+Für die arXiv-Suchen S1a und S1b und die folgenden Suchen werden laut Nutzer
+dieselben Einstellungen verwendet: beide Suchfelder „All fields“, alle
+Fachgebiete und Daten, Cross-Listings eingeschlossen, ältere Versionen nicht
+eingeschlossen, 50 Ergebnisse pro Seite, Abstracts eingeblendet und
+unveränderte Standardsortierung (konkrete Reihenfolge nicht dokumentiert).
+Der Nutzer ändert die Suchbegriffe über „Refine query“. Falls Einstellungen
+später verändert werden, wird die Abweichung beim jeweiligen Suchlauf notiert.
+Suchbegriffe, Trefferzahl und Sichtungsbereich bleiben für jeden Lauf separat
+zu dokumentieren.
+
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|---|---|
 | 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
@@ -220,7 +230,7 @@ der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 | 25.11.2026 | Google Scholar | S3a: `"gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 62 900 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S3a--gradient boosting- -missing values-.ris`, 18 RIS-Einträge; eine Arbeit doppelt exportiert (17 unterschiedliche Titel) | 18 gespeichert; Titel-/Abstractscreening noch offen | Perez-Lebel et al. ist bereits im Bestand; übrige Treffer mit früheren Exporten abgleichen (siehe 7.1) |
 | 25.11.2026 | Google Scholar | S3b: `"LightGBM" "missing values"` | Sortierung und Filter nicht dokumentiert | nicht dokumentiert | Sichtungsbereich nicht dokumentiert | Kein RIS-Export im Exportordner | Laut Nutzer keine passende Arbeit zur Aufnahme identifiziert; Umfang des Screenings nicht dokumentiert | nicht quantifiziert |
 | 25.11.2026 | Google Scholar | S4a: `"missing data" imputation classification benchmark` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 45 000 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S4a--missing data- imputation classification benchmark.ris`, 22 Einträge; enthält mögliche Dubletten und Versionsüberschneidungen (siehe 7.1) | 22 als passend oder unklar gespeichert; systematisches Titel-/Abstractscreening noch offen | Perez-Lebel et al. bereits in S3a und im Bestand; weitere Überschneidungen prüfen (siehe 7.1) |
-| 25.11.2026 | arXiv | S1a: `TabPFN` AND `"missing values"` | Beide Suchfelder: All fields; Filter und Sortierung nicht geklärt | 7 | Nicht angegeben | `Arxiv/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-Exporten; Seldon bisher nicht darin (siehe 7.1) |
+| 25.11.2026 | arXiv | S1a: `TabPFN` AND `"missing values"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung: Standardeinstellung | 7 | Nicht angegeben | `Arxiv/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-Exporten; Seldon bisher nicht darin (siehe 7.1) |
 | 25.11.2026 | arXiv | S1b: `"tabular foundation models"` AND `"missing data"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung: Standardeinstellung, konkrete Reihenfolge nicht dokumentiert | 3 | Alle 3 Treffer | `Arxiv/S1b--tabular foundation models- -missing data-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Xia et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
@@ -388,9 +398,8 @@ sind zunächst Kandidaten; die Auswahl ist nicht durch den Export belegt.
 | Luo et al. (2025), TIME: TabPFN-Integrated Multimodal Engine for Robust Tabular-Image Learning | Bereits in S1a und S1c |
 | Hollmann et al. (2023), TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | Bereits in S1a, S1c und S2a |
 
-Offen sind der tatsächlich gesichtete Bereich sowie Sortierung und etwaige
-Filter. Drei gespeicherte Einträge bedeuten nicht automatisch, dass alle
-sieben Treffer gesichtet wurden.
+Offen ist der tatsächlich gesichtete Bereich. Drei gespeicherte Einträge
+bedeuten nicht automatisch, dass alle sieben Treffer gesichtet wurden.
 
 **arXiv S1b (25.11.2026)**
 
