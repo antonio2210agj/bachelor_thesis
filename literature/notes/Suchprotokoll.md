@@ -106,7 +106,7 @@ passende Treffer ausschließen.
 "TabPFN" AND "imputation"
 ```
 
-**S2a**
+**S2a** (RIS-Export vorhanden; genaue Eingabe noch zu bestätigen)
 
 ```text
 "TabPFN" AND "gradient boosting" AND "missing values"
@@ -118,7 +118,7 @@ passende Treffer ausschließen.
 "gradient boosting" AND "missing values"
 ```
 
-**S4a**
+**S4a** (RIS-Export vorhanden; genaue Eingabe noch zu bestätigen)
 
 ```text
 "missing data" AND "imputation" AND "classification" AND "benchmark"
@@ -260,7 +260,9 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1a: `"TabPFN"` AND `"missing values"` | Suchfeld nicht angegeben; „All Results“, Sortierung „Relevance“; Jahresanzeige 2026–2026 (aktive Einschränkung nicht geklärt) | 4 | Alle 4 Treffer | `IEEE Xplore/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-S1a; Jang et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
+| Nicht bestätigt; Export vom 25.11.2026 | IEEE Xplore | S2a: geplante Vorlage `"TabPFN" AND "gradient boosting" AND "missing values"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S2a--TabPFN- -gradient boosting- -missing values-.ris`, 2 Einträge | Endgültige Auswahl offen | Beide bereits in IEEE S1a (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Erste 50 laut Nutzer | Nicht angegeben | Laut Nutzer keine interessanten Arbeiten gefunden | Nicht quantifiziert |
+| 25.11.2026 | IEEE Xplore | S4a: geplante Vorlage `"missing data" AND "imputation" AND "classification" AND "benchmark"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S4a--missing data- imputation classification benchmark.ris`, 1 Eintrag | Endgültige Auswahl offen | Shakir bereits in IEEE S1c (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -494,6 +496,12 @@ aus der Anzeige allein wird keine Jahresfilterung abgeleitet.
 | Bi et al. (2026), *Missing-Aware Imbalanced Learning Pathways for Manufacturing Process Quality Assessment* | Bereits in IEEE S1a |
 | Jang et al. (2026), *When Does Train-Time Masking Help? A Leakage-Controlled Robustness Audit of Tabular Classifiers Under Feature Missingness* | Bereits in IEEE S1a |
 | Shakir (2024), *Benchmarking TabLM: Evaluating the Performance of Language Models Against Traditional Machine Learning in Structured Data Tasks* | In bisherigen RIS-Exporten nicht nachgewiesen; übrigen Bestand und FF1-Relevanz prüfen |
+
+**IEEE Xplore S2a und S4a**
+
+S2a enthält Zaimoğlu und Jang, beide bereits in IEEE S1a. S4a enthält Shakir,
+bereits in IEEE S1c. Die Angaben beruhen auf RIS-Metadaten; die FF1-Relevanz
+und die tatsächlichen Suchanfragen bleiben zu prüfen.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
