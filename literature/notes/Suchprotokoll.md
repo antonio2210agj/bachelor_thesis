@@ -94,7 +94,7 @@ passende Treffer ausschließen.
 "TabPFN" AND "missing values"
 ```
 
-**S1b**
+**S1b** (bereits durchgeführt; keine Treffer)
 
 ```text
 "tabular foundation models" AND "missing data"
@@ -258,6 +258,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S4a: `"missing data"` AND `imputation` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
 | 25.11.2026 | arXiv | S5a: `"missing data"` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 24 | Alle 24 Treffer laut Nutzer | Kein RIS-Export im Exportordner; Zotero-Auswahl nicht bestätigt | Laut Nutzer keine passenden Treffer gefunden; endgültige Auswahl offen | Nicht quantifiziert |
 | 25.11.2026 | IEEE Xplore | S1a: `"TabPFN"` AND `"missing values"` | Suchfeld nicht angegeben; „All Results“, Sortierung „Relevance“; Jahresanzeige 2026–2026 (aktive Einschränkung nicht geklärt) | 4 | Alle 4 Treffer | `IEEE Xplore/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-S1a; Jang et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
+| 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
