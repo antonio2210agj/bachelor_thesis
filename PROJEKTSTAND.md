@@ -79,6 +79,11 @@ Mit dem Betreuer zu klären:
   Ausschlussliste sind leer; es ist noch keine Datenbanksuche protokolliert.
   Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
   Laut Nutzer wurde bis zum 25.11.2026 nicht weiter recherchiert.
+- Zotero-Austausch: Der Nutzer exportiert die tatsächlich erfassten Treffer
+  einer Suche als RIS nach `literature/recherche/exporte/` und teilt die
+  Suchangaben im Chat mit; die Assistenz kann damit das Such-Log ergänzen.
+  RIS-Dateien sind gitignoriert und bleiben lokal; fehlende Sichtungs- oder
+  Auswahlzahlen dürfen nicht aus den Metadaten erfunden werden.
 - Konzeptmatrix: 9 Arbeiten, alle mit Status „vorbefüllt, am Volltext prüfen“,
   21 Zellen mit `?`. In der Matrix fehlen aus der Startmenge der
   TabPFN-2.5-Bericht und Ke et al. (2017).

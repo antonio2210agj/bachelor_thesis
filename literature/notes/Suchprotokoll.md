@@ -113,9 +113,21 @@ Liste automatisch eingeschlossener Studien.
 
 ## 7. Such-Log
 
-| Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Filter | Treffer | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
-|---|---|---|---|---|---|---|
-| | | | | | | |
+Pro Suchlauf eine Zeile führen. Bei Google Scholar die angezeigte Trefferzahl
+als Schätzung kennzeichnen und den tatsächlich gesichteten Bereich eintragen.
+Die Zahl im RIS-Export ist nicht automatisch die Zahl der gesichteten oder
+nach Titel-/Abstractprüfung behaltenen Arbeiten. Überschneidungen zwischen
+Suchläufen getrennt erfassen und erst beim Abgleich bereinigen.
+
+Zotero-RIS-Dateien können unter
+[`literature/recherche/exporte/`](../recherche/exporte/README.md) für den
+Abgleich abgelegt werden. Eine Anleitung liegt dort; die RIS-Dateien bleiben
+lokal und werden nicht mit Git übertragen. Fehlende Angaben im Log offen
+lassen und nicht aus einem Export erraten.
+
+| Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
 
 ## 8. Rückwärts- und Vorwärtssuche
 

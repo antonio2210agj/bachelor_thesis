@@ -35,6 +35,9 @@ _minted*/
 # Literatur-PDFs ohne Weitergabelizenz (nur lokal)
 literature/07_Missing_Data_und_Imputation/Perez-Lebel_2022_*.pdf
 
+# Zotero-Austauschdateien können lokale Pfade und Notizen enthalten
+literature/recherche/exporte/*.ris
+
 # Operating system files
 Thumbs.db
 Desktop.ini
