@@ -604,7 +604,14 @@ ob es sich um verwandte Fassungen handelt, ist offen. Weitere bereits
 markierte mögliche Fassungen, insbesondere TabImpute und Woźnica et al.,
 bleiben ebenfalls zu prüfen. Gleiche Suchtreffer in verschiedenen Zotero-
 Sammlungen sind nicht automatisch doppelte Bibliothekseinträge. Nichts wurde
-gelöscht oder zusammengeführt.
+gelöscht oder zusammengeführt. Die Angaben spiegeln die RIS-Exporte zum
+Zeitpunkt des Abgleichs wider.
+
+Der Nutzer meldet am 25.11.2026 anschließend die Zusammenführung der
+angezeigten Zotero-Dubletten. Welche Gruppen zusammengeführt wurden und wie
+viele Einträge danach verbleiben, ist nicht dokumentiert; die vorhandenen
+RIS-Exporte wurden dadurch nicht automatisch geändert. Fassungsfragen und
+nicht erkannte Dubletten bleiben gegebenenfalls offen.
 
 **Zwischenstand der Suche:** Die erste Datenbanksuchrunde wird am 25.11.2026
 vorläufig beendet. Über weitere Ergänzungen und den Umfang der Sichtung soll

@@ -82,9 +82,11 @@ Mit dem Betreuer zu klären:
   Insbesondere sind bei arXiv S1a der Sichtungsbereich und bei IEEE S1a
   Suchfeld und Bedeutung der Jahresanzeige offen.
 - Vorläufiger DOI-/Titelabgleich der 15 lokalen RIS-Exporte durchgeführt;
-  Einzelheiten und Grenzen im Suchprotokoll, Abschnitt 7.2. Prüfung der
-  Zotero-Dubletten und Fassungen, systematische Auswahl und Volltextprüfung
-  stehen noch aus; Rückwärts-/Vorwärtssuche und Auswahlzahlen sind offen.
+  Einzelheiten und Grenzen im Suchprotokoll, Abschnitt 7.2. Der Nutzer meldet
+  am 25.11. die Zusammenführung der angezeigten Zotero-Dubletten; Anzahl und
+  einzelne Gruppen sind nicht dokumentiert. Die RIS-Dateien sind unveränderte
+  Momentaufnahmen. Fassungsfragen, systematische Auswahl und Volltextprüfung
+  sowie Rückwärts-/Vorwärtssuche und Auswahlzahlen bleiben offen.
   Die Suche ist kein Vollständigkeitsnachweis.
 - Scopus blieb trotz VPN auf Preview; das
   [DBIS der Uni Regensburg](https://dbis.ur.de/UBR/resources/3636) meldet
