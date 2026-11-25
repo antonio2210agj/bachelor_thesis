@@ -239,6 +239,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S3a: `"gradient boosting"` AND `"missing values"` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 34 | Alle 34 Treffer | `Arxiv/S3a--gradient boosting- -missing values-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Vo et al. im bisherigen Exportabgleich nicht nachgewiesen; übrigen Bestand prüfen |
 | 25.11.2026 | arXiv | S4a: `"missing data"` AND `imputation` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
 | 25.11.2026 | arXiv | S5a: `"missing data"` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 24 | Alle 24 Treffer laut Nutzer | Kein RIS-Export im Exportordner; Zotero-Auswahl nicht bestätigt | Laut Nutzer keine passenden Treffer gefunden; endgültige Auswahl offen | Nicht quantifiziert |
+| 25.11.2026 | IEEE Xplore | S1a: `"TabPFN"` AND `"missing values"` | Suchfeld und Sortierung nicht angegeben; Anzeige „Show all results“, Jahresbereich 2026–2026 (Bedeutung noch klären) | 4 | Alle 4 Treffer | `IEEE Xplore/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-S1a; Jang et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -449,6 +450,19 @@ gefunden. Der Exportordner enthält keinen RIS-Export für diesen Lauf; ob
 Einträge in Zotero gespeichert wurden, ist nicht bestätigt. Der Nutzer möchte
 die arXiv-Suche vorläufig abschließen und den Ablauf mit dem Betreuer
 besprechen. Das ist kein Nachweis einer vollständigen Abdeckung.
+
+**IEEE Xplore S1a (25.11.2026)**
+
+| Arbeit laut RIS-Export | Abgleich mit bisherigen Exporten |
+|---|---|
+| Zaimoğlu (2026), *Evaluation of TabPFN’s Performance Consistency Under Controlled MCAR Conditions* | Bereits in Google Scholar S1a |
+| Bi et al. (2026), *Missing-Aware Imbalanced Learning Pathways for Manufacturing Process Quality Assessment* | Bereits in Google Scholar S1a |
+| Jang et al. (2026), *When Does Train-Time Masking Help? A Leakage-Controlled Robustness Audit of Tabular Classifiers Under Feature Missingness* | In bisherigen Such-Exporten noch nicht nachgewiesen; übrigen Bestand und Volltext prüfen |
+
+Der Nutzer berichtet, dass der angezeigte Jahresbereich 2026–2026 nach einer
+Änderung automatisch zurückspringt. Ob dies die Jahre der Treffer widerspiegelt
+oder eine aktive Einschränkung darstellt, ist noch ungeklärt; aus der Anzeige
+allein wird keine Jahresfilterung abgeleitet.
 
 ## 8. Rückwärts- und Vorwärtssuche
 

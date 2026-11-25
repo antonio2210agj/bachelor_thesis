@@ -132,6 +132,11 @@ Mit dem Betreuer zu klären:
   gefunden; kein RIS-Export im Exportordner, Zotero-Auswahl nicht bestätigt.
   Der Nutzer möchte arXiv vorläufig abschließen und beim Betreuungsgespräch
   klären, ob der Suchablauf angepasst werden sollte.
+- IEEE Xplore S1a (`"TabPFN"` AND `"missing values"`): am 25.11. vier
+  Treffer angezeigt und alle vier gesichtet; drei als passend oder unklar
+  exportiert, davon zwei bereits in Scholar-S1a. Suchfeld und Sortierung sind
+  offen. Jahresanzeige 2026–2026 springt laut Nutzer nach Änderung zurück;
+  ob ein aktiver Jahresfilter besteht, ist zu klären.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
