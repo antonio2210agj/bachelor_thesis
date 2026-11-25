@@ -210,6 +210,7 @@ lassen und nicht aus einem Export erraten.
 | 25.11.2026 | Google Scholar | S1b: `"tabular foundation models" "missing data"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 236 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1b--tabular foundation models- -missing data-.ris`, 8 Einträge; nur die als passend oder unklar gespeicherten Treffer | 8 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 neu gegenüber Bestand und S1a (siehe 7.1); 2 Überschneidungen mit S1a |
 | 25.11.2026 | Google Scholar | S1c: `"TabPFN" imputation` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 350 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S1c--TabPFN- imputation.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 5 Titel neu gegenüber S1a/S1b (siehe 7.1); 11 Überschneidungen |
 | 25.11.2026 | Google Scholar | S2a: `"TabPFN" "gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 771 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S2a--TabPFN- -gradient boosting- -missing values-.ris`, 9 Einträge; nur die als passend oder unklar gespeicherten Treffer | 9 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 3 Titel neu gegenüber S1a–S1c (siehe 7.1); 6 Überschneidungen |
+| 25.11.2026 | Google Scholar | S3a: `"gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 62 900 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S3a--gradient boosting- -missing values-.ris`, 18 RIS-Einträge; eine Arbeit doppelt exportiert (17 unterschiedliche Titel) | 18 gespeichert; Titel-/Abstractscreening noch offen | Perez-Lebel et al. ist bereits im Bestand; übrige Treffer mit früheren Exporten abgleichen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -304,6 +305,37 @@ Prüfung der möglichen TabImpute-Fassung und tatsächliche Auswahl.
 Die Markierung „neuer Titel“ bedeutet nur, dass der Eintrag in den früheren
 S1-Exporten nicht vorkam; sie ist keine Aussage zur Relevanz oder zum
 Vorhandensein im übrigen Bestand. Screening nach Titel/Abstract steht aus.
+
+**S3a (25.11.2026)**
+
+RIS-Metadaten; Titel und Erscheinungsorte sind noch nicht am Volltext geprüft.
+Der Export enthält eine doppelte Zotero-Aufnahme von Aydin und Öztürk.
+
+| Nr. | Arbeit laut Export | Ort laut Export | Hinweis |
+|---|---|---|---|
+| 1 | Zhang et al. (2020), Predicting Missing Values in Medical Data Via XGBoost Regression | Journal of Healthcare Informatics Research | Imputation, trotz XGBoost im Titel keine Klassifikation aus dem Export ableitbar |
+| 2 | Perez-Lebel et al. (2022), Benchmarking missing-values approaches for predictive models on health databases | GigaScience | Bereits im Bestand (Abschnitt 6); jetzt tatsächlich über S3a gefunden |
+| 3 | Samad et al. (2022), Missing value estimation using clustering and deep learning within multiple imputation framework | Knowledge-Based Systems | — |
+| 4 | Rusdah und Murfi (2020), XGBoost in handling missing values for life insurance risk prediction | SN Applied Sciences | — |
+| 5 | Madhu et al. (2019), A Novel Algorithm for Missing Data Imputation on Machine Learning | ICSSIT | — |
+| 6 | Batra et al. (2022), A Pragmatic Ensemble Strategy for Missing Values Imputation in Health Records | Entropy | — |
+| 7 | Kurniadi et al. (2023), Local mean imputation for handling missing value to provide more accurate facies classification | Procedia Computer Science | — |
+| 8 | Gorshenin et al. (2019), Application of Machine Learning Algorithms to Handle Missing Values in Precipitation Data | Springer conference volume | — |
+| 9 | Kurucz et al., Methods for large scale SVD with missing values | Im Export ohne Erscheinungsort | — |
+| 10 | Josse et al. (2024), On the consistency of supervised learning with missing values | Statistical Papers | — |
+| 11 | Aydin und Öztürk, Performance Analysis of XGBoost Classifier with Missing Data | Im Export ohne Erscheinungsort | Doppelt im RIS-Export (Nr. 12); PDF liegt in Downloads |
+| 12 | Aydin und Öztürk, Performance Analysis of XGBoost Classifier with Missing Data | Im Export ohne Erscheinungsort | Doppelt im RIS-Export (Nr. 11) |
+| 13 | Ramosaj et al. (2019), Predicting missing values: a comparative study on non-parametric approaches for imputation | Computational Statistics | — |
+| 14 | Rios et al. (2022), Handling missing values in machine learning to predict patient-specific risk of adverse cardiac events | Computers in Biology and Medicine | — |
+| 15 | Chen et al. (2024), Missing values handling for machine learning portfolios | Journal of Financial Economics | — |
+| 16 | Kuchen (2026), MIBoost: A gradient boosting algorithm for variable selection after multiple imputation | arXiv | — |
+| 17 | Alabadla et al. (2022), Systematic Review of Using Machine Learning in Imputing Missing Values | IEEE Access | Review |
+| 18 | Rabit, Handling Missing Values and Prediction of Waste Pile Data Based on Machine Learning | Im Export ohne vollständige Metadaten | — |
+
+Der Nutzer hatte die Arbeiten von Aydin und Öztürk sowie Perez-Lebel zusätzlich
+als Abstract beziehungsweise Volltext vorgelegt. Diese Sichtung wird separat
+protokolliert und ersetzt nicht das spätere systematische Titel-/Abstractscreening
+aller S3a-Treffer.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
