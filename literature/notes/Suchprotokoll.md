@@ -221,7 +221,7 @@ der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 | 25.11.2026 | Google Scholar | S3b: `"LightGBM" "missing values"` | Sortierung und Filter nicht dokumentiert | nicht dokumentiert | Sichtungsbereich nicht dokumentiert | Kein RIS-Export im Exportordner | Laut Nutzer keine passende Arbeit zur Aufnahme identifiziert; Umfang des Screenings nicht dokumentiert | nicht quantifiziert |
 | 25.11.2026 | Google Scholar | S4a: `"missing data" imputation classification benchmark` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 45 000 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S4a--missing data- imputation classification benchmark.ris`, 22 Einträge; enthält mögliche Dubletten und Versionsüberschneidungen (siehe 7.1) | 22 als passend oder unklar gespeichert; systematisches Titel-/Abstractscreening noch offen | Perez-Lebel et al. bereits in S3a und im Bestand; weitere Überschneidungen prüfen (siehe 7.1) |
 | 25.11.2026 | arXiv | S1a: `TabPFN` AND `"missing values"` | Beide Suchfelder: All fields; Filter und Sortierung nicht geklärt | 7 | Nicht angegeben | `Arxiv/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-Exporten; Seldon bisher nicht darin (siehe 7.1) |
-| 25.11.2026 | arXiv | S1b: `"tabular foundation models"` AND `"missing data"` | Beide Suchfelder: All fields; Filter und Sortierung noch zu klären | 3 | Alle 3 Treffer | `Arxiv/S1b--tabular foundation models- -missing data-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Xia et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
+| 25.11.2026 | arXiv | S1b: `"tabular foundation models"` AND `"missing data"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung nicht ersichtlich | 3 | Alle 3 Treffer | `Arxiv/S1b--tabular foundation models- -missing data-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Xia et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -397,7 +397,9 @@ sieben Treffer gesichtet wurden.
 Der RIS-Export enthält Xia et al. (2026), *Tabular Foundation Models for
 Weighted Regression and Classification* (arXiv:2611.29789). Relevanz für FF1
 und ein möglicher Abgleich mit dem übrigen Bestand sind noch offen.
-Sortierung und Filter werden anhand des angekündigten Screenshots ergänzt.
+Der Screenshot zeigt 50 Ergebnisse pro Seite und eingeblendete Abstracts; die
+Sortierung der Ergebnisse ist darauf nicht zu erkennen. „Submission date
+(most recent)“ bezeichnet die Datumsfilterung, nicht nachweislich die Sortierung.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
