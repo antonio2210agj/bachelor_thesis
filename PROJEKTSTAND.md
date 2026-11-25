@@ -117,6 +117,10 @@ Mit dem Betreuer zu klären:
   angezeigt und alle 10 gesichtet. Der RIS-Export enthält zwei Einträge mit
   identischem Titel und identischer DOI für TabPFGen; Dublette und FF1-Relevanz
   prüfen.
+- arXiv S2a mit den Feldern `"TabPFN"`, `"gradient boosting"` und
+  `"missing values"`: am 25.11. laut Nutzer keine Treffer. Vor dem dritten
+  Feld zeigt der Screenshot `AND`; die Verknüpfung des zweiten Feldes ist
+  darauf nicht ersichtlich. Kein RIS-Export.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
