@@ -101,6 +101,10 @@ Mit dem Betreuer zu klären:
   Ergebnissen; Screening und Dublettenprüfung stehen aus. Die tatsächlich
   verwendete Suche enthielt nicht den nachträglich vorgeschlagenen Zusatz
   `tabular`; eine zweite Variante ist nicht vorgesehen.
+- arXiv S1a (`TabPFN` AND `"missing values"`, beide All fields): am 25.11.
+  durchgeführt; 7 Ergebnisse angezeigt, 3 passende oder unklare Einträge
+  exportiert. Sichtungsbereich, Sortierung und Filter sind noch zu klären;
+  zwei Einträge stehen bereits in Scholar-Exporten, Seldon bislang nicht.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
@@ -280,6 +284,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S3a ausgewertet, Such-Log und Trefferliste ergänzt; Suche und Sichtung durch den Nutzer |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Explorative Google-Scholar-Suche S3b nach Nutzerangabe als durchgeführt, aber ohne passende Auswahl protokolliert; fehlende Suchdetails ausdrücklich offengelassen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S4a ausgewertet, tatsächliche Suchanfrage und Trefferliste im Suchprotokoll dokumentiert; Screening offen |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten arXiv-Suche S1a mit vorhandenen Scholar-Exporten abgeglichen und protokolliert; fehlende Suchdetails offengelassen |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

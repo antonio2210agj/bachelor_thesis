@@ -220,6 +220,7 @@ der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 | 25.11.2026 | Google Scholar | S3a: `"gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 62 900 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S3a--gradient boosting- -missing values-.ris`, 18 RIS-Einträge; eine Arbeit doppelt exportiert (17 unterschiedliche Titel) | 18 gespeichert; Titel-/Abstractscreening noch offen | Perez-Lebel et al. ist bereits im Bestand; übrige Treffer mit früheren Exporten abgleichen (siehe 7.1) |
 | 25.11.2026 | Google Scholar | S3b: `"LightGBM" "missing values"` | Sortierung und Filter nicht dokumentiert | nicht dokumentiert | Sichtungsbereich nicht dokumentiert | Kein RIS-Export im Exportordner | Laut Nutzer keine passende Arbeit zur Aufnahme identifiziert; Umfang des Screenings nicht dokumentiert | nicht quantifiziert |
 | 25.11.2026 | Google Scholar | S4a: `"missing data" imputation classification benchmark` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 45 000 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S4a--missing data- imputation classification benchmark.ris`, 22 Einträge; enthält mögliche Dubletten und Versionsüberschneidungen (siehe 7.1) | 22 als passend oder unklar gespeichert; systematisches Titel-/Abstractscreening noch offen | Perez-Lebel et al. bereits in S3a und im Bestand; weitere Überschneidungen prüfen (siehe 7.1) |
+| 25.11.2026 | arXiv | S1a: `TabPFN` AND `"missing values"` | Beide Suchfelder: All fields; Filter und Sortierung nicht geklärt | 7 | Nicht angegeben | `Arxiv/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-Exporten; Seldon bisher nicht darin (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -374,6 +375,21 @@ RIS-Metadaten; Relevanz und Volltexte noch nicht systematisch geprüft.
 | 20 | Seu, An Intelligent Missing Data Imputation Techniques: A Review | JOIV | Unvollständige Metadaten; vermutlich Dublette von Nr. 21 |
 | 21 | Seu et al. (2022), An Intelligent Missing Data Imputation Techniques: A Review | JOIV | Vermutlich Dublette von Nr. 20 |
 | 22 | Pereira Barata et al. (2019), Imputation Methods Outperform Missing-Indicator for Data Missing Completely at Random | ICDM Workshops | — |
+
+**arXiv S1a (25.11.2026)**
+
+Die drei RIS-Einträge stammen laut Nutzer aus der tatsächlichen Suche und
+sind zunächst Kandidaten; die Auswahl ist nicht durch den Export belegt.
+
+| Arbeit laut Export | Abgleich mit bisherigen Scholar-Exporten |
+|---|---|
+| Angebault et al. (2026), Seldon TFM family: Seldon-Mini, Seldon and Seldon+ | Nicht in den bisherigen Scholar-Exporten; übrigen Bestand und Relevanz noch prüfen |
+| Luo et al. (2025), TIME: TabPFN-Integrated Multimodal Engine for Robust Tabular-Image Learning | Bereits in S1a und S1c |
+| Hollmann et al. (2023), TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | Bereits in S1a, S1c und S2a |
+
+Offen sind der tatsächlich gesichtete Bereich sowie Sortierung und etwaige
+Filter. Drei gespeicherte Einträge bedeuten nicht automatisch, dass alle
+sieben Treffer gesichtet wurden.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
