@@ -126,8 +126,9 @@ passende Treffer ausschließen.
 
 ### 3.1b Geplante Ergänzungssuchen
 
-Stand 25.11.2026 (PC): Die bisherigen Anfragen bleiben unverändert
-dokumentiert. Die folgenden Vorschläge erweitern Alternativbegriffe innerhalb
+Stand 25.11.2026 (PC): Die erste Suchrunde ist vorläufig beendet; weitere
+Ergänzungen sind bis zur Rücksprache zurückgestellt. Die bisherigen Anfragen
+bleiben unverändert dokumentiert. Die folgenden Vorschläge erweitern Begriffe innerhalb
 eines Themenblocks mit OR und verbinden Modellansatz und fehlende Werte mit
 AND. Der jeweilige Durchführungsstand steht beim Eintrag und im Such-Log.
 Ziel ist eine ergänzende Suche, kein Nachweis vollständiger Abdeckung.
@@ -301,7 +302,7 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 | 25.11.2026 | IEEE Xplore | S1b-erweitert: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing data" OR "missing values")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; Screenshot zeigt 6 Treffer | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Vier sichtbare Titel bereits in IEEE S1a oder S1c; zwei weitere nicht in bisherigen RIS-Exporten nachgewiesen |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
-| 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 10 laut Nutzer | Alle 10 auf Screenshots sichtbar; systematischer Sichtungsumfang nicht angegeben | Nicht angegeben | Offen; Abstracts von Kaysi, Campana et al. und Bellarmino vorgelegt | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; Kaysi und Campana et al. vorläufig prüfen |
+| 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 10 laut Nutzer | Alle 10 auf Screenshots sichtbar; systematischer Sichtungsumfang nicht angegeben | `IEEE Xplore/E!.ris`: 1 Eintrag (Kaysi); E1-Zuordnung anhand des Inhalts und des Gesprächs | Offen; Abstracts von Kaysi, Campana et al. und Bellarmino vorgelegt | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; Kaysi und Campana et al. vorläufig prüfen |
 | 25.11.2026 | IEEE Xplore | E2: `("gradient boosting" OR "LightGBM" OR "XGBoost") AND ("missing values" OR "missing data" OR "missingness")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 2 525 laut Nutzer | Nicht angegeben | Nicht angegeben | Offen | Nicht quantifiziert |
 | Nicht bestätigt; Export vom 25.11.2026 | IEEE Xplore | S2a: geplante Vorlage `"TabPFN" AND "gradient boosting" AND "missing values"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S2a--TabPFN- -gradient boosting- -missing values-.ris`, 2 Einträge | Endgültige Auswahl offen | Beide bereits in IEEE S1a (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Erste 50 laut Nutzer | Nicht angegeben | Laut Nutzer keine interessanten Arbeiten gefunden | Nicht quantifiziert |
@@ -558,6 +559,59 @@ deren Einfluss auf die Vorhersageleistung untersucht wird, ist offen.
 Bellarmino behandelt laut Abstract unter anderem fehlende Labels; fehlende
 Merkmalswerte sind daraus nicht erkennbar. Diese Einschätzungen beruhen
 ausschließlich auf Abstracts; Aufnahme und Volltextprüfung sind offen.
+
+### 7.2 Vorläufiger Dublettenabgleich der RIS-Exporte
+
+Stand 25.11.2026 (PC): Die 15 lokal vorhandenen RIS-Dateien enthalten
+zusammen 107 Einträge. Verglichen wurden DOI-Werte und normalisierte Titel,
+ergänzend ähnliche Titel. 18 Einträge enthalten kein DOI-Feld. Der Abgleich
+umfasst nur die vorhandenen Exporte, nicht die gesamte Zotero-Bibliothek oder
+den übrigen Bestand; RIS-Dateien bleiben lokal. Eine eindeutige Gesamtzahl
+der Arbeiten und die Auswahlzahlen werden daraus nicht abgeleitet.
+
+Die folgende Tabelle nennt Gruppen gleicher DOI-Werte aus den Exporten.
+G = Google Scholar, A = arXiv, I = IEEE Xplore; die Kürzel dahinter sind
+Suchlauf-IDs. Wiederholte IDs zeigen mehrere Einträge in demselben Export.
+Gleiche DOI-Werte sprechen für denselben bibliografischen Datensatz, ersetzen
+aber nicht die Prüfung in Zotero; Fundwege dort erhalten.
+
+| Arbeit laut Export | DOI | Vorkommen |
+|---|---|---|
+| TIMF | `10.1016/j.neucom.2026.134975` | G S1a, S1c |
+| Hollmann et al., Accurate predictions on small data | `10.1038/s41586-024-08328-6` | G S1a, S1b, S1c (zweimal), S2a |
+| Shadbahr et al., The impact of imputation quality | `10.1038/s43856-023-00356-z` | G S4a (zweimal) |
+| Perez-Lebel et al., Benchmarking missing-values approaches | `10.1093/gigascience/giac013` | G S3a, S4a |
+| Jang et al., When Does Train-Time Masking Help? | `10.1109/ACCESS.2026.3695538` | I S1a, S1c, S2a |
+| Shakir, Benchmarking TabLM | `10.1109/ICETI63946.2024.10777155` | I S1c, S4a |
+| Zaimoğlu, Evaluation of TabPFN’s Performance Consistency | `10.1109/IDAP71869.2026.11727906` | G S1a, S1c, S2a; I S1a, S1c, S2a |
+| Bi et al., Missing-Aware Imbalanced Learning Pathways | `10.1109/METMS70800.2026.11706171` | G S1a; I S1a, S1c |
+| Sepin, Multiple Imputation Using Pretrained Foundation Models | `10.20944/preprints202602.1666.v1` | G S1a, S2a |
+| Sepin, Multiple Imputation of a Continuous Outcome | `10.3390/stats9020038` | G S1a, S1c |
+| TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | `10.48550/arXiv.2207.01848` | A S1a; G S1a, S1c, S2a |
+| TabPFGen | `10.48550/arXiv.2406.05216` | A S1c (zweimal) |
+| TIME | `10.48550/arXiv.2506.00813` | A S1a; G S1a, S1c |
+| One Pipeline, Many Transformers | `10.48550/arXiv.2510.02625` | G S1b, S1c |
+| TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | `10.48550/arXiv.2511.08667` | G S1a, S1b, S1c, S2a |
+| TabPFN-3: Technical Report | `10.48550/arXiv.2605.13986` | G S1a, S1c |
+
+Weitere Titelüberschneidungen ohne DOI: Tran und Byeon, *Predicting dementia
+in Parkinson's disease*, in G S1a, S1c und S2a; Aydin und Öztürk,
+*Performance Analysis of XGBoost Classifier with Missing Data*, zweimal in
+G S3a. Metadaten vor einer Zusammenführung prüfen.
+
+TIME und TIMF haben sehr ähnliche Titel, aber unterschiedliche DOI-Werte;
+ob es sich um verwandte Fassungen handelt, ist offen. Weitere bereits
+markierte mögliche Fassungen, insbesondere TabImpute und Woźnica et al.,
+bleiben ebenfalls zu prüfen. Gleiche Suchtreffer in verschiedenen Zotero-
+Sammlungen sind nicht automatisch doppelte Bibliothekseinträge. Nichts wurde
+gelöscht oder zusammengeführt.
+
+**Zwischenstand der Suche:** Die erste Datenbanksuchrunde wird am 25.11.2026
+vorläufig beendet. Über weitere Ergänzungen und den Umfang der Sichtung soll
+der Betreuer mitentscheiden. Die bestehenden Suchläufe und ihre Grenzen
+bleiben dokumentiert; Titel-/Abstractauswahl, Volltextprüfung sowie Rückwärts-
+und Vorwärtssuche sind weiterhin offen. Der Zwischenstand ist kein
+Vollständigkeitsnachweis.
 
 ## 8. Rückwärts- und Vorwärtssuche
 

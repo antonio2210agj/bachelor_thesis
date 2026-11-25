@@ -74,16 +74,18 @@ Mit dem Betreuer zu klären:
 
 ### Literaturanalyse (FF1)
 
-- Stand 25.11.2026 (PC): Google-Scholar-Suchläufe durchgeführt, erste arXiv-
-  und IEEE-Xplore-Suchen durchgeführt; gezielte Ergänzungssuchen sind geplant.
-  Alle Einzelangaben,
+- Stand 25.11.2026 (PC): Erste Suchrunde in Google Scholar, arXiv und IEEE
+  Xplore vorläufig beendet; weitere Ergänzungen und Sichtungsumfang mit dem
+  Betreuer klären. Alle Einzelangaben,
   Trefferlisten, Überschneidungen und ungeklärten Angaben stehen im
   [Suchprotokoll](literature/notes/Suchprotokoll.md), Abschnitt 7.
   Insbesondere sind bei arXiv S1a der Sichtungsbereich und bei IEEE S1a
   Suchfeld und Bedeutung der Jahresanzeige offen.
-- Dublettenabgleich, systematische Auswahl und Volltextprüfung stehen noch aus;
-  Rückwärts-/Vorwärtssuche und Auswahlzahlen sind offen. Die vorgeschlagenen
-  Suchbegriffe und Auswahlkriterien sind keine Vollständigkeitsgarantie.
+- Vorläufiger DOI-/Titelabgleich der 15 lokalen RIS-Exporte durchgeführt;
+  Einzelheiten und Grenzen im Suchprotokoll, Abschnitt 7.2. Prüfung der
+  Zotero-Dubletten und Fassungen, systematische Auswahl und Volltextprüfung
+  stehen noch aus; Rückwärts-/Vorwärtssuche und Auswahlzahlen sind offen.
+  Die Suche ist kein Vollständigkeitsnachweis.
 - Scopus blieb trotz VPN auf Preview; das
   [DBIS der Uni Regensburg](https://dbis.ur.de/UBR/resources/3636) meldet
   derzeit keinen Zugriff. IEEE Xplore ist laut
@@ -174,8 +176,8 @@ Ziel ist ein nachvollziehbarer Zwischenstand, keine abgeschlossene Analyse.
 
 Vorbereitung:
 
-1. IEEE-Suche fortführen und die bisherigen Suchläufe samt offenen Angaben
-   für das Gespräch bereithalten.
+1. Die bisherigen Suchläufe und den vorläufigen Dublettenabgleich samt
+   offenen Angaben für das Gespräch bereithalten.
 2. Titel und Abstracts sichten und bei einer passenden Arbeit exemplarisch
    eine Matrixzeile anhand des Volltexts prüfen.
 3. Die Fragen unten und den vorläufigen Zeitplan für das Gespräch vorbereiten;
@@ -218,7 +220,7 @@ Fragen an den Betreuer:
 
 ## Nächste Schritte
 
-1. IEEE-Suche fortführen; Datenbanken und Suchumfang mit dem Betreuer klären,
+1. Datenbanken, Suchumfang und mögliche Ergänzungen mit dem Betreuer klären,
    danach Exposé und Suchprotokoll bei Bedarf angleichen.
 2. Suchläufe und Auswahl dokumentieren; Dubletten prüfen und Kandidaten sichten.
 3. Die neun Matrixzeilen am Volltext prüfen, `?` auflösen, Status fortschreiben;
@@ -268,6 +270,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten arXiv-Suche S1a mit vorhandenen Scholar-Exporten abgeglichen und protokolliert; fehlende Suchdetails offengelassen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Weitere arXiv-Suchläufe und IEEE-S1a anhand von Nutzerangaben und Exporten dokumentiert, Abstracts vorläufig eingeordnet, Zotero-/RIS-Ablage organisiert, Datenbankzugang und Suchoberflächen erläutert; Suchprotokoll und Projektstand gestrafft. Suche und Auswahl durch den Nutzer; Volltextprüfung offen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Weitere IEEE-Exporte und Sichtungsangaben dokumentiert, Abstracts vorläufig eingeordnet, ergänzende Suchläufe vorgeschlagen und eine bearbeitbare Gesprächsunterlage mit PDF für den Betreuungstermin erstellt |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Auf Nutzerwunsch die erste Suchrunde als vorläufig beendet dokumentiert, lokale RIS-Exporte anhand von DOI und Titeln auf Überschneidungen geprüft und die Gesprächsunterlage aktualisiert; keine Zotero-Einträge gelöscht oder zusammengeführt |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 
