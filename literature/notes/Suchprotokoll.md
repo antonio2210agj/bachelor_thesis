@@ -212,7 +212,7 @@ lassen und nicht aus einem Export erraten. Die unten aufgeführten RIS-Dateien
 der Google-Scholar-Suchläufe liegen im Unterordner `exporte/Google Scholar/`.
 
 Für die arXiv-Suchen S1a und S1b und die folgenden Suchen werden laut Nutzer
-dieselben Einstellungen verwendet: beide Suchfelder „All fields“, alle
+dieselben Einstellungen verwendet: Suchfelder „All fields“, alle
 Fachgebiete und Daten, Cross-Listings eingeschlossen, ältere Versionen nicht
 eingeschlossen, 50 Ergebnisse pro Seite, Abstracts eingeblendet und
 unveränderte Standardsortierung (konkrete Reihenfolge nicht dokumentiert).
@@ -235,6 +235,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S1c: `TabPFN` AND `imputation` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 10 | Alle 10 Treffer | `Arxiv/S1c--TabPFN- imputation.ris`, 2 RIS-Einträge mit identischem Titel und identischer DOI; eine Arbeit | Endgültige Auswahl offen | TabPFGen in S1a/S1b und bisherigen Scholar-Exporten nicht nachgewiesen; übrigen Bestand prüfen |
 | 25.11.2026 | arXiv | S2a: Felder `"TabPFN"`, `"gradient boosting"`, AND `"missing values"`; Verknüpfung des zweiten Feldes auf Screenshot nicht ersichtlich | Drei Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
 | 25.11.2026 | arXiv | S3a: `"gradient boosting"` AND `"missing values"` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 34 | Alle 34 Treffer | `Arxiv/S3a--gradient boosting- -missing values-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Vo et al. im bisherigen Exportabgleich nicht nachgewiesen; übrigen Bestand prüfen |
+| 25.11.2026 | arXiv | S4a: `"missing data"` AND `imputation` AND `classification` AND `benchmark` | Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
