@@ -105,6 +105,10 @@ Mit dem Betreuer zu klären:
   durchgeführt; 7 Ergebnisse angezeigt, 3 passende oder unklare Einträge
   exportiert. Sichtungsbereich, Sortierung und Filter sind noch zu klären;
   zwei Einträge stehen bereits in Scholar-Exporten, Seldon bislang nicht.
+- arXiv S1b (`"tabular foundation models"` AND `"missing data"`, beide All
+  fields): am 25.11. durchgeführt; 3 Treffer angezeigt und alle 3 gesichtet,
+  ein passender oder unklarer Eintrag exportiert. Sortierung und Filter anhand
+  des angekündigten Screenshots ergänzen; FF1-Relevanz der Arbeit ist offen.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
