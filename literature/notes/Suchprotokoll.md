@@ -129,10 +129,10 @@ passende Treffer ausschließen.
 Stand 25.11.2026 (PC): Die bisherigen Anfragen bleiben unverändert
 dokumentiert. Die folgenden Vorschläge erweitern Alternativbegriffe innerhalb
 eines Themenblocks mit OR und verbinden Modellansatz und fehlende Werte mit
-AND. Sie sind noch keine durchgeführten Suchläufe. Ziel ist eine ergänzende
-Suche, kein Nachweis vollständiger Abdeckung.
+AND. Der jeweilige Durchführungsstand steht beim Eintrag und im Such-Log.
+Ziel ist eine ergänzende Suche, kein Nachweis vollständiger Abdeckung.
 
-**IEEE E1: Tabular Foundation Models**
+**IEEE E1: Tabular Foundation Models** (bereits durchgeführt)
 
 ```text
 ("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")
@@ -301,6 +301,7 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 | 25.11.2026 | IEEE Xplore | S1b-erweitert: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing data" OR "missing values")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; Screenshot zeigt 6 Treffer | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Vier sichtbare Titel bereits in IEEE S1a oder S1c; zwei weitere nicht in bisherigen RIS-Exporten nachgewiesen |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
+| 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; zwei Screenshots zeigen 10 verschiedene Titel | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; weitere sichtbare Titel auf Relevanz prüfen |
 | Nicht bestätigt; Export vom 25.11.2026 | IEEE Xplore | S2a: geplante Vorlage `"TabPFN" AND "gradient boosting" AND "missing values"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S2a--TabPFN- -gradient boosting- -missing values-.ris`, 2 Einträge | Endgültige Auswahl offen | Beide bereits in IEEE S1a (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Erste 50 laut Nutzer | Nicht angegeben | Laut Nutzer keine interessanten Arbeiten gefunden | Nicht quantifiziert |
 | 25.11.2026 | IEEE Xplore | S4a: geplante Vorlage `"missing data" AND "imputation" AND "classification" AND "benchmark"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S4a--missing data- imputation classification benchmark.ris`, 1 Eintrag | Endgültige Auswahl offen | Shakir bereits in IEEE S1c (siehe 7.1) |
