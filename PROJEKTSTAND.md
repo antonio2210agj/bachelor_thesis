@@ -65,84 +65,33 @@ Vom Nutzer zu entscheiden (Vorschläge vom 19.11.2026, PC, noch unbeantwortet):
 
 Mit dem Betreuer zu klären:
 
-- Datenbanken: Das Exposé nennt Google Scholar, arXiv und Zitationssuche; das
-  Suchprotokoll zusätzlich Scopus, IEEE Xplore und ACM Digital Library. Die
-  Folien nennen außerdem AISeL. Eine Fassung festlegen und beide Dokumente
-  angleichen.
+- Datenbanken: Das Exposé nennt Google Scholar, arXiv und Zitationssuche;
+  IEEE Xplore wird ebenfalls genutzt, ACM Digital Library und AISeL sind
+  mögliche Ergänzungen. Scopus ist derzeit nicht zugänglich. Eine Auswahl
+  festlegen und beide Dokumente angleichen.
 
 ## Stand der Arbeitspakete
 
 ### Literaturanalyse (FF1)
 
-- Suchprotokoll: Vorgehen, Suchstrings S1 bis S4 und Kriterien stehen als
-  Vorschlag. Das Such-Log enthält inzwischen die dokumentierten Google-Scholar-
-  Läufe S1a bis S4a und den explorativen, nicht wiederholten Versuch S3b.
-  Rückwärts- und Vorwärtssuche, Auswahlzahlen und Ausschlussliste sind noch
-  offen. Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
-  Stand 25.11.2026 (PC): Abschnitt 3.1 enthält konkrete Scholar-Suchen S1a bis
-  S4a, Abschnitt 3.3 und 8a den getrennten Weg für Grundlagen. S1a
-  (`"TabPFN" "missing values"`) ist durchgeführt und protokolliert: 16
-  gespeicherte Treffer, davon 9 neu gegenüber dem Bestand; Screening offen.
-  S1b (`"tabular foundation models" "missing data"`) ebenfalls: 8 gespeicherte
-  Treffer, davon 5 neue Titel gegenüber Bestand und S1a. S1c (`"TabPFN"
-  imputation`) ebenfalls durchgeführt: 16 gespeicherte Einträge aus den ersten
-  50 von ungefähr 1 350 Ergebnissen; 5 Titel waren neu gegenüber S1a/S1b, eine
-  mögliche TabImpute-Fassung ist noch abzugleichen. S2a (`"TabPFN" "gradient
-  boosting" "missing values"`) ist ebenfalls durchgeführt: 9 Einträge, 3 neue
-  Titel gegenüber S1a–S1c. S3a (`"gradient boosting" "missing values"`)
-  durchgeführt: 18 RIS-Einträge aus den ersten 50 von ungefähr 62 900
-  Treffern; ein Titel doppelt exportiert. Perez-Lebel et al. (2022) aus dem
-  Bestand wurde dabei erneut gefunden. S3b (`"LightGBM" "missing values"`)
-  wurde explorativ durchgeführt; laut Nutzer wurde keine passende Arbeit zur
-  Aufnahme gefunden. Sortierung, Trefferzahl und Sichtungsbereich sind nicht
-  dokumentiert, ein RIS-Export liegt nicht vor; die Suche wird nicht
-  wiederholt. S4a (`"missing data" imputation classification benchmark`)
-  wurde durchgeführt: 22 RIS-Einträge aus den ersten 50 von ungefähr 45 000
-  Ergebnissen; Screening und Dublettenprüfung stehen aus. Die tatsächlich
-  verwendete Suche enthielt nicht den nachträglich vorgeschlagenen Zusatz
-  `tabular`; eine zweite Variante ist nicht vorgesehen.
-- arXiv S1a (`TabPFN` AND `"missing values"`, beide All fields): am 25.11.
-  durchgeführt; 7 Ergebnisse angezeigt, 3 passende oder unklare Einträge
-  exportiert. Sichtungsbereich ist noch zu klären;
-  zwei Einträge stehen bereits in Scholar-Exporten, Seldon bislang nicht.
-- arXiv S1b (`"tabular foundation models"` AND `"missing data"`, beide All
-  fields): am 25.11. durchgeführt; 3 Treffer angezeigt und alle 3 gesichtet,
-  ein passender oder unklarer Eintrag exportiert. Screenshot: alle Fachgebiete
-  und Daten, Cross-Listings eingeschlossen, ältere Versionen nicht eingeschlossen;
-  Sortierung laut Nutzer unveränderte Standardeinstellung, konkrete Reihenfolge
-  nicht dokumentiert. Laut Nutzer gelten diese Einstellungen auch für S1a und
-  die folgenden arXiv-Suchen über „Refine query“, sofern nicht anders angegeben.
-  FF1-Relevanz der Arbeit ist offen.
-- arXiv S1c (`TabPFN` AND `imputation`): am 25.11. durchgeführt; 10 Treffer
-  angezeigt und alle 10 gesichtet. Der RIS-Export enthält zwei Einträge mit
-  identischem Titel und identischer DOI für TabPFGen; Dublette und FF1-Relevanz
-  prüfen.
-- arXiv S2a mit den Feldern `"TabPFN"`, `"gradient boosting"` und
-  `"missing values"`: am 25.11. laut Nutzer keine Treffer. Vor dem dritten
-  Feld zeigt der Screenshot `AND`; die Verknüpfung des zweiten Feldes ist
-  darauf nicht ersichtlich. Kein RIS-Export.
-- arXiv S3a (`"gradient boosting"` AND `"missing values"`): am 25.11.
-  durchgeführt; 34 Treffer angezeigt und alle 34 gesichtet, ein Eintrag
-  exportiert. Der Export wurde vom Nutzer nachträglich von S2a auf S3a
-  umbenannt; FF1-Relevanz der SHAP-Arbeit ist offen.
-- arXiv S4a (`"missing data"` AND `imputation` AND `classification` AND
-  `benchmark`): am 25.11. laut Nutzer keine Treffer, kein RIS-Export.
-- arXiv S5a (`"missing data"` AND `classification` AND `benchmark`): am
-  25.11. laut Nutzer alle 24 Treffer gesichtet, keine passenden Arbeiten
-  gefunden; kein RIS-Export im Exportordner, Zotero-Auswahl nicht bestätigt.
-  Der Nutzer möchte arXiv vorläufig abschließen und beim Betreuungsgespräch
-  klären, ob der Suchablauf angepasst werden sollte.
-- IEEE Xplore S1a (`"TabPFN"` AND `"missing values"`): am 25.11. vier
-  Treffer angezeigt und alle vier gesichtet; drei als passend oder unklar
-  exportiert, davon zwei bereits in Scholar-S1a. Screenshot zeigt „All Results“
-  und Sortierung „Relevance“; Suchfeld ist offen. Jahresanzeige 2026–2026
-  springt laut Nutzer nach Änderung zurück; ob ein aktiver Jahresfilter besteht,
-  ist zu klären.
-- Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
-  Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
-  Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
-  Lehrstuhlfolien werden als Gesamtzahl nach der Volltextprüfung verstanden
-  (Lesart, beim Betreuer bestätigen).
+- Stand 25.11.2026 (PC): Google-Scholar-Suchläufe durchgeführt, arXiv
+  vorläufig abgeschlossen und IEEE Xplore begonnen. Alle Einzelangaben,
+  Trefferlisten, Überschneidungen und ungeklärten Angaben stehen im
+  [Suchprotokoll](literature/notes/Suchprotokoll.md), Abschnitt 7.
+  Insbesondere sind bei arXiv S1a der Sichtungsbereich und bei IEEE S1a
+  Suchfeld und Bedeutung der Jahresanzeige offen.
+- Dublettenabgleich, systematische Auswahl und Volltextprüfung stehen noch aus;
+  Rückwärts-/Vorwärtssuche und Auswahlzahlen sind offen. Die vorgeschlagenen
+  Suchbegriffe und Auswahlkriterien sind keine Vollständigkeitsgarantie.
+- Scopus blieb trotz VPN auf Preview; das
+  [DBIS der Uni Regensburg](https://dbis.ur.de/UBR/resources/3636) meldet
+  derzeit keinen Zugriff. IEEE Xplore ist laut
+  [DBIS](https://dbis.ur.de/UBR/resources/2172) für die Uni lizenziert.
+  Vorhaben bis 27.11.: neben Google Scholar zwei weitere Datenbanken
+  durchsuchen und den Umfang dem Betreuer zeigen. Auswahl und Umfang sowie
+  den arXiv-Ablauf mit ihm besprechen. Die 5–10 Kernpaper der Lehrstuhlfolien
+  werden als Gesamtzahl nach Volltextprüfung verstanden (Lesart, beim
+  Betreuer bestätigen).
 - Zotero-Austausch: Der Nutzer exportiert die tatsächlich erfassten Treffer
   einer Suche als RIS nach `literature/recherche/exporte/` und teilt die
   Suchangaben im Chat mit; die Assistenz kann damit das Such-Log ergänzen.
@@ -219,15 +168,13 @@ Mit dem Betreuer zu klären:
 
 ## Bis zum Betreuertermin am 27. November 2026
 
-Der Termin wurde laut Nutzer am 25.11. verschoben. Die Recherche wurde noch
-nicht begonnen. Ziel ist ein nachvollziehbarer erster Zwischenstand, keine
-abgeschlossene Literaturanalyse.
+Der Termin wurde laut Nutzer am 25.11. verschoben. Die Recherche hat begonnen;
+Ziel ist ein nachvollziehbarer Zwischenstand, keine abgeschlossene Analyse.
 
 Vorbereitung:
 
-1. Eine erste Google-Scholar-Suche samt tatsächlichem Sichtungsbereich und
-   Trefferzahlen protokollieren. Das Suchprotokoll wurde am 25.11. an den
-   neuen Suchbeginn angepasst.
+1. IEEE-Suche fortführen und die bisherigen Suchläufe samt offenen Angaben
+   für das Gespräch bereithalten.
 2. Titel und Abstracts sichten und bei einer passenden Arbeit exemplarisch
    eine Matrixzeile anhand des Volltexts prüfen.
 3. Die Fragen unten und den vorläufigen Zeitplan für das Gespräch vorbereiten;
@@ -240,8 +187,8 @@ Bis dahin kein Kapiteltext.
 Planungsvorschlag vom 25.11.2026 (PC), abhängig von verfügbarer Arbeitszeit,
 Feiertagen und Rückmeldung der Betreuung; Fristen sind interne Meilensteine.
 Der detaillierte, noch nicht freigegebene Entwurf steht in
-`writing/Zeitplan.tex` und `writing/Zeitplan.pdf`. Die Recherche beginnt
-erst nach Freigabe durch den Nutzer.
+`writing/Zeitplan.tex` und `writing/Zeitplan.pdf`. Die Recherche läuft bereits;
+der Zeitplan bleibt ein noch nicht freigegebener Entwurf.
 
 | Zeitraum | Ziel |
 |---|---|
@@ -270,9 +217,9 @@ Fragen an den Betreuer:
 
 ## Nächste Schritte
 
-1. Datenbanken festlegen und Exposé und Suchprotokoll angleichen.
-2. Datenbanksuche S1 bis S4 durchführen und jede Suche am selben Tag ins
-   Such-Log eintragen.
+1. IEEE-Suche fortführen; Datenbanken und Suchumfang mit dem Betreuer klären,
+   danach Exposé und Suchprotokoll bei Bedarf angleichen.
+2. Suchläufe und Auswahl dokumentieren; Dubletten prüfen und Kandidaten sichten.
 3. Die neun Matrixzeilen am Volltext prüfen, `?` auflösen, Status fortschreiben;
    TabPFN-2.5-Bericht und Ke et al. ergänzen.
 4. Rückwärts- und Vorwärtssuche zu den Kernarbeiten, Kandidaten prüfen.
@@ -318,6 +265,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Explorative Google-Scholar-Suche S3b nach Nutzerangabe als durchgeführt, aber ohne passende Auswahl protokolliert; fehlende Suchdetails ausdrücklich offengelassen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S4a ausgewertet, tatsächliche Suchanfrage und Trefferliste im Suchprotokoll dokumentiert; Screening offen |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten arXiv-Suche S1a mit vorhandenen Scholar-Exporten abgeglichen und protokolliert; fehlende Suchdetails offengelassen |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Weitere arXiv-Suchläufe und IEEE-S1a anhand von Nutzerangaben und Exporten dokumentiert, Abstracts vorläufig eingeordnet, Zotero-/RIS-Ablage organisiert, Datenbankzugang und Suchoberflächen erläutert; Suchprotokoll und Projektstand gestrafft. Suche und Auswahl durch den Nutzer; Volltextprüfung offen |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

@@ -29,23 +29,11 @@ dokumentiert. Der bereits vorhandene Bestand aus Themenfindung und Exposé
 (Abschnitt 6) bleibt erhalten, ist aber kein Ergebnis dieser Suche. Er wird
 nicht automatisch in die Synthese aufgenommen.
 
-Es gibt zwei miteinander verbundene Wege:
-
-- **FF1-Suche:** Arbeiten zu fehlenden Merkmalswerten bei den Modellansätzen
-  suchen, sichten und für die Literaturanalyse auswählen. Suchläufe und
-  Auswahl werden in den Abschnitten 7 bis 10 dokumentiert.
-- **Grundlagen und Kontext:** Quellen für die Erklärung von Begriffen,
-  Modellansätzen und Verfahren gezielt nutzen oder suchen, auch wenn sie
-  fehlende Werte nicht untersuchen. Solche Quellen sind nicht automatisch
-  FF1-Studien; ihren Fundweg und Zweck getrennt in Abschnitt 8a festhalten.
-  Sie können auch für FF1 relevant sein, wenn sie die dortigen Kriterien
-  erfüllen.
-
-Die vorhandenen Modell- und Grundlagenarbeiten dürfen für den Hintergrund
-genutzt werden: Ihre ursprüngliche Auswahl muss nicht nachträglich als
-Datenbanksuche ausgegeben werden. Für konkrete Aussagen sind die passenden
-Volltextstellen zu prüfen. Wird eine dieser Arbeiten bei einem neuen Suchlauf
-erneut gefunden, wird dieser tatsächliche Fund zusätzlich dokumentiert.
+Die **FF1-Suche** und die gezielte Ergänzung von **Grundlagen und Kontext**
+werden getrennt dokumentiert (Abschnitte 7–10 bzw. 8a). Grundlagenquellen
+können auch für FF1 relevant sein, wenn sie die Kriterien erfüllen. Vorhandene
+Arbeiten dürfen für den Hintergrund genutzt werden; ihren früheren Fundweg
+nicht als neue Datenbanksuche ausgeben. Konkrete Aussagen am Volltext prüfen.
 
 1. **Datenbanksuche:** Suchstrings aus Abschnitt 3 an die jeweilige Datenbank
    anpassen; Datum, genaue Eingabe, Filter, Treffer und gesichteten Bereich
@@ -70,12 +58,8 @@ erneut gefunden, wird dieser tatsächliche Fund zusätzlich dokumentiert.
 
 ### 3.1 Start in Google Scholar
 
-Jede Zeile ist eine **eigene Suchanfrage**, kein einzelner Begriff und keine
-Anweisung, alle Anfragen auf einmal einzugeben. Die Liste ist ein Arbeitsplan,
-kein Nachweis bereits durchgeführter Suchen. Je nach Treffern später weitere
-Varianten ergänzen und genau so protokollieren, wie sie tatsächlich eingegeben
-wurden. Die Beispiele unten setzen jeden Begriff in Anführungszeichen; sie
-sind nicht zwingend identisch mit bereits durchgeführten Anfragen. Maßgeblich
+Jede Zeile ist eine eigene Suchanfrage. Die Beispiele mit Anführungszeichen
+sind nicht zwingend identisch mit bereits durchgeführten Anfragen; maßgeblich
 für die tatsächlichen Eingaben ist das Such-Log in Abschnitt 7.
 
 | ID | Beispiel für Google Scholar | Zweck |
@@ -87,27 +71,15 @@ für die tatsächlichen Eingaben ist das Such-Log in Abschnitt 7.
 | S3a | `"gradient boosting" "missing values"` | Fehlende Werte bei Gradient Boosting |
 | S4a | `"missing data" "imputation" "classification" "benchmark"` | Vergleichsstudien zu Behandlungen |
 
-Die explorative Anfrage S3b (`"LightGBM" "missing values"`) wurde einmal
-ausprobiert, aber wegen geringer thematischer Ausbeute aus dem weiteren
-Suchplan entfernt. Sie wird nicht wiederholt; der tatsächliche Versuch bleibt
-in Abschnitt 7 vermerkt. S4a wurde ohne den später vorgeschlagenen Zusatz
-`tabular` durchgeführt. Es wird keine zweite S4a-Variante gesucht, sofern sich
-aus dem Screening kein konkreter Bedarf ergibt.
+S3b wurde explorativ ausprobiert, aber aus dem weiteren Suchplan entfernt;
+der Versuch bleibt in Abschnitt 7 dokumentiert. S4a wurde ohne `tabular`
+durchgeführt; eine zweite Variante ist ohne konkreten Bedarf nicht vorgesehen.
 
-**Erster Schritt:** S1a eingeben, angezeigte ungefähre Trefferzahl und
-Sortierung notieren und Titel und – soweit verfügbar – Abstracts der
-gesichteten Treffer prüfen. Für S1a unter `01 Suchtreffer` in Zotero eine
-Untersammlung anlegen und die dort tatsächlich aufgenommenen Treffer
-zuordnen. Eine Untersammlung ist für einen Suchlauf, nicht für jedes PDF.
-RIS-Export und Suchangaben wie in Abschnitt 7 dokumentieren. Treffer können
-für mehrere Suchläufe relevant sein und mehreren Sammlungen zugeordnet werden.
-
-Die erste Anfrage liefert nur einen **Einstieg**, keinen vollständigen
-Grundbestand. Weder müssen alle angezeigten Treffer gespeichert werden noch
-ist jeder gespeicherte Treffer bereits für FF1 ausgewählt. Suchergebnisse
-und tatsächlichen Sichtungsbereich getrennt festhalten. Bei wenigen Treffern
-die nächste Variante ausprobieren; bei vielen Treffern den tatsächlich
-gesichteten Bereich dokumentieren.
+Für jeden Suchlauf eine Zotero-Untersammlung anlegen und tatsächlich
+aufgenommene Treffer zuordnen; ein Eintrag kann mehreren Sammlungen angehören.
+Die [RIS-Anleitung](../recherche/exporte/README.md) beschreibt den Export.
+Gesichteter Bereich, gespeicherte Treffer und spätere Auswahl sind getrennt
+zu erfassen; keine einzelne Anfrage liefert einen vollständigen Grundbestand.
 
 ### 3.1a Suchanfragen für IEEE Xplore
 
@@ -198,9 +170,12 @@ Fundstellen belegen.
 
 ## 4. Datenbanken
 
-Scopus, IEEE Xplore, ACM Digital Library, Google Scholar und arXiv. Bei
-Google Scholar werden nur die ersten 50 Treffer je Suche gesichtet. Preprints
-werden nur aufgenommen, wenn keine publizierte Fassung existiert.
+Google Scholar, arXiv und IEEE Xplore werden genutzt; ACM Digital Library
+bleibt als mögliche Ergänzung offen. Scopus war trotz VPN nur als Preview
+zugänglich; das [DBIS der Uni Regensburg](https://dbis.ur.de/UBR/resources/3636)
+meldet derzeit keinen Zugriff. Die endgültige Auswahl mit dem Betreuer klären.
+Bei Google Scholar werden nur die ersten 50 Treffer je Suche gesichtet.
+Preprints werden nur aufgenommen, wenn keine publizierte Fassung existiert.
 
 ## 5. Ein- und Ausschlusskriterien (Vorschlag)
 
