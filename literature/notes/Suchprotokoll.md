@@ -140,7 +140,7 @@ Ziel ist eine ergänzende Suche, kein Nachweis vollständiger Abdeckung.
 
 Diese Anfrage ergänzt S1b-erweitert um `missingness` und `imputation`.
 
-**IEEE E2: Gradient Boosting**
+**IEEE E2: Gradient Boosting** (bereits durchgeführt)
 
 ```text
 ("gradient boosting" OR "LightGBM" OR "XGBoost") AND ("missing values" OR "missing data" OR "missingness")
@@ -302,6 +302,7 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1b-erweitert: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing data" OR "missing values")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | Gesamtzahl nicht sichtbar; Screenshot zeigt 6 Treffer | Sichtungsbereich nicht angegeben | Nicht angegeben | Offen | Vier sichtbare Titel bereits in IEEE S1a oder S1c; zwei weitere nicht in bisherigen RIS-Exporten nachgewiesen |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | E1: `("TabPFN" OR "tabular foundation model" OR "tabular foundation models") AND ("missing values" OR "missing data" OR "missingness" OR "imputation")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 10 laut Nutzer | Alle 10 auf Screenshots sichtbar; systematischer Sichtungsumfang nicht angegeben | Nicht angegeben | Offen; Abstracts von Kaysi, Campana et al. und Bellarmino vorgelegt | Zaimoğlu, Bi, Jang und Shakir bereits in IEEE-Exporten; Kaysi und Campana et al. vorläufig prüfen |
+| 25.11.2026 | IEEE Xplore | E2: `("gradient boosting" OR "LightGBM" OR "XGBoost") AND ("missing values" OR "missing data" OR "missingness")` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 2 525 laut Nutzer | Nicht angegeben | Nicht angegeben | Offen | Nicht quantifiziert |
 | Nicht bestätigt; Export vom 25.11.2026 | IEEE Xplore | S2a: geplante Vorlage `"TabPFN" AND "gradient boosting" AND "missing values"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S2a--TabPFN- -gradient boosting- -missing values-.ris`, 2 Einträge | Endgültige Auswahl offen | Beide bereits in IEEE S1a (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Erste 50 laut Nutzer | Nicht angegeben | Laut Nutzer keine interessanten Arbeiten gefunden | Nicht quantifiziert |
 | 25.11.2026 | IEEE Xplore | S4a: geplante Vorlage `"missing data" AND "imputation" AND "classification" AND "benchmark"`; tatsächliche Eingabe nicht bestätigt | Suchfelder, Filter und Sortierung nicht angegeben | 36 laut Nutzer | Alle 36 laut Nutzer | `IEEE Xplore/S4a--missing data- imputation classification benchmark.ris`, 1 Eintrag | Endgültige Auswahl offen | Shakir bereits in IEEE S1c (siehe 7.1) |
