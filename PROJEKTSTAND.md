@@ -75,9 +75,10 @@ Mit dem Betreuer zu klären:
 ### Literaturanalyse (FF1)
 
 - Suchprotokoll: Vorgehen, Suchstrings S1 bis S4 und Kriterien stehen als
-  Vorschlag. Such-Log, Rückwärts- und Vorwärtssuche, Auswahlzahlen und
-  Ausschlussliste sind leer; es ist noch keine Datenbanksuche protokolliert.
-  Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
+  Vorschlag. Das Such-Log enthält inzwischen die dokumentierten Google-Scholar-
+  Läufe S1a bis S4a und den explorativen, nicht wiederholten Versuch S3b.
+  Rückwärts- und Vorwärtssuche, Auswahlzahlen und Ausschlussliste sind noch
+  offen. Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
   Stand 25.11.2026 (PC): Abschnitt 3.1 enthält konkrete Scholar-Suchen S1a bis
   S4a, Abschnitt 3.3 und 8a den getrennten Weg für Grundlagen. S1a
   (`"TabPFN" "missing values"`) ist durchgeführt und protokolliert: 16
@@ -91,11 +92,15 @@ Mit dem Betreuer zu klären:
   Titel gegenüber S1a–S1c. S3a (`"gradient boosting" "missing values"`)
   durchgeführt: 18 RIS-Einträge aus den ersten 50 von ungefähr 62 900
   Treffern; ein Titel doppelt exportiert. Perez-Lebel et al. (2022) aus dem
-  Bestand wurde dabei erneut gefunden. Screening der fünf Suchläufe steht
-  noch aus. S3b (`"LightGBM" "missing values"`) wurde explorativ durchgeführt;
-  laut Nutzer wurde keine passende Arbeit zur Aufnahme gefunden. Sortierung,
-  Trefferzahl und Sichtungsbereich sind nicht dokumentiert, ein RIS-Export liegt
-  nicht vor; die Suche wird nicht fortgesetzt. S4a steht noch aus.
+  Bestand wurde dabei erneut gefunden. S3b (`"LightGBM" "missing values"`)
+  wurde explorativ durchgeführt; laut Nutzer wurde keine passende Arbeit zur
+  Aufnahme gefunden. Sortierung, Trefferzahl und Sichtungsbereich sind nicht
+  dokumentiert, ein RIS-Export liegt nicht vor; die Suche wird nicht
+  wiederholt. S4a (`"missing data" imputation classification benchmark`)
+  wurde durchgeführt: 22 RIS-Einträge aus den ersten 50 von ungefähr 45 000
+  Ergebnissen; Screening und Dublettenprüfung stehen aus. Die tatsächlich
+  verwendete Suche enthielt nicht den nachträglich vorgeschlagenen Zusatz
+  `tabular`; eine zweite Variante ist nicht vorgesehen.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
@@ -274,6 +279,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S2a ausgewertet, Such-Log und Trefferliste ergänzt; Suche und Sichtung durch den Nutzer |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S3a ausgewertet, Such-Log und Trefferliste ergänzt; Suche und Sichtung durch den Nutzer |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Explorative Google-Scholar-Suche S3b nach Nutzerangabe als durchgeführt, aber ohne passende Auswahl protokolliert; fehlende Suchdetails ausdrücklich offengelassen |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | RIS-Export der vom Nutzer durchgeführten Google-Scholar-Suche S4a ausgewertet, tatsächliche Suchanfrage und Trefferliste im Suchprotokoll dokumentiert; Screening offen |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

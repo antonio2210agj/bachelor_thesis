@@ -83,8 +83,14 @@ wurden.
 | S1c | `"TabPFN" imputation` | Weitere Arbeiten zur Behandlung fehlender Werte |
 | S2a | `"TabPFN" "gradient boosting" "missing values"` | Mögliche direkte Vergleiche |
 | S3a | `"gradient boosting" "missing values"` | Fehlende Werte bei Gradient Boosting |
-| S3b | `"LightGBM" "missing values"` | Explorativ durchgeführt am 25.11.2026; laut Nutzer keine passende Arbeit zur Aufnahme identifiziert, keine weitere Suche vorgesehen (Details in Abschnitt 7) |
-| S4a | `"missing data" imputation classification benchmark` | Vergleichsstudien zu Behandlungen |
+| S4a | `"missing data" imputation classification benchmark` | Vergleichsstudien zu Behandlungen; am 25.11.2026 mit genau dieser Eingabe durchgeführt |
+
+Die explorative Anfrage S3b (`"LightGBM" "missing values"`) wurde einmal
+ausprobiert, aber wegen geringer thematischer Ausbeute aus dem weiteren
+Suchplan entfernt. Sie wird nicht wiederholt; der tatsächliche Versuch bleibt
+in Abschnitt 7 vermerkt. S4a wurde ohne den später vorgeschlagenen Zusatz
+`tabular` durchgeführt. Es wird keine zweite S4a-Variante gesucht, sofern sich
+aus dem Screening kein konkreter Bedarf ergibt.
 
 **Erster Schritt:** S1a eingeben, angezeigte ungefähre Trefferzahl und
 Sortierung notieren und Titel und – soweit verfügbar – Abstracts der
@@ -212,6 +218,7 @@ lassen und nicht aus einem Export erraten.
 | 25.11.2026 | Google Scholar | S2a: `"TabPFN" "gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 771 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S2a--TabPFN- -gradient boosting- -missing values-.ris`, 9 Einträge; nur die als passend oder unklar gespeicherten Treffer | 9 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 3 Titel neu gegenüber S1a–S1c (siehe 7.1); 6 Überschneidungen |
 | 25.11.2026 | Google Scholar | S3a: `"gradient boosting" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 62 900 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S3a--gradient boosting- -missing values-.ris`, 18 RIS-Einträge; eine Arbeit doppelt exportiert (17 unterschiedliche Titel) | 18 gespeichert; Titel-/Abstractscreening noch offen | Perez-Lebel et al. ist bereits im Bestand; übrige Treffer mit früheren Exporten abgleichen (siehe 7.1) |
 | 25.11.2026 | Google Scholar | S3b: `"LightGBM" "missing values"` | Sortierung und Filter nicht dokumentiert | nicht dokumentiert | Sichtungsbereich nicht dokumentiert | Kein RIS-Export im Exportordner | Laut Nutzer keine passende Arbeit zur Aufnahme identifiziert; Umfang des Screenings nicht dokumentiert | nicht quantifiziert |
+| 25.11.2026 | Google Scholar | S4a: `"missing data" imputation classification benchmark` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 45 000 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5 mit je 10 Treffern, also Treffer 1 bis 50 | `S4a--missing data- imputation classification benchmark.ris`, 22 Einträge; enthält mögliche Dubletten und Versionsüberschneidungen (siehe 7.1) | 22 als passend oder unklar gespeichert; systematisches Titel-/Abstractscreening noch offen | Perez-Lebel et al. bereits in S3a und im Bestand; weitere Überschneidungen prüfen (siehe 7.1) |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -337,6 +344,35 @@ Der Nutzer hatte die Arbeiten von Aydin und Öztürk sowie Perez-Lebel zusätzli
 als Abstract beziehungsweise Volltext vorgelegt. Diese Sichtung wird separat
 protokolliert und ersetzt nicht das spätere systematische Titel-/Abstractscreening
 aller S3a-Treffer.
+
+**S4a (25.11.2026)**
+
+RIS-Metadaten; Relevanz und Volltexte noch nicht systematisch geprüft.
+
+| Nr. | Arbeit laut Export | Ort laut Export | Hinweis |
+|---|---|---|---|
+| 1 | Jäger et al. (2021), A Benchmark for Data Imputation Methods | Frontiers in Big Data | Review/Benchmark; Aufgaben und Modellfamilien prüfen |
+| 2 | Bertsimas et al. (2018), From Predictive Methods to Missing Data Imputation: An Optimization Approach | Journal of Machine Learning Research | — |
+| 3 | Poulos und Valle (2018), Missing Data Imputation for Supervised Learning | Applied Artificial Intelligence | — |
+| 4 | Woźnica et al. (2020), Does imputation matter? Benchmark for predictive models | arXiv | Vermutlich gleiche Arbeit wie Nr. 10; Fassung prüfen |
+| 5 | Shadbahr et al. (2023), The impact of imputation quality on machine learning classifiers for datasets with missing values | Communications Medicine | Gleiche DOI wie Nr. 9; vermutlich Dublette |
+| 6 | Perez-Lebel et al. (2022), Benchmarking missing-values approaches for predictive models on health databases | GigaScience | Bestand; auch in S3a |
+| 7 | Farhangfar et al. (2008), Impact of imputation of missing values on classification error for discrete data | Pattern Recognition | — |
+| 8 | Sun et al. (2025), Benchmarking Missing Data Imputation Methods in Socioeconomic Surveys | Transactions on Machine Learning Research | Aufgaben/Modelle prüfen |
+| 9 | Shadbahr et al. (2023), Classification of datasets with imputed missing values: does imputation quality matter? | Communications Medicine | Gleiche DOI wie Nr. 5; vermutlich Dublette |
+| 10 | Woźnica et al. (2020), Does imputation matter? Benchmark for real-life classification problems | ICML Workshop on the Art of Learning with Missing Values | Vermutlich gleiche Arbeit wie Nr. 4; Fassung prüfen |
+| 11 | Lee et al. (2024), Evaluating missing data handling methods for developing building energy benchmarking models | Energy | — |
+| 12 | Gendre, Benchmarking imputation methods for categorical biological data | Wiley Online Library | Metadaten im Export unvollständig |
+| 13 | Gabr et al. (2023), Effect of Missing Data Types and Imputation Methods on Supervised Classifiers: An Evaluation Study | Big Data and Cognitive Computing | — |
+| 14 | Pereira et al. (2024), Imputation of data Missing Not at Random: Artificial generation and benchmark analysis | Expert Systems with Applications | — |
+| 15 | Ishaq et al. (2024), Machine Learning Based Missing Data Imputation in Categorical Datasets | IEEE Access | Klassifikationsbezug und Modelle prüfen |
+| 16 | de Souto et al. (2015), Impact of missing data imputation methods on gene expression clustering and classification | BMC Bioinformatics | — |
+| 17 | Garciarena et al. (2017), An extensive analysis of the interaction between missing data types, imputation methods, and supervised classifiers | Expert Systems with Applications | — |
+| 18 | Gama et al. (2025), Imputation in well log data: A benchmark for machine learning methods | Computers & Geosciences | — |
+| 19 | Liang et al. (2026), Nearly Optimal Bayesian Inference for Structural Missingness | arXiv | Aufgabenbezug prüfen |
+| 20 | Seu, An Intelligent Missing Data Imputation Techniques: A Review | JOIV | Unvollständige Metadaten; vermutlich Dublette von Nr. 21 |
+| 21 | Seu et al. (2022), An Intelligent Missing Data Imputation Techniques: A Review | JOIV | Vermutlich Dublette von Nr. 20 |
+| 22 | Pereira Barata et al. (2019), Imputation Methods Outperform Missing-Indicator for Data Missing Completely at Random | ICDM Workshops | — |
 
 ## 8. Rückwärts- und Vorwärtssuche
 
