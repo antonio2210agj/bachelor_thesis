@@ -78,7 +78,16 @@ Mit dem Betreuer zu klären:
   Vorschlag. Such-Log, Rückwärts- und Vorwärtssuche, Auswahlzahlen und
   Ausschlussliste sind leer; es ist noch keine Datenbanksuche protokolliert.
   Vorhanden sind sowohl Grundlagen als auch thematisch einschlägige Arbeiten.
-  Laut Nutzer wurde bis zum 25.11.2026 nicht weiter recherchiert.
+  Stand 25.11.2026 (PC): Abschnitt 3.1 enthält konkrete Scholar-Suchen S1a bis
+  S4a, Abschnitt 3.3 und 8a den getrennten Weg für Grundlagen. S1a
+  (`"TabPFN" "missing values"`) ist durchgeführt und protokolliert: 16
+  gespeicherte Treffer, davon 9 neu gegenüber dem Bestand; Screening offen.
+  S1b bis S4a stehen aus.
+- Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
+  Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
+  Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der
+  Lehrstuhlfolien werden als Gesamtzahl nach der Volltextprüfung verstanden
+  (Lesart, beim Betreuer bestätigen).
 - Zotero-Austausch: Der Nutzer exportiert die tatsächlich erfassten Treffer
   einer Suche als RIS nach `literature/recherche/exporte/` und teilt die
   Suchangaben im Chat mit; die Assistenz kann damit das Such-Log ergänzen.
@@ -247,6 +256,7 @@ Der Lehrstuhl verlangt, die Nutzung von KI-Tools im Anhang anzugeben.
 | 21.11.2026 | GitHub Copilot in VS Code | Vorschlag für die Vorbereitung des Betreuertermins am 25.11.2026 (Prioritäten, Fragenliste) |
 | 23.11.2026 | GitHub Copilot in VS Code (PC) | Durchsicht der Laptop-Änderungen, Ergänzung des Projektstands um den PC-Stand, Wiederholung des Piloten auf der GPU, Laufzeittest auf Spambase mit Skripten und Diagnose des Speicherproblems |
 | 25.11.2026 | GitHub Copilot in VS Code (PC) | Entwurf eines detaillierten Zeit- und Arbeitsplans als bearbeitbare LaTeX-Datei und PDF; keine Literaturrecherche durchgeführt |
+| 25.11.2026 | GitHub Copilot in VS Code (PC) | Suchprotokoll um konkrete Suchanfragen und Grundlagenweg ergänzt; RIS-Export der vom Nutzer durchgeführten Suche S1a ausgelesen und ins Such-Log eingetragen; Suche, Sichtung und Auswahl durch den Nutzer |
 
 Frühere Nutzung (Recherche, Exposé, Pilotcode) bitte nachtragen.
 

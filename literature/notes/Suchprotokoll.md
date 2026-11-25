@@ -206,7 +206,39 @@ lassen und nicht aus einem Export erraten.
 
 | Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Felder, Filter und Sortierung | Angezeigte Treffer | Gesichtet (Bereich/Anzahl) | RIS-Datei und enthaltene Auswahl | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+| 25.11.2026 | Google Scholar | S1a: `"TabPFN" "missing values"` | Standardsuche, keine Filter, Sortierung nach Relevanz | ungefähr 1 310 (Schätzung von Google Scholar) | Ergebnisseiten 1 bis 5; Zahl der Treffer je Seite nicht notiert | `S1a--TabPFN- -missing values-.ris`, 16 Einträge; nur die als passend oder unklar gespeicherten Treffer | 16 als passend oder unklar gespeichert; Titel-/Abstractscreening noch offen | 9 (siehe 7.1) |
+
+### 7.1 Gespeicherte Treffer je Suchlauf
+
+Angaben aus den Metadaten des RIS-Exports, nicht am Volltext geprüft. „Bestand“
+heißt: Die Arbeit lag schon vor dem Neustart vor (Abschnitt 6 oder Zotero-Sammlung
+„00 Vorhandener Bestand“) und stand laut Nutzer zusätzlich in der Trefferliste
+dieser Suche.
+
+**S1a (25.11.2026)**
+
+| Nr. | Arbeit laut Export | Ort laut Export | Bestand oder neu |
+|---|---|---|---|
+| 1 | Hollmann et al. (2025), Accurate predictions on small data with a tabular foundation model | Nature | Bestand |
+| 2 | Tran und Byeon (2024), Predicting dementia in Parkinson's disease … hybrid LightGBM–TabPFN and SHAP | im Export ohne Autor-, Jahres- und Ortsfeld | Bestand |
+| 3 | Luo et al. (2025), TIME: TabPFN-Integrated Multimodal Engine … | arXiv | Bestand |
+| 4 | Luo et al. (2026), TIMF: TabPFN-integrated multimodal framework for robust tabular-image learning | Neurocomputing | neu; vermutlich publizierte Fassung von Nr. 3, zu prüfen |
+| 5 | Zhou et al. (2026), Prediction of cognitive impairment in Parkinson’s disease using TabPFN … | Frontiers in Aging Neuroscience | neu |
+| 6 | Sepin (2026), Multiple Imputation of a Continuous Outcome with Fully Observed Predictors Using TabPFN | Stats | Bestand |
+| 7 | Hollmann et al. (2023), TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second | arXiv | Bestand |
+| 8 | van Leeuwen (2025), Conformal Prediction for Tabular Prior-Data Fitted Networks with Missing data | EurIPS 2025 Workshop: AI for Tabular Data | neu |
+| 9 | Zaimoğlu (2026), Evaluation of TabPFN’s Performance Consistency Under Controlled MCAR Conditions … | IDAP 2026 | Bestand |
+| 10 | Sepin (2026), Multiple Imputation Using Pretrained Foundation Models: A TabPFN-Based Approach | Preprints | neu; Verhältnis zu Nr. 6 zu prüfen |
+| 11 | Bi et al. (2026), Missing-Aware Imbalanced Learning Pathways for Manufacturing Process Quality Assessment | METMS 2026 | neu |
+| 12 | Neunhoeffer, Learning from Small Data: Tabular Foundation Models for Political Science | im Export ohne Jahr und Ort | neu |
+| 13 | Rawat et al. (2025), A Fast and Reliable Transformer-Based TabPFN Model for Liver Disease Diagnosis | Cureus Journal of Computer Science | neu |
+| 14 | Zhou et al. (2027 laut Export), Predicting fatal helicopter accidents with missing data … | Reliability Engineering & System Safety | neu |
+| 15 | Grinsztajn et al. (2026), TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models | arXiv | Bestand |
+| 16 | Grinsztajn et al. (2026), TabPFN-3: Technical Report | arXiv | neu; nicht identisch mit dem TabPFN-3.5-Bericht im Bestand |
+
+Offen zu S1a: Zahl der Treffer je Ergebnisseite; unvollständige Metadaten bei
+Nr. 2 und Nr. 12 in Zotero ergänzen; Entscheidung je Treffer nach Titel und
+Abstract.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
