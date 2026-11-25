@@ -121,6 +121,10 @@ Mit dem Betreuer zu klären:
   `"missing values"`: am 25.11. laut Nutzer keine Treffer. Vor dem dritten
   Feld zeigt der Screenshot `AND`; die Verknüpfung des zweiten Feldes ist
   darauf nicht ersichtlich. Kein RIS-Export.
+- arXiv S3a (`"gradient boosting"` AND `"missing values"`): am 25.11.
+  durchgeführt; 34 Treffer angezeigt und alle 34 gesichtet, ein Eintrag
+  exportiert. Der Export wurde vom Nutzer nachträglich von S2a auf S3a
+  umbenannt; FF1-Relevanz der SHAP-Arbeit ist offen.
 - Vorhaben des Nutzers bis zum 27.11.: neben Google Scholar zwei weitere
   Datenbanken durchsuchen (Vorschlag: Scopus und arXiv), sichten und dem
   Betreuer den Umfang zur Rückmeldung zeigen. Die 5 bis 10 Kernpaper der

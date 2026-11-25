@@ -234,6 +234,7 @@ zu dokumentieren.
 | 25.11.2026 | arXiv | S1b: `"tabular foundation models"` AND `"missing data"` | Beide Suchfelder: All fields; alle Fachgebiete und Daten, Cross-Listings eingeschlossen; ältere Versionen nicht eingeschlossen; Sortierung: Standardeinstellung, konkrete Reihenfolge nicht dokumentiert | 3 | Alle 3 Treffer | `Arxiv/S1b--tabular foundation models- -missing data-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Xia et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 | 25.11.2026 | arXiv | S1c: `TabPFN` AND `imputation` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 10 | Alle 10 Treffer | `Arxiv/S1c--TabPFN- imputation.ris`, 2 RIS-Einträge mit identischem Titel und identischer DOI; eine Arbeit | Endgültige Auswahl offen | TabPFGen in S1a/S1b und bisherigen Scholar-Exporten nicht nachgewiesen; übrigen Bestand prüfen |
 | 25.11.2026 | arXiv | S2a: Felder `"TabPFN"`, `"gradient boosting"`, AND `"missing values"`; Verknüpfung des zweiten Feldes auf Screenshot nicht ersichtlich | Drei Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 0 laut Nutzer | 0 | Kein RIS-Export (keine Treffer) | 0 | 0 |
+| 25.11.2026 | arXiv | S3a: `"gradient boosting"` AND `"missing values"` | Beide Suchfelder: All fields; gemeinsame arXiv-Einstellungen wie oben | 34 | Alle 34 Treffer | `Arxiv/S3a--gradient boosting- -missing values-.ris`, 1 als passend oder unklar gespeicherter Eintrag | Endgültige Auswahl offen | Vo et al. im bisherigen Exportabgleich nicht nachgewiesen; übrigen Bestand prüfen |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
@@ -428,6 +429,14 @@ Laut Nutzer ergab die Anfrage keine Treffer. Der Screenshot zeigt vor dem
 dritten Feld `AND`, aber keine sichtbare Operatorauswahl vor dem zweiten Feld;
 dessen Verknüpfung wird daher nicht ergänzt oder erraten. Keine Treffer für
 diese Eingabe belegen nicht, dass keine einschlägigen Arbeiten existieren.
+
+**arXiv S3a (25.11.2026)**
+
+Der RIS-Export enthält Vo et al. (2025), *Explainability of Machine Learning
+Models under Missing Data* (arXiv:2407.00411). Der vorgelegte Abstract setzt
+den Schwerpunkt auf SHAP und Erklärbarkeit; ein Bezug zur Klassifikationsleistung
+bei fehlenden Merkmalswerten ist noch am Volltext zu prüfen. Der Export hieß
+anfangs S2a und wurde vom Nutzer auf S3a korrigiert.
 
 ## 8. Rückwärts- und Vorwärtssuche
 
