@@ -260,6 +260,7 @@ zu dokumentieren.
 | 25.11.2026 | IEEE Xplore | S1a: `"TabPFN"` AND `"missing values"` | Suchfeld nicht angegeben; „All Results“, Sortierung „Relevance“; Jahresanzeige 2026–2026 (aktive Einschränkung nicht geklärt) | 4 | Alle 4 Treffer | `IEEE Xplore/S1a--TabPFN- -missing values-.ris`, 3 als passend oder unklar gespeicherte Einträge | Endgültige Auswahl offen | Zwei Einträge bereits in Scholar-S1a; Jang et al. im bisherigen Exportabgleich nicht nachgewiesen (siehe 7.1) |
 | 25.11.2026 | IEEE Xplore | S1b: `("All Metadata":"tabular foundation models") AND ("All Metadata":"missing data")` | Beide Suchfelder: All Metadata; Filter und Sortierung nicht angegeben | 0 laut Nutzer | 0 | Kein Treffer zum Exportieren | 0 | 0 |
 | 25.11.2026 | IEEE Xplore | S1c: `"TabPFN" AND "imputation"` laut Nutzer | Keine Filter laut Nutzer; Suchfelder und Sortierung nicht angegeben | 6 laut Nutzer | Nicht angegeben | `IEEE Xplore/S1c--TabPFN- imputation.ris`, 4 Einträge | Endgültige Auswahl offen | Drei Einträge bereits in IEEE S1a; Shakir in bisherigen RIS-Exporten nicht nachgewiesen (siehe 7.1) |
+| 25.11.2026 | IEEE Xplore | S3a: `"gradient boosting" AND "missing values"` laut Nutzer | Suchfelder, Filter und Sortierung nicht angegeben | 1 142 laut Nutzer | Noch nicht angegeben | Noch nicht angegeben | Offen | Offen |
 
 ### 7.1 Gespeicherte Treffer je Suchlauf
 
