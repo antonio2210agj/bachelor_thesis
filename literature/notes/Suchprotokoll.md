@@ -29,6 +29,24 @@ dokumentiert. Der bereits vorhandene Bestand aus Themenfindung und Exposé
 (Abschnitt 6) bleibt erhalten, ist aber kein Ergebnis dieser Suche. Er wird
 nicht automatisch in die Synthese aufgenommen.
 
+Es gibt zwei miteinander verbundene Wege:
+
+- **FF1-Suche:** Arbeiten zu fehlenden Merkmalswerten bei den Modellansätzen
+  suchen, sichten und für die Literaturanalyse auswählen. Suchläufe und
+  Auswahl werden in den Abschnitten 7 bis 10 dokumentiert.
+- **Grundlagen und Kontext:** Quellen für die Erklärung von Begriffen,
+  Modellansätzen und Verfahren gezielt nutzen oder suchen, auch wenn sie
+  fehlende Werte nicht untersuchen. Solche Quellen sind nicht automatisch
+  FF1-Studien; ihren Fundweg und Zweck getrennt in Abschnitt 8a festhalten.
+  Sie können auch für FF1 relevant sein, wenn sie die dortigen Kriterien
+  erfüllen.
+
+Die vorhandenen Modell- und Grundlagenarbeiten dürfen für den Hintergrund
+genutzt werden: Ihre ursprüngliche Auswahl muss nicht nachträglich als
+Datenbanksuche ausgegeben werden. Für konkrete Aussagen sind die passenden
+Volltextstellen zu prüfen. Wird eine dieser Arbeiten bei einem neuen Suchlauf
+erneut gefunden, wird dieser tatsächliche Fund zusätzlich dokumentiert.
+
 1. **Datenbanksuche:** Suchstrings aus Abschnitt 3 an die jeweilige Datenbank
    anpassen; Datum, genaue Eingabe, Filter, Treffer und gesichteten Bereich
    in Abschnitt 7 festhalten.
@@ -48,9 +66,46 @@ nicht automatisch in die Synthese aufgenommen.
    dokumentierten Zitationsrunde ohne neue relevante Arbeiten kann die Suche
    vorläufig abgeschlossen werden. Das ist kein Vollständigkeitsnachweis.
 
-## 3. Suchstrings
+## 3. Suchbegriffe und konkrete Suchläufe
 
-Bausteine, je Datenbank an deren Syntax anpassen:
+### 3.1 Start in Google Scholar
+
+Jede Zeile ist eine **eigene Suchanfrage**, kein einzelner Begriff und keine
+Anweisung, alle Anfragen auf einmal einzugeben. Die Liste ist ein Arbeitsplan,
+kein Nachweis bereits durchgeführter Suchen. Je nach Treffern später weitere
+Varianten ergänzen und genau so protokollieren, wie sie tatsächlich eingegeben
+wurden.
+
+| ID | Eingabe in Google Scholar | Zweck |
+|---|---|---|
+| S1a | `"TabPFN" "missing values"` | Einstieg: TabPFN und fehlende Werte |
+| S1b | `"tabular foundation models" "missing data"` | Breiterer Ansatz über TabPFN hinaus |
+| S1c | `"TabPFN" imputation` | Weitere Arbeiten zur Behandlung fehlender Werte |
+| S2a | `"TabPFN" "gradient boosting" "missing values"` | Mögliche direkte Vergleiche |
+| S3a | `"gradient boosting" "missing values"` | Fehlende Werte bei Gradient Boosting |
+| S3b | `"LightGBM" "missing values"` | Arbeiten zum konkreten Modell |
+| S4a | `"missing data" imputation classification benchmark` | Vergleichsstudien zu Behandlungen |
+
+**Erster Schritt:** S1a eingeben, angezeigte ungefähre Trefferzahl und
+Sortierung notieren und Titel und – soweit verfügbar – Abstracts der
+gesichteten Treffer prüfen. Für S1a unter `01 Suchtreffer` in Zotero eine
+Untersammlung anlegen und die dort tatsächlich aufgenommenen Treffer
+zuordnen. Eine Untersammlung ist für einen Suchlauf, nicht für jedes PDF.
+RIS-Export und Suchangaben wie in Abschnitt 7 dokumentieren. Treffer können
+für mehrere Suchläufe relevant sein und mehreren Sammlungen zugeordnet werden.
+
+Die erste Anfrage liefert nur einen **Einstieg**, keinen vollständigen
+Grundbestand. Weder müssen alle angezeigten Treffer gespeichert werden noch
+ist jeder gespeicherte Treffer bereits für FF1 ausgewählt. Suchergebnisse
+und tatsächlichen Sichtungsbereich getrennt festhalten. Bei wenigen Treffern
+die nächste Variante ausprobieren; bei vielen Treffern den tatsächlich
+gesichteten Bereich dokumentieren.
+
+### 3.2 Suchbausteine für weitere Datenbanken
+
+Die folgenden Bausteine helfen beim Erweitern der Suche. Sie sind keine
+Eingabe, die unverändert in Google Scholar übernommen werden muss;
+Schreibweise und Operatoren sind an die jeweilige Datenbank anzupassen.
 
 | Block | Begriffe |
 |---|---|
@@ -61,10 +116,34 @@ Bausteine, je Datenbank an deren Syntax anpassen:
 
 | ID | Kombination | Zweck |
 |---|---|---|
-| S1 | A AND C | Fehlende Werte bei Tabular Foundation Models (Kern) |
+| S1 | A AND C | Fehlende Werte bei Tabular Foundation Models (Kern); S1a–c sind erste Varianten |
 | S2 | A AND B AND C | Direkter Vergleich beider Modellansätze |
-| S3 | B AND C AND D | Fehlende Werte bei Gradient Boosting; viele Treffer, auf Titel/Abstract und ab 2018 begrenzen |
+| S3 | B AND C AND D | Fehlende Werte bei Gradient Boosting; bei vielen Treffern gezielt eingrenzen und Eingrenzung begründen |
 | S4 | C AND D AND ("benchmark" OR "comparison") AND ("tabular") | Vergleichsstudien zu Behandlungen |
+
+Eine Jahresbegrenzung ab 2018 war für S3 vorgeschlagen, ist aber keine
+automatische Voraussetzung: Sie kann ältere Grundlagen und relevante Arbeiten
+ausschließen und muss vor Anwendung begründet und protokolliert werden.
+
+### 3.3 Grundlagen gezielt ergänzen
+
+Für Kapitel 2 werden Quellen zu den jeweils zu erklärenden Themen benötigt,
+nicht zwingend eine einzelne umfassende Datenbanksuche. Zuerst den vorhandenen
+Bestand und das Exposé prüfen, dann Lücken gezielt suchen:
+
+| Thema | Ausgangspunkt beziehungsweise Beispiel für eine gezielte Suche |
+|---|---|
+| PFN und TabPFN | PFN-Grundlage und TabPFN-Originalarbeit aus dem Exposé; bei Bedarf `"prior data fitted networks"` |
+| TabPFN-Versionen | vorhandene Nature-Arbeit und Modellberichte; die jeweils relevante Version prüfen |
+| Gradient Boosting und LightGBM | vorhandener LightGBM-Eintrag; bei Bedarf `"gradient boosting" classification` und `"LightGBM"` |
+| Fehlende Werte, MCAR/MAR/MNAR und Behandlungen | vorhandener Rubin-Eintrag; bei Bedarf `"missing data" MCAR MAR MNAR` und `"missing values" imputation classification` |
+
+Das sind Such- und Lesestartpunkte, keine bereits geprüften Aussagen und keine
+automatische Auswahl für FF1. Treffer aus einer gezielten Grundlagensuche
+können in Zotero unter `04 Grundlagen` gesammelt werden; bei FF1-Relevanz
+zusätzlich entsprechend zuordnen. Die tatsächlich verwendeten Quellen und
+Fundwege in Abschnitt 8a festhalten. Aussagen später am Volltext mit
+Fundstellen belegen.
 
 ## 4. Datenbanken
 
@@ -134,6 +213,21 @@ lassen und nicht aus einem Export erraten.
 | Datum | Ausgangsarbeit | Richtung | Geprüft | Neue Kandidaten |
 |---|---|---|---|---|
 | | | | | |
+
+## 8a. Grundlagen und gezielte Ergänzungen
+
+Getrennt von den FF1-Suchläufen festhalten, wofür eine Quelle benötigt wird
+und wie sie tatsächlich verfügbar wurde. Für Bestand aus der Zeit vor dem
+Neustart genügt etwa „vorhandener Bestand/Exposé; ursprünglicher Fundweg
+nicht dokumentiert“. Bei neuer Suche Datenbank und genaue Eingabe angeben,
+bei Zitationssuche die Ausgangsarbeit und Richtung. Keine nachträglichen
+Suchdaten erfinden. Für eine Aufnahme in die FF1-Synthese gelten zusätzlich
+die Kriterien aus Abschnitt 5; die entsprechenden Auswahlzahlen stehen in
+Abschnitt 9.
+
+| Datum der Zuordnung | Quelle | Thema/Zweck | Tatsächlicher Fundweg oder Bestand | Volltext/Fundstelle geprüft? | FF1-relevant? |
+|---|---|---|---|---|---|
+| | | | | | |
 
 ## 9. Auswahlzahlen
 
