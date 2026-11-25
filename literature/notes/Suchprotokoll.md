@@ -24,17 +24,29 @@ Einordnung nach Cooper (Vorschlag, im Methodenteil begründen):
 
 ## 2. Vorgehen
 
-Die Suche beginnt nicht bei null. Die Startmenge aus dem Exposé ist der
-Ausgangspunkt, die Datenbanksuche prüft, ob daneben etwas fehlt.
+Die Literaturrecherche wird neu durchgeführt und ab dem ersten Suchlauf
+dokumentiert. Der bereits vorhandene Bestand aus Themenfindung und Exposé
+(Abschnitt 6) bleibt erhalten, ist aber kein Ergebnis dieser Suche. Er wird
+nicht automatisch in die Synthese aufgenommen.
 
-1. **Startmenge festhalten** (Abschnitt 6) und in die Konzeptmatrix eintragen.
-2. **Datenbanksuche** mit den Suchstrings aus Abschnitt 3 in den Datenbanken
-   aus Abschnitt 4. Treffer nach Titel und Abstract sichten.
-3. **Rückwärtssuche** in den Literaturverzeichnissen der Kernarbeiten und
-   **Vorwärtssuche** über „Zitiert von" (Abschnitt 8).
-4. **Volltextprüfung** der verbliebenen Arbeiten, Eintrag in die Konzeptmatrix.
-5. **Abbruch**, wenn eine weitere Runde aus Rückwärts- und Vorwärtssuche keine
-   neue relevante Arbeit mehr liefert.
+1. **Datenbanksuche:** Suchstrings aus Abschnitt 3 an die jeweilige Datenbank
+   anpassen; Datum, genaue Eingabe, Filter, Treffer und gesichteten Bereich
+   in Abschnitt 7 festhalten.
+2. **Auswahl:** Treffer erfassen, Dubletten prüfen und Titel und Abstracts
+   anhand der Auswahlkriterien sichten; relevante oder unklare Volltexte prüfen.
+3. **Zitationssuche:** Literaturverzeichnisse einschlägiger Arbeiten
+   rückwärts und zitierende Arbeiten vorwärts durchsuchen; Ausgangsarbeit,
+   gesichteten Bereich und neue Kandidaten in Abschnitt 8 dokumentieren.
+4. **Bestand abgleichen:** Bereits vorhandene Arbeiten nach denselben Kriterien
+   prüfen. Werden sie bei einer Suche oder Zitationssuche gefunden, den
+   tatsächlichen Fundweg festhalten. Gezielt ergänzte Arbeiten getrennt als
+   solche dokumentieren; Grundlagen und Kontext separat einordnen.
+5. **Synthese:** Ausgewählte Arbeiten anhand der Volltexte und Fundstellen in
+   die Konzeptmatrix eintragen. Vorbefüllte Angaben bleiben ungeprüft, bis sie
+   am Volltext bestätigt wurden.
+6. **Abbruch:** Nach den vereinbarten Suchläufen und einer weiteren
+   dokumentierten Zitationsrunde ohne neue relevante Arbeiten kann die Suche
+   vorläufig abgeschlossen werden. Das ist kein Vollständigkeitsnachweis.
 
 ## 3. Suchstrings
 
@@ -78,7 +90,11 @@ Ausschluss:
 - A3: Zeitreihen, Bilder oder Text ohne tabellarischen Vorhersageteil.
 - A4: Keine nachvollziehbare Methodenbeschreibung.
 
-## 6. Startmenge
+## 6. Vorhandener Bestand
+
+Die folgende Liste dokumentiert bereits vorhandene beziehungsweise im Exposé
+verwendete Arbeiten. Sie gilt weder als Ergebnis der neuen Recherche noch als
+Liste automatisch eingeschlossener Studien.
 
 | Arbeit | BibTeX-Schlüssel | PDF lokal | In Matrix |
 |---|---|---|---|
@@ -97,7 +113,7 @@ Ausschluss:
 
 ## 7. Such-Log
 
-| Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Filter | Treffer | Nach Titel/Abstract behalten | Neu gegenüber Startmenge |
+| Datum | Datenbank | Suchstring (ID und genaue Eingabe) | Filter | Treffer | Nach Titel/Abstract behalten | Neu gegenüber Bestand |
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
@@ -112,7 +128,8 @@ Ausschluss:
 | Stufe | Anzahl |
 |---|---|
 | Treffer aus Datenbanken | |
-| Zusätzlich aus Startmenge sowie Rückwärts- und Vorwärtssuche | |
+| Zusätzlich aus Rückwärts- und Vorwärtssuche | |
+| Zusätzlich gezielt aus vorhandenem Bestand ergänzt | |
 | Nach Entfernen von Dubletten | |
 | Nach Titel- und Abstractscreening | |
 | Nach Volltextprüfung in der Synthese | |

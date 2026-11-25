@@ -31,7 +31,7 @@ Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 | 19.11.2026 | FF1 und FF2 bleiben im Wortlaut unverändert. Dass FF2 den Fehlmechanismus nicht nennt, ist gewollt (Spielraum); auch der Titel nennt keinen Mechanismus | Nutzer, PC |
 | 19.11.2026 | Statistische Tests nur, wenn der Betreuer sie verlangt; sonst deskriptive Auswertung | Nutzer, PC |
 | 19.11.2026 | Ältere Begleitdokumente (`notizen.md`, Exposé-Evaluationen, Verbesserungstipps, Cooper-Notiz, Gesprächscheckliste) bewusst gelöscht; sie gelten nicht mehr | Nutzer, PC |
-| 23.11.2026 | Neue Literaturrecherche von Grund auf dokumentieren; vorhandene Literatur bleibt Bestand und wird nach denselben Kriterien geprüft oder mit getrennt dokumentiertem Fundweg ergänzt. Abschnitt 2 des Suchprotokolls beschreibt noch den früheren Plan und ist vor der Recherche anzupassen | Nutzer, PC |
+| 23.11.2026 | Neue Literaturrecherche von Grund auf dokumentieren; vorhandene Literatur bleibt Bestand und wird nach denselben Kriterien geprüft oder mit getrennt dokumentiertem Fundweg ergänzt. Suchprotokoll am 25.11. entsprechend angepasst | Nutzer, PC |
 | 20.11.2026 | Zitierstil IEEE nach den Lehrstuhlfolien; `main.tex` von `style=lncs` auf `style=ieee` umgestellt (Abweichung von der Lehrstuhlvorlage, vom Nutzer entschieden) | Nutzer, Laptop |
 | 20.11.2026 | Rechenläufe des Hauptversuchs nur am PC; Laptop für Recherche, Schreiben und kurze Tests | Nutzer, Laptop |
 | 20.11.2026 | Literaturanalyse: zuerst alle relevanten Arbeiten breit sammeln und jede Suche protokollieren, dann anhand der Ein- und Ausschlusskriterien reduzieren; die Konzeptmatrix bleibt, weil das Exposé sie zusagt | Nutzer, Laptop |
@@ -156,8 +156,9 @@ abgeschlossene Literaturanalyse.
 
 Vorbereitung:
 
-1. Suchprotokoll an den neuen Suchbeginn anpassen und eine erste Google-Scholar-
-   Suche samt tatsächlichem Sichtungsbereich und Trefferzahlen protokollieren.
+1. Eine erste Google-Scholar-Suche samt tatsächlichem Sichtungsbereich und
+   Trefferzahlen protokollieren. Das Suchprotokoll wurde am 25.11. an den
+   neuen Suchbeginn angepasst.
 2. Titel und Abstracts sichten und bei einer passenden Arbeit exemplarisch
    eine Matrixzeile anhand des Volltexts prüfen.
 3. Die Fragen unten und den vorläufigen Zeitplan für das Gespräch vorbereiten;
