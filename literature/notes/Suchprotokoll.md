@@ -58,11 +58,25 @@ nicht als neue Datenbanksuche ausgeben. Konkrete Aussagen am Volltext prüfen.
 
 **Rückmeldung vom 27.11.2026 (Nutzer, Rechner nicht angegeben):** Für den
 Betreuer bis Montag, 30.11., einen gebündelten Suchstring mit AND/OR
-vorbereiten. Weitere Datenqualitätsmerkmale neben fehlenden Werten im
-Zusammenhang mit TabPFN wurden als mögliche Ergänzung angesprochen; konkrete
-Merkmale und die Tragweite sind noch zu klären. Die nachfolgenden historischen
-Suchläufe bleiben unverändert dokumentiert. Forschungsfragen und Design
-werden dadurch nicht automatisch erweitert.
+vorbereiten. Der Nutzer nennt „noisy data“ und „data quality“ als mögliche
+Anhaltspunkte für eine breitere Recherche zur Einordnung und Abgrenzung.
+Der Fokus der Arbeit soll voraussichtlich auf fehlenden Merkmalswerten bleiben;
+Forschungsfragen und Versuchsdesign sind unverändert. Historische Suchläufe
+bleiben unverändert dokumentiert.
+
+**Diskussionsentwurf, nicht durchgeführt oder freigegeben:**
+
+```text
+("TabPFN" OR "tabular foundation model" OR "tabular foundation models")
+AND
+("missing values" OR "missing data" OR "missingness" OR "imputation"
+ OR "data quality" OR "noisy data" OR "noise")
+```
+
+Die Begriffe zu Datenqualität und Rauschen sind keine Synonyme für fehlende
+Werte; entsprechende Treffer werden zunächst als möglicher Kontext getrennt
+geprüft. Der Entwurf ist an die jeweilige Datenbank und deren Suchfelder
+anzupassen; seine Treffermenge und Syntax sind noch nicht getestet.
 
 ### 3.1 Start in Google Scholar
 
