@@ -56,6 +56,14 @@ nicht als neue Datenbanksuche ausgeben. Konkrete Aussagen am Volltext prüfen.
 
 ## 3. Suchbegriffe und konkrete Suchläufe
 
+**Rückmeldung vom 27.11.2026 (Nutzer, Rechner nicht angegeben):** Für den
+Betreuer bis Montag, 30.11., einen gebündelten Suchstring mit AND/OR
+vorbereiten. Weitere Datenqualitätsmerkmale neben fehlenden Werten im
+Zusammenhang mit TabPFN wurden als mögliche Ergänzung angesprochen; konkrete
+Merkmale und die Tragweite sind noch zu klären. Die nachfolgenden historischen
+Suchläufe bleiben unverändert dokumentiert. Forschungsfragen und Design
+werden dadurch nicht automatisch erweitert.
+
 ### 3.1 Start in Google Scholar
 
 Jede Zeile ist eine eigene Suchanfrage. Die Beispiele mit Anführungszeichen

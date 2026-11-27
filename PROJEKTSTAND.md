@@ -3,7 +3,7 @@
 Fortlaufend gepflegter Stand der Bachelorarbeit. Dauerhafte Arbeitsregeln stehen
 in [.github/copilot-instructions.md](.github/copilot-instructions.md).
 
-Zuletzt aktualisiert: 25. November 2026 (PC). Erstfassung am Laptop aus dem
+Zuletzt aktualisiert: 27. November 2026 (Rechner nicht angegeben). Erstfassung am Laptop aus dem
 Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 
 ## Eckdaten
@@ -13,8 +13,8 @@ Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 | Abgabedatum laut `writing/thesis/main.tex` | 16. Februar 2027 |
 | Erstgutachter | Prof. Dr. Stefan Schönig |
 | Betreuer | Maximilian Metzner |
-| Letzter Stand beim Betreuer | Exposé abgegeben, Bachelorarbeit angemeldet (Angabe des Nutzers vom 21.11.2026) |
-| Nächster Betreuertermin | Freitag, 27. November 2026 (laut Nutzer vom 25.11.) |
+| Letzter Stand beim Betreuer | Gespräch am 27. November 2026 laut Nutzer erfolgt; Suchstring bis Montag zusenden |
+| Nächster Betreuertermin | noch nicht angegeben |
 | Seitenbudget laut Kapitelgerüst | ca. 40 Seiten ohne Anhang (4, 7, 6, 6, 9, 6, 2); „40 oder so“ ist eine Angabe des Nutzers vom 19.11.2026, keine belegte Lehrstuhlvorgabe |
 | Phase | Literaturanalyse (FF1) beginnt; Kapitel sind Gerüste ohne Text |
 
@@ -32,6 +32,7 @@ Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 | 19.11.2026 | Statistische Tests nur, wenn der Betreuer sie verlangt; sonst deskriptive Auswertung | Nutzer, PC |
 | 19.11.2026 | Ältere Begleitdokumente (`notizen.md`, Exposé-Evaluationen, Verbesserungstipps, Cooper-Notiz, Gesprächscheckliste) bewusst gelöscht; sie gelten nicht mehr | Nutzer, PC |
 | 23.11.2026 | Neue Literaturrecherche von Grund auf dokumentieren; vorhandene Literatur bleibt Bestand und wird nach denselben Kriterien geprüft oder mit getrennt dokumentiertem Fundweg ergänzt. Suchprotokoll am 25.11. entsprechend angepasst | Nutzer, PC |
+| 27.11.2026 | Rückmeldung aus dem Betreuungsgespräch laut Nutzer: Suchbegriffe stärker mit AND/OR bündeln; möglicherweise weitere Datenqualitätsmerkmale im Zusammenhang mit TabPFN berücksichtigen. Konkrete Merkmale und Tragweite sind noch zu klären. Suchstring am Montag, 30.11., zusenden | Nutzer, Rechner nicht angegeben |
 | 20.11.2026 | Zitierstil IEEE nach den Lehrstuhlfolien; `main.tex` von `style=lncs` auf `style=ieee` umgestellt (Abweichung von der Lehrstuhlvorlage, vom Nutzer entschieden) | Nutzer, Laptop |
 | 20.11.2026 | Rechenläufe des Hauptversuchs nur am PC; Laptop für Recherche, Schreiben und kurze Tests | Nutzer, Laptop |
 | 20.11.2026 | Literaturanalyse: zuerst alle relevanten Arbeiten breit sammeln und jede Suche protokollieren, dann anhand der Ein- und Ausschlusskriterien reduzieren; die Konzeptmatrix bleibt, weil das Exposé sie zusagt | Nutzer, Laptop |
@@ -74,9 +75,9 @@ Mit dem Betreuer zu klären:
 
 ### Literaturanalyse (FF1)
 
-- Stand 25.11.2026 (PC): Erste Suchrunde in Google Scholar, arXiv und IEEE
-  Xplore vorläufig beendet; weitere Ergänzungen und Sichtungsumfang mit dem
-  Betreuer klären. Alle Einzelangaben,
+- Stand 27.11.2026: Die erste Suchrunde in Google Scholar, arXiv und IEEE
+  Xplore ist dokumentiert; nach dem Betreuungsgespräch soll ein gebündelter
+  Suchstring für Montag vorbereitet werden. Einzelangaben,
   Trefferlisten, Überschneidungen und ungeklärten Angaben stehen im
   [Suchprotokoll](literature/notes/Suchprotokoll.md), Abschnitt 7.
   Insbesondere sind bei arXiv S1a der Sichtungsbereich und bei IEEE S1a
@@ -171,21 +172,15 @@ Mit dem Betreuer zu klären:
 - Mit dem Schreiben wurde noch nicht begonnen; das ist so geplant.
 - Deckblattangaben in `main.tex` sind vollständig (PLZ, Ort, Betreuer).
 
-## Bis zum Betreuertermin am 27. November 2026
+## Betreuungsgespräch am 27. November 2026
 
-Der Termin wurde laut Nutzer am 25.11. verschoben. Die Recherche hat begonnen;
-Ziel ist ein nachvollziehbarer Zwischenstand, keine abgeschlossene Analyse.
-
-Vorbereitung:
-
-1. Die bisherigen Suchläufe und den vorläufigen Dublettenabgleich samt
-   offenen Angaben für das Gespräch bereithalten.
-2. Titel und Abstracts sichten und bei einer passenden Arbeit exemplarisch
-   eine Matrixzeile anhand des Volltexts prüfen.
-3. Die Fragen unten und den vorläufigen Zeitplan für das Gespräch vorbereiten;
-   Ergebnisse des Treffens anschließend festhalten.
-
-Bis dahin kein Kapiteltext.
+Das Gespräch hat laut Nutzer stattgefunden. Für Montag, den 30.11., soll dem
+Betreuer ein Suchstring geschickt werden. Gewünscht ist, Begriffe mit AND/OR zu
+bündeln statt mit vielen einzelnen Suchstrings zu arbeiten; weitere
+Datenqualitätsmerkmale neben fehlenden Werten bei TabPFN wurden als mögliche
+Erweiterung angesprochen. Welche Merkmale gemeint sind und ob dies nur die
+Suche oder auch die Arbeit betrifft, ist noch offen. Weitere Gesprächsergebnisse
+nicht unterstellen.
 
 ## Vorläufiger Zeitplan bis zur Abgabe
 
@@ -222,8 +217,9 @@ Fragen an den Betreuer:
 
 ## Nächste Schritte
 
-1. Datenbanken, Suchumfang und mögliche Ergänzungen mit dem Betreuer klären,
-   danach Exposé und Suchprotokoll bei Bedarf angleichen.
+1. Gebündelten Suchstring für den Betreuer bis 30.11. vorbereiten; zusätzliche
+   Datenqualitätsmerkmale und deren Rolle klären. Forschungsfragen und
+   Versuchsdesign nicht ohne Rücksprache ändern.
 2. Suchläufe und Auswahl dokumentieren; Dubletten prüfen und Kandidaten sichten.
 3. Die neun Matrixzeilen am Volltext prüfen, `?` auflösen, Status fortschreiben;
    TabPFN-2.5-Bericht und Ke et al. ergänzen.
