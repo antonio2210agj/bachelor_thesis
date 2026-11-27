@@ -32,7 +32,7 @@ Inhalt des Repositorys erstellt; danach um den Stand aus dem PC-Chat ergänzt.
 | 19.11.2026 | Statistische Tests nur, wenn der Betreuer sie verlangt; sonst deskriptive Auswertung | Nutzer, PC |
 | 19.11.2026 | Ältere Begleitdokumente (`notizen.md`, Exposé-Evaluationen, Verbesserungstipps, Cooper-Notiz, Gesprächscheckliste) bewusst gelöscht; sie gelten nicht mehr | Nutzer, PC |
 | 23.11.2026 | Neue Literaturrecherche von Grund auf dokumentieren; vorhandene Literatur bleibt Bestand und wird nach denselben Kriterien geprüft oder mit getrennt dokumentiertem Fundweg ergänzt. Suchprotokoll am 25.11. entsprechend angepasst | Nutzer, PC |
-| 27.11.2026 | Rückmeldung aus dem Betreuungsgespräch laut Nutzer: Suchbegriffe stärker mit AND/OR bündeln und möglicherweise weitere Datenqualitätsmerkmale bei TabPFN berücksichtigen; Suchstring am Montag, 30.11., zusenden. Nutzer nennt „noisy data“ und „data quality“ als Anhaltspunkte und möchte voraussichtlich den Arbeitsfokus auf fehlende Werte beibehalten; breitere Recherche zur Einordnung und Abgrenzung. Forschungsfragen und Versuchsdesign unverändert | Nutzer, Rechner nicht angegeben |
+| 27.11.2026 | Rückmeldung aus dem Betreuungsgespräch laut Nutzer: mehr Datenbanken nutzen, Suchbegriffe stärker mit AND/OR bündeln und möglicherweise weitere Datenqualitätsmerkmale bei TabPFN berücksichtigen; Suchstring am Montag, 30.11., zusenden. Konkrete zusätzliche Datenbanken sind noch nicht genannt. Nutzer nennt „noisy data“ und „data quality“ als Anhaltspunkte und möchte voraussichtlich den Arbeitsfokus auf fehlende Werte beibehalten; breitere Recherche zur Einordnung und Abgrenzung. Forschungsfragen und Versuchsdesign unverändert | Nutzer, Rechner nicht angegeben |
 | 20.11.2026 | Zitierstil IEEE nach den Lehrstuhlfolien; `main.tex` von `style=lncs` auf `style=ieee` umgestellt (Abweichung von der Lehrstuhlvorlage, vom Nutzer entschieden) | Nutzer, Laptop |
 | 20.11.2026 | Rechenläufe des Hauptversuchs nur am PC; Laptop für Recherche, Schreiben und kurze Tests | Nutzer, Laptop |
 | 20.11.2026 | Literaturanalyse: zuerst alle relevanten Arbeiten breit sammeln und jede Suche protokollieren, dann anhand der Ein- und Ausschlusskriterien reduzieren; die Konzeptmatrix bleibt, weil das Exposé sie zusagt | Nutzer, Laptop |
@@ -176,7 +176,8 @@ Mit dem Betreuer zu klären:
 
 Das Gespräch hat laut Nutzer stattgefunden. Für Montag, den 30.11., soll dem
 Betreuer ein Suchstring geschickt werden. Gewünscht ist, Begriffe mit AND/OR zu
-bündeln statt mit vielen einzelnen Suchstrings zu arbeiten; weitere
+bündeln statt mit vielen einzelnen Suchstrings zu arbeiten und mehr
+Datenbanken zu nutzen; konkrete zusätzliche Datenbanken sind noch offen. Weitere
 Datenqualitätsmerkmale neben fehlenden Werten bei TabPFN wurden als mögliche
 Erweiterung angesprochen. Welche Merkmale gemeint sind und ob dies nur die
 Suche oder auch die Arbeit betrifft, ist noch offen. Weitere Gesprächsergebnisse

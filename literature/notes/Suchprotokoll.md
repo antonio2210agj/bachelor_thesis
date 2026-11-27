@@ -58,7 +58,8 @@ nicht als neue Datenbanksuche ausgeben. Konkrete Aussagen am Volltext prüfen.
 
 **Rückmeldung vom 27.11.2026 (Nutzer, Rechner nicht angegeben):** Für den
 Betreuer bis Montag, 30.11., einen gebündelten Suchstring mit AND/OR
-vorbereiten. Der Nutzer nennt „noisy data“ und „data quality“ als mögliche
+vorbereiten und mehr Datenbanken nutzen; konkrete zusätzliche Datenbanken sind
+noch offen. Der Nutzer nennt „noisy data“ und „data quality“ als mögliche
 Anhaltspunkte für eine breitere Recherche zur Einordnung und Abgrenzung.
 Der Fokus der Arbeit soll voraussichtlich auf fehlenden Merkmalswerten bleiben;
 Forschungsfragen und Versuchsdesign sind unverändert. Historische Suchläufe
